@@ -15,8 +15,8 @@
   ],
   "metrics": {
     "citations": {
-      "all": 361,
-      "since2019": 348
+      "all": 362,
+      "since2019": 349
     },
     "hIndex": {
       "all": 6,
@@ -32,7 +32,7 @@
       "title": "Experiments of federated learning for COVID-19 chest X-ray images",
       "authors": "B Yan, J Wang, J Cheng, Y Zhou, Y Zhang, Y Yang, L Liu, H Zhao, ...",
       "venue": "Advances in Artificial Intelligence and Security: 7th International… , 2021",
-      "citations": 273,
+      "citations": 274,
       "year": 2021
     },
     {
@@ -53,21 +53,21 @@
       "title": "Surveying attitudinal alignment between large language models vs. humans towards 17 sustainable development goals",
       "authors": "Q Wu, Y Xu, T Xiao, Y Xiao, Y Li, T Wang, Y Zhang, S Zhong, Y Zhang, ...",
       "venue": "arXiv preprint arXiv:2404.13885 , 2024",
-      "citations": 19,
+      "citations": 18,
       "year": 2024
+    },
+    {
+      "title": "Integrating spatiotemporal vision transformer into digital twins for high-resolution heat stress forecasting in campus environments",
+      "authors": "W Gong, X Ye, K Wu, S Jamonnak, W Zhang, Y Yang, X Huang",
+      "venue": "Journal of Planning Education and Research, 0739456X251391121 , 2025",
+      "citations": 7,
+      "year": 2025
     },
     {
       "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",
       "authors": "Y Yang, L Zou, B Zhou, D Li, B Lin, J Abedin, M Yang",
       "venue": "Computers, Environment and Urban Systems 121, 102335 , 2025",
       "citations": 7,
-      "year": 2025
-    },
-    {
-      "title": "Integrating spatiotemporal vision transformer into digital twins for high-resolution heat stress forecasting in campus environments",
-      "authors": "W Gong, X Ye, K Wu, S Jamonnak, W Zhang, Y Yang, X Huang",
-      "venue": "Journal of Planning Education and Research, 0739456X251391121 , 2025",
-      "citations": 6,
       "year": 2025
     },
     {
@@ -149,5 +149,5 @@
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-04-25T17:22:44.692Z"
+  "fetchedAt": "2026-05-11T12:22:17.600Z"
 }
