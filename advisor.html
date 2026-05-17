@@ -78,6 +78,17 @@
         </article>
       </section>
 
+      <section class="guide-panel advisor-desk-panel">
+        <div class="reading-list-heading">
+          <div>
+            <p class="kicker">Decision Desk</p>
+            <h2>What this reading system is trying to turn into work</h2>
+          </div>
+          <a href="./index.html?layer=question">Open bridge questions</a>
+        </div>
+        <div class="advisor-desk-grid" id="advisor-desk"></div>
+      </section>
+
       <section class="advisor-grid" aria-label="Reading intelligence lenses">
         <article class="guide-panel advisor-panel">
           <div class="reading-list-heading compact-heading">
@@ -141,6 +152,7 @@
       const activeNow = document.getElementById("active-now");
       const shelfGaps = document.getElementById("shelf-gaps");
       const bridgeThemes = document.getElementById("bridge-themes");
+      const advisorDesk = document.getElementById("advisor-desk");
       const advisorMoves = document.getElementById("advisor-moves");
       const starfield = document.getElementById("starfield");
 
@@ -283,6 +295,43 @@
         });
       }
 
+      function renderDesk(payload) {
+        if (!advisorDesk) {
+          return;
+        }
+        const deep = payload.lenses?.deepReads?.[0];
+        const bridge = payload.bridgeThemes?.[0];
+        const move = payload.advisorMoves?.[0];
+        advisorDesk.innerHTML = "";
+
+        [
+          {
+            eyebrow: "Deepest mark",
+            title: deep?.title || "No deep read yet",
+            body: deep ? `${deep.author || "Unknown author"} | ${deep.totalNoteCount || 0} notes` : "The next sync will populate this card."
+          },
+          {
+            eyebrow: "Bridge becoming output",
+            title: bridge?.label || bridge?.theme || "No bridge theme yet",
+            body: bridge?.suggestedMove || "The advisor will surface the next synthesis pressure after sync."
+          },
+          {
+            eyebrow: "Next workflow",
+            title: move?.title || "No workflow queued yet",
+            body: move?.evidence || "When a strong shelf-to-note pattern appears, it will surface here."
+          }
+        ].forEach((item) => {
+          const card = document.createElement("article");
+          card.className = "advisor-desk-card";
+          card.innerHTML = `
+            <span>${item.eyebrow}</span>
+            <h3>${item.title}</h3>
+            <p>${item.body}</p>
+          `;
+          advisorDesk.appendChild(card);
+        });
+      }
+
       function render(payload) {
         const totals = payload.totals || {};
         setMetric(0, totals.shelfBookCount);
@@ -292,6 +341,7 @@
         renderBookList(deepReads, payload.lenses?.deepReads, "No deep reads yet.", "notes");
         renderBookList(activeNow, payload.lenses?.activeNow, "No recent activity yet.", "notes");
         renderBookList(shelfGaps, payload.lenses?.shelfOnly, "No shelf-only gaps found.", "shelf");
+        renderDesk(payload);
         renderThemes(payload.bridgeThemes);
         renderMoves(payload.advisorMoves);
       }

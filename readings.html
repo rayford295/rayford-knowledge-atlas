@@ -78,6 +78,17 @@
         </article>
       </section>
 
+      <section class="guide-panel reading-spotlight-panel">
+        <div class="reading-list-heading">
+          <div>
+            <p class="kicker">Reading Room</p>
+            <h2>Three books that define the current shelf</h2>
+          </div>
+          <a href="./index.html?layer=input">Trace inputs in the atlas</a>
+        </div>
+        <div class="reading-spotlight-grid" id="reading-spotlights"></div>
+      </section>
+
       <section class="guide-panel reading-list-panel">
         <div class="reading-list-heading">
           <div>
@@ -98,6 +109,7 @@
     (function () {
       const metrics = document.getElementById("reading-metrics");
       const list = document.getElementById("reading-list");
+      const spotlights = document.getElementById("reading-spotlights");
       const starfield = document.getElementById("starfield");
 
       function initStarfield() {
@@ -158,13 +170,30 @@
       function render(payload) {
         const totals = payload.totals || {};
         const metricCards = Array.from(metrics.children);
+        const readings = payload.readings || [];
         setText(metricCards[0], "strong", totals.notebookBookCount || "--");
         setText(metricCards[1], "strong", totals.notebookNoteCount || "--");
         setText(metricCards[2], "strong", totals.yearlyReadDays || "--");
         setText(metricCards[3], "strong", totals.yearlyReadTime || "--");
 
+        if (spotlights) {
+          spotlights.innerHTML = "";
+          readings.slice(0, 3).forEach((reading, index) => {
+            const card = document.createElement("article");
+            card.className = "reading-spotlight-card";
+            card.innerHTML = `
+              <span class="reading-spotlight-rank">0${index + 1}</span>
+              <h3>${reading.title}</h3>
+              <p>${reading.author || "Unknown author"} | ${reading.readingProgress || 0}% read</p>
+              <strong>${reading.totalNoteCount || 0} notes</strong>
+              <em>${index === 0 ? "deepest marked book" : index === 1 ? "strong active signal" : "still shaping judgment"}</em>
+            `;
+            spotlights.appendChild(card);
+          });
+        }
+
         list.innerHTML = "";
-        (payload.readings || []).slice(0, 12).forEach((reading, index) => {
+        readings.slice(0, 12).forEach((reading, index) => {
           const row = document.createElement("article");
           row.className = "reading-row";
 

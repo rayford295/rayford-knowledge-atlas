@@ -89,6 +89,17 @@
         </article>
       </section>
 
+      <section class="guide-panel paper-feature-panel">
+        <div class="reading-list-heading">
+          <div>
+            <p class="kicker">Featured Works</p>
+            <h2>The output wall to start with</h2>
+          </div>
+          <a href="./index.html?layer=output">Jump to output layer</a>
+        </div>
+        <div class="paper-feature-grid" id="paper-features"></div>
+      </section>
+
       <section class="guide-panel paper-list-panel">
         <div class="reading-list-heading">
           <div>
@@ -111,6 +122,7 @@
       const data = window.researchMapData || { nodes: [] };
       const metrics = document.getElementById("paper-metrics");
       const list = document.getElementById("paper-list");
+      const features = document.getElementById("paper-features");
       const filterBar = document.getElementById("paper-filter-bar");
       const search = document.getElementById("paper-search");
       const starfield = document.getElementById("starfield");
@@ -290,6 +302,29 @@
         return anchor;
       }
 
+      function renderFeatures() {
+        if (!features) {
+          return;
+        }
+        features.innerHTML = "";
+        outputs
+          .filter((node) => node.source === "Research Wiki")
+          .slice(0, 3)
+          .forEach((node) => {
+            const card = document.createElement("article");
+            card.className = "paper-feature-card";
+            card.innerHTML = `
+              <span>${node.year} · ${node.type || "Research Output"}</span>
+              <h3>${node.shortTitle || node.title}</h3>
+              <p>${node.summary || node.impact || ""}</p>
+              <strong>${node.metricLabel || node.source}</strong>
+            `;
+            const link = createLink(`./index.html?node=${encodeURIComponent(node.id)}&layer=output`, "Open in Atlas", "paper-feature-link");
+            card.appendChild(link);
+            features.appendChild(card);
+          });
+      }
+
       function renderList() {
         const nodes = visibleOutputs();
         list.innerHTML = "";
@@ -359,6 +394,7 @@
       renderMetrics();
       loadScholarMetric();
       buildFilters();
+      renderFeatures();
       renderList();
       search.addEventListener("input", (event) => {
         query = event.target.value;
