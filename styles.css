@@ -2081,3 +2081,69 @@ summary:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+
+.knowledge-rooms {
+  padding: 8px 22px 26px;
+}
+
+.knowledge-room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.knowledge-room-card {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(186, 255, 232, 0.14);
+  background:
+    linear-gradient(145deg, rgba(54, 241, 199, 0.1), transparent 38%),
+    linear-gradient(215deg, rgba(255, 212, 106, 0.08), transparent 42%),
+    rgba(255, 255, 255, 0.045);
+}
+
+.knowledge-room-card h3,
+.knowledge-room-card p {
+  margin: 0;
+}
+
+.knowledge-room-card h3 {
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.knowledge-room-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.knowledge-room-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.knowledge-room-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(186, 255, 232, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+@media (max-width: 860px) {
+  .knowledge-room-grid {
+    grid-template-columns: 1fr;
+  }
+}
