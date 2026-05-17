@@ -60,25 +60,17 @@ Use `docs/PUBLICATIONS_MIGRATION.md` as the boundary rule. The atlas is public, 
 npm run verify
 ```
 
-If `npm run verify` is not wired in `package.json`, run the check inline:
+This runs `scripts/verify-atlas.js`, which checks:
 
-```bash
-node -e "
-const fs = require('fs');
-const text = fs.readFileSync('data.js', 'utf8')
-  .replace(/^window\.researchMapData = /, '')
-  .replace(/;\s*$/, '');
-const data = JSON.parse(text);
-const ids = new Set(data.nodes.map(n => n.id));
-const broken = data.nodes.flatMap(n =>
-  (n.connections || []).filter(c => !ids.has(c.target)).map(c => n.id + '->' + c.target)
-);
-console.log({ nodes: data.nodes.length, counts: data.counts, broken });
-if (broken.length) process.exit(1);
-"
-```
+- `data.js` is parseable;
+- node ids are unique;
+- `data.counts` matches actual node totals;
+- every connection target exists;
+- each node has the core public fields expected by the atlas;
+- question nodes still bridge toward both inputs and outputs when possible;
+- every compiled markdown page still has frontmatter.
 
-This exits with code 1 and prints every broken `source->target` pair if any connection targets a node id that does not exist.
+Use this before every commit that touches `wiki/`, `data.js`, or homepage graph behavior.
 
 ## Local Browser QA
 
