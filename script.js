@@ -5,9 +5,15 @@
   const filterBar = document.getElementById("filter-bar");
   const moreFilterBar = document.getElementById("more-filter-bar");
   const guidedTrailsContainer = document.getElementById("guided-trails");
+  const storyCardsContainer = document.getElementById("story-cards");
   const repoList = document.getElementById("repo-list");
   const searchInput = document.getElementById("search-input");
   const modeTabs = Array.from(document.querySelectorAll(".mode-tab"));
+  const atlas = document.querySelector(".atlas");
+  const railToggle = document.getElementById("rail-toggle");
+  const stageRailToggle = document.getElementById("stage-rail-toggle");
+  const detailToggle = document.getElementById("detail-toggle");
+  const detailClose = document.getElementById("detail-close");
   const starfield = document.getElementById("starfield");
   const paperCount = document.getElementById("paper-count");
   const themeCountElement = document.getElementById("theme-count");
@@ -57,6 +63,8 @@
   let activeMode = "flow";
   let activeTrailId = "disaster-evidence";
   let searchTerm = "";
+  let railCollapsed = window.innerWidth >= 1320;
+  let detailOpen = false;
 
   const graphRuntime = {
     nodeStates: new Map(),
@@ -250,6 +258,14 @@
       card.classList.toggle("active", isActive);
       card.setAttribute("aria-pressed", String(isActive));
     });
+
+    if (storyCardsContainer) {
+      storyCardsContainer.querySelectorAll(".story-card").forEach((card) => {
+        const isActive = card.dataset.trail === activeTrailId;
+        card.classList.toggle("active", isActive);
+        card.setAttribute("aria-pressed", String(isActive));
+      });
+    }
   }
 
   function buildTrails() {
@@ -287,6 +303,83 @@
 
   function getActiveTrail() {
     return guidedTrails.find((trail) => trail.id === activeTrailId) || null;
+  }
+
+
+  function applyPanelState() {
+    if (!atlas) {
+      return;
+    }
+
+    atlas.classList.toggle("is-rail-collapsed", railCollapsed);
+    atlas.classList.toggle("is-detail-closed", !detailOpen);
+
+    if (railToggle) {
+      railToggle.textContent = railCollapsed ? "Expand" : "Collapse";
+      railToggle.setAttribute("aria-expanded", String(!railCollapsed));
+    }
+
+    if (stageRailToggle) {
+      stageRailToggle.textContent = railCollapsed ? "Show Filters" : "Hide Filters";
+      stageRailToggle.setAttribute("aria-expanded", String(!railCollapsed));
+    }
+
+    if (detailToggle) {
+      detailToggle.textContent = detailOpen ? "Hide Detail" : "Open Detail";
+      detailToggle.setAttribute("aria-expanded", String(detailOpen));
+    }
+
+    if (detailClose) {
+      detailClose.setAttribute("aria-expanded", String(detailOpen));
+    }
+  }
+
+  function setRailCollapsed(nextValue) {
+    railCollapsed = Boolean(nextValue);
+    applyPanelState();
+  }
+
+  function setDetailOpen(nextValue) {
+    detailOpen = Boolean(nextValue);
+    applyPanelState();
+  }
+
+  function buildStoryCards() {
+    if (!storyCardsContainer) {
+      return;
+    }
+
+    storyCardsContainer.innerHTML = "";
+    guidedTrails.forEach((trail) => {
+      const cards = trail.nodes
+        .map((nodeId) => data.nodes.find((node) => node.id === nodeId))
+        .filter(Boolean);
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "story-card";
+      card.dataset.trail = trail.id;
+      card.innerHTML = `
+        <span class="story-card-route">${cards.map((node) => node.shortTitle).join(" -> ")}</span>
+        <strong>${trail.title}</strong>
+        <p>${trail.summary}</p>
+        <span class="story-card-foot">Enter this path through <b>${cards[0]?.shortTitle || "the atlas"}</b>.</span>
+      `;
+      card.addEventListener("click", () => {
+        activeTrailId = trail.id;
+        activeTheme = "All";
+        activeLayer = "All";
+        searchTerm = "";
+        searchInput.value = "";
+        if (cards[0]) {
+          selectedNodeId = cards[0].id;
+        }
+        setDetailOpen(true);
+        syncFilterState();
+        renderAll();
+        updateUrlState();
+      });
+      storyCardsContainer.appendChild(card);
+    });
   }
 
   function renderRepoList() {
@@ -801,10 +894,12 @@
       activeTrailId = trailParam;
       activeTheme = "All";
       activeLayer = "All";
+      detailOpen = true;
     }
 
     if (nodeParam && data.nodes.some((node) => node.id === nodeParam)) {
       selectedNodeId = nodeParam;
+      detailOpen = true;
     }
   }
 
@@ -844,6 +939,7 @@
   function selectNode(nodeId) {
     selectedNodeId = nodeId;
     hoveredNodeId = null;
+    setDetailOpen(true);
     const node = data.nodes.find((candidate) => candidate.id === nodeId);
     renderAll();
     showDetail(node);
@@ -1111,10 +1207,38 @@
     });
   });
 
+  [railToggle, stageRailToggle].filter(Boolean).forEach((button) => {
+    button.addEventListener("click", () => {
+      setRailCollapsed(!railCollapsed);
+    });
+  });
+
+  if (detailToggle) {
+    detailToggle.addEventListener("click", () => {
+      setDetailOpen(!detailOpen);
+    });
+  }
+
+  if (detailClose) {
+    detailClose.addEventListener("click", () => {
+      setDetailOpen(false);
+    });
+  }
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth < 860) {
+      railCollapsed = false;
+      detailOpen = true;
+      applyPanelState();
+    }
+  });
+
   buildFilters();
   buildTrails();
+  buildStoryCards();
   syncFilterState();
   syncModeTabs();
+  applyPanelState();
   initStarfield();
   loadScholarSnapshot();
   loadReadingSnapshot();

@@ -52,7 +52,12 @@
     </header>
 
     <main class="atlas">
-      <aside class="source-rail" aria-label="Knowledge sources">
+      <aside class="source-rail" id="source-rail" aria-label="Knowledge sources">
+        <div class="panel-topline">
+          <span>Atlas Controls</span>
+          <button class="panel-toggle" id="rail-toggle" type="button" aria-expanded="true">Collapse</button>
+        </div>
+
         <div class="rail-heading">
           <p>Input to Output</p>
           <strong id="paper-count">0</strong>
@@ -153,22 +158,41 @@
 
       <section class="graph-stage" id="graph">
         <div class="stage-toolbar">
-          <div>
+          <div class="stage-copy">
             <p class="kicker">Living Knowledge Graph</p>
             <h1>Inputs Become Outputs.</h1>
-            <p class="stage-onboarding">Use this page for relationships and guided trails. Use Readings, Advisor, and Papers when you want clean libraries instead of the full graph.</p>
+            <p class="stage-onboarding">Start with a reading input, a bridge question, or a research output to see how they connect.</p>
+            <p class="stage-manifesto">Outputs show what I write into the world. Inputs show what I let the world write into me.</p>
+            <div class="hero-actions" aria-label="Featured atlas entry points">
+              <a class="hero-action" href="./readings.html">Start with Reading Inputs</a>
+              <a class="hero-action hero-action-muted" href="./papers.html">See Research Outputs</a>
+            </div>
             <div class="layer-legend" aria-label="Atlas layer legend">
               <span><i data-layer="input"></i>Inputs</span>
               <span><i data-layer="question"></i>Questions</span>
               <span><i data-layer="output"></i>Outputs</span>
             </div>
           </div>
-          <div class="mode-tabs" role="tablist" aria-label="Graph modes">
-            <button class="mode-tab active" type="button" role="tab" aria-selected="true" data-mode="network">Network</button>
-            <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="timeline">Timeline</button>
-            <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="flow">Flow</button>
+          <div class="stage-side">
+            <div class="mode-tabs" role="tablist" aria-label="Graph modes">
+              <button class="mode-tab active" type="button" role="tab" aria-selected="true" data-mode="network">Network</button>
+              <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="timeline">Timeline</button>
+              <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="flow">Flow</button>
+            </div>
+            <div class="stage-panel-actions">
+              <button class="panel-toggle stage-toggle" id="stage-rail-toggle" type="button" aria-expanded="true">Hide Filters</button>
+              <button class="panel-toggle stage-toggle" id="detail-toggle" type="button" aria-expanded="false">Open Detail</button>
+            </div>
           </div>
         </div>
+
+        <section class="story-strip" aria-label="Featured thinking trails">
+          <div class="story-strip-heading">
+            <p class="kicker">Featured Trails</p>
+            <h2>Three ways into the atlas.</h2>
+          </div>
+          <div class="story-cards" id="story-cards"></div>
+        </section>
 
         <div class="graph-wrap">
           <svg id="graph-svg" viewBox="0 0 980 660" role="img" aria-label="Interactive research map"></svg>
@@ -176,6 +200,10 @@
       </section>
 
       <aside class="inspector" id="detail-panel" aria-label="Knowledge node detail">
+        <div class="panel-topline panel-topline-detail">
+          <span>Node Dossier</span>
+          <button class="panel-toggle" id="detail-close" type="button" aria-expanded="false">Close</button>
+        </div>
         <div class="inspector-topline">
           <span id="detail-type">Knowledge Node</span>
           <span id="detail-status">Published</span>
