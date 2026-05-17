@@ -952,6 +952,11 @@
       return;
     }
 
+    const detailEmptyNote = document.getElementById("detail-empty-note");
+    if (detailEmptyNote) {
+      detailEmptyNote.style.display = "none";
+    }
+
     document.getElementById("detail-type").textContent = node.displayKind || node.type;
     document.getElementById("detail-status").textContent = node.status;
     document.getElementById("detail-title").textContent = node.title;

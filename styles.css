@@ -2390,3 +2390,23 @@ summary:focus-visible {
     text-align: left;
   }
 }
+
+
+.knowledge-room-grid-teaser {
+  grid-template-columns: 1fr;
+}
+
+.knowledge-room-card-teaser {
+  max-width: 860px;
+}
+
+.detail-empty-note {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.atlas.is-detail-closed .detail-empty-note {
+  display: none;
+}
