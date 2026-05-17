@@ -1,6 +1,7 @@
 (function () {
   const data = window.researchMapData || { nodes: [], themes: [] };
   const svg = document.getElementById("graph-svg");
+  const layerFilterBar = document.getElementById("layer-filter-bar");
   const filterBar = document.getElementById("filter-bar");
   const repoList = document.getElementById("repo-list");
   const searchInput = document.getElementById("search-input");
@@ -18,6 +19,7 @@
   const maxYear = years.length ? Math.max.apply(null, years) : 0;
 
   let activeTheme = "All";
+  let activeLayer = "All";
   let selectedNodeId = data.nodes.find((node) => node.id === "damagearbiter")?.id || data.nodes[0]?.id || null;
   let hoveredNodeId = null;
   let activeMode = "network";
@@ -32,7 +34,7 @@
     reducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches
   };
 
-  if (!svg || !filterBar || !repoList || !searchInput || !paperCount || !data.nodes.length) {
+  if (!svg || !layerFilterBar || !filterBar || !repoList || !searchInput || !paperCount || !data.nodes.length) {
     initStarfield();
     return;
   }
@@ -77,10 +79,41 @@
       });
   }
 
+  function renderReadingSnapshot(snapshot) {
+    if (!snapshot || !snapshot.totals) {
+      return;
+    }
+
+    const notes = document.getElementById("reading-notes");
+    const books = document.getElementById("reading-books");
+    const rhythm = document.getElementById("reading-rhythm");
+
+    notes.textContent = String(snapshot.totals.notebookNoteCount || "--");
+    books.textContent = String(snapshot.totals.notebookBookCount || "--");
+    rhythm.textContent = `${snapshot.totals.yearlyReadTime || "--"} · ${snapshot.totals.yearlyReadDays || "--"} reading days`;
+  }
+
+  function loadReadingSnapshot() {
+    fetch("./raw/weread/public-reading-index.json", { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : null)
+      .then(renderReadingSnapshot)
+      .catch(() => {
+        const rhythm = document.getElementById("reading-rhythm");
+        if (rhythm) {
+          rhythm.textContent = "Reading snapshot unavailable";
+        }
+      });
+  }
+
   function filteredNodes() {
     const query = searchTerm.trim().toLowerCase();
 
     return data.nodes.filter((node) => {
+      const layerMatch = activeLayer === "All" || (node.kind || "output") === activeLayer;
+      if (!layerMatch) {
+        return false;
+      }
+
       const themeMatch = activeTheme === "All" || node.themes.indexOf(activeTheme) >= 0;
       if (!themeMatch) {
         return false;
@@ -114,6 +147,25 @@
   }
 
   function buildFilters() {
+    [
+      { label: "All", value: "All" },
+      { label: "Inputs", value: "input" },
+      { label: "Questions", value: "question" },
+      { label: "Outputs", value: "output" }
+    ].forEach((layer) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "filter-chip layer-chip" + (layer.value === activeLayer ? " active" : "");
+      button.textContent = layer.label;
+      button.addEventListener("click", () => {
+        activeLayer = layer.value;
+        activeTheme = "All";
+        syncFilterState();
+        renderAll();
+      });
+      layerFilterBar.appendChild(button);
+    });
+
     data.themes.forEach((theme) => {
       const button = document.createElement("button");
       button.type = "button";
@@ -129,6 +181,14 @@
   }
 
   function syncFilterState() {
+    layerFilterBar.querySelectorAll(".layer-chip").forEach((chip) => {
+      const value = chip.textContent === "Inputs" ? "input" :
+        chip.textContent === "Questions" ? "question" :
+        chip.textContent === "Outputs" ? "output" :
+        "All";
+      chip.classList.toggle("active", value === activeLayer);
+    });
+
     filterBar.querySelectorAll(".filter-chip").forEach((chip) => {
       chip.classList.toggle("active", chip.textContent === activeTheme);
     });
@@ -794,6 +854,7 @@
   buildFilters();
   initStarfield();
   loadScholarSnapshot();
+  loadReadingSnapshot();
   renderAll();
   showDetail(data.nodes.find((node) => node.id === selectedNodeId));
 })();

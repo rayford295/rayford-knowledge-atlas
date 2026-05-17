@@ -49,6 +49,8 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - `scripts/build-map.js`: compiles papers, readings, questions, and Scholar records into `data.js`.
 - `scripts/fetch-scholar.js`: refreshes public Google Scholar metadata.
 - `scripts/fetch-weread.js`: refreshes public-safe WeRead reading nodes from `WEREAD_API_KEY`.
+- `docs/ATLAS_ARCHITECTURE.md`: explains the input-question-output graph model.
+- `docs/OPERATIONS.md`: gives the update, QA, and publishing runbook.
 
 ## Current Output Layer
 
@@ -72,6 +74,12 @@ Use `npm run build` after editing `wiki/papers/`, `wiki/readings/`, or `wiki/que
 ## Privacy and Copyright Boundary
 
 This repository is public. The reading layer therefore commits only metadata, counts, themes, and Yifan's own synthesis scaffolds. It does not publish raw WeRead highlights, private thoughts, or long copyrighted excerpts.
+
+## Maintenance Docs
+
+- [Atlas Architecture](./docs/ATLAS_ARCHITECTURE.md)
+- [Operations Runbook](./docs/OPERATIONS.md)
+- [WeRead Integration](./docs/WEREAD_INTEGRATION.md)
 
 ## Make Your Own
 

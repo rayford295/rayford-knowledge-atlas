@@ -1,0 +1,52 @@
+name: Update WeRead Reading Layer
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-weread:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Refresh public-safe WeRead nodes
+        env:
+          WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
+        run: |
+          if [ -z "$WEREAD_API_KEY" ]; then
+            echo "WEREAD_API_KEY secret is not configured; skipping WeRead refresh."
+            exit 0
+          fi
+          npm run weread:update
+
+      - name: Rebuild public graph data
+        run: npm run build
+
+      - name: Verify graph data
+        run: |
+          node - <<'NODE'
+          const fs = require("fs");
+          const text = fs.readFileSync("data.js", "utf8")
+            .replace(/^window\.researchMapData = /, "")
+            .replace(/;\s*$/, "");
+          const data = JSON.parse(text);
+          if (!data.counts || !data.counts.input) {
+            throw new Error("data.js does not include reading input nodes");
+          }
+          console.log(`Verified ${data.counts.input} reading input nodes`);
+          NODE
+
+      - name: Commit updated reading layer and graph
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update WeRead reading layer and graph data"
+          file_pattern: raw/weread/public-reading-index.json wiki/readings/*.md data.js

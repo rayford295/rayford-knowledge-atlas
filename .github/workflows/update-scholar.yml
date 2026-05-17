@@ -23,8 +23,25 @@ jobs:
       - name: Refresh Google Scholar snapshot
         run: npm run scholar:update
 
-      - name: Commit updated snapshot
+      - name: Rebuild public graph data
+        run: npm run build
+
+      - name: Verify graph data
+        run: |
+          node - <<'NODE'
+          const fs = require("fs");
+          const text = fs.readFileSync("data.js", "utf8")
+            .replace(/^window\.researchMapData = /, "")
+            .replace(/;\s*$/, "");
+          const data = JSON.parse(text);
+          if (!data.nodes.length) {
+            throw new Error("data.js has no graph nodes");
+          }
+          console.log(`Verified ${data.nodes.length} graph nodes`);
+          NODE
+
+      - name: Commit updated snapshot and graph
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update Google Scholar snapshot"
-          file_pattern: raw/scholar/google-scholar.json
+          commit_message: "Update Scholar snapshot and graph data"
+          file_pattern: raw/scholar/google-scholar.json data.js
