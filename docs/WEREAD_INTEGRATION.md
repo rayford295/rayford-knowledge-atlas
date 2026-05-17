@@ -34,6 +34,7 @@ npm run build
 The script writes:
 
 - `raw/weread/public-reading-index.json`
+- `raw/weread/reading-intelligence.json`
 - `wiki/readings/*.md`
 
 Private exports, if ever created, should stay under `raw/weread/private/` or `raw/weread/snapshots/`; both are ignored by git.
@@ -56,6 +57,7 @@ Before committing after a WeRead update, confirm:
 - [ ] No long verbatim excerpts from copyrighted books are present.
 - [ ] Every generated reading page has at least one `connections` entry.
 - [ ] `raw/weread/public-reading-index.json` contains only metadata fields (title, author, counts, themes).
+- [ ] `raw/weread/reading-intelligence.json` contains only public-safe shelf, notebook, depth, and workflow signals.
 
 Run a quick scan for common private-text signals before committing:
 
@@ -77,6 +79,23 @@ Examples:
 - biographies -> `How do biographies train research judgment?` -> founder judgment and research taste.
 - institutional novels -> `What counts as evidence in disaster AI?` -> disaster assessment papers.
 
+## Reading Advisor Layer
+
+The advisor page applies the huashu-weread method:
+
+```text
+Shelf intention + notebook evidence + recent activity -> workflow queue
+```
+
+`raw/weread/reading-intelligence.json` keeps four public-safe lenses:
+
+- deep reads: books with strong note-count evidence;
+- recent signals: books recently active in the shelf or notebooks;
+- hidden deep reads: note-heavy books that are not visible in the current shelf view;
+- shelf gaps: books on the shelf with no public note signal yet.
+
+The page deliberately produces workflow moves, not private summaries: alchemy candidates, learning-path candidates, year-to-date review candidates, and atlas cleanup prompts.
+
 ## Updating the Public Layer
 
-After running `npm run weread:update`, review the generated reading pages before committing. Use the pre-commit checklist above before every `git commit`. Add hand-written synthesis when a book deserves a richer public page — especially for books that directly motivated a published paper.
+After running `npm run weread:update`, review the generated reading pages and the advisor JSON before committing. Use the pre-commit checklist above before every `git commit`. Add hand-written synthesis when a book deserves a richer public page — especially for books that directly motivated a published paper.

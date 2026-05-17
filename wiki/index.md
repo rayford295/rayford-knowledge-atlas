@@ -4,6 +4,7 @@
 
 - [[maps/input-output-map]]
 - [[maps/reading-input-map]]
+- [[maps/reading-intelligence-map]]
 - [[maps/question-map]]
 - [[maps/research-output-map]]
 - [[maps/publication-map]]

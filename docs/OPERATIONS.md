@@ -36,6 +36,7 @@ Before committing, inspect generated files under:
 
 ```text
 raw/weread/public-reading-index.json
+raw/weread/reading-intelligence.json
 wiki/readings/
 ```
 
@@ -90,18 +91,20 @@ Open:
 ```text
 http://127.0.0.1:8899/
 http://127.0.0.1:8899/readings.html
+http://127.0.0.1:8899/advisor.html
 http://127.0.0.1:8899/papers.html
 ```
 
 Check:
 
 - title says `Rayford Knowledge Atlas`;
-- homepage exposes separate `Readings` and `Papers` navigation;
+- homepage exposes separate `Readings`, `Advisor`, and `Papers` navigation;
 - sidebar counts show outputs, inputs, questions, and themes;
 - `Network`, `Timeline`, and `Flow` all render;
 - search finds a reading node such as `李小龙`;
 - search finds a migrated publication node such as `Agentic Urban Digital Twins`;
 - `readings.html` shows reading metrics and top WeRead signals;
+- `advisor.html` shows shelf books, notebook books, true reads, hidden deep reads, bridge themes, and workflow queue;
 - `papers.html` shows output metrics, filters, and publication cards;
 - selecting Inputs, Questions, and Outputs changes both the graph and inspector;
 - mobile width does not overlap text or controls.

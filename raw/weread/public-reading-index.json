@@ -1,6 +1,6 @@
 {
   "source": "WeRead public-safe reading index",
-  "generatedAt": "2026-05-17T02:57:35.664Z",
+  "generatedAt": "2026-05-17T16:46:39.665Z",
   "privacy": "No raw highlights or private note text are committed. This file keeps metadata, counts, themes, and graph links only.",
   "totals": {
     "notebookBookCount": 99,
@@ -22,7 +22,8 @@
       "reviewCount": 1,
       "lineCount": 1004,
       "bookmarkCount": 341,
-      "totalNoteCount": 1346
+      "totalNoteCount": 1346,
+      "lastReadDate": "2026-02-07"
     },
     {
       "bookId": "3300064301",
@@ -34,7 +35,8 @@
       "reviewCount": 0,
       "lineCount": 506,
       "bookmarkCount": 209,
-      "totalNoteCount": 715
+      "totalNoteCount": 715,
+      "lastReadDate": "2026-01-29"
     },
     {
       "bookId": "43993718",
@@ -46,7 +48,8 @@
       "reviewCount": 1,
       "lineCount": 94,
       "bookmarkCount": 375,
-      "totalNoteCount": 470
+      "totalNoteCount": 470,
+      "lastReadDate": "2025-10-29"
     },
     {
       "bookId": "31230615",
@@ -58,7 +61,8 @@
       "reviewCount": 1,
       "lineCount": 299,
       "bookmarkCount": 127,
-      "totalNoteCount": 427
+      "totalNoteCount": 427,
+      "lastReadDate": "2026-03-16"
     },
     {
       "bookId": "3300118393",
@@ -70,7 +74,8 @@
       "reviewCount": 0,
       "lineCount": 250,
       "bookmarkCount": 98,
-      "totalNoteCount": 348
+      "totalNoteCount": 348,
+      "lastReadDate": "2025-12-20"
     },
     {
       "bookId": "24019296",
@@ -82,7 +87,8 @@
       "reviewCount": 0,
       "lineCount": 168,
       "bookmarkCount": 172,
-      "totalNoteCount": 340
+      "totalNoteCount": 340,
+      "lastReadDate": "2026-01-12"
     },
     {
       "bookId": "3300021861",
@@ -94,7 +100,8 @@
       "reviewCount": 0,
       "lineCount": 181,
       "bookmarkCount": 149,
-      "totalNoteCount": 330
+      "totalNoteCount": 330,
+      "lastReadDate": "2025-10-16"
     },
     {
       "bookId": "3300151174",
@@ -106,7 +113,8 @@
       "reviewCount": 0,
       "lineCount": 235,
       "bookmarkCount": 86,
-      "totalNoteCount": 321
+      "totalNoteCount": 321,
+      "lastReadDate": "2026-03-01"
     },
     {
       "bookId": "3300045715",
@@ -118,7 +126,8 @@
       "reviewCount": 0,
       "lineCount": 122,
       "bookmarkCount": 198,
-      "totalNoteCount": 320
+      "totalNoteCount": 320,
+      "lastReadDate": "2025-10-03"
     },
     {
       "bookId": "25926862",
@@ -130,7 +139,8 @@
       "reviewCount": 0,
       "lineCount": 175,
       "bookmarkCount": 126,
-      "totalNoteCount": 301
+      "totalNoteCount": 301,
+      "lastReadDate": "2026-05-02"
     },
     {
       "bookId": "3300200299",
@@ -142,7 +152,8 @@
       "reviewCount": 0,
       "lineCount": 254,
       "bookmarkCount": 36,
-      "totalNoteCount": 290
+      "totalNoteCount": 290,
+      "lastReadDate": "2026-05-17"
     },
     {
       "bookId": "3300146170",
@@ -154,7 +165,8 @@
       "reviewCount": 0,
       "lineCount": 177,
       "bookmarkCount": 85,
-      "totalNoteCount": 262
+      "totalNoteCount": 262,
+      "lastReadDate": "2026-02-23"
     }
   ]
 }

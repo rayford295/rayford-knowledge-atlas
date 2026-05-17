@@ -2,6 +2,8 @@
 
 Reading inputs are the source layer of the atlas. They should be public-safe, concise, and connected to questions.
 
+For shelf-vs-notebook analysis, use [[reading-intelligence-map]].
+
 ## High-Signal WeRead Nodes
 
 - [[../readings/1-23303928]] feeds [[../questions/human-evidence-disaster-ai]]

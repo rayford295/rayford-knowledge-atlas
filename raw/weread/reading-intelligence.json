@@ -1,0 +1,738 @@
+{
+  "source": "huashu-weread-advisor public-safe intelligence layer",
+  "generatedAt": "2026-05-17T16:46:39.670Z",
+  "privacy": "No raw highlights, private comments, or long excerpts are committed. This file stores metadata-level signals for reading strategy.",
+  "method": {
+    "skill": "huashu-weread-advisor",
+    "inputs": [
+      "shelf/sync",
+      "user/notebooks",
+      "readdata/detail"
+    ],
+    "principle": "Cross the shelf with notebooks: shelf shows intention, notebooks show what was actually read deeply."
+  },
+  "totals": {
+    "shelfBookCount": 57,
+    "notebookBookCount": 99,
+    "notebookNoteCount": 10983,
+    "trueReadCount": 24,
+    "hiddenDeepReadCount": 45,
+    "shelfOnlyCount": 15,
+    "yearlyReadDays": 132,
+    "yearlyReadTime": "53h 0m",
+    "depthBands": {
+      "heavy": 56,
+      "committed": 7,
+      "light": 13,
+      "skim": 23
+    }
+  },
+  "lenses": {
+    "deepReads": [
+      {
+        "bookId": "23303928",
+        "title": "我的团长我的团（段奕宏、张译主演同名电视剧原著）",
+        "shortTitle": "我的团长我的团（段奕宏、张译主演同名...",
+        "author": "兰晓龙",
+        "readingProgress": 100,
+        "totalNoteCount": 1346,
+        "underlineCount": 1004,
+        "bookmarkCount": 341,
+        "thoughtCount": 1,
+        "lastActiveDate": "2026-02-07",
+        "wereadUrl": "weread://reading?bId=23303928",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "3300064301",
+        "title": "李小龙：神话和真实",
+        "shortTitle": "李小龙：神话和真实",
+        "author": "马修·波利",
+        "readingProgress": 93,
+        "totalNoteCount": 715,
+        "underlineCount": 506,
+        "bookmarkCount": 209,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-01-29",
+        "wereadUrl": "weread://reading?bId=3300064301",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "43993718",
+        "title": "白色巨塔（日本“国民级小说”，日剧巅峰之作）",
+        "shortTitle": "白色巨塔（日本“国民级小说”，日剧巅...",
+        "author": "山崎丰子",
+        "readingProgress": 100,
+        "totalNoteCount": 470,
+        "underlineCount": 94,
+        "bookmarkCount": 375,
+        "thoughtCount": 1,
+        "lastActiveDate": "2025-10-29",
+        "wereadUrl": "weread://reading?bId=43993718",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "31230615",
+        "title": "笑场",
+        "shortTitle": "笑场",
+        "author": "李诞",
+        "readingProgress": 91,
+        "totalNoteCount": 427,
+        "underlineCount": 299,
+        "bookmarkCount": 127,
+        "thoughtCount": 1,
+        "lastActiveDate": "2026-03-16",
+        "wereadUrl": "weread://reading?bId=31230615",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "3300118393",
+        "title": "自我突围（独家首发）",
+        "shortTitle": "自我突围（独家首发）",
+        "author": "施一公",
+        "readingProgress": 100,
+        "totalNoteCount": 348,
+        "underlineCount": 250,
+        "bookmarkCount": 98,
+        "thoughtCount": 0,
+        "lastActiveDate": "2025-12-20",
+        "wereadUrl": "weread://reading?bId=3300118393",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "24019296",
+        "title": "命运：文在寅自传",
+        "shortTitle": "命运：文在寅自传",
+        "author": "文在寅",
+        "readingProgress": 97,
+        "totalNoteCount": 340,
+        "underlineCount": 168,
+        "bookmarkCount": 172,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-01-12",
+        "wereadUrl": "weread://reading?bId=24019296",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "3300021861",
+        "title": "李嘉诚传",
+        "shortTitle": "李嘉诚传",
+        "author": "王晶 陈润",
+        "readingProgress": 100,
+        "totalNoteCount": 330,
+        "underlineCount": 181,
+        "bookmarkCount": 149,
+        "thoughtCount": 0,
+        "lastActiveDate": "2025-10-16",
+        "wereadUrl": "weread://reading?bId=3300021861",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "3300151174",
+        "title": "2049：未来10000天的可能",
+        "shortTitle": "2049：未来10000天的可能",
+        "author": "[美]凯文·凯利 吴晨",
+        "readingProgress": 99,
+        "totalNoteCount": 321,
+        "underlineCount": 235,
+        "bookmarkCount": 86,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-03-01",
+        "wereadUrl": "weread://reading?bId=3300151174",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "3300045715",
+        "title": "我是成龙",
+        "shortTitle": "我是成龙",
+        "author": "成龙 朱墨",
+        "readingProgress": 100,
+        "totalNoteCount": 320,
+        "underlineCount": 122,
+        "bookmarkCount": 198,
+        "thoughtCount": 0,
+        "lastActiveDate": "2025-10-03",
+        "wereadUrl": "weread://reading?bId=3300045715",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "25926862",
+        "title": "美丽新世界（译文经典）",
+        "shortTitle": "美丽新世界（译文经典）",
+        "author": "奥尔德斯·赫胥黎",
+        "readingProgress": 100,
+        "totalNoteCount": 301,
+        "underlineCount": 175,
+        "bookmarkCount": 126,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-05-02",
+        "wereadUrl": "weread://reading?bId=25926862",
+        "inShelf": false,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "3300200299",
+        "title": "2030倒计时：马斯克预言AI取代人类",
+        "shortTitle": "2030倒计时：马斯克预言AI取代人...",
+        "author": "史塔克",
+        "readingProgress": 92,
+        "totalNoteCount": 290,
+        "underlineCount": 254,
+        "bookmarkCount": 36,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-05-17",
+        "wereadUrl": "weread://reading?bId=3300200299",
+        "inShelf": true,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "3300146170",
+        "title": "段永平投资问答录（全两册）",
+        "shortTitle": "段永平投资问答录（全两册）",
+        "author": "孙力科",
+        "readingProgress": 100,
+        "totalNoteCount": 262,
+        "underlineCount": 177,
+        "bookmarkCount": 85,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-02-23",
+        "wereadUrl": "weread://reading?bId=3300146170",
+        "inShelf": false,
+        "signal": "heavy read"
+      }
+    ],
+    "activeNow": [
+      {
+        "bookId": "3300200299",
+        "title": "2030倒计时：马斯克预言AI取代人类",
+        "author": "史塔克",
+        "readingProgress": 92,
+        "totalNoteCount": 290,
+        "lastActiveDate": "2026-05-17",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=3300200299"
+      },
+      {
+        "bookId": "3300203616",
+        "title": "哈萨比斯：谷歌AI之脑",
+        "author": "[英]塞巴斯蒂安·马拉比",
+        "readingProgress": 1,
+        "totalNoteCount": 5,
+        "lastActiveDate": "2026-05-15",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=3300203616"
+      },
+      {
+        "bookId": "CB_FlTB3o9gXAyt87d71HD7U54k",
+        "title": "每周工作4小时",
+        "author": "（美）费里斯",
+        "readingProgress": 19,
+        "totalNoteCount": 103,
+        "lastActiveDate": "2026-05-13",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=CB_FlTB3o9gXAyt87d71HD7U54k"
+      },
+      {
+        "bookId": "3300201056",
+        "title": "小王子：新译与注释（中法英三语版）",
+        "author": "[法]圣埃克苏佩里",
+        "readingProgress": 24,
+        "totalNoteCount": 91,
+        "lastActiveDate": "2026-05-12",
+        "inShelf": false,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=3300201056"
+      },
+      {
+        "bookId": "3300181368",
+        "title": "1984",
+        "author": "[英]乔治·奥威尔",
+        "readingProgress": 4,
+        "totalNoteCount": 13,
+        "lastActiveDate": "2026-05-05",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=3300181368"
+      },
+      {
+        "bookId": "3300058349",
+        "title": "生成式人工智能",
+        "author": "丁磊",
+        "readingProgress": 10,
+        "totalNoteCount": 37,
+        "lastActiveDate": "2026-05-04",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=3300058349"
+      },
+      {
+        "bookId": "3300053592",
+        "title": "十三邀：我们时代的头脑与心灵 （全四辑）",
+        "author": "许知远",
+        "readingProgress": 96,
+        "totalNoteCount": 201,
+        "lastActiveDate": "2026-05-04",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=3300053592"
+      },
+      {
+        "bookId": "25926862",
+        "title": "美丽新世界（译文经典）",
+        "author": "奥尔德斯·赫胥黎",
+        "readingProgress": 100,
+        "totalNoteCount": 301,
+        "lastActiveDate": "2026-05-02",
+        "inShelf": false,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=25926862"
+      },
+      {
+        "bookId": "31808223",
+        "title": "白痴（陀思妥耶夫斯基文集2015）",
+        "author": "陀思妥耶夫斯基",
+        "readingProgress": 2,
+        "totalNoteCount": 5,
+        "lastActiveDate": "2026-04-23",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=31808223"
+      },
+      {
+        "bookId": "3300065906",
+        "title": "逆势者：彼得·蒂尔传",
+        "author": "马克斯·查夫金",
+        "readingProgress": null,
+        "totalNoteCount": 0,
+        "lastActiveDate": "2026-04-21",
+        "inShelf": true,
+        "hasNotes": false,
+        "wereadUrl": "weread://reading?bId=3300065906"
+      }
+    ],
+    "hiddenDeepReads": [
+      {
+        "bookId": "23303928",
+        "title": "我的团长我的团（段奕宏、张译主演同名电视剧原著）",
+        "shortTitle": "我的团长我的团（段奕宏、张译主演同名...",
+        "author": "兰晓龙",
+        "readingProgress": 100,
+        "totalNoteCount": 1346,
+        "underlineCount": 1004,
+        "bookmarkCount": 341,
+        "thoughtCount": 1,
+        "lastActiveDate": "2026-02-07",
+        "wereadUrl": "weread://reading?bId=23303928",
+        "signal": "notebook-only deep read"
+      },
+      {
+        "bookId": "3300064301",
+        "title": "李小龙：神话和真实",
+        "shortTitle": "李小龙：神话和真实",
+        "author": "马修·波利",
+        "readingProgress": 93,
+        "totalNoteCount": 715,
+        "underlineCount": 506,
+        "bookmarkCount": 209,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-01-29",
+        "wereadUrl": "weread://reading?bId=3300064301",
+        "signal": "notebook-only deep read"
+      },
+      {
+        "bookId": "43993718",
+        "title": "白色巨塔（日本“国民级小说”，日剧巅峰之作）",
+        "shortTitle": "白色巨塔（日本“国民级小说”，日剧巅...",
+        "author": "山崎丰子",
+        "readingProgress": 100,
+        "totalNoteCount": 470,
+        "underlineCount": 94,
+        "bookmarkCount": 375,
+        "thoughtCount": 1,
+        "lastActiveDate": "2025-10-29",
+        "wereadUrl": "weread://reading?bId=43993718",
+        "signal": "notebook-only deep read"
+      },
+      {
+        "bookId": "31230615",
+        "title": "笑场",
+        "shortTitle": "笑场",
+        "author": "李诞",
+        "readingProgress": 91,
+        "totalNoteCount": 427,
+        "underlineCount": 299,
+        "bookmarkCount": 127,
+        "thoughtCount": 1,
+        "lastActiveDate": "2026-03-16",
+        "wereadUrl": "weread://reading?bId=31230615",
+        "signal": "notebook-only deep read"
+      },
+      {
+        "bookId": "3300118393",
+        "title": "自我突围（独家首发）",
+        "shortTitle": "自我突围（独家首发）",
+        "author": "施一公",
+        "readingProgress": 100,
+        "totalNoteCount": 348,
+        "underlineCount": 250,
+        "bookmarkCount": 98,
+        "thoughtCount": 0,
+        "lastActiveDate": "2025-12-20",
+        "wereadUrl": "weread://reading?bId=3300118393",
+        "signal": "notebook-only deep read"
+      },
+      {
+        "bookId": "24019296",
+        "title": "命运：文在寅自传",
+        "shortTitle": "命运：文在寅自传",
+        "author": "文在寅",
+        "readingProgress": 97,
+        "totalNoteCount": 340,
+        "underlineCount": 168,
+        "bookmarkCount": 172,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-01-12",
+        "wereadUrl": "weread://reading?bId=24019296",
+        "signal": "notebook-only deep read"
+      },
+      {
+        "bookId": "3300021861",
+        "title": "李嘉诚传",
+        "shortTitle": "李嘉诚传",
+        "author": "王晶 陈润",
+        "readingProgress": 100,
+        "totalNoteCount": 330,
+        "underlineCount": 181,
+        "bookmarkCount": 149,
+        "thoughtCount": 0,
+        "lastActiveDate": "2025-10-16",
+        "wereadUrl": "weread://reading?bId=3300021861",
+        "signal": "notebook-only deep read"
+      },
+      {
+        "bookId": "3300151174",
+        "title": "2049：未来10000天的可能",
+        "shortTitle": "2049：未来10000天的可能",
+        "author": "[美]凯文·凯利 吴晨",
+        "readingProgress": 99,
+        "totalNoteCount": 321,
+        "underlineCount": 235,
+        "bookmarkCount": 86,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-03-01",
+        "wereadUrl": "weread://reading?bId=3300151174",
+        "signal": "notebook-only deep read"
+      },
+      {
+        "bookId": "3300045715",
+        "title": "我是成龙",
+        "shortTitle": "我是成龙",
+        "author": "成龙 朱墨",
+        "readingProgress": 100,
+        "totalNoteCount": 320,
+        "underlineCount": 122,
+        "bookmarkCount": 198,
+        "thoughtCount": 0,
+        "lastActiveDate": "2025-10-03",
+        "wereadUrl": "weread://reading?bId=3300045715",
+        "signal": "notebook-only deep read"
+      },
+      {
+        "bookId": "25926862",
+        "title": "美丽新世界（译文经典）",
+        "shortTitle": "美丽新世界（译文经典）",
+        "author": "奥尔德斯·赫胥黎",
+        "readingProgress": 100,
+        "totalNoteCount": 301,
+        "underlineCount": 175,
+        "bookmarkCount": 126,
+        "thoughtCount": 0,
+        "lastActiveDate": "2026-05-02",
+        "wereadUrl": "weread://reading?bId=25926862",
+        "signal": "notebook-only deep read"
+      }
+    ],
+    "shelfOnly": [
+      {
+        "bookId": "3300065906",
+        "title": "逆势者：彼得·蒂尔传",
+        "author": "马克斯·查夫金",
+        "category": "经济理财-商业",
+        "lastActiveDate": "2026-04-21",
+        "wereadUrl": "weread://reading?bId=3300065906",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "805144",
+        "title": "胡适四十自述",
+        "author": "胡适",
+        "category": "人物传记-学者",
+        "lastActiveDate": "2026-01-31",
+        "wereadUrl": "weread://reading?bId=805144",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "29996178",
+        "title": "大创业家：麦当劳之父雷·克洛克自传",
+        "author": "雷·克洛克 罗伯特·安德森",
+        "category": "经济理财-商业",
+        "lastActiveDate": "2025-09-09",
+        "wereadUrl": "weread://reading?bId=29996178",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "3300053438",
+        "title": "翦商：殷周之变与华夏新生",
+        "author": "李硕",
+        "category": "历史-中国古代",
+        "lastActiveDate": "2025-07-17",
+        "wereadUrl": "weread://reading?bId=3300053438",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "3300075734",
+        "title": "胜者心法：资治通鉴成事之道",
+        "author": "冯唐",
+        "category": "历史-中国近现代",
+        "lastActiveDate": "2025-06-28",
+        "wereadUrl": "weread://reading?bId=3300075734",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "3300022034",
+        "title": "埃隆·马斯克传",
+        "author": "王晶 陈润",
+        "category": "经济理财-商业",
+        "lastActiveDate": "2025-06-26",
+        "wereadUrl": "weread://reading?bId=3300022034",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "709763",
+        "title": "乔布斯传",
+        "author": "柳润墨",
+        "category": "经济理财-商业",
+        "lastActiveDate": "2025-06-22",
+        "wereadUrl": "weread://reading?bId=709763",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "25135387",
+        "title": "流浪地球",
+        "author": "刘慈欣",
+        "category": "精品小说-科幻小说",
+        "lastActiveDate": "2025-05-31",
+        "wereadUrl": "weread://reading?bId=25135387",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "809705",
+        "title": "素书",
+        "author": "[秦汉]黄石公",
+        "category": "历史-历史典籍",
+        "lastActiveDate": "2025-05-17",
+        "wereadUrl": "weread://reading?bId=809705",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "28386824",
+        "title": "创始人：新管理者如何度过第一个90天",
+        "author": "[英]迈克尔·沃特金斯",
+        "category": "经济理财-管理",
+        "lastActiveDate": "2025-04-29",
+        "wereadUrl": "weread://reading?bId=28386824",
+        "signal": "on shelf, no public note signal yet"
+      }
+    ]
+  },
+  "bridgeThemes": [
+    {
+      "theme": "Biography and Judgment",
+      "label": "Biography as judgment training",
+      "question": "biography-research-judgment",
+      "noteCount": 3384,
+      "bookCount": 23,
+      "anchorBooks": [
+        {
+          "title": "李小龙：神话和真实",
+          "notes": 715
+        },
+        {
+          "title": "自我突围（独家首发）",
+          "notes": 348
+        },
+        {
+          "title": "命运：文在寅自传",
+          "notes": 340
+        }
+      ],
+      "suggestedMove": "Turn biography notes into a reusable taste and timing map."
+    },
+    {
+      "theme": "Institutions Under Stress",
+      "label": "Evidence under institutional pressure",
+      "question": "human-evidence-disaster-ai",
+      "noteCount": 2130,
+      "bookCount": 4,
+      "anchorBooks": [
+        {
+          "title": "我的团长我的团（段奕宏、张译主演同名...",
+          "notes": 1346
+        },
+        {
+          "title": "白色巨塔（日本“国民级小说”，日剧巅...",
+          "notes": 470
+        },
+        {
+          "title": "美丽新世界（译文经典）",
+          "notes": 301
+        }
+      ],
+      "suggestedMove": "Connect the institutional novels and histories to disaster-evidence papers."
+    },
+    {
+      "theme": "Evidence and Power",
+      "label": "Evidence under institutional pressure",
+      "question": "human-evidence-disaster-ai",
+      "noteCount": 2130,
+      "bookCount": 4,
+      "anchorBooks": [
+        {
+          "title": "我的团长我的团（段奕宏、张译主演同名...",
+          "notes": 1346
+        },
+        {
+          "title": "白色巨塔（日本“国民级小说”，日剧巅...",
+          "notes": 470
+        },
+        {
+          "title": "美丽新世界（译文经典）",
+          "notes": 301
+        }
+      ],
+      "suggestedMove": "Ask how evidence changes when organizations, incentives, and power distort it."
+    },
+    {
+      "theme": "Founder Judgment",
+      "label": "Founder judgment and timing",
+      "question": "founder-window-research-output",
+      "noteCount": 1629,
+      "bookCount": 8,
+      "anchorBooks": [
+        {
+          "title": "李嘉诚传",
+          "notes": 330
+        },
+        {
+          "title": "2030倒计时：马斯克预言AI取代人...",
+          "notes": 290
+        },
+        {
+          "title": "段永平投资问答录（全两册）",
+          "notes": 262
+        }
+      ],
+      "suggestedMove": "Convert founder reading into research-to-product questions."
+    },
+    {
+      "theme": "Narrative and Public Voice",
+      "label": "Public voice and lived judgment",
+      "question": "biography-research-judgment",
+      "noteCount": 1355,
+      "bookCount": 6,
+      "anchorBooks": [
+        {
+          "title": "白色巨塔（日本“国民级小说”，日剧巅...",
+          "notes": 470
+        },
+        {
+          "title": "笑场",
+          "notes": 427
+        },
+        {
+          "title": "冷场",
+          "notes": 250
+        }
+      ],
+      "suggestedMove": "Use the review workflow to turn narrative reading into public writing."
+    },
+    {
+      "theme": "AI Futures",
+      "label": "AI systems and human judgment",
+      "question": "ai-systems-human-judgment",
+      "noteCount": 936,
+      "bookCount": 8,
+      "anchorBooks": [
+        {
+          "title": "2049：未来10000天的可能",
+          "notes": 321
+        },
+        {
+          "title": "2030倒计时：马斯克预言AI取代人...",
+          "notes": 290
+        },
+        {
+          "title": "经营未来",
+          "notes": 198
+        }
+      ],
+      "suggestedMove": "Use the path workflow to turn AI biography and future-risk reading into a research agenda."
+    },
+    {
+      "theme": "Human-AI Judgment",
+      "label": "AI systems and human judgment",
+      "question": "ai-systems-human-judgment",
+      "noteCount": 936,
+      "bookCount": 8,
+      "anchorBooks": [
+        {
+          "title": "2049：未来10000天的可能",
+          "notes": 321
+        },
+        {
+          "title": "2030倒计时：马斯克预言AI取代人...",
+          "notes": 290
+        },
+        {
+          "title": "经营未来",
+          "notes": 198
+        }
+      ],
+      "suggestedMove": "Use the alchemy workflow to extract judgment principles from the marked AI books."
+    }
+  ],
+  "advisorMoves": [
+    {
+      "workflow": "alchemy",
+      "title": "Turn 我的团长我的团（段奕宏、张译主演同名... into a reusable synthesis note",
+      "evidence": "1346 public-safe note signals make it the strongest candidate for note alchemy."
+    },
+    {
+      "workflow": "path",
+      "title": "Build a learning path around Biography as judgment training",
+      "evidence": "23 books and 3384 notes point to this as a real reading line."
+    },
+    {
+      "workflow": "review",
+      "title": "Create a year-to-date reading review",
+      "evidence": "132 reading days and 53h 0m of WeRead time are enough for a public-safe review."
+    },
+    {
+      "workflow": "advisor",
+      "title": "Promote hidden deep reads into the visible atlas",
+      "evidence": "45 note-heavy books appear in notebooks but not in the current shelf view."
+    }
+  ]
+}

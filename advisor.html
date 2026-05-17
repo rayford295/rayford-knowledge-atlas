@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Advisor | Rayford Knowledge Atlas</title>
+  <meta
+    name="description"
+    content="A public-safe reading intelligence page for Rayford Knowledge Atlas, built from WeRead shelf and notebook signals without exposing private highlights."
+  >
+  <link rel="canonical" href="https://rayford295.github.io/rayford-knowledge-atlas/advisor.html">
+  <meta property="og:title" content="Reading Advisor | Rayford Knowledge Atlas">
+  <meta property="og:description" content="A reading intelligence layer that separates real deep reading from shelf intention, hidden deep reads, and recent activity.">
+  <meta property="og:image" content="https://rayford295.github.io/rayford-knowledge-atlas/assets/rayford-knowledge-atlas-preview.png">
+  <meta property="og:url" content="https://rayford295.github.io/rayford-knowledge-atlas/advisor.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reading Advisor | Rayford Knowledge Atlas">
+  <meta name="twitter:description" content="A public-safe WeRead advisor layer for Rayford Knowledge Atlas.">
+  <meta name="twitter:image" content="https://rayford295.github.io/rayford-knowledge-atlas/assets/rayford-knowledge-atlas-preview.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css?v=2026051708">
+</head>
+<body>
+  <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+  <div class="app-shell guide-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Rayford Knowledge Atlas">
+        <span class="brand-mark">RK</span>
+        <span>
+          <strong>Rayford Knowledge Atlas</strong>
+          <small>WeRead shelf, notebooks, and output questions</small>
+        </span>
+      </a>
+
+      <nav class="top-links guide-links" aria-label="Primary links">
+        <a href="./index.html">Atlas</a>
+        <a href="./readings.html">Readings</a>
+        <a href="./papers.html">Papers</a>
+        <a href="https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/readings" target="_blank" rel="noopener">Reading Vault</a>
+        <a href="https://github.com/rayford295/rayford-knowledge-atlas" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="guide-page advisor-page">
+      <section class="guide-hero advisor-hero">
+        <p class="kicker">Reading Advisor Layer</p>
+        <h1>Bookshelf is intention. Notes are evidence.</h1>
+        <p>
+          This page applies the huashu-weread advisor method to the atlas. It compares shelf signals with notebook signals, then turns reading into visible next actions for synthesis, learning paths, and output writing.
+        </p>
+        <div class="reading-metrics advisor-metrics" id="advisor-metrics" aria-label="Reading advisor metrics">
+          <div><strong>--</strong><span>shelf books</span></div>
+          <div><strong>--</strong><span>notebook books</span></div>
+          <div><strong>--</strong><span>true reads</span></div>
+          <div><strong>--</strong><span>hidden deep reads</span></div>
+        </div>
+      </section>
+
+      <section class="guide-grid advisor-principles" aria-label="Advisor principles">
+        <article class="guide-panel">
+          <span>1</span>
+          <h2>Shelf vs Notes</h2>
+          <p>The shelf shows what I meant to read. Notebooks show what actually left marks.</p>
+        </article>
+        <article class="guide-panel">
+          <span>2</span>
+          <h2>Recent Beats Static</h2>
+          <p>Recent activity reveals the live edge of attention better than a permanent category list.</p>
+        </article>
+        <article class="guide-panel">
+          <span>3</span>
+          <h2>Notes Become Workflows</h2>
+          <p>Deep reads feed alchemy, learning paths, reviews, and the questions that drive papers.</p>
+        </article>
+      </section>
+
+      <section class="advisor-grid" aria-label="Reading intelligence lenses">
+        <article class="guide-panel advisor-panel">
+          <div class="reading-list-heading compact-heading">
+            <div>
+              <p class="kicker">Lens 1</p>
+              <h2>Deep reads</h2>
+            </div>
+          </div>
+          <div class="advisor-list" id="deep-reads"></div>
+        </article>
+
+        <article class="guide-panel advisor-panel">
+          <div class="reading-list-heading compact-heading">
+            <div>
+              <p class="kicker">Lens 2</p>
+              <h2>Recent signals</h2>
+            </div>
+          </div>
+          <div class="advisor-list" id="active-now"></div>
+        </article>
+
+        <article class="guide-panel advisor-panel">
+          <div class="reading-list-heading compact-heading">
+            <div>
+              <p class="kicker">Lens 3</p>
+              <h2>Shelf gaps</h2>
+            </div>
+          </div>
+          <div class="advisor-list" id="shelf-gaps"></div>
+        </article>
+      </section>
+
+      <section class="guide-panel advisor-bridge-panel">
+        <div class="reading-list-heading">
+          <div>
+            <p class="kicker">Bridge Themes</p>
+            <h2>Where reading already wants to become output</h2>
+          </div>
+          <a href="./index.html?layer=question">Open question layer</a>
+        </div>
+        <div class="theme-bridge-grid" id="bridge-themes"></div>
+      </section>
+
+      <section class="guide-panel advisor-bridge-panel">
+        <div class="reading-list-heading">
+          <div>
+            <p class="kicker">Workflow Queue</p>
+            <h2>Next actions for the atlas</h2>
+          </div>
+          <a href="./raw/weread/reading-intelligence.json">Open raw intelligence</a>
+        </div>
+        <div class="advisor-moves" id="advisor-moves"></div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const metrics = document.getElementById("advisor-metrics");
+      const deepReads = document.getElementById("deep-reads");
+      const activeNow = document.getElementById("active-now");
+      const shelfGaps = document.getElementById("shelf-gaps");
+      const bridgeThemes = document.getElementById("bridge-themes");
+      const advisorMoves = document.getElementById("advisor-moves");
+      const starfield = document.getElementById("starfield");
+
+      function initStarfield() {
+        if (!starfield) {
+          return;
+        }
+
+        const context = starfield.getContext("2d");
+        let width = 0;
+        let height = 0;
+        let stars = [];
+
+        function resize() {
+          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          width = window.innerWidth;
+          height = window.innerHeight;
+          starfield.width = Math.floor(width * ratio);
+          starfield.height = Math.floor(height * ratio);
+          starfield.style.width = width + "px";
+          starfield.style.height = height + "px";
+          context.setTransform(ratio, 0, 0, ratio, 0, 0);
+          stars = Array.from({ length: Math.min(180, Math.floor((width * height) / 6200)) }, (_, index) => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: index % 9 === 0 ? 1.6 : Math.random() * 1.1 + 0.3,
+            alpha: Math.random() * 0.5 + 0.16,
+            tint: index % 7 === 0 ? "255, 212, 106" : "186, 255, 232"
+          }));
+        }
+
+        function draw() {
+          context.clearRect(0, 0, width, height);
+          stars.forEach((star) => {
+            context.beginPath();
+            context.fillStyle = `rgba(${star.tint}, ${star.alpha})`;
+            context.shadowColor = `rgba(${star.tint}, ${star.alpha})`;
+            context.shadowBlur = star.radius * 7;
+            context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+            context.fill();
+          });
+        }
+
+        resize();
+        draw();
+        window.addEventListener("resize", () => {
+          resize();
+          draw();
+        });
+      }
+
+      function setMetric(index, value) {
+        const card = metrics.children[index];
+        if (card) {
+          card.querySelector("strong").textContent = String(value ?? "--");
+        }
+      }
+
+      function createBookRow(book, index, mode) {
+        const row = document.createElement("article");
+        row.className = "advisor-row";
+
+        const rank = document.createElement("span");
+        rank.className = "reading-rank";
+        rank.textContent = String(index + 1).padStart(2, "0");
+
+        const body = document.createElement("div");
+        const title = document.createElement("h3");
+        title.textContent = book.title;
+        const meta = document.createElement("p");
+        const bits = [book.author, book.lastActiveDate, book.readingProgress !== null && book.readingProgress !== undefined ? `${book.readingProgress}% read` : null].filter(Boolean);
+        meta.textContent = bits.join(" | ");
+        body.append(title, meta);
+
+        const stat = document.createElement("a");
+        stat.href = book.wereadUrl || "#";
+        stat.textContent = mode === "shelf" ? "Open" : `${book.totalNoteCount || 0} notes`;
+
+        row.append(rank, body, stat);
+        return row;
+      }
+
+      function renderBookList(element, books, empty, mode) {
+        element.innerHTML = "";
+        if (!books || !books.length) {
+          element.innerHTML = `<p class="repo-empty">${empty}</p>`;
+          return;
+        }
+        books.slice(0, 7).forEach((book, index) => {
+          element.appendChild(createBookRow(book, index, mode));
+        });
+      }
+
+      function renderThemes(themes) {
+        bridgeThemes.innerHTML = "";
+        if (!themes || !themes.length) {
+          bridgeThemes.innerHTML = "<p class=\"repo-empty\">Bridge themes will appear after the next WeRead sync.</p>";
+          return;
+        }
+
+        themes.slice(0, 6).forEach((theme) => {
+          const card = document.createElement("article");
+          card.className = "theme-bridge-card";
+          const eyebrow = document.createElement("p");
+          eyebrow.className = "paper-eyebrow";
+          eyebrow.textContent = `${theme.bookCount} books | ${theme.noteCount} notes`;
+          const title = document.createElement("h3");
+          title.textContent = theme.label || theme.theme;
+          const move = document.createElement("p");
+          move.textContent = theme.suggestedMove;
+          const anchors = document.createElement("div");
+          anchors.className = "paper-tags";
+          (theme.anchorBooks || []).forEach((book) => {
+            const tag = document.createElement("span");
+            tag.textContent = `${book.title} · ${book.notes}`;
+            anchors.appendChild(tag);
+          });
+          const link = document.createElement("a");
+          link.href = theme.question ? `./index.html?node=${encodeURIComponent(theme.question)}&layer=question` : "./index.html?layer=question";
+          link.textContent = "Open bridge question";
+          card.append(eyebrow, title, move, anchors, link);
+          bridgeThemes.appendChild(card);
+        });
+      }
+
+      function renderMoves(moves) {
+        advisorMoves.innerHTML = "";
+        (moves || []).forEach((move) => {
+          const card = document.createElement("article");
+          card.className = "advisor-move";
+          const chip = document.createElement("span");
+          chip.className = "workflow-chip";
+          chip.textContent = move.workflow;
+          const title = document.createElement("h3");
+          title.textContent = move.title;
+          const evidence = document.createElement("p");
+          evidence.textContent = move.evidence;
+          card.append(chip, title, evidence);
+          advisorMoves.appendChild(card);
+        });
+      }
+
+      function render(payload) {
+        const totals = payload.totals || {};
+        setMetric(0, totals.shelfBookCount);
+        setMetric(1, totals.notebookBookCount);
+        setMetric(2, totals.trueReadCount);
+        setMetric(3, totals.hiddenDeepReadCount);
+        renderBookList(deepReads, payload.lenses?.deepReads, "No deep reads yet.", "notes");
+        renderBookList(activeNow, payload.lenses?.activeNow, "No recent activity yet.", "notes");
+        renderBookList(shelfGaps, payload.lenses?.shelfOnly, "No shelf-only gaps found.", "shelf");
+        renderThemes(payload.bridgeThemes);
+        renderMoves(payload.advisorMoves);
+      }
+
+      initStarfield();
+      fetch("./raw/weread/reading-intelligence.json", { cache: "no-store" })
+        .then((response) => response.ok ? response.json() : Promise.reject(new Error("Reading intelligence unavailable")))
+        .then(render)
+        .catch(() => {
+          deepReads.innerHTML = "<p class=\"repo-empty\">Reading intelligence unavailable. Run the next WeRead sync.</p>";
+        });
+    })();
+  </script>
+</body>
+</html>

@@ -26,6 +26,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 - Live site: [rayford295.github.io/rayford-knowledge-atlas](https://rayford295.github.io/rayford-knowledge-atlas/)
 - Reading input page: [rayford295.github.io/rayford-knowledge-atlas/readings.html](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)
+- Reading advisor page: [rayford295.github.io/rayford-knowledge-atlas/advisor.html](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)
 - Research output page: [rayford295.github.io/rayford-knowledge-atlas/papers.html](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)
 - Published PDF archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/publications](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)
 - Fork guide: [rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
@@ -36,7 +37,8 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 ## Frontend Experience
 
 - The first screen is an interactive knowledge constellation.
-- Reading inputs and research outputs have separate library pages, so the main atlas can focus on relationships instead of acting as one crowded catalog.
+- Reading inputs, reading intelligence, and research outputs have separate library pages, so the main atlas can focus on relationships instead of acting as one crowded catalog.
+- The reading advisor page applies the huashu-weread method: cross the shelf with notebooks, separate intention from deep reading, and turn reading signals into workflows.
 - The graph supports keyword search, theme filters, node cards, and three views: `Network`, `Timeline`, and `Flow`.
 - `Flow` separates reading inputs, bridge questions, and research outputs.
 - Each node opens an inspector with source metadata, themes, methods or reading lenses, links, metrics, and graph relationships.
@@ -57,6 +59,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - `raw/publications/`: migrated publication records from the former Publications repository.
 - `raw/scholar/google-scholar.json`: the latest public Google Scholar snapshot.
 - `raw/weread/public-reading-index.json`: public-safe WeRead metadata, note counts, and reading graph seeds.
+- `raw/weread/reading-intelligence.json`: public-safe advisor signals from the shelf, notebooks, reading depth, and recent activity.
 - `scripts/build-map.js`: compiles papers, readings, questions, and Scholar records into `data.js`.
 - `scripts/fetch-scholar.js`: refreshes public Google Scholar metadata.
 - `scripts/fetch-weread.js`: refreshes public-safe WeRead reading nodes from `WEREAD_API_KEY`.
@@ -72,7 +75,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 ## Current Input Layer
 
-The first WeRead seed imports the highest-signal public-safe reading nodes by note count, including books on institutions, biography, AI futures, founder judgment, public voice, and social imagination. Raw highlights and private note text are intentionally excluded from the public repository.
+The WeRead layer imports the highest-signal public-safe reading nodes by note count, including books on institutions, biography, AI futures, founder judgment, public voice, and social imagination. The advisor layer then compares shelf presence with notebook evidence to identify deep reads, recent signals, shelf gaps, and reading-to-output workflow moves. Raw highlights and private note text are intentionally excluded from the public repository.
 
 ## Local Workflow
 

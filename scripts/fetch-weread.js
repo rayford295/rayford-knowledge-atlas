@@ -6,6 +6,7 @@ const repoRoot = path.resolve(__dirname, "..");
 const outputDir = path.join(repoRoot, "raw", "weread");
 const readingsDir = path.join(repoRoot, "wiki", "readings");
 const publicIndexPath = path.join(outputDir, "public-reading-index.json");
+const intelligencePath = path.join(outputDir, "reading-intelligence.json");
 const gatewayUrl = "https://i.weread.qq.com/api/agent/gateway";
 const skillVersion = "1.0.3";
 
@@ -102,6 +103,15 @@ function secondsToText(seconds) {
   return `${hours}h ${minutes}m`;
 }
 
+function timestampToDate(timestamp) {
+  const value = Number(timestamp || 0);
+  if (!value) {
+    return null;
+  }
+
+  return new Date(value * 1000).toISOString().slice(0, 10);
+}
+
 function sanitizeScalar(value) {
   return String(value || "")
     .replace(/\r?\n/g, " ")
@@ -169,6 +179,249 @@ function inferConnections(themes) {
   }
 
   return Array.from(connections.values()).slice(0, 4);
+}
+
+function themeRoute(theme) {
+  const routes = {
+    "AI Futures": {
+      question: "ai-systems-human-judgment",
+      label: "AI systems and human judgment",
+      move: "Use the path workflow to turn AI biography and future-risk reading into a research agenda."
+    },
+    "Human-AI Judgment": {
+      question: "ai-systems-human-judgment",
+      label: "AI systems and human judgment",
+      move: "Use the alchemy workflow to extract judgment principles from the marked AI books."
+    },
+    "Institutions Under Stress": {
+      question: "human-evidence-disaster-ai",
+      label: "Evidence under institutional pressure",
+      move: "Connect the institutional novels and histories to disaster-evidence papers."
+    },
+    "Evidence and Power": {
+      question: "human-evidence-disaster-ai",
+      label: "Evidence under institutional pressure",
+      move: "Ask how evidence changes when organizations, incentives, and power distort it."
+    },
+    "Biography and Judgment": {
+      question: "biography-research-judgment",
+      label: "Biography as judgment training",
+      move: "Turn biography notes into a reusable taste and timing map."
+    },
+    "Founder Judgment": {
+      question: "founder-window-research-output",
+      label: "Founder judgment and timing",
+      move: "Convert founder reading into research-to-product questions."
+    },
+    "Narrative and Public Voice": {
+      question: "biography-research-judgment",
+      label: "Public voice and lived judgment",
+      move: "Use the review workflow to turn narrative reading into public writing."
+    }
+  };
+
+  return routes[theme] || null;
+}
+
+function toShelfRecord(item) {
+  return {
+    bookId: String(item.bookId || ""),
+    title: sanitizeScalar(item.title || "Untitled"),
+    author: sanitizeScalar(item.author || ""),
+    category: sanitizeScalar(item.category || ""),
+    finishReading: Boolean(item.finishReading),
+    readUpdateTime: Number(item.readUpdateTime || item.updateTime || 0),
+    readUpdateDate: timestampToDate(item.readUpdateTime || item.updateTime)
+  };
+}
+
+function compactReading(reading, extra = {}) {
+  return {
+    bookId: reading.bookId,
+    title: reading.title,
+    shortTitle: reading.shortTitle,
+    author: reading.author,
+    readingProgress: reading.readingProgress,
+    totalNoteCount: reading.totalNoteCount,
+    underlineCount: reading.lineCount,
+    bookmarkCount: reading.bookmarkCount,
+    thoughtCount: reading.reviewCount,
+    lastActiveDate: timestampToDate(reading.lastReadTime),
+    wereadUrl: `weread://reading?bId=${reading.bookId}`,
+    ...extra
+  };
+}
+
+function publicReadingRecord(reading) {
+  const { lastReadTime, ...record } = reading;
+  if (lastReadTime) {
+    record.lastReadDate = timestampToDate(lastReadTime);
+  }
+  return record;
+}
+
+function buildReadingIntelligence({ readings, shelf, annual, notebooks }) {
+  const shelfBooks = (shelf.books || []).map(toShelfRecord).filter((book) => book.bookId);
+  const shelfById = new Map(shelfBooks.map((book) => [book.bookId, book]));
+  const notebookById = new Map(readings.map((reading) => [reading.bookId, reading]));
+  const deepReads = readings
+    .filter((reading) => reading.totalNoteCount >= 20)
+    .sort((a, b) => b.totalNoteCount - a.totalNoteCount);
+  const trueReads = readings.filter((reading) => shelfById.has(reading.bookId) && reading.totalNoteCount >= 5);
+  const hiddenDeepReads = readings
+    .filter((reading) => !shelfById.has(reading.bookId) && reading.totalNoteCount >= 10)
+    .sort((a, b) => b.totalNoteCount - a.totalNoteCount);
+  const shelfOnly = shelfBooks
+    .filter((book) => !notebookById.has(book.bookId))
+    .sort((a, b) => b.readUpdateTime - a.readUpdateTime);
+
+  const activeMap = new Map();
+  shelfBooks.forEach((book) => {
+    activeMap.set(book.bookId, {
+      bookId: book.bookId,
+      title: book.title,
+      author: book.author,
+      readingProgress: book.finishReading ? 100 : null,
+      totalNoteCount: notebookById.get(book.bookId)?.totalNoteCount || 0,
+      lastActiveTime: book.readUpdateTime,
+      lastActiveDate: book.readUpdateDate,
+      inShelf: true,
+      hasNotes: notebookById.has(book.bookId),
+      wereadUrl: `weread://reading?bId=${book.bookId}`
+    });
+  });
+  readings.forEach((reading) => {
+    const existing = activeMap.get(reading.bookId);
+    const lastActiveTime = Math.max(existing?.lastActiveTime || 0, reading.lastReadTime || 0);
+    activeMap.set(reading.bookId, {
+      bookId: reading.bookId,
+      title: reading.title,
+      author: reading.author,
+      readingProgress: reading.readingProgress,
+      totalNoteCount: reading.totalNoteCount,
+      lastActiveTime,
+      lastActiveDate: timestampToDate(lastActiveTime),
+      inShelf: shelfById.has(reading.bookId),
+      hasNotes: true,
+      wereadUrl: `weread://reading?bId=${reading.bookId}`
+    });
+  });
+
+  const activeNow = Array.from(activeMap.values())
+    .filter((book) => book.lastActiveTime)
+    .sort((a, b) => b.lastActiveTime - a.lastActiveTime)
+    .slice(0, 10)
+    .map(({ lastActiveTime, ...book }) => book);
+
+  const themeStats = new Map();
+  readings.forEach((reading) => {
+    inferReadingThemes(reading)
+      .filter((theme) => theme !== "Reading Input")
+      .forEach((theme) => {
+        const route = themeRoute(theme);
+        const current = themeStats.get(theme) || {
+          theme,
+          label: route?.label || theme,
+          question: route?.question || null,
+          noteCount: 0,
+          bookCount: 0,
+          anchorBooks: [],
+          suggestedMove: route?.move || "Use this theme as a candidate reading-to-output bridge."
+        };
+        current.noteCount += reading.totalNoteCount;
+        current.bookCount += 1;
+        if (current.anchorBooks.length < 3) {
+          current.anchorBooks.push({
+            title: reading.shortTitle,
+            notes: reading.totalNoteCount
+          });
+        }
+        themeStats.set(theme, current);
+      });
+  });
+
+  const bridgeThemes = Array.from(themeStats.values())
+    .sort((a, b) => b.noteCount - a.noteCount)
+    .slice(0, 8);
+
+  const depthBands = {
+    heavy: readings.filter((reading) => reading.totalNoteCount >= 20).length,
+    committed: readings.filter((reading) => reading.totalNoteCount >= 10 && reading.totalNoteCount < 20).length,
+    light: readings.filter((reading) => reading.totalNoteCount >= 3 && reading.totalNoteCount < 10).length,
+    skim: readings.filter((reading) => reading.totalNoteCount > 0 && reading.totalNoteCount < 3).length
+  };
+
+  const topDeepRead = deepReads[0];
+  const topTheme = bridgeThemes[0];
+  const advisorMoves = [
+    topDeepRead ? {
+      workflow: "alchemy",
+      title: `Turn ${topDeepRead.shortTitle} into a reusable synthesis note`,
+      evidence: `${topDeepRead.totalNoteCount} public-safe note signals make it the strongest candidate for note alchemy.`
+    } : null,
+    topTheme ? {
+      workflow: "path",
+      title: `Build a learning path around ${topTheme.label}`,
+      evidence: `${topTheme.bookCount} books and ${topTheme.noteCount} notes point to this as a real reading line.`
+    } : null,
+    {
+      workflow: "review",
+      title: "Create a year-to-date reading review",
+      evidence: `${annual.readDays || 0} reading days and ${secondsToText(annual.totalReadTime)} of WeRead time are enough for a public-safe review.`
+    },
+    hiddenDeepReads.length ? {
+      workflow: "advisor",
+      title: "Promote hidden deep reads into the visible atlas",
+      evidence: `${hiddenDeepReads.length} note-heavy books appear in notebooks but not in the current shelf view.`
+    } : {
+      workflow: "advisor",
+      title: "Use recent active books to choose the next reading branch",
+      evidence: "Recent activity is a better signal than a static shelf when no topic is specified."
+    }
+  ].filter(Boolean);
+
+  return {
+    source: "huashu-weread-advisor public-safe intelligence layer",
+    generatedAt: new Date().toISOString(),
+    privacy: "No raw highlights, private comments, or long excerpts are committed. This file stores metadata-level signals for reading strategy.",
+    method: {
+      skill: "huashu-weread-advisor",
+      inputs: ["shelf/sync", "user/notebooks", "readdata/detail"],
+      principle: "Cross the shelf with notebooks: shelf shows intention, notebooks show what was actually read deeply."
+    },
+    totals: {
+      shelfBookCount: shelfBooks.length,
+      notebookBookCount: readings.length,
+      notebookNoteCount: notebooks.totalNoteCount || readings.reduce((sum, reading) => sum + reading.totalNoteCount, 0),
+      trueReadCount: trueReads.length,
+      hiddenDeepReadCount: hiddenDeepReads.length,
+      shelfOnlyCount: shelfOnly.length,
+      yearlyReadDays: annual.readDays || 0,
+      yearlyReadTime: secondsToText(annual.totalReadTime),
+      depthBands
+    },
+    lenses: {
+      deepReads: deepReads.slice(0, 12).map((reading) => compactReading(reading, {
+        inShelf: shelfById.has(reading.bookId),
+        signal: reading.totalNoteCount >= 20 ? "heavy read" : "committed read"
+      })),
+      activeNow,
+      hiddenDeepReads: hiddenDeepReads.slice(0, 10).map((reading) => compactReading(reading, {
+        signal: "notebook-only deep read"
+      })),
+      shelfOnly: shelfOnly.slice(0, 10).map((book) => ({
+        bookId: book.bookId,
+        title: book.title,
+        author: book.author,
+        category: book.category,
+        lastActiveDate: book.readUpdateDate,
+        wereadUrl: `weread://reading?bId=${book.bookId}`,
+        signal: "on shelf, no public note signal yet"
+      }))
+    },
+    bridgeThemes,
+    advisorMoves
+  };
 }
 
 function readingColor(themes, index) {
@@ -281,7 +534,8 @@ function toReadingRecord(item) {
     reviewCount: Number(item.reviewCount || 0),
     lineCount: Number(item.noteCount || 0),
     bookmarkCount: Number(item.bookmarkCount || 0),
-    totalNoteCount
+    totalNoteCount,
+    lastReadTime: Number(item.sort || item.readUpdateTime || 0)
   };
 }
 
@@ -311,12 +565,22 @@ async function main() {
       yearlyReadDays: annual.readDays || 0,
       yearlyReadTime: secondsToText(annual.totalReadTime)
     },
-    readings: publicReadings
+    readings: publicReadings.map(publicReadingRecord)
   };
 
   fs.mkdirSync(outputDir, { recursive: true });
   fs.mkdirSync(readingsDir, { recursive: true });
   fs.writeFileSync(publicIndexPath, JSON.stringify(publicIndex, null, 2) + "\n", "utf8");
+  fs.writeFileSync(
+    intelligencePath,
+    JSON.stringify(buildReadingIntelligence({ readings, shelf, annual, notebooks }), null, 2) + "\n",
+    "utf8"
+  );
+
+  fs
+    .readdirSync(readingsDir)
+    .filter((file) => /^\d+-.*\.md$/.test(file))
+    .forEach((file) => fs.unlinkSync(path.join(readingsDir, file)));
 
   publicReadings.forEach((reading, index) => {
     const filePath = path.join(readingsDir, `${index + 1}-${reading.bookId}.md`);
@@ -325,6 +589,7 @@ async function main() {
 
   console.log(`Wrote ${publicReadings.length} public-safe reading nodes`);
   console.log(`Notebook books: ${publicIndex.totals.notebookBookCount}; notes: ${publicIndex.totals.notebookNoteCount}`);
+  console.log("Wrote public-safe reading intelligence");
 }
 
 main().catch((error) => {

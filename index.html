@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./styles.css?v=2026051707">
+  <link rel="stylesheet" href="./styles.css?v=2026051708">
 </head>
 <body>
   <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
@@ -44,6 +44,7 @@
       <nav class="top-links" aria-label="Primary links">
         <a href="https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki" target="_blank" rel="noopener">Vault</a>
         <a href="./readings.html">Readings</a>
+        <a href="./advisor.html">Advisor</a>
         <a href="./papers.html">Papers</a>
         <a href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ" target="_blank" rel="noopener">Scholar</a>
         <a href="https://github.com/rayford295/rayford-knowledge-atlas" target="_blank" rel="noopener">GitHub</a>
@@ -85,6 +86,10 @@
             <strong>Reading Inputs</strong>
             <span>Books, notes, reading rhythm</span>
           </a>
+          <a class="library-link library-link-advisor" href="./advisor.html">
+            <strong>Reading Advisor</strong>
+            <span>True reads, shelf gaps, workflow queue</span>
+          </a>
           <a class="library-link library-link-output" href="./papers.html">
             <strong>Research Outputs</strong>
             <span>Papers, chapters, Scholar records</span>
@@ -124,6 +129,13 @@
             <em id="reading-rhythm">Open readable reading layer</em>
           </a>
 
+          <a class="paper-card advisor-card" href="./advisor.html">
+            <span>Reading Advisor</span>
+            <strong>Cross shelf with notes</strong>
+            <small>deep reads · shelf gaps · next workflows</small>
+            <em>Open the huashu-weread intelligence layer</em>
+          </a>
+
           <a class="paper-card" id="paper-card" href="./papers.html">
             <span>Research Output Layer</span>
             <strong id="paper-library-count">--</strong>
@@ -144,7 +156,7 @@
           <div>
             <p class="kicker">Living Knowledge Graph</p>
             <h1>Inputs Become Outputs.</h1>
-            <p class="stage-onboarding">Use this page for relationships and guided trails. Use Readings and Papers when you want clean libraries instead of the full graph.</p>
+            <p class="stage-onboarding">Use this page for relationships and guided trails. Use Readings, Advisor, and Papers when you want clean libraries instead of the full graph.</p>
             <div class="layer-legend" aria-label="Atlas layer legend">
               <span><i data-layer="input"></i>Inputs</span>
               <span><i data-layer="question"></i>Questions</span>
@@ -212,7 +224,7 @@
     </main>
   </div>
 
-  <script src="./data.js?v=2026051707"></script>
-  <script src="./script.js?v=2026051706"></script>
+  <script src="./data.js?v=2026051708"></script>
+  <script src="./script.js?v=2026051708"></script>
 </body>
 </html>

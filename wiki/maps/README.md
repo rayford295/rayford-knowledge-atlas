@@ -4,6 +4,7 @@ This folder contains Obsidian-style maps of content (MOCs). They are entry point
 
 - [[input-output-map]]
 - [[reading-input-map]]
+- [[reading-intelligence-map]]
 - [[question-map]]
 - [[research-output-map]]
 - [[publication-map]]
