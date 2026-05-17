@@ -2266,3 +2266,96 @@ summary:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+
+.guide-shell .topbar,
+.guide-hero,
+.guide-panel,
+.story-card,
+.knowledge-room-card,
+.room-card,
+.next-stop-card,
+.reading-spotlight-card,
+.advisor-desk-card,
+.paper-feature-card {
+  border-radius: 18px;
+}
+
+.guide-page {
+  display: grid;
+  gap: 18px;
+}
+
+.guide-hero,
+.guide-panel {
+  border: 1px solid rgba(186, 255, 232, 0.14);
+  background: rgba(8, 17, 15, 0.72);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(22px);
+}
+
+.guide-hero {
+  padding: 28px;
+}
+
+.guide-hero h1 {
+  max-width: 820px;
+  margin: 6px 0 0;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.25rem, 3.6vw, 3.8rem);
+  line-height: 1.04;
+}
+
+.guide-hero > p {
+  max-width: 860px;
+}
+
+.guide-hero-note {
+  margin: 14px 0 0;
+  max-width: 760px;
+  padding-left: 14px;
+  border-left: 3px solid rgba(255, 212, 106, 0.82);
+  color: var(--ink-soft);
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.guide-panel {
+  padding: 20px;
+}
+
+.top-links a,
+.hero-action,
+.paper-feature-link,
+.knowledge-room-links a,
+.room-card a,
+.next-stop-card,
+.library-link,
+.panel-toggle,
+.trail-card,
+.story-card {
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease, background 0.18s ease;
+}
+
+.hero-action:hover,
+.paper-feature-link:hover,
+.knowledge-room-links a:hover,
+.room-card a:hover,
+.next-stop-card:hover,
+.library-link:hover,
+.trail-card:hover,
+.story-card:hover {
+  transform: translateY(-1px);
+}
+
+.reading-list-heading,
+.compact-heading {
+  gap: 12px;
+}
+
+@media (max-width: 860px) {
+  .guide-hero,
+  .guide-panel {
+    padding: 18px;
+  }
+}
