@@ -6,7 +6,7 @@
   --ink: #f5fff9;
   --ink-soft: #d8eee6;
   --muted: #9ab2aa;
-  --line: rgba(186, 255, 232, 0.18);
+  --line: rgba(186, 255, 232, 0.12);
   --aqua: #36f1c7;
   --aqua-deep: #14a68d;
   --leaf: #9ad66d;
@@ -14,7 +14,7 @@
   --violet: #a88cff;
   --gold: #ffd46a;
   --sky: #64c7ff;
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --shadow: 0 18px 52px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -174,8 +174,8 @@ summary:focus-visible {
 .top-links a {
   padding: 10px 12px;
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(186, 255, 232, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(186, 255, 232, 0.12);
 }
 
 .top-links a:hover,
@@ -2288,10 +2288,10 @@ summary:focus-visible {
 
 .guide-hero,
 .guide-panel {
-  border: 1px solid rgba(186, 255, 232, 0.14);
-  background: rgba(8, 17, 15, 0.72);
+  border: 1px solid rgba(186, 255, 232, 0.1);
+  background: rgba(8, 17, 15, 0.68);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(22px);
+  backdrop-filter: blur(20px);
 }
 
 .guide-hero {
