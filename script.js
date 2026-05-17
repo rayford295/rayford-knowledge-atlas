@@ -63,7 +63,7 @@
   let activeMode = "flow";
   let activeTrailId = "disaster-evidence";
   let searchTerm = "";
-  let railCollapsed = window.innerWidth >= 1320;
+  let railCollapsed = window.innerWidth >= 1024;
   let detailOpen = false;
 
   const graphRuntime = {
