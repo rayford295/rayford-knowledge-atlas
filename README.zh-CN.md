@@ -86,6 +86,7 @@ npm run build
 - [Operations Runbook](./docs/OPERATIONS.md)
 - [WeRead Integration](./docs/WEREAD_INTEGRATION.md)
 - [Obsidian Vault Guide](./docs/OBSIDIAN_VAULT.md)
+- [Hermes 评审与优化建议](./docs/HERMES_REVIEW.zh-CN.md)
 
 ## 做一个自己的版本
 

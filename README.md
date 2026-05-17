@@ -86,6 +86,7 @@ This repository is public. The reading layer therefore commits only metadata, co
 - [Operations Runbook](./docs/OPERATIONS.md)
 - [WeRead Integration](./docs/WEREAD_INTEGRATION.md)
 - [Obsidian Vault Guide](./docs/OBSIDIAN_VAULT.md)
+- [Hermes Review](./docs/HERMES_REVIEW.md)
 
 ## Make Your Own
 
