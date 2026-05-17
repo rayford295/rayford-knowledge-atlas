@@ -18,6 +18,8 @@ methods:
   - Street-View Imagery
   - Damage Semantics
 links:
+  - label: PDF
+    url: ./publications/2025-perceiving-multidimensional-disaster-damages-ica.pdf
   - label: Paper
     url: https://doi.org/10.5194/ica-abs-10-310-2025
   - label: DOI

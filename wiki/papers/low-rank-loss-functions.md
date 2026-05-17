@@ -21,6 +21,10 @@ methods:
   - Loss Function Comparison
   - Numerical Analysis
 links:
+  - label: PDF
+    url: ./publications/2020-different-loss-functions-low-rank-approximation.pdf
+  - label: DOI
+    url: https://doi.org/10.6919/ICJE.202011_6(11).0046
   - label: Scholar Profile
     url: https://scholar.google.com/citations?user=B-fiSHwAAAAJ
 connections:

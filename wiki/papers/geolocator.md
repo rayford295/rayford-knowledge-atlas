@@ -21,6 +21,8 @@ methods:
   - Geo-Privacy Inference
   - Location Integration
 links:
+  - label: PDF
+    url: ./publications/2024-geolocator-location-integrated-lmm-geo-privacy.pdf
   - label: Paper
     url: https://www.mdpi.com/2076-3417/14/16/7091
   - label: DOI

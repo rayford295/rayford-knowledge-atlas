@@ -21,6 +21,10 @@ methods:
   - Crash Severity Modeling
   - Spatial Inequality Analysis
 links:
+  - label: PDF
+    url: ./publications/2025-navigating-spatial-inequities-freight-truck-crash-severity.pdf
+  - label: DOI
+    url: https://doi.org/10.1016/j.jtrangeo.2025.104387
   - label: Scholar Profile
     url: https://scholar.google.com/citations?user=B-fiSHwAAAAJ
 connections:

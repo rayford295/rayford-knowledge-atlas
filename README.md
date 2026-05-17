@@ -27,6 +27,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - Live site: [rayford295.github.io/rayford-knowledge-atlas](https://rayford295.github.io/rayford-knowledge-atlas/)
 - Reading input page: [rayford295.github.io/rayford-knowledge-atlas/readings.html](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)
 - Research output page: [rayford295.github.io/rayford-knowledge-atlas/papers.html](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)
+- Published PDF archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/publications](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)
 - Fork guide: [rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
 - GitHub repository: [github.com/rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas)
 - Google Scholar: [scholar.google.com/citations?user=B-fiSHwAAAAJ](https://scholar.google.com/citations?user=B-fiSHwAAAAJ)
@@ -51,6 +52,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - `.obsidian/`: minimal vault settings for opening this repository in Obsidian.
 - `wiki/concepts/`: reusable concept pages.
 - `wiki/comparisons/`: cross-paper and cross-source narratives.
+- `publications/`: public PDF copies of published papers and chapters, with filenames starting by year.
 - `raw/papers/`: source records for paper and repository metadata.
 - `raw/publications/`: migrated publication records from the former Publications repository.
 - `raw/scholar/google-scholar.json`: the latest public Google Scholar snapshot.

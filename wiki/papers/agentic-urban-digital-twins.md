@@ -23,6 +23,10 @@ methods:
   - Agentic Systems
   - Urban Science
 links:
+  - label: PDF
+    url: ./publications/2026-towards-agentic-urban-digital-twins-audits.pdf
+  - label: DOI
+    url: https://doi.org/10.1007/s44212-025-00099-3
   - label: Scholar Profile
     url: https://scholar.google.com/citations?user=B-fiSHwAAAAJ
 connections:

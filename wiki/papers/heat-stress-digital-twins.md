@@ -23,6 +23,8 @@ methods:
   - Digital Twins
   - Heat Stress Forecasting
 links:
+  - label: PDF
+    url: ./publications/2025-spatiotemporal-vision-transformer-heat-stress-digital-twins.pdf
   - label: DOI
     url: https://doi.org/10.1177/0739456X251391121
   - label: Scholar Profile

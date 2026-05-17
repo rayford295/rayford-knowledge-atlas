@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-05-17T16:10:44.095Z",
+  "generatedAt": "2026-05-17T16:32:51.941Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -71,6 +71,14 @@ window.researchMapData = {
       ],
       "links": [
         {
+          "label": "PDF",
+          "url": "./publications/2026-towards-agentic-urban-digital-twins-audits.pdf"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1007/s44212-025-00099-3"
+        },
+        {
           "label": "Scholar Profile",
           "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
         }
@@ -128,6 +136,10 @@ window.researchMapData = {
         "Vectorized Tree Polygons"
       ],
       "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2025-object-detection-segmentation-trees-text-sam-arcgis.pdf"
+        },
         {
           "label": "Book",
           "url": "https://www.esri.com/en-us/esri-press/browse/security-first-geospatial-workflows-for-a-safe-and-equitable-world"
@@ -200,6 +212,10 @@ window.researchMapData = {
         "Public Opinion Monitoring"
       ],
       "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2020-covid-19-public-opinion-emotion-monitoring.pdf"
+        },
         {
           "label": "DOI",
           "url": "https://doi.org/10.32604/cmc.2020.011316"
@@ -335,6 +351,10 @@ window.researchMapData = {
       ],
       "links": [
         {
+          "label": "PDF",
+          "url": "./publications/2025-perceiving-multidimensional-disaster-damages-ica.pdf"
+        },
+        {
           "label": "Paper",
           "url": "https://doi.org/10.5194/ica-abs-10-310-2025"
         },
@@ -407,6 +427,10 @@ window.researchMapData = {
       ],
       "links": [
         {
+          "label": "PDF",
+          "url": "./publications/2021-federated-learning-covid-19-chest-xray.pdf"
+        },
+        {
           "label": "Scholar Profile",
           "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
         }
@@ -461,6 +485,14 @@ window.researchMapData = {
       ],
       "links": [
         {
+          "label": "PDF",
+          "url": "./publications/2025-navigating-spatial-inequities-freight-truck-crash-severity.pdf"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1016/j.jtrangeo.2025.104387"
+        },
+        {
           "label": "Scholar Profile",
           "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
         }
@@ -510,6 +542,10 @@ window.researchMapData = {
         "Location Integration"
       ],
       "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2024-geolocator-location-integrated-lmm-geo-privacy.pdf"
+        },
         {
           "label": "Paper",
           "url": "https://www.mdpi.com/2076-3417/14/16/7091"
@@ -583,6 +619,10 @@ window.researchMapData = {
       ],
       "links": [
         {
+          "label": "PDF",
+          "url": "./publications/2025-spatiotemporal-vision-transformer-heat-stress-digital-twins.pdf"
+        },
+        {
           "label": "DOI",
           "url": "https://doi.org/10.1177/0739456X251391121"
         },
@@ -639,6 +679,10 @@ window.researchMapData = {
         "Pre-trained Vision Models"
       ],
       "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2025-hyperlocal-disaster-damage-assessment.pdf"
+        },
         {
           "label": "Paper",
           "url": "https://www.sciencedirect.com/science/article/pii/S0198971525000311"
@@ -718,6 +762,14 @@ window.researchMapData = {
         "Numerical Analysis"
       ],
       "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2020-different-loss-functions-low-rank-approximation.pdf"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.6919/ICJE.202011_6(11).0046"
+        },
         {
           "label": "Scholar Profile",
           "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"

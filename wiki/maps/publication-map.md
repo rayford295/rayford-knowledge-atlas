@@ -22,6 +22,6 @@ This map is the landing page for the old `rayford295/Publications` repository af
 - [[../papers/disastervlp]]
 - [[../papers/federated-covid-chest-xray]]
 
-## Migration Boundary
+## Published PDF Archive
 
-The legacy repository also contained PDF files. The public Atlas records the publication metadata and graph nodes, but it does not publish those PDFs directly. Keep full-text files in controlled storage unless rights and public-sharing status are clear.
+Published PDF copies now live in the top-level [`publications/`](../../publications/) folder. Each filename starts with the publication year, so GitHub, Obsidian, and local search all keep the archive in chronological order.

@@ -22,6 +22,8 @@ methods:
   - Bi-temporal Analysis
   - Pre-trained Vision Models
 links:
+  - label: PDF
+    url: ./publications/2025-hyperlocal-disaster-damage-assessment.pdf
   - label: Paper
     url: https://www.sciencedirect.com/science/article/pii/S0198971525000311
   - label: DOI

@@ -23,6 +23,8 @@ methods:
   - Chest X-Ray Classification
   - Distributed AI
 links:
+  - label: PDF
+    url: ./publications/2021-federated-learning-covid-19-chest-xray.pdf
   - label: Scholar Profile
     url: https://scholar.google.com/citations?user=B-fiSHwAAAAJ
 connections:

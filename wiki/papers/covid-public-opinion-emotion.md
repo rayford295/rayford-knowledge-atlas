@@ -25,6 +25,8 @@ methods:
   - New Word Mining
   - Public Opinion Monitoring
 links:
+  - label: PDF
+    url: ./publications/2020-covid-19-public-opinion-emotion-monitoring.pdf
   - label: DOI
     url: https://doi.org/10.32604/cmc.2020.011316
   - label: Scholar Profile

@@ -1352,6 +1352,13 @@ summary:focus-visible {
   gap: 8px;
 }
 
+.paper-heading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
 .paper-list-panel {
   display: grid;
   gap: 14px;

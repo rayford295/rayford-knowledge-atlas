@@ -7,14 +7,15 @@ The former `rayford295/Publications` repository has been consolidated into Rayfo
 - The legacy README publication list was preserved as a source record in `raw/publications/legacy-publications-readme.md`.
 - Publication metadata was normalized into `raw/publications/publications.json`.
 - Each high-signal publication from the legacy list now has or reuses a curated output page under `wiki/papers/`.
+- Public PDF copies provided from the desktop `出版物` folder were added to `publications/`, with filenames starting by year.
 - The Obsidian entry point is `wiki/maps/publication-map.md`.
 - The browser graph is rebuilt through `data.js`, so these records appear in the research output layer.
 
-## Public Boundary
+## Public PDF Archive
 
-The legacy repository was private and contained PDF files. Rayford Knowledge Atlas is public. For that reason, the migration records PDF filenames, sizes, and checksums in `raw/publications/legacy-file-manifest.json`, but it does not publish the PDFs themselves.
+The legacy repository was private and contained PDF files. Rayford Knowledge Atlas is public, so PDF files are now published only for the papers explicitly provided for the public archive.
 
-This keeps the atlas useful as a public knowledge system while avoiding accidental redistribution of publisher PDFs, private drafts, or files whose public-sharing rights have not been checked.
+The public archive lives in `publications/`. Each corresponding `wiki/papers/` page includes a `PDF` link so the paper output page can surface the files directly.
 
 ## Local Backup
 
@@ -27,4 +28,4 @@ The public repository should be treated as the canonical knowledge atlas. The lo
 
 ## Follow-Up Rule
 
-When a publication has a known public DOI, official landing page, arXiv page, project page, or accepted author manuscript, add that link to the corresponding `wiki/papers/` page. Do not add full-text PDFs to the public repository unless the sharing status is clear.
+When a publication has a known public DOI, official landing page, arXiv page, project page, accepted author manuscript, or public PDF, add that link to the corresponding `wiki/papers/` page.

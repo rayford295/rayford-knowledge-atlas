@@ -22,6 +22,8 @@ methods:
   - ArcGIS API for Python
   - Vectorized Tree Polygons
 links:
+  - label: PDF
+    url: ./publications/2025-object-detection-segmentation-trees-text-sam-arcgis.pdf
   - label: Book
     url: https://www.esri.com/en-us/esri-press/browse/security-first-geospatial-workflows-for-a-safe-and-equitable-world
   - label: Chapter
