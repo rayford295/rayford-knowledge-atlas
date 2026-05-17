@@ -108,15 +108,18 @@
         <div class="rail-section-title">Guided Trails</div>
         <div class="trail-list" id="guided-trails" aria-label="Guided atlas trails"></div>
 
-        <div class="rail-section-title">Themes</div>
-        <div class="filter-bar" id="filter-bar" aria-label="Theme filters"></div>
-        <details class="rail-more theme-more">
-          <summary>More themes</summary>
-          <div class="filter-bar compact-filter-bar" id="more-filter-bar" aria-label="Additional theme filters"></div>
-        </details>
+        <details class="rail-more rail-browse-more">
+          <summary>Browse themes and nodes</summary>
+          <div class="rail-section-title rail-section-title-inner">Themes</div>
+          <div class="filter-bar compact-filter-bar" id="filter-bar" aria-label="Theme filters"></div>
+          <details class="rail-more theme-more">
+            <summary>More themes</summary>
+            <div class="filter-bar compact-filter-bar" id="more-filter-bar" aria-label="Additional theme filters"></div>
+          </details>
 
-        <div class="rail-section-title">Nodes</div>
-        <div class="repo-list" id="repo-list" aria-label="Knowledge node cards"></div>
+          <div class="rail-section-title rail-section-title-inner">Nodes</div>
+          <div class="repo-list rail-compact-list" id="repo-list" aria-label="Knowledge node cards"></div>
+        </details>
 
         <details class="rail-more">
           <summary>Sources and sync</summary>
@@ -185,6 +188,7 @@
               <button class="panel-toggle stage-toggle" id="stage-rail-toggle" type="button" aria-expanded="true">Hide Filters</button>
               <button class="panel-toggle stage-toggle" id="detail-toggle" type="button" aria-expanded="false">Open Detail</button>
             </div>
+            <p class="stage-side-note">Best first view: Flow mode, then open one trail and one node.</p>
           </div>
         </div>
 
