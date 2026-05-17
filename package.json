@@ -1,15 +1,17 @@
 {
-  "name": "rayford-geograph",
-  "displayName": "Rayford GeoGraph",
-  "description": "A star-map style research atlas for Yifan Yang's papers, repositories, datasets, and GeoAI workflows.",
-  "homepage": "https://rayford295.github.io/Rayford-GeoGraph/",
+  "name": "rayford-knowledge-atlas",
+  "displayName": "Rayford Knowledge Atlas",
+  "description": "An input-output knowledge graph for Yifan Yang's reading inputs, papers, Scholar outputs, repositories, and GeoAI workflows.",
+  "homepage": "https://rayford295.github.io/GeoGraph/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rayford295/Rayford-GeoGraph.git"
+    "url": "https://github.com/rayford295/GeoGraph.git"
   },
   "private": true,
   "scripts": {
     "build": "node scripts/build-map.js",
-    "scholar:update": "node scripts/fetch-scholar.js"
+    "scholar:update": "node scripts/fetch-scholar.js",
+    "weread:update": "node scripts/fetch-weread.js",
+    "atlas:update": "npm run scholar:update && npm run weread:update && npm run build"
   }
 }

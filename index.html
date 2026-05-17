@@ -3,58 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rayford GeoGraph | Yifan Yang Research Atlas</title>
+  <title>Rayford Knowledge Atlas | Inputs to Outputs</title>
   <meta
     name="description"
-    content="Rayford GeoGraph is an interactive research atlas for Yifan Yang's papers, book chapters, repositories, datasets, and GeoAI workflows."
+    content="Rayford Knowledge Atlas is an input-output knowledge graph for Yifan Yang's reading inputs, Google Scholar outputs, papers, repositories, and GeoAI workflows."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%231fc7a1'%3ERG%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css?v=2026051702">
 </head>
 <body>
   <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#graph" aria-label="Rayford GeoGraph">
-        <span class="brand-mark">RG</span>
+      <a class="brand" href="#graph" aria-label="Rayford Knowledge Atlas">
+        <span class="brand-mark">RK</span>
         <span>
-          <strong>Rayford GeoGraph</strong>
-          <small>Research atlas powered by papers and GitHub repositories</small>
+          <strong>Rayford Knowledge Atlas</strong>
+          <small>Reading inputs, Scholar outputs, and GeoAI research trails</small>
         </span>
       </a>
 
       <label class="search-box" for="search-input">
         <span>Search</span>
-        <input id="search-input" type="search" placeholder="CLIP, Text SAM, street-view, geo-privacy">
+        <input id="search-input" type="search" placeholder="AI judgment, disaster evidence, biography, GeoLocator">
       </label>
 
       <nav class="top-links" aria-label="Primary links">
         <a href="./fork.html">Make Your Own</a>
         <a href="https://rayford295.github.io/" target="_blank" rel="noopener">Main Site</a>
         <a href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ" target="_blank" rel="noopener">Scholar</a>
-        <a href="https://github.com/rayford295/Rayford-GeoGraph" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/rayford295/GeoGraph" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </header>
 
     <main class="atlas">
-      <aside class="source-rail" aria-label="Repository sources">
+      <aside class="source-rail" aria-label="Knowledge sources">
         <div class="rail-heading">
-          <p>Sources</p>
+          <p>Input to Output</p>
           <strong id="paper-count">0</strong>
-          <span>research outputs</span>
+          <span>connected knowledge nodes</span>
         </div>
 
         <div class="rail-stats">
           <div>
-            <strong id="theme-count">0</strong>
-            <span>themes</span>
+            <strong id="output-count">0</strong>
+            <span>outputs</span>
           </div>
           <div>
-            <strong id="year-range">2024-2026</strong>
-            <span>timeline</span>
+            <strong id="input-count">0</strong>
+            <span>inputs</span>
+          </div>
+          <div>
+            <strong id="question-count">0</strong>
+            <span>questions</span>
+          </div>
+          <div>
+            <strong id="theme-count">0</strong>
+            <span>themes</span>
           </div>
         </div>
 
@@ -66,26 +74,26 @@
         </a>
 
         <a class="fork-card" href="./fork.html">
-          <span>Fork Template</span>
-          <strong>Build your own GeoGraph</strong>
-          <em>Use this repository as a public research atlas template.</em>
+          <span>Knowledge System</span>
+          <strong>Outputs are written. Inputs are read.</strong>
+          <em>Papers and Scholar records sit beside public-safe reading nodes.</em>
         </a>
 
         <div class="filter-bar" id="filter-bar" aria-label="Theme filters"></div>
 
-        <div class="repo-list" id="repo-list" aria-label="Repository cards"></div>
+        <div class="repo-list" id="repo-list" aria-label="Knowledge node cards"></div>
       </aside>
 
       <section class="graph-stage" id="graph">
         <div class="stage-toolbar">
           <div>
-            <p class="kicker">Research Constellation</p>
-            <h1>Every output becomes a star in the same research sky.</h1>
+            <p class="kicker">Living Knowledge Graph</p>
+            <h1>Inputs Become Outputs.</h1>
           </div>
           <div class="mode-tabs" aria-label="Graph modes">
             <button class="mode-tab active" type="button" data-mode="network">Network</button>
             <button class="mode-tab" type="button" data-mode="timeline">Timeline</button>
-            <button class="mode-tab" type="button" data-mode="repo">Repo</button>
+            <button class="mode-tab" type="button" data-mode="flow">Flow</button>
           </div>
         </div>
 
@@ -94,24 +102,24 @@
         </div>
       </section>
 
-      <aside class="inspector" id="detail-panel" aria-label="Research output detail">
+      <aside class="inspector" id="detail-panel" aria-label="Knowledge node detail">
         <div class="inspector-topline">
-          <span id="detail-type">Research Output</span>
+          <span id="detail-type">Knowledge Node</span>
           <span id="detail-status">Published</span>
         </div>
 
         <h2 id="detail-title">Select a node</h2>
-        <p class="detail-meta" id="detail-meta">Open any research output to inspect its paper, code repository, methods, links, and graph relationships.</p>
+        <p class="detail-meta" id="detail-meta">Open any node to inspect how reading inputs, bridge questions, Scholar records, and research outputs connect.</p>
 
         <div class="repo-preview" id="repo-preview"></div>
 
         <section class="detail-section">
           <h3>Summary</h3>
-          <p id="detail-summary">The graph is driven by markdown pages and enriched with GitHub repository metadata.</p>
+          <p id="detail-summary">The graph is driven by markdown pages, public Scholar metadata, and public-safe WeRead reading nodes.</p>
         </section>
 
         <section class="detail-section">
-          <h3>Why It Matters</h3>
+          <h3 id="detail-impact-heading">Why It Matters</h3>
           <p id="detail-impact"></p>
         </section>
 
@@ -121,7 +129,7 @@
         </section>
 
         <section class="detail-section">
-          <h3>Methods</h3>
+          <h3 id="detail-methods-heading">Methods</h3>
           <div class="token-group" id="detail-methods"></div>
         </section>
 
@@ -138,7 +146,7 @@
     </main>
   </div>
 
-  <script src="./data.js"></script>
-  <script src="./script.js"></script>
+  <script src="./data.js?v=2026051702"></script>
+  <script src="./script.js?v=2026051702"></script>
 </body>
 </html>

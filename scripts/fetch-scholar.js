@@ -12,7 +12,7 @@ function fetchText(url) {
       url,
       {
         headers: {
-          "User-Agent": "Rayford-GeoGraph/1.0 (+https://rayford295.github.io/Rayford-GeoGraph/)",
+          "User-Agent": "Rayford-Knowledge-Atlas/1.0 (+https://rayford295.github.io/GeoGraph/)",
           "Accept-Language": "en-US,en;q=0.9"
         }
       },

@@ -1,90 +1,78 @@
-# Rayford GeoGraph
+# Rayford Knowledge Atlas
 
-[Open Live Website](https://rayford295.github.io/Rayford-GeoGraph/) | [Make Your Own](https://rayford295.github.io/Rayford-GeoGraph/fork.html) | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) | [Main Homepage](https://rayford295.github.io/) | [中文说明](./README.zh-CN.md)
+[Open Live Website](https://rayford295.github.io/GeoGraph/) | [Make Your Own](https://rayford295.github.io/GeoGraph/fork.html) | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) | [Main Homepage](https://rayford295.github.io/) | [中文说明](./README.zh-CN.md)
 
-Rayford GeoGraph is my personal contribution to a more open research knowledge layer: a public knowledge base and knowledge graph for my papers, book chapters, datasets, GitHub repositories, and GeoAI workflows.
+Rayford Knowledge Atlas is my public input-output knowledge graph. It places my reading inputs beside my research outputs, so papers, book chapters, collaborative Google Scholar records, repositories, methods, and long-term questions can be inspected in one living system.
 
-Instead of presenting research as a flat publication list, this project treats each output as a connected object with a paper trail, code trail, method trail, and intellectual lineage. The goal is to make my research easier to inspect, reuse, teach, and extend.
+The premise is simple: my papers will never outnumber the books, biographies, essays, and technical material that shape my judgment. Research outputs show what I write into the world. Reading inputs show what I let the world write into me.
 
 <p align="center">
-  <a href="https://rayford295.github.io/Rayford-GeoGraph/">
-    <img src="./assets/rayford-geograph-preview.gif" alt="Animated preview of the Rayford GeoGraph research constellation website" width="920">
+  <a href="https://rayford295.github.io/GeoGraph/">
+    <img src="./assets/rayford-geograph-preview.gif" alt="Animated preview of the Rayford Knowledge Atlas website" width="920">
   </a>
 </p>
 
 ## What This Is
 
-- A public research atlas for Yifan Yang's GeoAI and GIScience work.
-- A star-map style website for exploring papers, repositories, datasets, and methods.
-- A structured markdown knowledge base that agents and humans can maintain together.
-- A weekly-updated Google Scholar snapshot for public citation metadata.
-- A forkable template for other researchers who want to build their own research graph.
+- A public knowledge atlas for Yifan Yang's GeoAI, GIScience, reading, and founder-facing thinking.
+- An input-output graph where WeRead book nodes feed bridge questions, and bridge questions connect to papers and Scholar outputs.
+- A structured markdown wiki that agents and humans can maintain together.
+- A weekly-updated Google Scholar snapshot that includes collaborative and non-first-author outputs.
+- A public-safe reading layer that stores metadata, themes, and synthesis scaffolds without publishing raw copyrighted highlights or private notes.
 
 ## One-Click Access
 
-- Live site: [rayford295.github.io/Rayford-GeoGraph](https://rayford295.github.io/Rayford-GeoGraph/)
-- Fork guide: [rayford295.github.io/Rayford-GeoGraph/fork.html](https://rayford295.github.io/Rayford-GeoGraph/fork.html)
-- GitHub repository: [github.com/rayford295/Rayford-GeoGraph](https://github.com/rayford295/Rayford-GeoGraph)
+- Live site: [rayford295.github.io/GeoGraph](https://rayford295.github.io/GeoGraph/)
+- Fork guide: [rayford295.github.io/GeoGraph/fork.html](https://rayford295.github.io/GeoGraph/fork.html)
+- GitHub repository: [github.com/rayford295/GeoGraph](https://github.com/rayford295/GeoGraph)
 - Google Scholar: [scholar.google.com/citations?user=B-fiSHwAAAAJ](https://scholar.google.com/citations?user=B-fiSHwAAAAJ)
 - Main academic homepage: [rayford295.github.io](https://rayford295.github.io/)
 
 ## Frontend Experience
 
-- The first screen is an interactive research constellation.
-- The graph supports keyword search, theme filters, repository cards, and three views: `Network`, `Timeline`, and `Repo`.
-- Each node opens an inspector with repository metadata, methods, paper links, dataset links, and graph relationships.
-- The visual language is intentionally celestial: research outputs appear as connected stars in the same research sky.
+- The first screen is an interactive knowledge constellation.
+- The graph supports keyword search, theme filters, node cards, and three views: `Network`, `Timeline`, and `Flow`.
+- `Flow` separates reading inputs, bridge questions, and research outputs.
+- Each node opens an inspector with source metadata, themes, methods or reading lenses, links, metrics, and graph relationships.
+- Scholar-derived nodes keep collaborative outputs visible even when they do not yet have hand-written wiki pages.
 
 ## Knowledge Architecture
 
-- `wiki/papers/`: structured profiles for research outputs.
+- `wiki/papers/`: curated research output profiles.
+- `wiki/readings/`: public-safe WeRead reading input pages.
+- `wiki/questions/`: bridge questions that connect reading to research.
 - `wiki/concepts/`: reusable concept pages.
-- `wiki/comparisons/`: cross-paper research narratives.
+- `wiki/comparisons/`: cross-paper and cross-source narratives.
 - `raw/papers/`: source records for paper and repository metadata.
-- `raw/scholar/google-scholar.json`: the latest Google Scholar profile snapshot.
-- `scripts/build-map.js`: compiles paper pages into `data.js`.
+- `raw/scholar/google-scholar.json`: the latest public Google Scholar snapshot.
+- `raw/weread/public-reading-index.json`: public-safe WeRead metadata, note counts, and reading graph seeds.
+- `scripts/build-map.js`: compiles papers, readings, questions, and Scholar records into `data.js`.
 - `scripts/fetch-scholar.js`: refreshes public Google Scholar metadata.
-- `.github/workflows/update-scholar.yml`: runs the Scholar refresh once per week.
-- `docs/FORK_GUIDE.md`: explains how another researcher can fork and customize the atlas.
-- `wiki/papers/_template.md`: reusable paper-node template ignored by the graph build.
+- `scripts/fetch-weread.js`: refreshes public-safe WeRead reading nodes from `WEREAD_API_KEY`.
 
-## Current Research Outputs
+## Current Output Layer
 
-- ArcGIS Text SAM Tree Segmentation
-- GeoLocator
-- Hyperlocal Disaster Damage Assessment
-- Perceiving Multidimensional Disaster Damages
-- DamageArbiter
-- Satellite-to-Street
+- Curated paper/project nodes: ArcGIS Text SAM, GeoLocator, Hyperlocal Disaster Damage Assessment, DisasterVLP, DamageArbiter, Satellite-to-Street.
+- Google Scholar nodes: collaborative and non-first-author outputs from the public Scholar profile.
 
-## Weekly Scholar Refresh
+## Current Input Layer
 
-The repository includes a scheduled GitHub Actions workflow that runs once per week. It fetches the public Google Scholar profile, updates `raw/scholar/google-scholar.json`, and commits the new snapshot only when the data changes.
-
-Google Scholar may temporarily rate-limit automated requests. When that happens, the script keeps the previous snapshot and avoids breaking the website.
+The first WeRead seed imports the highest-signal public-safe reading nodes by note count, including books on institutions, biography, AI futures, founder judgment, public voice, and social imagination. Raw highlights and private note text are intentionally excluded from the public repository.
 
 ## Local Workflow
 
 ```bash
-npm run build
 npm run scholar:update
+npm run weread:update
+npm run build
 ```
 
-Use `npm run build` after editing `wiki/papers/`. Use `npm run scholar:update` when you want to refresh the local Google Scholar snapshot manually.
+Use `npm run build` after editing `wiki/papers/`, `wiki/readings/`, or `wiki/questions/`. Use `npm run weread:update` only in a local environment where `WEREAD_API_KEY` is configured.
+
+## Privacy and Copyright Boundary
+
+This repository is public. The reading layer therefore commits only metadata, counts, themes, and Yifan's own synthesis scaffolds. It does not publish raw WeRead highlights, private thoughts, or long copyrighted excerpts.
 
 ## Make Your Own
 
-This repository is designed to be forked. Start with the [Make Your Own page](https://rayford295.github.io/Rayford-GeoGraph/fork.html), then follow [docs/FORK_GUIDE.md](./docs/FORK_GUIDE.md). The short version:
-
-1. Fork and rename the repository.
-2. Replace personal links, Scholar user id, and homepage metadata.
-3. Copy `wiki/papers/_template.md` for each research output.
-4. Run `npm run build`.
-5. Enable GitHub Pages and publish your own research graph.
-
-## Next Growth Directions
-
-1. Add dedicated project pages for each research output.
-2. Expand `wiki/concepts/` and `wiki/comparisons/`.
-3. Add talks, datasets, code releases, and collaborators as graph entities.
-4. Add bilingual content blocks directly on the website.
+This repository can still be forked as a template. Start with the [Make Your Own page](https://rayford295.github.io/GeoGraph/fork.html), then follow [docs/FORK_GUIDE.md](./docs/FORK_GUIDE.md).

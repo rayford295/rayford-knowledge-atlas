@@ -1,12 +1,12 @@
-# Fork Guide: Build Your Own GeoGraph
+# Fork Guide: Build Your Own Knowledge Atlas
 
-This repository can be forked into a personal research atlas for another scholar, lab, course, or project. The goal is simple: turn research outputs into a public knowledge base and knowledge graph.
+This repository can be forked into a personal input-output atlas for another scholar, lab, course, or project. The goal is simple: connect reading inputs, bridge questions, research outputs, and Scholar metadata in one public knowledge graph.
 
 ## 1. Fork and Rename
 
-1. Open [Rayford GeoGraph](https://github.com/rayford295/Rayford-GeoGraph).
+1. Open [Rayford Knowledge Atlas](https://github.com/rayford295/GeoGraph).
 2. Click `Fork`.
-3. Rename the fork to your preferred project name, for example `YourName-GeoGraph`.
+3. Rename the fork to your preferred project name, for example `YourName-Knowledge-Atlas`.
 4. In GitHub repository settings, enable GitHub Pages from the `main` branch root.
 
 Your site will usually be available at:
@@ -64,7 +64,18 @@ Then fill in:
 
 Files that start with `_` are ignored by the build script, so `_template.md` will not appear as a graph node.
 
-## 4. Connect the Graph
+## 4. Add Reading Inputs and Bridge Questions
+
+Use these templates when you want the graph to show what shaped the work, not only what came out of it:
+
+```text
+wiki/readings/_template.md
+wiki/questions/_template.md
+```
+
+Reading pages should stay public-safe. Do not publish raw highlights, private notes, or long copyrighted excerpts. Use metadata, note counts, themes, and your own synthesis.
+
+## 5. Connect the Graph
 
 Every node should connect to at least one other node. Use relationship labels such as:
 
@@ -76,7 +87,7 @@ Every node should connect to at least one other node. Use relationship labels su
 
 Good graph connections explain your intellectual trajectory, not just citation relationships.
 
-## 5. Build Locally
+## 6. Build Locally
 
 Run:
 
@@ -84,9 +95,9 @@ Run:
 npm run build
 ```
 
-This reads `wiki/papers/*.md` and generates `data.js`.
+This reads `wiki/papers/*.md`, `wiki/readings/*.md`, `wiki/questions/*.md`, and the Scholar snapshot, then generates `data.js`.
 
-## 6. Add Google Scholar
+## 7. Add Google Scholar
 
 Find your Google Scholar user id from your profile URL:
 
@@ -108,13 +119,25 @@ Then run:
 npm run scholar:update
 ```
 
-## 7. Publish
+## 8. Add WeRead Inputs
+
+Set a local WeRead API key if you want to generate reading input nodes:
+
+```bash
+export WEREAD_API_KEY=wrk-...
+npm run weread:update
+npm run build
+```
+
+Review generated reading pages before committing.
+
+## 9. Publish
 
 Commit and push:
 
 ```bash
 git add .
-git commit -m "Customize my GeoGraph"
+git commit -m "Customize my knowledge atlas"
 git push
 ```
 
@@ -124,6 +147,8 @@ GitHub Pages will deploy the site. The weekly Scholar workflow will run automati
 
 - Replace all personal links.
 - Replace paper pages.
+- Replace or remove generated reading pages.
+- Add bridge questions that make inputs and outputs meet.
 - Replace raw source records.
 - Update theme and method tags.
 - Update graph positions so nodes do not overlap.

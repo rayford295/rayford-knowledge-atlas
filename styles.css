@@ -37,18 +37,6 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 16% 22%, rgba(54, 241, 199, 0.16), transparent 16%),
-    radial-gradient(circle at 78% 14%, rgba(255, 212, 106, 0.12), transparent 12%),
-    radial-gradient(circle at 64% 82%, rgba(168, 140, 255, 0.14), transparent 16%);
-  mix-blend-mode: screen;
-}
-
 a {
   color: inherit;
 }
@@ -92,7 +80,7 @@ input {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 22px;
   text-decoration: none;
   min-width: 0;
 }
@@ -396,10 +384,10 @@ input {
 }
 
 .stage-toolbar {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 18px;
-  align-items: end;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: flex-start;
   padding: 22px 22px 0;
 }
 
@@ -407,8 +395,8 @@ input {
   max-width: 780px;
   margin: 4px 0 0;
   font-family: "Fraunces", serif;
-  font-size: clamp(2rem, 4vw, 4.2rem);
-  line-height: 0.96;
+  font-size: clamp(2rem, 3.3vw, 3.4rem);
+  line-height: 1.08;
   text-shadow: 0 0 36px rgba(54, 241, 199, 0.14);
 }
 
@@ -419,6 +407,8 @@ input {
   padding: 5px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.06);
+  width: min(100%, 320px);
+  margin-top: 2px;
 }
 
 .mode-tab {
@@ -532,6 +522,14 @@ input {
   stroke: #ffffff;
   stroke-width: 4;
   filter: drop-shadow(0 0 24px rgba(255, 212, 106, 0.58));
+}
+
+.node-kind-input circle.core {
+  stroke-dasharray: 3 6;
+}
+
+.node-kind-question circle.core {
+  stroke-dasharray: 8 5;
 }
 
 .node-aura {
@@ -666,7 +664,8 @@ input {
   margin: 16px 0;
 }
 
-.repo-art {
+.repo-art,
+.node-art {
   display: grid;
   gap: 8px;
   min-height: 178px;
@@ -684,7 +683,29 @@ input {
   box-shadow: inset 0 0 36px rgba(54, 241, 199, 0.08);
 }
 
-.repo-art span {
+.node-art-input {
+  background:
+    linear-gradient(135deg, rgba(255, 110, 77, 0.26), transparent 44%),
+    linear-gradient(225deg, rgba(255, 212, 106, 0.16), transparent 36%),
+    linear-gradient(180deg, rgba(24, 15, 12, 0.96), rgba(45, 28, 18, 0.94));
+}
+
+.node-art-question {
+  background:
+    linear-gradient(135deg, rgba(168, 140, 255, 0.24), transparent 44%),
+    linear-gradient(225deg, rgba(100, 199, 255, 0.18), transparent 36%),
+    linear-gradient(180deg, rgba(17, 14, 31, 0.96), rgba(24, 26, 49, 0.94));
+}
+
+.node-art-output {
+  background:
+    linear-gradient(135deg, rgba(100, 199, 255, 0.22), transparent 42%),
+    linear-gradient(225deg, rgba(54, 241, 199, 0.16), transparent 38%),
+    linear-gradient(180deg, rgba(9, 21, 30, 0.95), rgba(18, 35, 48, 0.95));
+}
+
+.repo-art span,
+.node-art span {
   width: max-content;
   border-radius: 999px;
   padding: 6px 9px;
@@ -694,13 +715,15 @@ input {
   font-weight: 900;
 }
 
-.repo-art strong {
+.repo-art strong,
+.node-art strong {
   font-family: "Fraunces", serif;
   font-size: 1.6rem;
   line-height: 1;
 }
 
-.repo-art em {
+.repo-art em,
+.node-art em {
   color: rgba(248, 255, 249, 0.68);
   font-style: normal;
   font-weight: 800;

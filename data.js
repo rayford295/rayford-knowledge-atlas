@@ -1,19 +1,47 @@
 window.researchMapData = {
-  "generatedAt": "2026-04-25T21:13:37.590Z",
+  "generatedAt": "2026-05-17T04:34:32.052Z",
   "themes": [
     "All",
+    "AI Alignment",
+    "AI Futures",
     "Applied GeoAI Tooling",
+    "Biography and Judgment",
     "Computer Vision Segmentation",
     "Disaster Assessment",
+    "Evidence and Power",
+    "Founder Judgment",
     "Generative Vision",
     "Geo-Privacy",
+    "Human-AI Judgment",
+    "Institutions Under Stress",
     "Multimodal Learning",
+    "Narrative and Public Voice",
+    "Public Health AI",
+    "Public Writing",
+    "Reading Input",
+    "Research Taste",
+    "Research Translation",
+    "Scholar Output",
     "Spatial Intelligence",
+    "Urban Digital Twins",
     "Urban Greening"
   ],
+  "sources": [
+    "Google Scholar",
+    "Knowledge Questions",
+    "Research Wiki",
+    "WeRead"
+  ],
+  "counts": {
+    "output": 17,
+    "input": 12,
+    "question": 5
+  },
   "nodes": [
     {
       "id": "arcgis-sam-tree-segmentation",
+      "kind": "output",
+      "source": "Research Wiki",
       "shortTitle": "ArcGIS Text SAM",
       "title": "Object Detection and Segmentation of Trees using Text SAM in ArcGIS Online",
       "year": 2025,
@@ -74,15 +102,22 @@ window.researchMapData = {
         "forks": 0,
         "commits": 4
       },
+      "metrics": {},
+      "role": null,
+      "metricLabel": "4 commits",
+      "wikiPath": "wiki/papers/arcgis-sam-tree-segmentation.md",
       "position": {
         "x": 430,
         "y": 535
       },
       "color": "#2f8f6f",
-      "radius": 35
+      "radius": 35,
+      "displayKind": "Research Output"
     },
     {
       "id": "damagearbiter",
+      "kind": "output",
+      "source": "Research Wiki",
       "shortTitle": "DamageArbiter",
       "title": "DamageArbiter: A CLIP-Enhanced Multimodal Arbitration Framework for Hurricane Damage Assessment from Street-View Imagery",
       "year": 2026,
@@ -143,15 +178,22 @@ window.researchMapData = {
         "forks": 1,
         "commits": 61
       },
+      "metrics": {},
+      "role": null,
+      "metricLabel": "61 commits",
+      "wikiPath": "wiki/papers/damagearbiter.md",
       "position": {
         "x": 705,
         "y": 255
       },
       "color": "#0f1f34",
-      "radius": 42
+      "radius": 42,
+      "displayKind": "Research Output"
     },
     {
       "id": "disastervlp",
+      "kind": "output",
+      "source": "Research Wiki",
       "shortTitle": "DisasterVLP",
       "title": "Perceiving Multidimensional Disaster Damages from Street-View Images Using Visual-Language Models",
       "year": 2025,
@@ -208,15 +250,22 @@ window.researchMapData = {
         "forks": 3,
         "commits": 26
       },
+      "metrics": {},
+      "role": null,
+      "metricLabel": "26 commits",
+      "wikiPath": "wiki/papers/disastervlp.md",
       "position": {
         "x": 560,
         "y": 390
       },
       "color": "#4b9dd5",
-      "radius": 36
+      "radius": 36,
+      "displayKind": "Research Output"
     },
     {
       "id": "geolocator",
+      "kind": "output",
+      "source": "Research Wiki",
       "shortTitle": "GeoLocator",
       "title": "GeoLocator: A Location-Integrated Large Multimodal Model for Inferring Geo-Privacy",
       "year": 2024,
@@ -273,15 +322,22 @@ window.researchMapData = {
         "forks": 1,
         "commits": 22
       },
+      "metrics": {},
+      "role": null,
+      "metricLabel": "22 commits",
+      "wikiPath": "wiki/papers/geolocator.md",
       "position": {
         "x": 180,
         "y": 470
       },
       "color": "#d7a13b",
-      "radius": 34
+      "radius": 34,
+      "displayKind": "Research Output"
     },
     {
       "id": "hyperlocal-disaster",
+      "kind": "output",
+      "source": "Research Wiki",
       "shortTitle": "Hyperlocal Disaster",
       "title": "Hyperlocal Disaster Damage Assessment Using Bi-temporal Street-View Imagery and Pre-trained Vision Models",
       "year": 2025,
@@ -345,15 +401,22 @@ window.researchMapData = {
         "forks": 2,
         "commits": 44
       },
+      "metrics": {},
+      "role": null,
+      "metricLabel": "44 commits",
+      "wikiPath": "wiki/papers/hyperlocal-disaster.md",
       "position": {
         "x": 370,
         "y": 300
       },
       "color": "#157bc0",
-      "radius": 38
+      "radius": 38,
+      "displayKind": "Research Output"
     },
     {
       "id": "satellite-to-street",
+      "kind": "output",
+      "source": "Research Wiki",
       "shortTitle": "Satellite-to-Street",
       "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
       "year": 2026,
@@ -402,12 +465,1466 @@ window.researchMapData = {
         "forks": 1,
         "commits": 106
       },
+      "metrics": {},
+      "role": null,
+      "metricLabel": "106 commits",
+      "wikiPath": "wiki/papers/satellite-to-street.md",
       "position": {
         "x": 790,
         "y": 500
       },
       "color": "#b97a16",
-      "radius": 40
+      "radius": 40,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "reading-23303928",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "我的团长我的团（段奕宏、张译主演同名...",
+      "title": "我的团长我的团（段奕宏、张译主演同名电视剧原著）",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Read",
+      "authors": "兰晓龙",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Institutions Under Stress",
+        "Evidence and Power"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=23303928"
+        }
+      ],
+      "connections": [
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "keeps technical evidence tied to human institutions under pressure"
+        },
+        {
+          "target": "damagearbiter",
+          "label": "adds a social and institutional reading layer to disaster assessment"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 1346,
+        "underline_count": 1004,
+        "bookmark_count": 341,
+        "thought_count": 1,
+        "reading_progress": 100
+      },
+      "role": null,
+      "metricLabel": "1346 notes",
+      "wikiPath": "wiki/readings/1-23303928.md",
+      "position": {
+        "x": 120,
+        "y": 115
+      },
+      "color": "#ff6e4d",
+      "radius": 48,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-25926862",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "美丽新世界（译文经典）",
+      "title": "美丽新世界（译文经典）",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Read",
+      "authors": "奥尔德斯·赫胥黎",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Institutions Under Stress",
+        "Evidence and Power"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=25926862"
+        }
+      ],
+      "connections": [
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "keeps technical evidence tied to human institutions under pressure"
+        },
+        {
+          "target": "damagearbiter",
+          "label": "adds a social and institutional reading layer to disaster assessment"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 301,
+        "underline_count": 175,
+        "bookmark_count": 126,
+        "thought_count": 0,
+        "reading_progress": 100
+      },
+      "role": null,
+      "metricLabel": "301 notes",
+      "wikiPath": "wiki/readings/10-25926862.md",
+      "position": {
+        "x": 374,
+        "y": 210
+      },
+      "color": "#ff6e4d",
+      "radius": 38,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-3300200299",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "2030倒计时：马斯克预言AI取代人...",
+      "title": "2030倒计时：马斯克预言AI取代人类",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Reading",
+      "authors": "史塔克",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "AI Futures",
+        "Human-AI Judgment",
+        "Founder Judgment"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=3300200299"
+        }
+      ],
+      "connections": [
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "feeds the question of how AI systems should support human judgment"
+        },
+        {
+          "target": "geolocator",
+          "label": "sharpens the public stakes of spatial AI and inference"
+        },
+        {
+          "target": "founder-window-research-output",
+          "label": "connects founder judgment with research-to-product translation"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 290,
+        "underline_count": 254,
+        "bookmark_count": 36,
+        "thought_count": 0,
+        "reading_progress": 92
+      },
+      "role": null,
+      "metricLabel": "290 notes",
+      "wikiPath": "wiki/readings/11-3300200299.md",
+      "position": {
+        "x": 274,
+        "y": 330
+      },
+      "color": "#a88cff",
+      "radius": 37,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-3300146170",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "段永平投资问答录（全两册）",
+      "title": "段永平投资问答录（全两册）",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Read",
+      "authors": "孙力科",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Founder Judgment"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=3300146170"
+        }
+      ],
+      "connections": [
+        {
+          "target": "founder-window-research-output",
+          "label": "connects founder judgment with research-to-product translation"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 262,
+        "underline_count": 177,
+        "bookmark_count": 85,
+        "thought_count": 0,
+        "reading_progress": 100
+      },
+      "role": null,
+      "metricLabel": "262 notes",
+      "wikiPath": "wiki/readings/12-3300146170.md",
+      "position": {
+        "x": 399,
+        "y": 455
+      },
+      "color": "#ffd46a",
+      "radius": 37,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-3300064301",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "李小龙：神话和真实",
+      "title": "李小龙：神话和真实",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Reading",
+      "authors": "马修·波利",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Biography and Judgment"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=3300064301"
+        }
+      ],
+      "connections": [
+        {
+          "target": "biography-research-judgment",
+          "label": "turns life histories into research judgment training data"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 715,
+        "underline_count": 506,
+        "bookmark_count": 209,
+        "thought_count": 0,
+        "reading_progress": 93
+      },
+      "role": null,
+      "metricLabel": "715 notes",
+      "wikiPath": "wiki/readings/2-3300064301.md",
+      "position": {
+        "x": 230,
+        "y": 210
+      },
+      "color": "#9ad66d",
+      "radius": 43,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-43993718",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "白色巨塔（日本“国民级小说”，日剧巅...",
+      "title": "白色巨塔（日本“国民级小说”，日剧巅峰之作）",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Read",
+      "authors": "山崎丰子",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Institutions Under Stress",
+        "Evidence and Power",
+        "Narrative and Public Voice"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=43993718"
+        }
+      ],
+      "connections": [
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "keeps technical evidence tied to human institutions under pressure"
+        },
+        {
+          "target": "damagearbiter",
+          "label": "adds a social and institutional reading layer to disaster assessment"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 470,
+        "underline_count": 94,
+        "bookmark_count": 375,
+        "thought_count": 1,
+        "reading_progress": 100
+      },
+      "role": null,
+      "metricLabel": "470 notes",
+      "wikiPath": "wiki/readings/3-43993718.md",
+      "position": {
+        "x": 130,
+        "y": 330
+      },
+      "color": "#ff6e4d",
+      "radius": 40,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-31230615",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "笑场",
+      "title": "笑场",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Reading",
+      "authors": "李诞",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Narrative and Public Voice"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=31230615"
+        }
+      ],
+      "connections": [
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "keeps the reading input connected to the output graph"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 427,
+        "underline_count": 299,
+        "bookmark_count": 127,
+        "thought_count": 1,
+        "reading_progress": 91
+      },
+      "role": null,
+      "metricLabel": "427 notes",
+      "wikiPath": "wiki/readings/4-31230615.md",
+      "position": {
+        "x": 255,
+        "y": 455
+      },
+      "color": "#36f1c7",
+      "radius": 39,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-3300118393",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "自我突围（独家首发）",
+      "title": "自我突围（独家首发）",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Read",
+      "authors": "施一公",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Biography and Judgment"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=3300118393"
+        }
+      ],
+      "connections": [
+        {
+          "target": "biography-research-judgment",
+          "label": "turns life histories into research judgment training data"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 348,
+        "underline_count": 250,
+        "bookmark_count": 98,
+        "thought_count": 0,
+        "reading_progress": 100
+      },
+      "role": null,
+      "metricLabel": "348 notes",
+      "wikiPath": "wiki/readings/5-3300118393.md",
+      "position": {
+        "x": 192,
+        "y": 133
+      },
+      "color": "#9ad66d",
+      "radius": 38,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-24019296",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "命运：文在寅自传",
+      "title": "命运：文在寅自传",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Reading",
+      "authors": "文在寅",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Biography and Judgment"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=24019296"
+        }
+      ],
+      "connections": [
+        {
+          "target": "biography-research-judgment",
+          "label": "turns life histories into research judgment training data"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 340,
+        "underline_count": 168,
+        "bookmark_count": 172,
+        "thought_count": 0,
+        "reading_progress": 97
+      },
+      "role": null,
+      "metricLabel": "340 notes",
+      "wikiPath": "wiki/readings/6-24019296.md",
+      "position": {
+        "x": 302,
+        "y": 228
+      },
+      "color": "#9ad66d",
+      "radius": 38,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-3300021861",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "李嘉诚传",
+      "title": "李嘉诚传",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Read",
+      "authors": "王晶 陈润",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Biography and Judgment",
+        "Founder Judgment"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=3300021861"
+        }
+      ],
+      "connections": [
+        {
+          "target": "biography-research-judgment",
+          "label": "turns life histories into research judgment training data"
+        },
+        {
+          "target": "founder-window-research-output",
+          "label": "connects founder judgment with research-to-product translation"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 330,
+        "underline_count": 181,
+        "bookmark_count": 149,
+        "thought_count": 0,
+        "reading_progress": 100
+      },
+      "role": null,
+      "metricLabel": "330 notes",
+      "wikiPath": "wiki/readings/7-3300021861.md",
+      "position": {
+        "x": 202,
+        "y": 348
+      },
+      "color": "#ffd46a",
+      "radius": 38,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-3300151174",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "2049：未来10000天的可能",
+      "title": "2049：未来10000天的可能",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Reading",
+      "authors": "[美]凯文·凯利 吴晨",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "AI Futures",
+        "Human-AI Judgment"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=3300151174"
+        }
+      ],
+      "connections": [
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "feeds the question of how AI systems should support human judgment"
+        },
+        {
+          "target": "geolocator",
+          "label": "sharpens the public stakes of spatial AI and inference"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 321,
+        "underline_count": 235,
+        "bookmark_count": 86,
+        "thought_count": 0,
+        "reading_progress": 99
+      },
+      "role": null,
+      "metricLabel": "321 notes",
+      "wikiPath": "wiki/readings/8-3300151174.md",
+      "position": {
+        "x": 327,
+        "y": 473
+      },
+      "color": "#a88cff",
+      "radius": 38,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "reading-3300045715",
+      "kind": "input",
+      "source": "WeRead",
+      "shortTitle": "我是成龙",
+      "title": "我是成龙",
+      "year": 2026,
+      "venue": "WeRead",
+      "type": "Reading Input",
+      "status": "Read",
+      "authors": "成龙 朱墨",
+      "summary": "This reading node records a high-signal WeRead book from Yifan Yang's reading system. It keeps the book visible as an input to research taste, founder judgment, public writing, and GeoAI system design without publishing raw copyrighted highlights.",
+      "impact": "This book belongs in the input layer because it helps explain the intellectual pressure behind the output layer. It can feed research framing, public writing, founder narrative, and the long questions that connect technical GeoAI work with human judgment.",
+      "themes": [
+        "Reading Input",
+        "Biography and Judgment"
+      ],
+      "methods": [
+        "Close Reading",
+        "Note Synthesis",
+        "Cross-Source Interpretation"
+      ],
+      "links": [
+        {
+          "label": "Open in WeRead",
+          "url": "weread://reading?bId=3300045715"
+        }
+      ],
+      "connections": [
+        {
+          "target": "biography-research-judgment",
+          "label": "turns life histories into research judgment training data"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "note_count": 320,
+        "underline_count": 122,
+        "bookmark_count": 198,
+        "thought_count": 0,
+        "reading_progress": 100
+      },
+      "role": null,
+      "metricLabel": "320 notes",
+      "wikiPath": "wiki/readings/9-3300045715.md",
+      "position": {
+        "x": 264,
+        "y": 115
+      },
+      "color": "#9ad66d",
+      "radius": 38,
+      "displayKind": "Reading Input"
+    },
+    {
+      "id": "ai-systems-human-judgment",
+      "kind": "question",
+      "source": "Knowledge Questions",
+      "shortTitle": "AI and Judgment",
+      "title": "How should AI systems support human judgment?",
+      "year": 2026,
+      "venue": "Knowledge Bridge",
+      "type": "Bridge Question",
+      "status": "Active",
+      "authors": "Yifan Yang",
+      "summary": "The important question is not whether AI can make a prediction. The harder question is how AI helps people judge, challenge, and reuse that prediction.",
+      "impact": "Many readings on AI, biographies, and public technology narratives ask what kind of human agency survives automation. This bridge keeps that concern visible inside the research graph.",
+      "themes": [
+        "AI Futures",
+        "Human-AI Judgment",
+        "Multimodal Learning"
+      ],
+      "methods": [
+        "AI System Critique",
+        "Human-in-the-Loop Design",
+        "Reading-to-Research Synthesis"
+      ],
+      "links": [],
+      "connections": [
+        {
+          "target": "geolocator",
+          "label": "shows why spatial AI should expose inference risks"
+        },
+        {
+          "target": "damagearbiter",
+          "label": "makes disagreement visible before a system makes a damage claim"
+        },
+        {
+          "target": "satellite-to-street",
+          "label": "asks how generated evidence should remain accountable"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": null,
+      "metricLabel": "Knowledge Questions",
+      "wikiPath": "wiki/questions/ai-systems-human-judgment.md",
+      "position": {
+        "x": 515,
+        "y": 350
+      },
+      "color": "#a88cff",
+      "radius": 38,
+      "displayKind": "Bridge Question"
+    },
+    {
+      "id": "biography-research-judgment",
+      "kind": "question",
+      "source": "Knowledge Questions",
+      "shortTitle": "Biography as Method",
+      "title": "How do biographies train research judgment?",
+      "year": 2026,
+      "venue": "Knowledge Bridge",
+      "type": "Bridge Question",
+      "status": "Active",
+      "authors": "Yifan Yang",
+      "summary": "Biographies are not just stories of exceptional people. Read carefully, they become case studies in taste, pressure, attention, and timing.",
+      "impact": "This question gives the reading graph a disciplined use for biography. It converts life stories into judgment patterns that can inform research choices and public writing.",
+      "themes": [
+        "Biography and Judgment",
+        "Founder Judgment",
+        "Research Taste"
+      ],
+      "methods": [
+        "Biographical Reading",
+        "Judgment Extraction",
+        "Pattern Comparison"
+      ],
+      "links": [],
+      "connections": [
+        {
+          "target": "founder-window-research-output",
+          "label": "turns life histories into timing and judgment heuristics"
+        },
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "asks what human judgment should remain visible in AI systems"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": null,
+      "metricLabel": "Knowledge Questions",
+      "wikiPath": "wiki/questions/biography-research-judgment.md",
+      "position": {
+        "x": 390,
+        "y": 430
+      },
+      "color": "#9ad66d",
+      "radius": 34,
+      "displayKind": "Bridge Question"
+    },
+    {
+      "id": "founder-window-research-output",
+      "kind": "question",
+      "source": "Knowledge Questions",
+      "shortTitle": "Founder Window",
+      "title": "How does a founder turn research into a timing window?",
+      "year": 2026,
+      "venue": "Knowledge Bridge",
+      "type": "Bridge Question",
+      "status": "Active",
+      "authors": "Yifan Yang",
+      "summary": "Research becomes founder material when it reveals a problem, a timing window, a trusted workflow, and a public story at the same time.",
+      "impact": "This question keeps business, biographies, and startup reading from drifting away from scholarship. It asks which research outputs can become useful systems without losing scientific honesty.",
+      "themes": [
+        "Founder Judgment",
+        "Research Translation",
+        "Public Writing"
+      ],
+      "methods": [
+        "Venture Framing",
+        "Opportunity Synthesis",
+        "Research-to-Product Mapping"
+      ],
+      "links": [],
+      "connections": [
+        {
+          "target": "satellite-to-street",
+          "label": "turns generative geospatial research into a resilience product question"
+        },
+        {
+          "target": "damagearbiter",
+          "label": "connects auditable disaster evidence with operational decision-making"
+        },
+        {
+          "target": "geolocator",
+          "label": "links spatial intelligence to public risk and market awareness"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": null,
+      "metricLabel": "Knowledge Questions",
+      "wikiPath": "wiki/questions/founder-window-research-output.md",
+      "position": {
+        "x": 520,
+        "y": 500
+      },
+      "color": "#ffd46a",
+      "radius": 36,
+      "displayKind": "Bridge Question"
+    },
+    {
+      "id": "human-evidence-disaster-ai",
+      "kind": "question",
+      "source": "Knowledge Questions",
+      "shortTitle": "Evidence in Disaster AI",
+      "title": "What counts as evidence in disaster AI?",
+      "year": 2026,
+      "venue": "Knowledge Bridge",
+      "type": "Bridge Question",
+      "status": "Active",
+      "authors": "Yifan Yang",
+      "summary": "Disaster AI should not only predict damage; it should explain what kind of evidence supports the claim and who can inspect that evidence.",
+      "impact": "This question turns reading about institutions, pressure, leadership, and public trust into a research criterion. It asks every disaster model to show its trail: image, text, location, uncertainty, and human review.",
+      "themes": [
+        "Disaster Assessment",
+        "Evidence and Power",
+        "Human-AI Judgment"
+      ],
+      "methods": [
+        "Cross-Reading Synthesis",
+        "Disaster AI Framing",
+        "Evidence Design"
+      ],
+      "links": [],
+      "connections": [
+        {
+          "target": "damagearbiter",
+          "label": "asks how multimodal arbitration can produce auditable evidence"
+        },
+        {
+          "target": "hyperlocal-disaster",
+          "label": "links street-view damage assessment to human-readable evidence"
+        },
+        {
+          "target": "disastervlp",
+          "label": "treats semantic damage categories as inspectable claims"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": null,
+      "metricLabel": "Knowledge Questions",
+      "wikiPath": "wiki/questions/human-evidence-disaster-ai.md",
+      "position": {
+        "x": 485,
+        "y": 210
+      },
+      "color": "#f08bd6",
+      "radius": 40,
+      "displayKind": "Bridge Question"
+    },
+    {
+      "id": "spatial-intelligence-public-infrastructure",
+      "kind": "question",
+      "source": "Knowledge Questions",
+      "shortTitle": "Spatial Infrastructure",
+      "title": "How does spatial intelligence become public infrastructure?",
+      "year": 2026,
+      "venue": "Knowledge Bridge",
+      "type": "Bridge Question",
+      "status": "Active",
+      "authors": "Yifan Yang",
+      "summary": "Spatial intelligence becomes public infrastructure when it supports shared decisions, trusted evidence, and repeatable workflows rather than isolated demos.",
+      "impact": "This bridge connects GeoAI papers with readings on cities, institutions, technology, and governance. It keeps the research graph aimed at usable systems.",
+      "themes": [
+        "Spatial Intelligence",
+        "Urban Digital Twins",
+        "Disaster Assessment"
+      ],
+      "methods": [
+        "GeoAI Framing",
+        "Public Infrastructure Thinking",
+        "Cross-Project Synthesis"
+      ],
+      "links": [],
+      "connections": [
+        {
+          "target": "geolocator",
+          "label": "begins with the risks and affordances of location inference"
+        },
+        {
+          "target": "satellite-to-street",
+          "label": "asks how generated views can support public resilience workflows"
+        },
+        {
+          "target": "hyperlocal-disaster",
+          "label": "links street-level data to public damage assessment"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": null,
+      "metricLabel": "Knowledge Questions",
+      "wikiPath": "wiki/questions/spatial-intelligence-public-infrastructure.md",
+      "position": {
+        "x": 635,
+        "y": 405
+      },
+      "color": "#64c7ff",
+      "radius": 36,
+      "displayKind": "Bridge Question"
+    },
+    {
+      "id": "scholar-experiments-of-federated-learning-for-covid-19-chest-x-ray-image",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Experiments of federated learning for COVI",
+      "title": "Experiments of federated learning for COVID-19 chest X-ray images",
+      "year": 2021,
+      "venue": "Advances in Artificial Intelligence and Security: 7th International… , 2021",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "B Yan, J Wang, J Cheng, Y Zhou, Y Zhang, Y Yang, L Liu, H Zhao, ...",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Multimodal Learning",
+        "Public Health AI"
+      ],
+      "methods": [
+        "Multimodal Learning",
+        "Public Health AI"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "connects public signals with accountable AI evidence"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 274
+      },
+      "role": "collaborative output",
+      "metricLabel": "274 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 720,
+        "y": 96
+      },
+      "color": "#64c7ff",
+      "radius": 44,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-covid-19-public-opinion-and-emotion-monitoring-system-based-on-t",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "COVID-19 Public Opinion and Emotion Monito",
+      "title": "COVID-19 Public Opinion and Emotion Monitoring System Based on Time Series Thermal New Word Mining",
+      "year": 2020,
+      "venue": "Computers, Materials & Continua 64 (3), 1415-1434 , 2020",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "Y Zhang, J Chen, Y Yang, H Li, X Zheng, X Chen, B Liu, T Ren, N Xiong",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Public Health AI"
+      ],
+      "methods": [
+        "Public Health AI"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "connects public signals with accountable AI evidence"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 28
+      },
+      "role": "collaborative output",
+      "metricLabel": "28 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 772,
+        "y": 96
+      },
+      "color": "#64c7ff",
+      "radius": 36.69960629311004,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-surveying-attitudinal-alignment-between-large-language-models-vs",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Surveying attitudinal alignment between la",
+      "title": "Surveying attitudinal alignment between large language models vs. humans towards 17 sustainable development goals",
+      "year": 2024,
+      "venue": "arXiv preprint arXiv:2404.13885 , 2024",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "Q Wu, Y Xu, T Xiao, Y Xiao, Y Li, T Wang, Y Zhang, S Zhong, Y Zhang, ...",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Multimodal Learning",
+        "AI Alignment"
+      ],
+      "methods": [
+        "Multimodal Learning",
+        "AI Alignment"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [],
+      "repository": null,
+      "metrics": {
+        "citations": 18
+      },
+      "role": "collaborative output",
+      "metricLabel": "18 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 824,
+        "y": 96
+      },
+      "color": "#64c7ff",
+      "radius": 34.182337649086286,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-integrating-spatiotemporal-vision-transformer-into-digital-twins",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Integrating spatiotemporal vision transfor",
+      "title": "Integrating spatiotemporal vision transformer into digital twins for high-resolution heat stress forecasting in campus environments",
+      "year": 2025,
+      "venue": "Journal of Planning Education and Research, 0739456X251391121 , 2025",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "W Gong, X Ye, K Wu, S Jamonnak, W Zhang, Y Yang, X Huang",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Spatial Intelligence",
+        "Multimodal Learning",
+        "Urban Digital Twins"
+      ],
+      "methods": [
+        "Spatial Intelligence",
+        "Multimodal Learning",
+        "Urban Digital Twins"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "extends the urban and spatial intelligence question"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 8
+      },
+      "role": "collaborative output",
+      "metricLabel": "8 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 720,
+        "y": 190
+      },
+      "color": "#64c7ff",
+      "radius": 30.788225099390857,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-integrating-earth-observation-data-into-the-tri-environmental-ev",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Integrating earth observation data into th",
+      "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2505.01721 , 2025",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "Z Li, H Li, Y Yang, S Wang, Y Zhu",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Disaster Assessment",
+        "Spatial Intelligence"
+      ],
+      "methods": [
+        "Disaster Assessment",
+        "Spatial Intelligence"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "damagearbiter",
+          "label": "feeds the disaster intelligence output layer"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 4
+      },
+      "role": "collaborative output",
+      "metricLabel": "4 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 772,
+        "y": 190
+      },
+      "color": "#64c7ff",
+      "radius": 28.8,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-towards-agentic-urban-digital-twins-audits-advancing-new-urban-s",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Towards Agentic Urban Digital Twins (AUDiT",
+      "title": "Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents",
+      "year": 2026,
+      "venue": "Urban Informatics 5 (1), 9 , 2026",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "X Ye, W Gong, Y Yang, L Zou, Z Tu, X Huang, Z Li, H Ning, L Wu",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Spatial Intelligence",
+        "Multimodal Learning",
+        "Urban Digital Twins"
+      ],
+      "methods": [
+        "Spatial Intelligence",
+        "Multimodal Learning",
+        "Urban Digital Twins"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "extends the urban and spatial intelligence question"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 2
+      },
+      "role": "collaborative output",
+      "metricLabel": "2 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 824,
+        "y": 190
+      },
+      "color": "#64c7ff",
+      "radius": 27.39411254969543,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-earth-embeddings-reveal-diverse-urban-signals-from-space",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Earth Embeddings Reveal Diverse Urban Sign",
+      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Spatial Intelligence"
+      ],
+      "methods": [
+        "Spatial Intelligence"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "extends the urban and spatial intelligence question"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 720,
+        "y": 284
+      },
+      "color": "#64c7ff",
+      "radius": 24,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-predicting-healthcare-system-visitation-flow-by-integrating-hosp",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Predicting Healthcare System Visitation Fl",
+      "title": "Predicting Healthcare System Visitation Flow by Integrating Hospital Attributes and Population Socioeconomics with Human Mobility Data",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2601.15977 , 2026",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "B Lin, L Zou, H Tian, H Cai, Y Yang, B Zhou",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Spatial Intelligence",
+        "Public Health AI"
+      ],
+      "methods": [
+        "Spatial Intelligence",
+        "Public Health AI"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "extends the urban and spatial intelligence question"
+        },
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "connects public signals with accountable AI evidence"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 772,
+        "y": 284
+      },
+      "color": "#64c7ff",
+      "radius": 24,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-resilience-in-4d-ai-driven-geospatial-digital-twins-for-urban-fl",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Resilience in 4D",
+      "title": "Resilience in 4D: AI-Driven Geospatial Digital Twins for Urban Flood Simulation and Management",
+      "year": 2025,
+      "venue": "AGU25 , 2025",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "L Zou, D Mandal, B Zhou, Y Yang, M Yang",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Disaster Assessment",
+        "Spatial Intelligence",
+        "Multimodal Learning",
+        "Urban Digital Twins"
+      ],
+      "methods": [
+        "Disaster Assessment",
+        "Spatial Intelligence",
+        "Multimodal Learning",
+        "Urban Digital Twins"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "damagearbiter",
+          "label": "feeds the disaster intelligence output layer"
+        },
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "extends the urban and spatial intelligence question"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 824,
+        "y": 284
+      },
+      "color": "#64c7ff",
+      "radius": 24,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-navigating-spatial-inequities-in-freight-truck-crash-severity-vi",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Navigating Spatial Inequities in Freight T",
+      "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
+      "year": 2025,
+      "venue": "Journal of Transport Geography 128, 104387 , 2025",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "Y Wang, H Yin, Y Yang, C Zhao, S Wang",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Spatial Intelligence"
+      ],
+      "methods": [
+        "Spatial Intelligence"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "extends the urban and spatial intelligence question"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 720,
+        "y": 378
+      },
+      "color": "#64c7ff",
+      "radius": 24,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-different-loss-functions-used-in-the-low-rank-approximation",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Different Loss Functions Used in the Low-r",
+      "title": "Different Loss Functions Used in the Low-rank Approximation",
+      "year": 2020,
+      "venue": "International Core Journal of Engineering 6 (11), 360-368 , 2020",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "C Shi, G Mou, H Wang, T Liu, Y Yang, Z Li",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Scholar Output"
+      ],
+      "methods": [
+        "Scholar Output"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 772,
+        "y": 378
+      },
+      "color": "#64c7ff",
+      "radius": 24,
+      "displayKind": "Research Output"
     }
   ]
 };

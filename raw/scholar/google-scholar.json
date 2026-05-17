@@ -15,8 +15,8 @@
   ],
   "metrics": {
     "citations": {
-      "all": 362,
-      "since2019": 349
+      "all": 366,
+      "since2019": 353
     },
     "hIndex": {
       "all": 6,
@@ -60,14 +60,14 @@
       "title": "Integrating spatiotemporal vision transformer into digital twins for high-resolution heat stress forecasting in campus environments",
       "authors": "W Gong, X Ye, K Wu, S Jamonnak, W Zhang, Y Yang, X Huang",
       "venue": "Journal of Planning Education and Research, 0739456X251391121 , 2025",
-      "citations": 7,
+      "citations": 8,
       "year": 2025
     },
     {
       "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",
       "authors": "Y Yang, L Zou, B Zhou, D Li, B Lin, J Abedin, M Yang",
       "venue": "Computers, Environment and Urban Systems 121, 102335 , 2025",
-      "citations": 7,
+      "citations": 8,
       "year": 2025
     },
     {
@@ -76,6 +76,13 @@
       "venue": "arXiv preprint arXiv:2505.01721 , 2025",
       "citations": 4,
       "year": 2025
+    },
+    {
+      "title": "Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents",
+      "authors": "X Ye, W Gong, Y Yang, L Zou, Z Tu, X Huang, Z Li, H Ning, L Wu",
+      "venue": "Urban Informatics 5 (1), 9 , 2026",
+      "citations": 2,
+      "year": 2026
     },
     {
       "title": "DamageArbiter: A CLIP-Enhanced Multimodal Arbitration Framework for Hurricane Damage Assessment from Street-View Imagery",
@@ -102,13 +109,6 @@
       "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
       "authors": "Y Yang, L Zou, W Jepson",
       "venue": "arXiv preprint arXiv:2603.20697 , 2026",
-      "citations": 0,
-      "year": 2026
-    },
-    {
-      "title": "Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents",
-      "authors": "X Ye, W Gong, Y Yang, L Zou, Z Tu, X Huang, Z Li, H Ning, L Wu",
-      "venue": "Urban Informatics 5 (1), 9 , 2026",
       "citations": 0,
       "year": 2026
     },
@@ -149,5 +149,5 @@
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-05-11T12:22:17.600Z"
+  "fetchedAt": "2026-05-17T04:28:43.997Z"
 }

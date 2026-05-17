@@ -8,10 +8,12 @@
   const starfield = document.getElementById("starfield");
   const paperCount = document.getElementById("paper-count");
   const themeCountElement = document.getElementById("theme-count");
-  const yearRangeElement = document.getElementById("year-range");
+  const outputCountElement = document.getElementById("output-count");
+  const inputCountElement = document.getElementById("input-count");
+  const questionCountElement = document.getElementById("question-count");
 
   const themeCount = new Set(data.nodes.flatMap((node) => node.themes)).size;
-  const years = data.nodes.map((node) => node.year);
+  const years = data.nodes.map((node) => Number(node.year)).filter(Boolean);
   const minYear = years.length ? Math.min.apply(null, years) : 0;
   const maxYear = years.length ? Math.max.apply(null, years) : 0;
 
@@ -37,7 +39,9 @@
 
   paperCount.textContent = String(data.nodes.length);
   themeCountElement.textContent = String(themeCount);
-  yearRangeElement.textContent = minYear + "-" + maxYear;
+  outputCountElement.textContent = String(data.counts?.output || data.nodes.filter((node) => node.kind === "output").length);
+  inputCountElement.textContent = String(data.counts?.input || data.nodes.filter((node) => node.kind === "input").length);
+  questionCountElement.textContent = String(data.counts?.question || data.nodes.filter((node) => node.kind === "question").length);
 
   function renderScholar(snapshot) {
     if (!snapshot || !snapshot.metrics) {
@@ -97,6 +101,10 @@
         node.authors,
         node.repository?.name,
         node.repository?.language,
+        node.kind,
+        node.source,
+        node.role,
+        node.metricLabel,
         ...(node.themes || []),
         ...(node.methods || [])
       ].join(" ").toLowerCase();
@@ -134,15 +142,17 @@
       button.type = "button";
       button.className = "repo-card" + (node.id === selectedNodeId ? " active" : "");
 
-      const repoName = node.repository?.name || "No repository";
-      const stats = node.repository
-        ? `${node.repository.language} | ${node.repository.commits} commits | ${node.repository.stars} stars`
-        : "Repository metadata pending";
+      const sourceName = node.repository?.name || node.source || "Knowledge source";
+      const stats = node.metricLabel || (
+        node.repository
+          ? `${node.repository.language} | ${node.repository.commits} commits | ${node.repository.stars} stars`
+          : node.displayKind
+      );
 
       button.innerHTML = `
-        <small>${node.type} | ${node.year}</small>
+        <small>${node.displayKind || node.type} | ${node.year}</small>
         <strong>${node.shortTitle}</strong>
-        <span>${repoName}</span>
+        <span>${sourceName}</span>
         <span>${stats}</span>
       `;
 
@@ -168,13 +178,27 @@
       return { x, y };
     }
 
+    if (activeMode === "flow") {
+      const lanes = {
+        input: 190,
+        question: 500,
+        output: 790
+      };
+      const laneNodes = visibleNodes.filter((candidate) => (candidate.kind || "output") === (node.kind || "output"));
+      const laneIndex = laneNodes.findIndex((candidate) => candidate.id === node.id);
+      const spacing = Math.max(72, Math.min(132, 520 / Math.max(1, laneNodes.length)));
+      return {
+        x: lanes[node.kind] || 790,
+        y: 92 + laneIndex * spacing
+      };
+    }
+
     const rank = visibleNodes
       .slice()
-      .sort((a, b) => (b.repository?.commits || 0) - (a.repository?.commits || 0));
+      .sort((a, b) => nodeWeight(b) - nodeWeight(a));
     const index = rank.findIndex((candidate) => candidate.id === node.id);
     const angle = (Math.PI * 2 * index) / Math.max(1, rank.length) - Math.PI / 2;
-    const commits = node.repository?.commits || 10;
-    const radius = 170 + Math.min(140, commits * 1.05);
+    const radius = 170 + Math.min(140, nodeWeight(node) * 1.05);
 
     return {
       x: 490 + Math.cos(angle) * radius,
@@ -184,7 +208,7 @@
 
   function ensureNodeState(node, target) {
     const existing = graphRuntime.nodeStates.get(node.id);
-    const repoWeight = Math.min(18, Math.round((node.repository?.commits || 0) / 8));
+    const repoWeight = Math.min(18, Math.round(nodeWeight(node) / 8));
 
     if (existing) {
       existing.targetX = target.x;
@@ -294,6 +318,7 @@
       const group = createSvg("g", {
         class: [
           "graph-node",
+          "node-kind-" + (node.kind || "output"),
           isSelected ? "is-selected" : "",
           isDimmed ? "is-muted" : ""
         ].join(" ").trim(),
@@ -355,7 +380,7 @@
         class: "node-meta",
         y: state.radius + 42,
         "text-anchor": "middle"
-      }, `${node.year} | ${node.repository?.commits || 0} commits`));
+      }, `${node.year} | ${node.metricLabel || node.source}`));
 
       group.appendChild(visual);
       nodeGroup.appendChild(group);
@@ -568,16 +593,19 @@
       return;
     }
 
-    document.getElementById("detail-type").textContent = node.type;
+    document.getElementById("detail-type").textContent = node.displayKind || node.type;
     document.getElementById("detail-status").textContent = node.status;
     document.getElementById("detail-title").textContent = node.title;
     document.getElementById("detail-meta").textContent = [
       node.year,
       node.venue,
-      node.authors
-    ].join(" | ");
+      node.authors,
+      node.role
+    ].filter(Boolean).join(" | ");
     document.getElementById("detail-summary").textContent = node.summary;
     document.getElementById("detail-impact").textContent = node.impact;
+    document.getElementById("detail-impact-heading").textContent = node.kind === "input" ? "How It Feeds My Work" : node.kind === "question" ? "Why This Question Matters" : "Why It Matters";
+    document.getElementById("detail-methods-heading").textContent = node.kind === "input" ? "Reading Lenses" : node.kind === "question" ? "Bridge Methods" : "Methods";
 
     renderRepoPreview(node);
     populateTokens("detail-themes", node.themes);
@@ -591,6 +619,24 @@
     container.innerHTML = "";
 
     if (!node.repository) {
+      const article = document.createElement("div");
+      article.className = "node-art node-art-" + (node.kind || "output");
+      article.innerHTML = `
+        <span>${node.source || node.displayKind}</span>
+        <strong>${node.metricLabel || node.displayKind || node.type}</strong>
+        <em>${node.kind === "input" ? "Input layer" : node.kind === "question" ? "Bridge layer" : "Output layer"}</em>
+      `;
+      container.appendChild(article);
+
+      if (node.metrics && Object.keys(node.metrics).length) {
+        const metrics = document.createElement("div");
+        metrics.className = "repo-metrics";
+        const entries = Object.entries(node.metrics).slice(0, 3);
+        metrics.innerHTML = entries.map(([key, value]) => `
+          <div><strong>${value}</strong><span>${key.replace(/_/g, " ")}</span></div>
+        `).join("");
+        container.appendChild(metrics);
+      }
       return;
     }
 
@@ -655,8 +701,26 @@
   }
 
   function renderAll() {
+    const visibleNodes = filteredNodes();
+    if (visibleNodes.length && !visibleNodes.some((node) => node.id === selectedNodeId)) {
+      selectedNodeId = visibleNodes[0].id;
+    }
     renderRepoList();
     renderGraph();
+    showDetail(data.nodes.find((node) => node.id === selectedNodeId));
+  }
+
+  function nodeWeight(node) {
+    if (node.repository?.commits) {
+      return node.repository.commits;
+    }
+    if (node.metrics?.note_count) {
+      return Math.sqrt(node.metrics.note_count) * 8;
+    }
+    if (node.metrics?.citations !== undefined) {
+      return Math.sqrt(node.metrics.citations + 1) * 10;
+    }
+    return node.kind === "question" ? 24 : 10;
   }
 
   function initStarfield() {

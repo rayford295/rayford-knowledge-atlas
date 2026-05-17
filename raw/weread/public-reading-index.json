@@ -1,0 +1,160 @@
+{
+  "source": "WeRead public-safe reading index",
+  "generatedAt": "2026-05-17T02:57:35.664Z",
+  "privacy": "No raw highlights or private note text are committed. This file keeps metadata, counts, themes, and graph links only.",
+  "totals": {
+    "notebookBookCount": 99,
+    "notebookNoteCount": 10983,
+    "shelfVisibleCount": 58,
+    "shelfBookCount": 57,
+    "shelfAlbumCount": 0,
+    "yearlyReadDays": 132,
+    "yearlyReadTime": "53h 0m"
+  },
+  "readings": [
+    {
+      "bookId": "23303928",
+      "title": "我的团长我的团（段奕宏、张译主演同名电视剧原著）",
+      "shortTitle": "我的团长我的团（段奕宏、张译主演同名...",
+      "author": "兰晓龙",
+      "readingProgress": 100,
+      "markedStatus": 4,
+      "reviewCount": 1,
+      "lineCount": 1004,
+      "bookmarkCount": 341,
+      "totalNoteCount": 1346
+    },
+    {
+      "bookId": "3300064301",
+      "title": "李小龙：神话和真实",
+      "shortTitle": "李小龙：神话和真实",
+      "author": "马修·波利",
+      "readingProgress": 93,
+      "markedStatus": 4,
+      "reviewCount": 0,
+      "lineCount": 506,
+      "bookmarkCount": 209,
+      "totalNoteCount": 715
+    },
+    {
+      "bookId": "43993718",
+      "title": "白色巨塔（日本“国民级小说”，日剧巅峰之作）",
+      "shortTitle": "白色巨塔（日本“国民级小说”，日剧巅...",
+      "author": "山崎丰子",
+      "readingProgress": 100,
+      "markedStatus": 4,
+      "reviewCount": 1,
+      "lineCount": 94,
+      "bookmarkCount": 375,
+      "totalNoteCount": 470
+    },
+    {
+      "bookId": "31230615",
+      "title": "笑场",
+      "shortTitle": "笑场",
+      "author": "李诞",
+      "readingProgress": 91,
+      "markedStatus": 4,
+      "reviewCount": 1,
+      "lineCount": 299,
+      "bookmarkCount": 127,
+      "totalNoteCount": 427
+    },
+    {
+      "bookId": "3300118393",
+      "title": "自我突围（独家首发）",
+      "shortTitle": "自我突围（独家首发）",
+      "author": "施一公",
+      "readingProgress": 100,
+      "markedStatus": 4,
+      "reviewCount": 0,
+      "lineCount": 250,
+      "bookmarkCount": 98,
+      "totalNoteCount": 348
+    },
+    {
+      "bookId": "24019296",
+      "title": "命运：文在寅自传",
+      "shortTitle": "命运：文在寅自传",
+      "author": "文在寅",
+      "readingProgress": 97,
+      "markedStatus": 4,
+      "reviewCount": 0,
+      "lineCount": 168,
+      "bookmarkCount": 172,
+      "totalNoteCount": 340
+    },
+    {
+      "bookId": "3300021861",
+      "title": "李嘉诚传",
+      "shortTitle": "李嘉诚传",
+      "author": "王晶 陈润",
+      "readingProgress": 100,
+      "markedStatus": 4,
+      "reviewCount": 0,
+      "lineCount": 181,
+      "bookmarkCount": 149,
+      "totalNoteCount": 330
+    },
+    {
+      "bookId": "3300151174",
+      "title": "2049：未来10000天的可能",
+      "shortTitle": "2049：未来10000天的可能",
+      "author": "[美]凯文·凯利 吴晨",
+      "readingProgress": 99,
+      "markedStatus": 4,
+      "reviewCount": 0,
+      "lineCount": 235,
+      "bookmarkCount": 86,
+      "totalNoteCount": 321
+    },
+    {
+      "bookId": "3300045715",
+      "title": "我是成龙",
+      "shortTitle": "我是成龙",
+      "author": "成龙 朱墨",
+      "readingProgress": 100,
+      "markedStatus": 4,
+      "reviewCount": 0,
+      "lineCount": 122,
+      "bookmarkCount": 198,
+      "totalNoteCount": 320
+    },
+    {
+      "bookId": "25926862",
+      "title": "美丽新世界（译文经典）",
+      "shortTitle": "美丽新世界（译文经典）",
+      "author": "奥尔德斯·赫胥黎",
+      "readingProgress": 100,
+      "markedStatus": 4,
+      "reviewCount": 0,
+      "lineCount": 175,
+      "bookmarkCount": 126,
+      "totalNoteCount": 301
+    },
+    {
+      "bookId": "3300200299",
+      "title": "2030倒计时：马斯克预言AI取代人类",
+      "shortTitle": "2030倒计时：马斯克预言AI取代人...",
+      "author": "史塔克",
+      "readingProgress": 92,
+      "markedStatus": 2,
+      "reviewCount": 0,
+      "lineCount": 254,
+      "bookmarkCount": 36,
+      "totalNoteCount": 290
+    },
+    {
+      "bookId": "3300146170",
+      "title": "段永平投资问答录（全两册）",
+      "shortTitle": "段永平投资问答录（全两册）",
+      "author": "孙力科",
+      "readingProgress": 100,
+      "markedStatus": 4,
+      "reviewCount": 0,
+      "lineCount": 177,
+      "bookmarkCount": 85,
+      "totalNoteCount": 262
+    }
+  ]
+}

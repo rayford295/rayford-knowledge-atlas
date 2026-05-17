@@ -1,4 +1,4 @@
-# Research Wiki Index
+# Knowledge Wiki Index
 
 ## Papers
 
@@ -8,6 +8,22 @@
 - [Perceiving Multidimensional Disaster Damages](./papers/disastervlp.md)
 - [DamageArbiter](./papers/damagearbiter.md)
 - [Satellite-to-Street](./papers/satellite-to-street.md)
+
+## Reading Inputs
+
+- [我的团长我的团](./readings/1-23303928.md)
+- [李小龙：神话和真实](./readings/2-3300064301.md)
+- [白色巨塔](./readings/3-43993718.md)
+- [笑场](./readings/4-31230615.md)
+- [2049：未来10000天的可能](./readings/8-3300151174.md)
+
+## Bridge Questions
+
+- [What counts as evidence in disaster AI?](./questions/human-evidence-disaster-ai.md)
+- [How should AI systems support human judgment?](./questions/ai-systems-human-judgment.md)
+- [How does a founder turn research into a timing window?](./questions/founder-window-research-output.md)
+- [How do biographies train research judgment?](./questions/biography-research-judgment.md)
+- [How does spatial intelligence become public infrastructure?](./questions/spatial-intelligence-public-infrastructure.md)
 
 ## Concepts
 
