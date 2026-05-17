@@ -3,6 +3,8 @@
   const svg = document.getElementById("graph-svg");
   const layerFilterBar = document.getElementById("layer-filter-bar");
   const filterBar = document.getElementById("filter-bar");
+  const moreFilterBar = document.getElementById("more-filter-bar");
+  const guidedTrailsContainer = document.getElementById("guided-trails");
   const repoList = document.getElementById("repo-list");
   const searchInput = document.getElementById("search-input");
   const modeTabs = Array.from(document.querySelectorAll(".mode-tab"));
@@ -17,12 +19,42 @@
   const years = data.nodes.map((node) => Number(node.year)).filter(Boolean);
   const minYear = years.length ? Math.min.apply(null, years) : 0;
   const maxYear = years.length ? Math.max.apply(null, years) : 0;
+  const featuredThemes = new Set([
+    "All",
+    "Disaster Assessment",
+    "Spatial Intelligence",
+    "Multimodal Learning",
+    "Reading Input",
+    "Geo-Privacy",
+    "Human-AI Judgment"
+  ]);
+  const guidedTrails = [
+    {
+      id: "biography-founder",
+      title: "Biography -> Founder Judgment",
+      summary: "How life histories become timing, taste, and research-to-product questions.",
+      nodes: ["biography-research-judgment", "founder-window-research-output", "damagearbiter"]
+    },
+    {
+      id: "geo-privacy-infrastructure",
+      title: "Geo-Privacy -> Public Infrastructure",
+      summary: "How location inference becomes spatial intelligence for public systems.",
+      nodes: ["geolocator", "spatial-intelligence-public-infrastructure", "satellite-to-street"]
+    },
+    {
+      id: "disaster-evidence",
+      title: "Disaster Evidence -> Arbitration",
+      summary: "How street-view evidence moves from perception to auditable damage assessment.",
+      nodes: ["disastervlp", "human-evidence-disaster-ai", "damagearbiter"]
+    }
+  ];
 
   let activeTheme = "All";
   let activeLayer = "All";
   let selectedNodeId = data.nodes.find((node) => node.id === "damagearbiter")?.id || data.nodes[0]?.id || null;
   let hoveredNodeId = null;
   let activeMode = "network";
+  let activeTrailId = null;
   let searchTerm = "";
 
   const graphRuntime = {
@@ -34,10 +66,12 @@
     reducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches
   };
 
-  if (!svg || !layerFilterBar || !filterBar || !repoList || !searchInput || !paperCount || !data.nodes.length) {
+  if (!svg || !layerFilterBar || !filterBar || !moreFilterBar || !guidedTrailsContainer || !repoList || !searchInput || !paperCount || !data.nodes.length) {
     initStarfield();
     return;
   }
+
+  loadStateFromUrl();
 
   paperCount.textContent = String(data.nodes.length);
   themeCountElement.textContent = String(themeCount);
@@ -107,8 +141,14 @@
 
   function filteredNodes() {
     const query = searchTerm.trim().toLowerCase();
+    const trail = getActiveTrail();
+    const trailIds = trail ? new Set(trail.nodes) : null;
 
     return data.nodes.filter((node) => {
+      if (trailIds && !trailIds.has(node.id)) {
+        return false;
+      }
+
       const layerMatch = activeLayer === "All" || (node.kind || "output") === activeLayer;
       if (!layerMatch) {
         return false;
@@ -148,7 +188,7 @@
 
   function buildFilters() {
     [
-      { label: "All", value: "All" },
+      { label: "All Layers", value: "All" },
       { label: "Inputs", value: "input" },
       { label: "Questions", value: "question" },
       { label: "Outputs", value: "output" }
@@ -157,11 +197,15 @@
       button.type = "button";
       button.className = "filter-chip layer-chip" + (layer.value === activeLayer ? " active" : "");
       button.textContent = layer.label;
+      button.dataset.value = layer.value;
+      button.setAttribute("aria-pressed", String(layer.value === activeLayer));
       button.addEventListener("click", () => {
+        activeTrailId = null;
         activeLayer = layer.value;
         activeTheme = "All";
         syncFilterState();
         renderAll();
+        updateUrlState();
       });
       layerFilterBar.appendChild(button);
     });
@@ -169,38 +213,100 @@
     data.themes.forEach((theme) => {
       const button = document.createElement("button");
       button.type = "button";
-      button.className = "filter-chip" + (theme === activeTheme ? " active" : "");
-      button.textContent = theme;
+      button.className = "filter-chip theme-chip" + (theme === activeTheme ? " active" : "");
+      button.textContent = theme === "All" ? "All Themes" : theme;
+      button.dataset.theme = theme;
+      button.setAttribute("aria-pressed", String(theme === activeTheme));
       button.addEventListener("click", () => {
+        activeTrailId = null;
         activeTheme = theme;
         syncFilterState();
         renderAll();
+        updateUrlState();
       });
-      filterBar.appendChild(button);
+      (featuredThemes.has(theme) ? filterBar : moreFilterBar).appendChild(button);
     });
   }
 
   function syncFilterState() {
     layerFilterBar.querySelectorAll(".layer-chip").forEach((chip) => {
-      const value = chip.textContent === "Inputs" ? "input" :
-        chip.textContent === "Questions" ? "question" :
-        chip.textContent === "Outputs" ? "output" :
-        "All";
+      const value = chip.dataset.value || "All";
       chip.classList.toggle("active", value === activeLayer);
+      chip.setAttribute("aria-pressed", String(value === activeLayer));
     });
 
-    filterBar.querySelectorAll(".filter-chip").forEach((chip) => {
-      chip.classList.toggle("active", chip.textContent === activeTheme);
+    document.querySelectorAll(".theme-chip").forEach((chip) => {
+      const theme = chip.dataset.theme || "All";
+      chip.classList.toggle("active", theme === activeTheme);
+      chip.setAttribute("aria-pressed", String(theme === activeTheme));
     });
+
+    guidedTrailsContainer.querySelectorAll(".trail-card").forEach((card) => {
+      const isActive = card.dataset.trail === activeTrailId;
+      card.classList.toggle("active", isActive);
+      card.setAttribute("aria-pressed", String(isActive));
+    });
+  }
+
+  function buildTrails() {
+    guidedTrails.forEach((trail) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "trail-card";
+      button.dataset.trail = trail.id;
+      button.setAttribute("aria-pressed", "false");
+      button.innerHTML = `
+        <strong>${trail.title}</strong>
+        <span>${trail.summary}</span>
+      `;
+      button.addEventListener("click", () => {
+        activeTrailId = activeTrailId === trail.id ? null : trail.id;
+        activeTheme = "All";
+        activeLayer = "All";
+        searchTerm = "";
+        searchInput.value = "";
+
+        if (activeTrailId) {
+          const firstAvailable = trail.nodes.find((nodeId) => data.nodes.some((node) => node.id === nodeId));
+          if (firstAvailable) {
+            selectedNodeId = firstAvailable;
+          }
+        }
+
+        syncFilterState();
+        renderAll();
+        updateUrlState();
+      });
+      guidedTrailsContainer.appendChild(button);
+    });
+  }
+
+  function getActiveTrail() {
+    return guidedTrails.find((trail) => trail.id === activeTrailId) || null;
   }
 
   function renderRepoList() {
     repoList.innerHTML = "";
 
-    filteredNodes().forEach((node) => {
+    const nodes = filteredNodes();
+    if (!nodes.length) {
+      const empty = document.createElement("p");
+      empty.className = "repo-empty";
+      empty.textContent = "No nodes match this view. Clear the search or choose another layer, theme, or trail.";
+      repoList.appendChild(empty);
+      return;
+    }
+
+    nodes.forEach((node) => {
       const button = document.createElement("button");
       button.type = "button";
-      button.className = "repo-card" + (node.id === selectedNodeId ? " active" : "");
+      button.className = [
+        "repo-card",
+        node.id === selectedNodeId ? "active" : "",
+        node.source === "Google Scholar" ? "is-scholar-output" : "",
+        node.kind === "output" && node.source !== "Google Scholar" ? "is-curated-output" : ""
+      ].join(" ").trim();
+      button.setAttribute("aria-pressed", String(node.id === selectedNodeId));
 
       const sourceName = node.repository?.name || node.source || "Knowledge source";
       const stats = node.metricLabel || (
@@ -225,6 +331,21 @@
   }
 
   function nodePosition(node, visibleNodes) {
+    const trail = getActiveTrail();
+    if (trail && activeMode === "network") {
+      const trailNodes = trail.nodes
+        .map((nodeId) => visibleNodes.find((candidate) => candidate.id === nodeId))
+        .filter(Boolean);
+      const index = Math.max(0, trailNodes.findIndex((candidate) => candidate.id === node.id));
+      const total = Math.max(1, trailNodes.length);
+      const step = total > 1 ? 560 / (total - 1) : 0;
+
+      return {
+        x: total === 1 ? 490 : 210 + step * index,
+        y: 250 + (index % 2 === 0 ? 64 : -44)
+      };
+    }
+
     if (activeMode === "network") {
       return node.position;
     }
@@ -375,10 +496,12 @@
       const isSelected = node.id === selectedNodeId;
       const isHot = hotIds.has(node.id);
       const isDimmed = selectedNodeId && !isHot;
+      const isScholar = node.source === "Google Scholar";
       const group = createSvg("g", {
         class: [
           "graph-node",
           "node-kind-" + (node.kind || "output"),
+          isScholar ? "node-source-scholar" : "node-source-curated",
           isSelected ? "is-selected" : "",
           isDimmed ? "is-muted" : ""
         ].join(" ").trim(),
@@ -455,6 +578,11 @@
     const focusId = hoveredId || selectedNodeId;
     const hotIds = new Set([focusId]);
     const focus = data.nodes.find((node) => node.id === focusId) || selected;
+    const trail = getActiveTrail();
+
+    if (trail) {
+      trail.nodes.forEach((nodeId) => hotIds.add(nodeId));
+    }
 
     if (focus) {
       focus.connections.forEach((connection) => hotIds.add(connection.target));
@@ -639,6 +767,70 @@
     return element;
   }
 
+  function loadStateFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const nodeParam = params.get("node") || window.location.hash.replace(/^#/, "");
+    const themeParam = params.get("theme");
+    const layerParam = params.get("layer");
+    const modeParam = params.get("mode");
+    const trailParam = params.get("trail");
+
+    if (themeParam && data.themes.includes(themeParam)) {
+      activeTheme = themeParam;
+    }
+
+    if (["All", "input", "question", "output"].includes(layerParam)) {
+      activeLayer = layerParam;
+    }
+
+    if (["network", "timeline", "flow"].includes(modeParam)) {
+      activeMode = modeParam;
+    }
+
+    if (trailParam && guidedTrails.some((trail) => trail.id === trailParam)) {
+      activeTrailId = trailParam;
+      activeTheme = "All";
+      activeLayer = "All";
+    }
+
+    if (nodeParam && data.nodes.some((node) => node.id === nodeParam)) {
+      selectedNodeId = nodeParam;
+    }
+  }
+
+  function updateUrlState() {
+    const url = new URL(window.location.href);
+    const params = new URLSearchParams();
+
+    if (selectedNodeId) {
+      params.set("node", selectedNodeId);
+    }
+    if (activeLayer !== "All") {
+      params.set("layer", activeLayer);
+    }
+    if (activeTheme !== "All") {
+      params.set("theme", activeTheme);
+    }
+    if (activeMode !== "network") {
+      params.set("mode", activeMode);
+    }
+    if (activeTrailId) {
+      params.set("trail", activeTrailId);
+    }
+
+    url.search = params.toString();
+    url.hash = "";
+    window.history.replaceState(null, "", url);
+  }
+
+  function syncModeTabs() {
+    modeTabs.forEach((tab) => {
+      const isActive = tab.dataset.mode === activeMode;
+      tab.classList.toggle("active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    });
+  }
+
   function selectNode(nodeId) {
     selectedNodeId = nodeId;
     hoveredNodeId = null;
@@ -646,6 +838,7 @@
     renderAll();
     showDetail(node);
     createBurst(nodeId);
+    updateUrlState();
   }
 
   function showDetail(node) {
@@ -672,6 +865,7 @@
     populateTokens("detail-methods", node.methods);
     populateLinks(node.links);
     populateConnections(node.connections);
+    populateNextActions(node);
   }
 
   function renderRepoPreview(node) {
@@ -760,6 +954,59 @@
     });
   }
 
+  function populateNextActions(node) {
+    const container = document.getElementById("detail-next-actions");
+    container.innerHTML = "";
+
+    const outbound = node.connections
+      .map((connection) => {
+        const target = data.nodes.find((candidate) => candidate.id === connection.target);
+        return target ? { node: target, label: connection.label } : null;
+      })
+      .filter(Boolean);
+
+    const inbound = data.nodes
+      .filter((candidate) => candidate.connections.some((connection) => connection.target === node.id))
+      .map((candidate) => ({ node: candidate, label: "connects into this node" }));
+
+    const seen = new Set();
+    const nextNodes = outbound.concat(inbound).filter((entry) => {
+      if (seen.has(entry.node.id)) {
+        return false;
+      }
+      seen.add(entry.node.id);
+      return true;
+    }).slice(0, 4);
+
+    if (!nextNodes.length) {
+      const empty = document.createElement("p");
+      empty.className = "next-empty";
+      empty.textContent = "No direct next node yet.";
+      container.appendChild(empty);
+      return;
+    }
+
+    nextNodes.forEach((entry) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "next-node-action";
+      button.innerHTML = `
+        <strong>${entry.node.shortTitle}</strong>
+        <span>${entry.label}</span>
+      `;
+      button.addEventListener("click", () => {
+        activeTrailId = null;
+        activeTheme = "All";
+        activeLayer = "All";
+        searchTerm = "";
+        searchInput.value = "";
+        syncFilterState();
+        selectNode(entry.node.id);
+      });
+      container.appendChild(button);
+    });
+  }
+
   function renderAll() {
     const visibleNodes = filteredNodes();
     if (visibleNodes.length && !visibleNodes.some((node) => node.id === selectedNodeId)) {
@@ -839,19 +1086,25 @@
   }
 
   searchInput.addEventListener("input", (event) => {
+    activeTrailId = null;
     searchTerm = event.target.value;
+    syncFilterState();
     renderAll();
   });
 
   modeTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       activeMode = tab.dataset.mode;
-      modeTabs.forEach((candidate) => candidate.classList.toggle("active", candidate === tab));
+      syncModeTabs();
       renderGraph();
+      updateUrlState();
     });
   });
 
   buildFilters();
+  buildTrails();
+  syncFilterState();
+  syncModeTabs();
   initStarfield();
   loadScholarSnapshot();
   loadReadingSnapshot();

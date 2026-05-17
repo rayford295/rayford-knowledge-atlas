@@ -8,11 +8,21 @@
     name="description"
     content="Rayford Knowledge Atlas is an input-output knowledge graph for Yifan Yang's reading inputs, Google Scholar outputs, papers, repositories, and GeoAI workflows."
   >
+  <link rel="canonical" href="https://rayford295.github.io/rayford-knowledge-atlas/">
+  <meta property="og:title" content="Rayford Knowledge Atlas | Inputs to Outputs">
+  <meta property="og:description" content="A public knowledge graph connecting Yifan Yang's reading inputs, bridge questions, Scholar outputs, papers, repositories, and GeoAI workflows.">
+  <meta property="og:image" content="https://rayford295.github.io/rayford-knowledge-atlas/assets/rayford-knowledge-atlas-preview.png">
+  <meta property="og:url" content="https://rayford295.github.io/rayford-knowledge-atlas/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rayford Knowledge Atlas | Inputs to Outputs">
+  <meta name="twitter:description" content="A public knowledge graph connecting reading inputs, bridge questions, and GeoAI research outputs.">
+  <meta name="twitter:image" content="https://rayford295.github.io/rayford-knowledge-atlas/assets/rayford-knowledge-atlas-preview.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./styles.css?v=2026051703">
+  <link rel="stylesheet" href="./styles.css?v=2026051705">
 </head>
 <body>
   <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
@@ -33,6 +43,7 @@
 
       <nav class="top-links" aria-label="Primary links">
         <a href="https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki" target="_blank" rel="noopener">Vault</a>
+        <a href="./readings.html">Readings</a>
         <a href="https://rayford295.github.io/" target="_blank" rel="noopener">Main Site</a>
         <a href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ" target="_blank" rel="noopener">Scholar</a>
         <a href="https://github.com/rayford295/rayford-knowledge-atlas" target="_blank" rel="noopener">GitHub</a>
@@ -66,30 +77,47 @@
           </div>
         </div>
 
-        <a class="scholar-card" id="scholar-card" href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ" target="_blank" rel="noopener">
-          <span>Google Scholar</span>
-          <strong id="scholar-citations">--</strong>
-          <small>citations · h-index <b id="scholar-hindex">--</b></small>
-          <em id="scholar-updated">Weekly snapshot pending</em>
-        </a>
+        <p class="rail-manifesto">Outputs show what I write into the world. Inputs show what I let the world write into me.</p>
 
-        <a class="reading-card" id="reading-card" href="./raw/weread/public-reading-index.json">
-          <span>WeRead Input Layer</span>
-          <strong id="reading-notes">--</strong>
-          <small>notes · <b id="reading-books">--</b> books with notes</small>
-          <em id="reading-rhythm">Reading rhythm pending</em>
-        </a>
-
-        <a class="fork-card" href="./fork.html">
-          <span>Knowledge System</span>
-          <strong>Outputs are written. Inputs are read.</strong>
-          <em>Papers and Scholar records sit beside public-safe reading nodes.</em>
-        </a>
-
+        <div class="rail-section-title">Layers</div>
         <div class="layer-filter-bar" id="layer-filter-bar" aria-label="Layer filters"></div>
-        <div class="filter-bar" id="filter-bar" aria-label="Theme filters"></div>
 
+        <div class="rail-section-title">Guided Trails</div>
+        <div class="trail-list" id="guided-trails" aria-label="Guided atlas trails"></div>
+
+        <div class="rail-section-title">Themes</div>
+        <div class="filter-bar" id="filter-bar" aria-label="Theme filters"></div>
+        <details class="rail-more theme-more">
+          <summary>More themes</summary>
+          <div class="filter-bar compact-filter-bar" id="more-filter-bar" aria-label="Additional theme filters"></div>
+        </details>
+
+        <div class="rail-section-title">Nodes</div>
         <div class="repo-list" id="repo-list" aria-label="Knowledge node cards"></div>
+
+        <details class="rail-more">
+          <summary>Sources and sync</summary>
+
+          <a class="scholar-card" id="scholar-card" href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ" target="_blank" rel="noopener">
+            <span>Google Scholar</span>
+            <strong id="scholar-citations">--</strong>
+            <small>citations · h-index <b id="scholar-hindex">--</b></small>
+            <em id="scholar-updated">Weekly snapshot pending</em>
+          </a>
+
+          <a class="reading-card" id="reading-card" href="./readings.html">
+            <span>WeRead Input Layer</span>
+            <strong id="reading-notes">--</strong>
+            <small>notes · <b id="reading-books">--</b> books with notes</small>
+            <em id="reading-rhythm">Open readable reading layer</em>
+          </a>
+
+          <a class="fork-card" href="./fork.html">
+            <span>Knowledge System</span>
+            <strong>Outputs are written. Inputs are read.</strong>
+            <em>Papers and Scholar records sit beside public-safe reading nodes.</em>
+          </a>
+        </details>
       </aside>
 
       <section class="graph-stage" id="graph">
@@ -97,11 +125,17 @@
           <div>
             <p class="kicker">Living Knowledge Graph</p>
             <h1>Inputs Become Outputs.</h1>
+            <p class="stage-onboarding">Start with a reading input, a bridge question, or a research output to see how they connect.</p>
+            <div class="layer-legend" aria-label="Atlas layer legend">
+              <span><i data-layer="input"></i>Inputs</span>
+              <span><i data-layer="question"></i>Questions</span>
+              <span><i data-layer="output"></i>Outputs</span>
+            </div>
           </div>
-          <div class="mode-tabs" aria-label="Graph modes">
-            <button class="mode-tab active" type="button" data-mode="network">Network</button>
-            <button class="mode-tab" type="button" data-mode="timeline">Timeline</button>
-            <button class="mode-tab" type="button" data-mode="flow">Flow</button>
+          <div class="mode-tabs" role="tablist" aria-label="Graph modes">
+            <button class="mode-tab active" type="button" role="tab" aria-selected="true" data-mode="network">Network</button>
+            <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="timeline">Timeline</button>
+            <button class="mode-tab" type="button" role="tab" aria-selected="false" data-mode="flow">Flow</button>
           </div>
         </div>
 
@@ -146,6 +180,11 @@
           <ul class="connection-list" id="detail-connections"></ul>
         </section>
 
+        <section class="detail-section" id="detail-next-section">
+          <h3>Keep Exploring</h3>
+          <div class="next-node-actions" id="detail-next-actions"></div>
+        </section>
+
         <section class="detail-section">
           <h3>Links</h3>
           <div class="detail-links" id="detail-links"></div>
@@ -154,7 +193,7 @@
     </main>
   </div>
 
-  <script src="./data.js?v=2026051703"></script>
-  <script src="./script.js?v=2026051703"></script>
+  <script src="./data.js?v=2026051705"></script>
+  <script src="./script.js?v=2026051705"></script>
 </body>
 </html>
