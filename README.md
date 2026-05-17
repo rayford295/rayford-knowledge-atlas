@@ -25,6 +25,8 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 ## One-Click Access
 
 - Live site: [rayford295.github.io/rayford-knowledge-atlas](https://rayford295.github.io/rayford-knowledge-atlas/)
+- Reading input page: [rayford295.github.io/rayford-knowledge-atlas/readings.html](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)
+- Research output page: [rayford295.github.io/rayford-knowledge-atlas/papers.html](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)
 - Fork guide: [rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
 - GitHub repository: [github.com/rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas)
 - Google Scholar: [scholar.google.com/citations?user=B-fiSHwAAAAJ](https://scholar.google.com/citations?user=B-fiSHwAAAAJ)
@@ -33,6 +35,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 ## Frontend Experience
 
 - The first screen is an interactive knowledge constellation.
+- Reading inputs and research outputs have separate library pages, so the main atlas can focus on relationships instead of acting as one crowded catalog.
 - The graph supports keyword search, theme filters, node cards, and three views: `Network`, `Timeline`, and `Flow`.
 - `Flow` separates reading inputs, bridge questions, and research outputs.
 - Each node opens an inspector with source metadata, themes, methods or reading lenses, links, metrics, and graph relationships.

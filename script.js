@@ -14,6 +14,7 @@
   const outputCountElement = document.getElementById("output-count");
   const inputCountElement = document.getElementById("input-count");
   const questionCountElement = document.getElementById("question-count");
+  const paperLibraryCount = document.getElementById("paper-library-count");
 
   const themeCount = new Set(data.nodes.flatMap((node) => node.themes)).size;
   const years = data.nodes.map((node) => Number(node.year)).filter(Boolean);
@@ -53,8 +54,8 @@
   let activeLayer = "All";
   let selectedNodeId = data.nodes.find((node) => node.id === "damagearbiter")?.id || data.nodes[0]?.id || null;
   let hoveredNodeId = null;
-  let activeMode = "network";
-  let activeTrailId = null;
+  let activeMode = "flow";
+  let activeTrailId = "disaster-evidence";
   let searchTerm = "";
 
   const graphRuntime = {
@@ -78,6 +79,9 @@
   outputCountElement.textContent = String(data.counts?.output || data.nodes.filter((node) => node.kind === "output").length);
   inputCountElement.textContent = String(data.counts?.input || data.nodes.filter((node) => node.kind === "input").length);
   questionCountElement.textContent = String(data.counts?.question || data.nodes.filter((node) => node.kind === "question").length);
+  if (paperLibraryCount) {
+    paperLibraryCount.textContent = String(data.counts?.output || data.nodes.filter((node) => node.kind === "output").length);
+  }
 
   function renderScholar(snapshot) {
     if (!snapshot || !snapshot.metrics) {
@@ -774,6 +778,12 @@
     const layerParam = params.get("layer");
     const modeParam = params.get("mode");
     const trailParam = params.get("trail");
+    const hasExplicitState = Boolean(nodeParam || themeParam || layerParam || modeParam || trailParam);
+
+    if (hasExplicitState) {
+      activeMode = "network";
+      activeTrailId = null;
+    }
 
     if (themeParam && data.themes.includes(themeParam)) {
       activeTheme = themeParam;

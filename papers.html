@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Outputs | Rayford Knowledge Atlas</title>
+  <meta
+    name="description"
+    content="A dedicated research output page for Rayford Knowledge Atlas, separating papers, book chapters, proceedings, preprints, and Scholar records from reading inputs."
+  >
+  <link rel="canonical" href="https://rayford295.github.io/rayford-knowledge-atlas/papers.html">
+  <meta property="og:title" content="Research Outputs | Rayford Knowledge Atlas">
+  <meta property="og:description" content="A clean output library for Yifan Yang's papers, book chapters, proceedings, preprints, and Scholar records.">
+  <meta property="og:image" content="https://rayford295.github.io/rayford-knowledge-atlas/assets/rayford-knowledge-atlas-preview.png">
+  <meta property="og:url" content="https://rayford295.github.io/rayford-knowledge-atlas/papers.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research Outputs | Rayford Knowledge Atlas">
+  <meta name="twitter:description" content="A dedicated paper and publication layer for Rayford Knowledge Atlas.">
+  <meta name="twitter:image" content="https://rayford295.github.io/rayford-knowledge-atlas/assets/rayford-knowledge-atlas-preview.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css?v=2026051706">
+</head>
+<body>
+  <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+  <div class="app-shell guide-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Rayford Knowledge Atlas">
+        <span class="brand-mark">RK</span>
+        <span>
+          <strong>Rayford Knowledge Atlas</strong>
+          <small>Research outputs separated from reading inputs</small>
+        </span>
+      </a>
+
+      <nav class="top-links guide-links" aria-label="Primary links">
+        <a href="./index.html">Atlas</a>
+        <a href="./readings.html">Readings</a>
+        <a href="https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/papers" target="_blank" rel="noopener">Paper Vault</a>
+        <a href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://github.com/rayford295/rayford-knowledge-atlas" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="guide-page papers-page">
+      <section class="guide-hero papers-hero">
+        <p class="kicker">Research Output Layer</p>
+        <h1>Papers, separated from inputs.</h1>
+        <p>
+          This page is the clean publication library. It keeps papers, book chapters, proceedings, preprints, repositories, and Scholar-only records together, without mixing them into the reading input list.
+        </p>
+        <div class="reading-metrics paper-metrics" id="paper-metrics" aria-label="Research output metrics">
+          <div><strong>--</strong><span>research outputs</span></div>
+          <div><strong>--</strong><span>curated pages</span></div>
+          <div><strong>--</strong><span>Scholar-only records</span></div>
+          <div><strong>--</strong><span>citations</span></div>
+        </div>
+      </section>
+
+      <section class="guide-panel paper-control-panel" aria-label="Paper filters">
+        <div class="paper-control-grid">
+          <label class="search-box paper-search" for="paper-search">
+            <span>Search</span>
+            <input id="paper-search" type="search" placeholder="DamageArbiter, GeoLocator, digital twins, COVID">
+          </label>
+          <div class="paper-filter-bar" id="paper-filter-bar" aria-label="Output filters"></div>
+        </div>
+      </section>
+
+      <section class="guide-grid output-principles" aria-label="Output layer principles">
+        <article class="guide-panel">
+          <span>1</span>
+          <h2>Curated First</h2>
+          <p>Hand-written paper pages explain the research problem, method, impact, and relationship to other work.</p>
+        </article>
+        <article class="guide-panel">
+          <span>2</span>
+          <h2>Scholar Complete</h2>
+          <p>Scholar-only records keep collaborative and non-first-author outputs visible until they receive full pages.</p>
+        </article>
+        <article class="guide-panel">
+          <span>3</span>
+          <h2>Atlas Connected</h2>
+          <p>Each output can still open in the main atlas when you want to see how it connects to questions and readings.</p>
+        </article>
+      </section>
+
+      <section class="guide-panel paper-list-panel">
+        <div class="reading-list-heading">
+          <div>
+            <p class="kicker">Output Library</p>
+            <h2>Publications and Scholar records</h2>
+          </div>
+          <a href="./index.html?layer=output">Open output layer in atlas</a>
+        </div>
+        <div class="paper-list" id="paper-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./data.js?v=2026051706"></script>
+  <script>
+    (function () {
+      const data = window.researchMapData || { nodes: [] };
+      const metrics = document.getElementById("paper-metrics");
+      const list = document.getElementById("paper-list");
+      const filterBar = document.getElementById("paper-filter-bar");
+      const search = document.getElementById("paper-search");
+      const starfield = document.getElementById("starfield");
+      const outputs = data.nodes
+        .filter((node) => node.kind === "output")
+        .sort((a, b) => {
+          const sourceScore = (b.source === "Research Wiki") - (a.source === "Research Wiki");
+          if (sourceScore) {
+            return sourceScore;
+          }
+          const yearScore = Number(b.year || 0) - Number(a.year || 0);
+          if (yearScore) {
+            return yearScore;
+          }
+          return metricValue(b) - metricValue(a);
+        });
+      let activeFilter = "all";
+      let query = "";
+
+      function initStarfield() {
+        if (!starfield) {
+          return;
+        }
+
+        const context = starfield.getContext("2d");
+        let width = 0;
+        let height = 0;
+        let stars = [];
+
+        function resize() {
+          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          width = window.innerWidth;
+          height = window.innerHeight;
+          starfield.width = Math.floor(width * ratio);
+          starfield.height = Math.floor(height * ratio);
+          starfield.style.width = width + "px";
+          starfield.style.height = height + "px";
+          context.setTransform(ratio, 0, 0, ratio, 0, 0);
+          stars = Array.from({ length: Math.min(180, Math.floor((width * height) / 6200)) }, (_, index) => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: index % 9 === 0 ? 1.6 : Math.random() * 1.1 + 0.3,
+            alpha: Math.random() * 0.5 + 0.16,
+            tint: index % 7 === 0 ? "255, 212, 106" : "186, 255, 232"
+          }));
+        }
+
+        function draw() {
+          context.clearRect(0, 0, width, height);
+          stars.forEach((star) => {
+            context.beginPath();
+            context.fillStyle = `rgba(${star.tint}, ${star.alpha})`;
+            context.shadowColor = `rgba(${star.tint}, ${star.alpha})`;
+            context.shadowBlur = star.radius * 7;
+            context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+            context.fill();
+          });
+        }
+
+        resize();
+        draw();
+        window.addEventListener("resize", () => {
+          resize();
+          draw();
+        });
+      }
+
+      function metricValue(node) {
+        if (node.metrics && typeof node.metrics.citations === "number") {
+          return node.metrics.citations;
+        }
+        if (node.repository && typeof node.repository.commits === "number") {
+          return node.repository.commits;
+        }
+        return 0;
+      }
+
+      function setMetric(index, value) {
+        const card = metrics.children[index];
+        if (card) {
+          card.querySelector("strong").textContent = String(value);
+        }
+      }
+
+      function renderMetrics() {
+        setMetric(0, outputs.length);
+        setMetric(1, outputs.filter((node) => node.source === "Research Wiki").length);
+        setMetric(2, outputs.filter((node) => node.source === "Google Scholar").length);
+        setMetric(3, outputs.reduce((total, node) => total + (node.metrics?.citations || 0), 0));
+      }
+
+      function loadScholarMetric() {
+        fetch("./raw/scholar/google-scholar.json", { cache: "no-store" })
+          .then((response) => response.ok ? response.json() : null)
+          .then((snapshot) => {
+            const citations = snapshot?.metrics?.citations?.all;
+            if (citations !== undefined) {
+              setMetric(3, citations);
+            }
+          })
+          .catch(() => {});
+      }
+
+      function filterLabel(value) {
+        return value === "all" ? "All Outputs" :
+          value === "curated" ? "Curated Pages" :
+          value === "scholar" ? "Scholar Only" :
+          value;
+      }
+
+      function buildFilters() {
+        const types = Array.from(new Set(outputs.map((node) => node.type).filter(Boolean))).sort();
+        ["all", "curated", "scholar"].concat(types).forEach((value) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "filter-chip paper-filter-chip" + (value === activeFilter ? " active" : "");
+          button.textContent = filterLabel(value);
+          button.dataset.filter = value;
+          button.setAttribute("aria-pressed", String(value === activeFilter));
+          button.addEventListener("click", () => {
+            activeFilter = value;
+            syncFilters();
+            renderList();
+          });
+          filterBar.appendChild(button);
+        });
+      }
+
+      function syncFilters() {
+        filterBar.querySelectorAll(".paper-filter-chip").forEach((button) => {
+          const isActive = button.dataset.filter === activeFilter;
+          button.classList.toggle("active", isActive);
+          button.setAttribute("aria-pressed", String(isActive));
+        });
+      }
+
+      function visibleOutputs() {
+        const needle = query.trim().toLowerCase();
+        return outputs.filter((node) => {
+          if (activeFilter === "curated" && node.source !== "Research Wiki") {
+            return false;
+          }
+          if (activeFilter === "scholar" && node.source !== "Google Scholar") {
+            return false;
+          }
+          if (!["all", "curated", "scholar"].includes(activeFilter) && node.type !== activeFilter) {
+            return false;
+          }
+          if (!needle) {
+            return true;
+          }
+          return [
+            node.title,
+            node.shortTitle,
+            node.authors,
+            node.venue,
+            node.type,
+            node.status,
+            node.summary,
+            node.impact,
+            node.role,
+            ...(node.themes || []),
+            ...(node.methods || [])
+          ].join(" ").toLowerCase().includes(needle);
+        });
+      }
+
+      function createLink(href, text, className) {
+        const anchor = document.createElement("a");
+        anchor.href = href;
+        anchor.textContent = text;
+        anchor.className = className || "";
+        if (/^https?:/.test(href)) {
+          anchor.target = "_blank";
+          anchor.rel = "noopener";
+        }
+        return anchor;
+      }
+
+      function renderList() {
+        const nodes = visibleOutputs();
+        list.innerHTML = "";
+        if (!nodes.length) {
+          const empty = document.createElement("p");
+          empty.className = "repo-empty";
+          empty.textContent = "No research outputs match this filter.";
+          list.appendChild(empty);
+          return;
+        }
+
+        nodes.forEach((node) => {
+          const article = document.createElement("article");
+          article.className = "paper-row";
+
+          const year = document.createElement("div");
+          year.className = "paper-year";
+          year.textContent = node.year || "n.d.";
+
+          const body = document.createElement("div");
+          body.className = "paper-body";
+
+          const eyebrow = document.createElement("p");
+          eyebrow.className = "paper-eyebrow";
+          eyebrow.textContent = `${node.source} | ${node.type || "Research Output"} | ${node.status || "Indexed"}`;
+
+          const title = document.createElement("h3");
+          title.textContent = node.title;
+
+          const meta = document.createElement("p");
+          meta.className = "paper-meta";
+          meta.textContent = [node.venue, node.authors, node.role].filter(Boolean).join(" | ");
+
+          const summary = document.createElement("p");
+          summary.className = "paper-summary";
+          summary.textContent = node.summary || node.impact || "";
+
+          const tags = document.createElement("div");
+          tags.className = "paper-tags";
+          (node.themes || []).slice(0, 4).forEach((theme) => {
+            const tag = document.createElement("span");
+            tag.textContent = theme;
+            tags.appendChild(tag);
+          });
+
+          body.append(eyebrow, title, meta, summary, tags);
+
+          const actions = document.createElement("div");
+          actions.className = "paper-actions";
+          const metric = document.createElement("strong");
+          metric.textContent = node.metricLabel || node.source;
+          actions.appendChild(metric);
+          actions.appendChild(createLink(`./index.html?node=${encodeURIComponent(node.id)}&layer=output`, "Open in Atlas"));
+          if (node.wikiPath) {
+            actions.appendChild(createLink(`https://github.com/rayford295/rayford-knowledge-atlas/blob/main/${node.wikiPath}`, "Vault Page"));
+          }
+          (node.links || []).slice(0, 3).forEach((link) => {
+            actions.appendChild(createLink(link.url, link.label));
+          });
+
+          article.append(year, body, actions);
+          list.appendChild(article);
+        });
+      }
+
+      initStarfield();
+      renderMetrics();
+      loadScholarMetric();
+      buildFilters();
+      renderList();
+      search.addEventListener("input", (event) => {
+        query = event.target.value;
+        renderList();
+      });
+    })();
+  </script>
+</body>
+</html>
