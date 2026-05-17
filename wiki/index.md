@@ -6,12 +6,17 @@
 - [[maps/reading-input-map]]
 - [[maps/question-map]]
 - [[maps/research-output-map]]
+- [[maps/publication-map]]
 
 ## Papers
 
 - [ArcGIS Text SAM Tree Segmentation](./papers/arcgis-sam-tree-segmentation.md)
+- [Agentic Urban Digital Twins](./papers/agentic-urban-digital-twins.md)
 - [GeoLocator](./papers/geolocator.md)
 - [Hyperlocal Disaster Damage Assessment](./papers/hyperlocal-disaster.md)
+- [Heat Stress Digital Twins](./papers/heat-stress-digital-twins.md)
+- [COVID Public Opinion and Emotion](./papers/covid-public-opinion-emotion.md)
+- [Federated COVID Chest X-Ray](./papers/federated-covid-chest-xray.md)
 - [Perceiving Multidimensional Disaster Damages](./papers/disastervlp.md)
 - [DamageArbiter](./papers/damagearbiter.md)
 - [Satellite-to-Street](./papers/satellite-to-street.md)

@@ -41,6 +41,18 @@ wiki/readings/
 
 Do not commit raw highlights or private note text.
 
+## Merge Publication Records
+
+Publication records belong in:
+
+```text
+wiki/papers/
+raw/publications/
+wiki/maps/publication-map.md
+```
+
+Use `docs/PUBLICATIONS_MIGRATION.md` as the boundary rule. The atlas is public, so do not commit legacy PDFs unless their public-sharing rights are clear.
+
 ## Verify Graph Integrity
 
 ```bash
@@ -85,6 +97,7 @@ Check:
 - sidebar counts show outputs, inputs, questions, and themes;
 - `Network`, `Timeline`, and `Flow` all render;
 - search finds a reading node such as `李小龙`;
+- search finds a migrated publication node such as `Agentic Urban Digital Twins`;
 - selecting Inputs, Questions, and Outputs changes both the graph and inspector;
 - mobile width does not overlap text or controls.
 

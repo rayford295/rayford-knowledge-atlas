@@ -1,0 +1,78 @@
+{
+  "sourceRepository": "rayford295/Publications",
+  "sourceVisibility": "PRIVATE",
+  "migrationDate": "2026-05-17",
+  "publicCommitPolicy": "The public atlas records metadata, filenames, sizes, and checksums only. Legacy PDFs are not committed because the atlas is public and full-text sharing rights need file-by-file review.",
+  "files": [
+    {
+      "path": "Abstract/ica-abs-10-310-2025.pdf",
+      "bytes": 2379594,
+      "sha256": "5f2c6a4acf210f3b8bf9dcbdd4826e57b397858cc93b11fc9ffe7e55751f04ec"
+    },
+    {
+      "path": "Abstract/readme",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2984,
+      "sha256": "1d1bcb13d9c54d3b49d1a30f07694c957453894ea7d16dbfc76df0a7bc1d21f8"
+    },
+    {
+      "path": "book chapter/Security First-135-145.pdf",
+      "bytes": 2154648,
+      "sha256": "2cdef9770379e12290f6b89af100c9f47186b52592553bb691c4be7bcf3d6cf5"
+    },
+    {
+      "path": "book chapter/readme",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "manuscript/Hyperlocal disaster damage.pdf",
+      "bytes": 8828215,
+      "sha256": "9e094a45f55ab9d205c6906d2b645c22eb98d6d865455dd4b85223e3b328d7a3"
+    },
+    {
+      "path": "manuscript/Towards Agentic Urban Digital Twins (AUDiTs).pdf",
+      "bytes": 1000364,
+      "sha256": "353430415204e462f6152ddd22ad15eca5cf89a1d6e2927e6a84bbca4fce8755"
+    },
+    {
+      "path": "manuscript/covid-19 public opinion and emotion.pdf",
+      "bytes": 1554540,
+      "sha256": "7dda49bda779b8cd9565e06399323909f2af724fa05d941db82a73b345f4dda8"
+    },
+    {
+      "path": "manuscript/different loss functions.pdf",
+      "bytes": 441649,
+      "sha256": "b7b786de5568c807551b7a67fb126e0102e086305e179ff7498886fb59f9a333"
+    },
+    {
+      "path": "manuscript/federated learning for covid-19.pdf",
+      "bytes": 379820,
+      "sha256": "ce8ec66837f6914ebcc4fb5cfa99b63be998d75ed0532cd0e4d28173e04231f3"
+    },
+    {
+      "path": "manuscript/geolocator llm for inferring.pdf",
+      "bytes": 6078940,
+      "sha256": "2b7ee063974cc7694a0465c42af924c977702801103eeba21ab9d07e0187700b"
+    },
+    {
+      "path": "manuscript/integrating-spatiotemporal-vision-transformer-into-digital-twins-for-high-resolution-heat-stress.pdf",
+      "bytes": 6638559,
+      "sha256": "e9a7c5a45cbba34e83905caae903c3e63f4179a015cc7ce71be540254e8d28ec"
+    },
+    {
+      "path": "manuscript/navigating spatial inequities.pdf",
+      "bytes": 5104659,
+      "sha256": "d81e0d4261093b3fc0d347d327c5cbdd27206cc83f863377a4423b6ad6b90d93"
+    },
+    {
+      "path": "manuscript/readme",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    }
+  ]
+}

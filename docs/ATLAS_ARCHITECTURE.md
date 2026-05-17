@@ -32,7 +32,7 @@ Typical questions:
 
 ### Research Output
 
-`wiki/papers/` records curated paper and project pages. `raw/scholar/google-scholar.json` adds Scholar-indexed outputs that do not yet have hand-written pages, including collaborative and non-first-author work.
+`wiki/papers/` records curated paper and project pages. `raw/publications/` preserves the migrated publication list from the former Publications repository. `raw/scholar/google-scholar.json` adds Scholar-indexed outputs that do not yet have hand-written pages, including collaborative and non-first-author work.
 
 Typical fields for a curated wiki page:
 
@@ -88,6 +88,9 @@ The browser reads only `data.js`, plus small live snapshots from:
 
 - `raw/scholar/google-scholar.json`
 - `raw/weread/public-reading-index.json`
+- `raw/publications/publications.json`
+
+`raw/publications/publications.json` is a source record for maintenance and review. The graph sees migrated publications through their curated pages in `wiki/papers/`.
 
 ## Automation
 
@@ -96,4 +99,4 @@ The browser reads only `data.js`, plus small live snapshots from:
 
 ## Public Boundary
 
-The repository is public. Keep private or copyrighted material out of committed files. The WeRead layer should expose metadata, counts, themes, and Yifan's own synthesis, not raw highlights or private notes.
+The repository is public. Keep private or copyrighted material out of committed files. The WeRead layer should expose metadata, counts, themes, and Yifan's own synthesis, not raw highlights or private notes. The publication layer should expose citation metadata and public links, not publisher PDFs or private drafts unless public-sharing rights are clear.

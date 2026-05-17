@@ -1,0 +1,99 @@
+{
+  "sourceRepository": "rayford295/Publications",
+  "sourceReadme": "raw/publications/legacy-publications-readme.md",
+  "googleScholar": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ",
+  "migratedAt": "2026-05-17",
+  "records": [
+    {
+      "id": "agentic-urban-digital-twins",
+      "category": "Journal Article",
+      "title": "Towards Agentic Urban Digital Twins (AUDiTs): Advancing New Urban Science Through Human-AI Co-Learning Agents",
+      "year": 2026,
+      "venue": "Urban Informatics, 5(1), 9",
+      "atlasPage": "wiki/papers/agentic-urban-digital-twins.md"
+    },
+    {
+      "id": "hyperlocal-disaster",
+      "category": "Journal Article",
+      "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",
+      "year": 2025,
+      "venue": "Computers, Environment and Urban Systems, 121, 102335",
+      "doi": "https://doi.org/10.1016/j.compenvurbsys.2025.102335",
+      "atlasPage": "wiki/papers/hyperlocal-disaster.md"
+    },
+    {
+      "id": "freight-crash-spatial-inequities",
+      "category": "Journal Article",
+      "title": "Navigating spatial inequities in freight truck crash severity via counterfactual inference in Los Angeles",
+      "year": 2025,
+      "venue": "Journal of Transport Geography, 128, 104387",
+      "atlasPage": "wiki/papers/freight-crash-spatial-inequities.md"
+    },
+    {
+      "id": "heat-stress-digital-twins",
+      "category": "Journal Article",
+      "title": "Integrating spatiotemporal vision transformer into digital twins for high-resolution heat stress forecasting in campus environments",
+      "year": 2025,
+      "venue": "Journal of Planning Education and Research",
+      "doi": "https://doi.org/10.1177/0739456X251391121",
+      "atlasPage": "wiki/papers/heat-stress-digital-twins.md"
+    },
+    {
+      "id": "geolocator",
+      "category": "Journal Article",
+      "title": "GeoLocator: A Location-Integrated Large Multimodal Model (LMM) for Inferring Geo-Privacy",
+      "year": 2024,
+      "venue": "Applied Sciences, 14(16), 7091",
+      "atlasPage": "wiki/papers/geolocator.md"
+    },
+    {
+      "id": "covid-public-opinion-emotion",
+      "category": "Journal Article",
+      "title": "COVID-19 public opinion and emotion monitoring system based on time series thermal new word mining",
+      "year": 2020,
+      "venue": "Computers, Materials & Continua, 64(3), 1415-1434",
+      "doi": "https://doi.org/10.32604/cmc.2020.011316",
+      "atlasPage": "wiki/papers/covid-public-opinion-emotion.md"
+    },
+    {
+      "id": "low-rank-loss-functions",
+      "category": "Journal Article",
+      "title": "Different loss functions used in the low-rank approximation",
+      "year": 2020,
+      "venue": "International Core Journal of Engineering, 6(11), 360-368",
+      "atlasPage": "wiki/papers/low-rank-loss-functions.md"
+    },
+    {
+      "id": "arcgis-sam-tree-segmentation",
+      "category": "Book Chapter",
+      "title": "Object detection and segmentation of trees using Text SAM in ArcGIS Online",
+      "year": 2025,
+      "venue": "Security First: Geospatial Workflows for a Safe and Equitable World",
+      "atlasPage": "wiki/papers/arcgis-sam-tree-segmentation.md"
+    },
+    {
+      "id": "resilience-4d-urban-flood",
+      "category": "Conference Proceeding",
+      "title": "Resilience in 4D: AI-Driven Geospatial Digital Twins for Urban Flood Simulation and Management",
+      "year": 2025,
+      "venue": "AGU25",
+      "atlasPage": "wiki/papers/resilience-4d-urban-flood.md"
+    },
+    {
+      "id": "disastervlp",
+      "category": "Conference Proceeding",
+      "title": "Perceiving Multidimensional Disaster Damages from Street-View Images Using Visual-Language Models",
+      "year": 2025,
+      "venue": "Abstracts of the ICA, 10, 310",
+      "atlasPage": "wiki/papers/disastervlp.md"
+    },
+    {
+      "id": "federated-covid-chest-xray",
+      "category": "Conference Proceeding",
+      "title": "Experiments of federated learning for COVID-19 chest X-ray images",
+      "year": 2021,
+      "venue": "International Conference on Artificial Intelligence and Security",
+      "atlasPage": "wiki/papers/federated-covid-chest-xray.md"
+    }
+  ]
+}

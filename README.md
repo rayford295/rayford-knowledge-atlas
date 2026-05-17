@@ -18,6 +18,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - An input-output graph where WeRead book nodes feed bridge questions, and bridge questions connect to papers and Scholar outputs.
 - A structured markdown wiki that agents and humans can maintain together.
 - A weekly-updated Google Scholar snapshot that includes collaborative and non-first-author outputs.
+- A consolidated publication layer migrated from the former `rayford295/Publications` repository.
 - A public-safe reading layer that stores metadata, themes, and synthesis scaffolds without publishing raw copyrighted highlights or private notes.
 - An Obsidian-ready vault with maps of content, wiki links, templates, and graph color groups.
 
@@ -48,6 +49,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - `wiki/concepts/`: reusable concept pages.
 - `wiki/comparisons/`: cross-paper and cross-source narratives.
 - `raw/papers/`: source records for paper and repository metadata.
+- `raw/publications/`: migrated publication records from the former Publications repository.
 - `raw/scholar/google-scholar.json`: the latest public Google Scholar snapshot.
 - `raw/weread/public-reading-index.json`: public-safe WeRead metadata, note counts, and reading graph seeds.
 - `scripts/build-map.js`: compiles papers, readings, questions, and Scholar records into `data.js`.
@@ -56,10 +58,11 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - `docs/ATLAS_ARCHITECTURE.md`: explains the input-question-output graph model.
 - `docs/OPERATIONS.md`: gives the update, QA, and publishing runbook.
 - `docs/OBSIDIAN_VAULT.md`: explains how to use the repository as an Obsidian vault.
+- `docs/PUBLICATIONS_MIGRATION.md`: records the Publications repository consolidation.
 
 ## Current Output Layer
 
-- Curated paper/project nodes: ArcGIS Text SAM, GeoLocator, Hyperlocal Disaster Damage Assessment, DisasterVLP, DamageArbiter, Satellite-to-Street.
+- Curated paper/project nodes: Agentic Urban Digital Twins, ArcGIS Text SAM, GeoLocator, Hyperlocal Disaster Damage Assessment, DisasterVLP, DamageArbiter, Satellite-to-Street, and the migrated Publications records.
 - Google Scholar nodes: collaborative and non-first-author outputs from the public Scholar profile.
 
 ## Current Input Layer
@@ -87,6 +90,7 @@ This repository is public. The reading layer therefore commits only metadata, co
 - [WeRead Integration](./docs/WEREAD_INTEGRATION.md)
 - [Obsidian Vault Guide](./docs/OBSIDIAN_VAULT.md)
 - [Hermes Review](./docs/HERMES_REVIEW.md)
+- [Publications Migration](./docs/PUBLICATIONS_MIGRATION.md)
 
 ## Make Your Own
 

@@ -1,30 +1,38 @@
 window.researchMapData = {
-  "generatedAt": "2026-05-17T05:36:37.112Z",
+  "generatedAt": "2026-05-17T16:10:44.095Z",
   "themes": [
     "All",
     "AI Alignment",
     "AI Futures",
+    "AI Systems",
     "Applied GeoAI Tooling",
     "Biography and Judgment",
+    "Climate Risk",
     "Computer Vision Segmentation",
     "Disaster Assessment",
     "Evidence and Power",
+    "Federated Learning",
     "Founder Judgment",
     "Generative Vision",
     "Geo-Privacy",
     "Human-AI Judgment",
     "Institutions Under Stress",
+    "Machine Learning Foundations",
+    "Mathematical Modeling",
+    "Medical Imaging",
     "Multimodal Learning",
     "Narrative and Public Voice",
     "Public Health AI",
+    "Public Signals",
     "Public Writing",
     "Reading Input",
     "Research Taste",
     "Research Translation",
-    "Scholar Output",
     "Spatial Intelligence",
+    "Transportation Equity",
     "Urban Digital Twins",
-    "Urban Greening"
+    "Urban Greening",
+    "Urban Risk"
   ],
   "sources": [
     "Google Scholar",
@@ -38,6 +46,60 @@ window.researchMapData = {
     "question": 5
   },
   "nodes": [
+    {
+      "id": "agentic-urban-digital-twins",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "Agentic Urban Digital Twins",
+      "title": "Towards Agentic Urban Digital Twins (AUDiTs): Advancing New Urban Science Through Human-AI Co-Learning Agents",
+      "year": 2026,
+      "venue": "Urban Informatics, 5(1), 9",
+      "type": "Journal Article",
+      "status": "Published",
+      "authors": "Xinyue Ye, Wenjing Gong, Yifan Yang, Lei Zou, Ziyue Tu, Xiao Huang, Lixia Wu",
+      "summary": "This article frames agentic urban digital twins as a new urban science direction built around human-AI co-learning agents.",
+      "impact": "This output broadens the atlas beyond disaster response. It connects Yifan's GeoAI work to the larger question of how cities can use AI agents as infrastructure for planning, simulation, and public decision support.",
+      "themes": [
+        "Urban Digital Twins",
+        "Spatial Intelligence",
+        "AI Systems"
+      ],
+      "methods": [
+        "Human-AI Co-Learning",
+        "Agentic Systems",
+        "Urban Science"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "frames urban digital twins as public spatial intelligence infrastructure"
+        },
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "connects agentic systems to human-AI co-learning rather than full automation"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 2
+      },
+      "role": "collaborative output",
+      "metricLabel": "2 citations",
+      "wikiPath": "wiki/papers/agentic-urban-digital-twins.md",
+      "position": {
+        "x": 755,
+        "y": 124
+      },
+      "color": "#1d9a8a",
+      "radius": 30,
+      "displayKind": "Research Output"
+    },
     {
       "id": "arcgis-sam-tree-segmentation",
       "kind": "output",
@@ -112,6 +174,64 @@ window.researchMapData = {
       },
       "color": "#2f8f6f",
       "radius": 35,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "covid-public-opinion-emotion",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "COVID Public Opinion",
+      "title": "COVID-19 Public Opinion and Emotion Monitoring System Based on Time Series Thermal New Word Mining",
+      "year": 2020,
+      "venue": "Computers, Materials & Continua, 64(3), 1415-1434",
+      "type": "Journal Article",
+      "status": "Published",
+      "authors": "Y. Zhang, J. Chen, B. Liu, Yifan Yang, H. Li, X. Zheng, X. Chen, T. Ren, N. Xiong",
+      "summary": "This article presents a COVID-19 public opinion and emotion monitoring system based on time series thermal new word mining.",
+      "impact": "This output matters because it gives the atlas a public-signal lineage before the later spatial and multimodal disaster work. It shows an early interest in how data systems can read social conditions during emergencies.",
+      "themes": [
+        "Public Health AI",
+        "Public Signals",
+        "AI Systems"
+      ],
+      "methods": [
+        "Time Series Analysis",
+        "New Word Mining",
+        "Public Opinion Monitoring"
+      ],
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.32604/cmc.2020.011316"
+        },
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "connects crisis signals to evidence that people can interpret"
+        },
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "shows an early public-signal monitoring system before the current GeoAI branch"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 28
+      },
+      "role": "collaborative output",
+      "metricLabel": "28 citations",
+      "wikiPath": "wiki/papers/covid-public-opinion-emotion.md",
+      "position": {
+        "x": 838,
+        "y": 588
+      },
+      "color": "#7488ff",
+      "radius": 38,
       "displayKind": "Research Output"
     },
     {
@@ -263,6 +383,110 @@ window.researchMapData = {
       "displayKind": "Research Output"
     },
     {
+      "id": "federated-covid-chest-xray",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "Federated COVID X-Ray",
+      "title": "Experiments of Federated Learning for COVID-19 Chest X-Ray Images",
+      "year": 2021,
+      "venue": "International Conference on Artificial Intelligence and Security",
+      "type": "Conference Proceeding",
+      "status": "Published",
+      "authors": "B. Yan, J. Wang, J. Cheng, Y. Zhou, Y. Zhang, Yifan Yang, B. Liu",
+      "summary": "This conference paper reports experiments with federated learning for COVID-19 chest X-ray images.",
+      "impact": "This output is important because it shows that Yifan's publication trail includes sensitive-data AI and medical imaging before the current GeoAI and disaster-response focus. It widens the output layer without diluting the core spatial intelligence narrative.",
+      "themes": [
+        "Public Health AI",
+        "Federated Learning",
+        "Medical Imaging"
+      ],
+      "methods": [
+        "Federated Learning",
+        "Chest X-Ray Classification",
+        "Distributed AI"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "connects crisis-oriented AI to evidence-sensitive health settings"
+        },
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "shows early experience with distributed AI systems under sensitive data constraints"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 274
+      },
+      "role": "collaborative output",
+      "metricLabel": "274 citations",
+      "wikiPath": "wiki/papers/federated-covid-chest-xray.md",
+      "position": {
+        "x": 848,
+        "y": 222
+      },
+      "color": "#64c7ff",
+      "radius": 44,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "freight-crash-spatial-inequities",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "Freight Crash Inequities",
+      "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
+      "year": 2025,
+      "venue": "Journal of Transport Geography, 128, 104387",
+      "type": "Journal Article",
+      "status": "Published",
+      "authors": "Y. Wang, H. Yin, Yifan Yang, C. Zhao, S. Wang",
+      "summary": "This article studies freight truck crash severity in Los Angeles through the lens of spatial inequity and counterfactual inference.",
+      "impact": "This output helps connect GeoAI and urban analytics to public accountability. It asks where risk concentrates, who bears that risk, and how spatial evidence can make those patterns harder to ignore.",
+      "themes": [
+        "Spatial Intelligence",
+        "Transportation Equity",
+        "Urban Risk"
+      ],
+      "methods": [
+        "Counterfactual Inference",
+        "Crash Severity Modeling",
+        "Spatial Inequality Analysis"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "turns spatial modeling toward public risk and infrastructure equity"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": "wiki/papers/freight-crash-spatial-inequities.md",
+      "position": {
+        "x": 818,
+        "y": 494
+      },
+      "color": "#e4a72a",
+      "radius": 26,
+      "displayKind": "Research Output"
+    },
+    {
       "id": "geolocator",
       "kind": "output",
       "source": "Research Wiki",
@@ -332,6 +556,64 @@ window.researchMapData = {
       },
       "color": "#d7a13b",
       "radius": 34,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "heat-stress-digital-twins",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "Heat Stress Digital Twins",
+      "title": "Integrating Spatiotemporal Vision Transformer into Digital Twins for High-Resolution Heat Stress Forecasting in Campus Environments",
+      "year": 2025,
+      "venue": "Journal of Planning Education and Research",
+      "type": "Journal Article",
+      "status": "Published",
+      "authors": "Wenjing Gong, Xinyue Ye, Kai Wu, S. Jamonnak, W. Zhang, Yifan Yang, Xiao Huang",
+      "summary": "This paper integrates a spatiotemporal vision transformer with digital twins to forecast high-resolution heat stress in campus environments.",
+      "impact": "The paper extends Yifan's output layer into environmental exposure and heat-risk forecasting. It also reinforces the larger digital twin thread that appears in urban simulation and flood-management work.",
+      "themes": [
+        "Urban Digital Twins",
+        "Spatial Intelligence",
+        "Climate Risk"
+      ],
+      "methods": [
+        "Spatiotemporal Vision Transformer",
+        "Digital Twins",
+        "Heat Stress Forecasting"
+      ],
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1177/0739456X251391121"
+        },
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "shows how high-resolution environmental intelligence can support campus and city planning"
+        },
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "uses prediction as a planning aid rather than a replacement for human interpretation"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 8
+      },
+      "role": "collaborative output",
+      "metricLabel": "8 citations",
+      "wikiPath": "wiki/papers/heat-stress-digital-twins.md",
+      "position": {
+        "x": 742,
+        "y": 404
+      },
+      "color": "#ff6b5e",
+      "radius": 30,
       "displayKind": "Research Output"
     },
     {
@@ -411,6 +693,109 @@ window.researchMapData = {
       },
       "color": "#157bc0",
       "radius": 38,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "low-rank-loss-functions",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "Low-Rank Loss Functions",
+      "title": "Different Loss Functions Used in the Low-Rank Approximation",
+      "year": 2020,
+      "venue": "International Core Journal of Engineering, 6(11), 360-368",
+      "type": "Journal Article",
+      "status": "Published",
+      "authors": "C. Shi, G. Mou, H. Wang, T. Liu, Yifan Yang, Z. Li",
+      "summary": "This article compares different loss functions used in low-rank approximation.",
+      "impact": "This output keeps the atlas honest about the path into GeoAI. The public output layer did not begin with spatial applications only; it also includes earlier work on model behavior and approximation choices.",
+      "themes": [
+        "Mathematical Modeling",
+        "Machine Learning Foundations"
+      ],
+      "methods": [
+        "Low-Rank Approximation",
+        "Loss Function Comparison",
+        "Numerical Analysis"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "records an early modeling foundation behind later applied AI work"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": "wiki/papers/low-rank-loss-functions.md",
+      "position": {
+        "x": 884,
+        "y": 682
+      },
+      "color": "#a579ff",
+      "radius": 24,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "resilience-4d-urban-flood",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "Resilience in 4D",
+      "title": "Resilience in 4D: AI-Driven Geospatial Digital Twins for Urban Flood Simulation and Management",
+      "year": 2025,
+      "venue": "AGU25",
+      "type": "Conference Proceeding",
+      "status": "Accepted",
+      "authors": "Lei Zou, D. Mandal, Bing Zhou, Yifan Yang, M. Yang",
+      "summary": "This conference proceeding frames urban flood simulation and management through AI-driven geospatial digital twins.",
+      "impact": "This output helps the atlas show a continuum: disaster work is not only post-event damage assessment, but also simulation, management, and infrastructure planning.",
+      "themes": [
+        "Disaster Assessment",
+        "Urban Digital Twins",
+        "Spatial Intelligence"
+      ],
+      "methods": [
+        "Geospatial Digital Twins",
+        "Urban Flood Simulation",
+        "AI-Driven Modeling"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "links flood simulation to civic geospatial infrastructure"
+        },
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "extends disaster evidence from assessment into simulation and management"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": "wiki/papers/resilience-4d-urban-flood.md",
+      "position": {
+        "x": 798,
+        "y": 318
+      },
+      "color": "#36f1c7",
+      "radius": 28,
       "displayKind": "Research Output"
     },
     {
@@ -1401,100 +1786,6 @@ window.researchMapData = {
       "displayKind": "Bridge Question"
     },
     {
-      "id": "scholar-experiments-of-federated-learning-for-covid-19-chest-x-ray-image",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Experiments of federated learning for COVI",
-      "title": "Experiments of federated learning for COVID-19 chest X-ray images",
-      "year": 2021,
-      "venue": "Advances in Artificial Intelligence and Security: 7th International… , 2021",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "B Yan, J Wang, J Cheng, Y Zhou, Y Zhang, Y Yang, L Liu, H Zhao, ...",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Multimodal Learning",
-        "Public Health AI"
-      ],
-      "methods": [
-        "Multimodal Learning",
-        "Public Health AI"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "human-evidence-disaster-ai",
-          "label": "connects public signals with accountable AI evidence"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 274
-      },
-      "role": "collaborative output",
-      "metricLabel": "274 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 720,
-        "y": 96
-      },
-      "color": "#64c7ff",
-      "radius": 44,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-covid-19-public-opinion-and-emotion-monitoring-system-based-on-t",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "COVID-19 Public Opinion and Emotion Monito",
-      "title": "COVID-19 Public Opinion and Emotion Monitoring System Based on Time Series Thermal New Word Mining",
-      "year": 2020,
-      "venue": "Computers, Materials & Continua 64 (3), 1415-1434 , 2020",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "Y Zhang, J Chen, Y Yang, H Li, X Zheng, X Chen, B Liu, T Ren, N Xiong",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Public Health AI"
-      ],
-      "methods": [
-        "Public Health AI"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "human-evidence-disaster-ai",
-          "label": "connects public signals with accountable AI evidence"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 28
-      },
-      "role": "collaborative output",
-      "metricLabel": "28 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 772,
-        "y": 96
-      },
-      "color": "#64c7ff",
-      "radius": 36.69960629311004,
-      "displayKind": "Research Output"
-    },
-    {
       "id": "scholar-surveying-attitudinal-alignment-between-large-language-models-vs",
       "kind": "output",
       "source": "Google Scholar",
@@ -1530,61 +1821,11 @@ window.researchMapData = {
       "metricLabel": "18 citations",
       "wikiPath": null,
       "position": {
-        "x": 824,
+        "x": 720,
         "y": 96
       },
       "color": "#64c7ff",
       "radius": 34.182337649086286,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-integrating-spatiotemporal-vision-transformer-into-digital-twins",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Integrating spatiotemporal vision transfor",
-      "title": "Integrating spatiotemporal vision transformer into digital twins for high-resolution heat stress forecasting in campus environments",
-      "year": 2025,
-      "venue": "Journal of Planning Education and Research, 0739456X251391121 , 2025",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "W Gong, X Ye, K Wu, S Jamonnak, W Zhang, Y Yang, X Huang",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Spatial Intelligence",
-        "Multimodal Learning",
-        "Urban Digital Twins"
-      ],
-      "methods": [
-        "Spatial Intelligence",
-        "Multimodal Learning",
-        "Urban Digital Twins"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "spatial-intelligence-public-infrastructure",
-          "label": "extends the urban and spatial intelligence question"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 8
-      },
-      "role": "collaborative output",
-      "metricLabel": "8 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 720,
-        "y": 190
-      },
-      "color": "#64c7ff",
-      "radius": 30.788225099390857,
       "displayKind": "Research Output"
     },
     {
@@ -1629,60 +1870,10 @@ window.researchMapData = {
       "wikiPath": null,
       "position": {
         "x": 772,
-        "y": 190
+        "y": 96
       },
       "color": "#64c7ff",
       "radius": 28.8,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-towards-agentic-urban-digital-twins-audits-advancing-new-urban-s",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Towards Agentic Urban Digital Twins (AUDiT",
-      "title": "Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents",
-      "year": 2026,
-      "venue": "Urban Informatics 5 (1), 9 , 2026",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "X Ye, W Gong, Y Yang, L Zou, Z Tu, X Huang, Z Li, H Ning, L Wu",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Spatial Intelligence",
-        "Multimodal Learning",
-        "Urban Digital Twins"
-      ],
-      "methods": [
-        "Spatial Intelligence",
-        "Multimodal Learning",
-        "Urban Digital Twins"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "spatial-intelligence-public-infrastructure",
-          "label": "extends the urban and spatial intelligence question"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 2
-      },
-      "role": "collaborative output",
-      "metricLabel": "2 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 824,
-        "y": 190
-      },
-      "color": "#64c7ff",
-      "radius": 27.39411254969543,
       "displayKind": "Research Output"
     },
     {
@@ -1724,8 +1915,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 720,
-        "y": 284
+        "x": 824,
+        "y": 96
       },
       "color": "#64c7ff",
       "radius": 24,
@@ -1776,151 +1967,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 772,
-        "y": 284
-      },
-      "color": "#64c7ff",
-      "radius": 24,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-resilience-in-4d-ai-driven-geospatial-digital-twins-for-urban-fl",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Resilience in 4D",
-      "title": "Resilience in 4D: AI-Driven Geospatial Digital Twins for Urban Flood Simulation and Management",
-      "year": 2025,
-      "venue": "AGU25 , 2025",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "L Zou, D Mandal, B Zhou, Y Yang, M Yang",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Disaster Assessment",
-        "Spatial Intelligence",
-        "Multimodal Learning",
-        "Urban Digital Twins"
-      ],
-      "methods": [
-        "Disaster Assessment",
-        "Spatial Intelligence",
-        "Multimodal Learning",
-        "Urban Digital Twins"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "damagearbiter",
-          "label": "feeds the disaster intelligence output layer"
-        },
-        {
-          "target": "spatial-intelligence-public-infrastructure",
-          "label": "extends the urban and spatial intelligence question"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 0
-      },
-      "role": "collaborative output",
-      "metricLabel": "0 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 824,
-        "y": 284
-      },
-      "color": "#64c7ff",
-      "radius": 24,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-navigating-spatial-inequities-in-freight-truck-crash-severity-vi",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Navigating Spatial Inequities in Freight T",
-      "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
-      "year": 2025,
-      "venue": "Journal of Transport Geography 128, 104387 , 2025",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "Y Wang, H Yin, Y Yang, C Zhao, S Wang",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Spatial Intelligence"
-      ],
-      "methods": [
-        "Spatial Intelligence"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "spatial-intelligence-public-infrastructure",
-          "label": "extends the urban and spatial intelligence question"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 0
-      },
-      "role": "collaborative output",
-      "metricLabel": "0 citations",
-      "wikiPath": null,
-      "position": {
         "x": 720,
-        "y": 378
-      },
-      "color": "#64c7ff",
-      "radius": 24,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-different-loss-functions-used-in-the-low-rank-approximation",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Different Loss Functions Used in the Low-r",
-      "title": "Different Loss Functions Used in the Low-rank Approximation",
-      "year": 2020,
-      "venue": "International Core Journal of Engineering 6 (11), 360-368 , 2020",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "C Shi, G Mou, H Wang, T Liu, Y Yang, Z Li",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Scholar Output"
-      ],
-      "methods": [
-        "Scholar Output"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [],
-      "repository": null,
-      "metrics": {
-        "citations": 0
-      },
-      "role": "collaborative output",
-      "metricLabel": "0 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 772,
-        "y": 378
+        "y": 190
       },
       "color": "#64c7ff",
       "radius": 24,
