@@ -2410,3 +2410,21 @@ summary:focus-visible {
 .atlas.is-detail-closed .detail-empty-note {
   display: none;
 }
+
+
+.topbar {
+  position: sticky;
+  top: 14px;
+  z-index: 20;
+}
+
+.top-links a[aria-current="page"] {
+  border-color: rgba(255, 212, 106, 0.52);
+  background: linear-gradient(135deg, rgba(255, 212, 106, 0.16), rgba(54, 241, 199, 0.08));
+  color: #ffffff;
+  box-shadow: 0 0 24px rgba(255, 212, 106, 0.12);
+}
+
+.guide-links a[aria-current="page"] {
+  border-color: rgba(255, 212, 106, 0.52);
+}
