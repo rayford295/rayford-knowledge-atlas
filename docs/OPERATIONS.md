@@ -44,25 +44,28 @@ Do not commit raw highlights or private note text.
 ## Verify Graph Integrity
 
 ```bash
-node - <<'NODE'
-const fs = require("fs");
-const text = fs.readFileSync("data.js", "utf8")
-  .replace(/^window\.researchMapData = /, "")
-  .replace(/;\s*$/, "");
+npm run verify
+```
+
+If `npm run verify` is not wired in `package.json`, run the check inline:
+
+```bash
+node -e "
+const fs = require('fs');
+const text = fs.readFileSync('data.js', 'utf8')
+  .replace(/^window\.researchMapData = /, '')
+  .replace(/;\s*$/, '');
 const data = JSON.parse(text);
-const ids = new Set(data.nodes.map((node) => node.id));
-const broken = [];
-for (const node of data.nodes) {
-  for (const connection of node.connections || []) {
-    if (!ids.has(connection.target)) {
-      broken.push(`${node.id}->${connection.target}`);
-    }
-  }
-}
+const ids = new Set(data.nodes.map(n => n.id));
+const broken = data.nodes.flatMap(n =>
+  (n.connections || []).filter(c => !ids.has(c.target)).map(c => n.id + '->' + c.target)
+);
 console.log({ nodes: data.nodes.length, counts: data.counts, broken });
 if (broken.length) process.exit(1);
-NODE
+"
 ```
+
+This exits with code 1 and prints every broken `source->target` pair if any connection targets a node id that does not exist.
 
 ## Local Browser QA
 
@@ -93,10 +96,41 @@ git commit -m "Your message"
 git push
 ```
 
-Then verify:
+Then verify the live site contains expected text:
 
 ```bash
+# Using ripgrep (rg):
 curl -sS -L -H 'Cache-Control: no-cache' \
   'https://rayford295.github.io/rayford-knowledge-atlas/?v=latest' |
   rg 'Rayford Knowledge Atlas|Inputs Become Outputs'
+
+# Or with standard grep:
+curl -sS -L -H 'Cache-Control: no-cache' \
+  'https://rayford295.github.io/rayford-knowledge-atlas/?v=latest' |
+  grep -E 'Rayford Knowledge Atlas|Inputs Become Outputs'
 ```
+
+## Check GitHub Actions Status
+
+After pushing, confirm the automated workflows ran without error:
+
+```bash
+gh run list --repo rayford295/rayford-knowledge-atlas --limit 5
+```
+
+For a failing run, get the full log:
+
+```bash
+gh run view <run-id> --log-failed
+```
+
+## Rollback
+
+If a push breaks the live site, revert the last commit and force-push:
+
+```bash
+git revert HEAD --no-edit
+git push
+```
+
+Do not use `git push --force` on `main`. A revert commit preserves history and is safer for a public repository.

@@ -34,14 +34,42 @@ Typical questions:
 
 `wiki/papers/` records curated paper and project pages. `raw/scholar/google-scholar.json` adds Scholar-indexed outputs that do not yet have hand-written pages, including collaborative and non-first-author work.
 
-Typical fields:
+Typical fields for a curated wiki page:
 
 - `kind: output`
-- `source: Research Wiki` or `Google Scholar`
+- `source: Research Wiki`
 - `repository`
 - `metrics.citations`
 - `themes`
 - `connections`
+
+Typical fields for a Scholar-only node (no wiki page yet):
+
+- `kind: output`
+- `source: Google Scholar`
+- `title`
+- `year`
+- `venue`
+- `authors`
+- `metrics.citations`
+- `themes` (auto-assigned or empty)
+- `connections` (empty until manually curated)
+
+**Deduplication rule:** If a paper already has a `wiki/papers/` page, the build script uses the wiki page and ignores the matching Scholar JSON entry. The wiki page `id` must match the Scholar record's id for deduplication to work correctly.
+
+## Bridge Connection Mechanics
+
+A bridge question node connects the two otherwise separate layers. Its `connections` frontmatter must include at least one entry pointing to a reading input and at least one entry pointing to a research output. Without both sides, the graph breaks into disconnected clusters instead of showing the intellectual trajectory.
+
+Example bridge structure:
+
+```yaml
+connections:
+  - target: 3-43993718        # reading input node id
+    label: motivates
+  - target: damagearbiter      # research output node id
+    label: answers
+```
 
 ## Build Pipeline
 

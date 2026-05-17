@@ -19,15 +19,14 @@ https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/
 
 Update these files first:
 
-- `README.md`
-- `README.zh-CN.md`
-- `package.json`
-- `index.html`
-- `raw/scholar/google-scholar.json`
-- `scripts/fetch-scholar.js`
-- `.github/workflows/update-scholar.yml`
+- `README.md` and `README.zh-CN.md` — change all personal links, Scholar URL, and homepage URL.
+- `package.json` — update `name`, `description`, and `homepage`.
+- `index.html` — update the `<title>` tag, the `.hero-title` heading, the Scholar profile link in the sidebar, and your homepage link in the header.
+- `raw/scholar/google-scholar.json` — replace with an empty `{"nodes": []}` until you run `npm run scholar:update`.
+- `scripts/fetch-scholar.js` — replace the `userId` constant with your own Scholar user id.
+- `.github/workflows/update-scholar.yml` — no changes needed unless you rename the default branch.
 
-Replace Rayford/Yifan links with your own website, GitHub profile, Google Scholar profile, and repository name.
+Replace all occurrences of `rayford295`, `Rayford`, `Yifan Yang`, `B-fiSHwAAAAJ`, and `rayford295.github.io` with your own identifiers.
 
 ## 3. Add Your Research Outputs
 
@@ -43,24 +42,17 @@ Copy it to a new file such as:
 wiki/papers/my-first-paper.md
 ```
 
-Then fill in:
+Then fill in all required frontmatter fields. See `CLAUDE.md` for the full field list and position/radius sizing guidelines.
 
-- `id`
-- `short_title`
-- `title`
-- `year`
-- `venue`
-- `type`
-- `status`
-- `authors`
-- `themes`
-- `methods`
-- `links`
-- `connections`
-- `repository`
-- `position`
-- `color`
-- `radius`
+For `color`, pick a hex value that groups related outputs visually. A consistent palette suggestion:
+
+| Field type | Example color |
+|---|---|
+| GeoAI / spatial | `#d7a13b` (gold) |
+| Disaster / safety | `#c0392b` (red) |
+| Multimodal / vision | `#2980b9` (blue) |
+| Reading input | `#27ae60` (green) |
+| Bridge question | `#8e44ad` (purple) |
 
 Files that start with `_` are ignored by the build script, so `_template.md` will not appear as a graph node.
 
@@ -119,9 +111,11 @@ Then run:
 npm run scholar:update
 ```
 
-## 8. Add WeRead Inputs
+## 8. Add WeRead Inputs (Optional)
 
-Set a local WeRead API key if you want to generate reading input nodes:
+Skip this step if you do not use WeRead or do not have a WeRead Agent API key. The graph works without a reading layer — you can add reading inputs by hand using `wiki/readings/_template.md` instead.
+
+If you do have a WeRead API key:
 
 ```bash
 export WEREAD_API_KEY=wrk-...
@@ -129,7 +123,7 @@ npm run weread:update
 npm run build
 ```
 
-Review generated reading pages before committing.
+Review every generated reading page before committing. Confirm no raw highlights or private text were included.
 
 ## 9. Publish
 
@@ -145,13 +139,15 @@ GitHub Pages will deploy the site. The weekly Scholar workflow will run automati
 
 ## Suggested Customization Checklist
 
-- Replace all personal links.
-- Replace paper pages.
-- Replace or remove generated reading pages.
-- Add bridge questions that make inputs and outputs meet.
-- Replace raw source records.
-- Update theme and method tags.
-- Update graph positions so nodes do not overlap.
-- Update colors to match your field or identity.
-- Check `data.js` after running `npm run build`.
-- Open the GitHub Pages site and test search, filters, and node clicks.
+- [ ] Replace all personal links in `README.md`, `index.html`, and `package.json`.
+- [ ] Replace the Scholar user id in `scripts/fetch-scholar.js` and run `npm run scholar:update`.
+- [ ] Replace or delete the six example paper pages in `wiki/papers/`.
+- [ ] Replace or remove the generated reading pages in `wiki/readings/`.
+- [ ] Add at least two bridge questions in `wiki/questions/` that connect your reading inputs to your outputs.
+- [ ] Replace raw source records in `raw/papers/`.
+- [ ] Update theme and method tags to match your research domain.
+- [ ] Update graph positions so nodes do not overlap (see `CLAUDE.md` for spacing rules).
+- [ ] Update colors to match your field or identity (see color table above).
+- [ ] Run `npm run build` and confirm zero broken links.
+- [ ] Open the GitHub Pages site and test search, filters, and node inspector clicks.
+- [ ] Test on a narrow viewport to confirm mobile layout does not break.
