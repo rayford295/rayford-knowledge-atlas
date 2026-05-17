@@ -2,10 +2,10 @@
   "name": "rayford-knowledge-atlas",
   "displayName": "Rayford Knowledge Atlas",
   "description": "An input-output knowledge graph for Yifan Yang's reading inputs, papers, Scholar outputs, repositories, and GeoAI workflows.",
-  "homepage": "https://rayford295.github.io/GeoGraph/",
+  "homepage": "https://rayford295.github.io/rayford-knowledge-atlas/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rayford295/GeoGraph.git"
+    "url": "https://github.com/rayford295/rayford-knowledge-atlas.git"
   },
   "private": true,
   "scripts": {

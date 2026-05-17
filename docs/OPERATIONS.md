@@ -97,6 +97,6 @@ Then verify:
 
 ```bash
 curl -sS -L -H 'Cache-Control: no-cache' \
-  'https://rayford295.github.io/GeoGraph/?v=latest' |
+  'https://rayford295.github.io/rayford-knowledge-atlas/?v=latest' |
   rg 'Rayford Knowledge Atlas|Inputs Become Outputs'
 ```

@@ -4,7 +4,7 @@
 
 ## 1. Fork 并改名
 
-1. 打开 [Rayford Knowledge Atlas](https://github.com/rayford295/GeoGraph)。
+1. 打开 [Rayford Knowledge Atlas](https://github.com/rayford295/rayford-knowledge-atlas)。
 2. 点击 `Fork`。
 3. 把 fork 后的仓库改成你自己的名字，例如 `YourName-Knowledge-Atlas`。
 4. 在 GitHub repository settings 里启用 GitHub Pages，来源选择 `main` branch root。

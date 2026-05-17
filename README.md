@@ -1,13 +1,13 @@
 # Rayford Knowledge Atlas
 
-[Open Live Website](https://rayford295.github.io/GeoGraph/) | [Make Your Own](https://rayford295.github.io/GeoGraph/fork.html) | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) | [Main Homepage](https://rayford295.github.io/) | [中文说明](./README.zh-CN.md)
+[Open Live Website](https://rayford295.github.io/rayford-knowledge-atlas/) | [Make Your Own](https://rayford295.github.io/rayford-knowledge-atlas/fork.html) | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) | [Main Homepage](https://rayford295.github.io/) | [中文说明](./README.zh-CN.md)
 
 Rayford Knowledge Atlas is my public input-output knowledge graph. It places my reading inputs beside my research outputs, so papers, book chapters, collaborative Google Scholar records, repositories, methods, and long-term questions can be inspected in one living system.
 
 The premise is simple: my papers will never outnumber the books, biographies, essays, and technical material that shape my judgment. Research outputs show what I write into the world. Reading inputs show what I let the world write into me.
 
 <p align="center">
-  <a href="https://rayford295.github.io/GeoGraph/">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/">
     <img src="./assets/rayford-knowledge-atlas-preview.png" alt="Preview of the Rayford Knowledge Atlas website" width="920">
   </a>
 </p>
@@ -19,12 +19,13 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - A structured markdown wiki that agents and humans can maintain together.
 - A weekly-updated Google Scholar snapshot that includes collaborative and non-first-author outputs.
 - A public-safe reading layer that stores metadata, themes, and synthesis scaffolds without publishing raw copyrighted highlights or private notes.
+- An Obsidian-ready vault with maps of content, wiki links, templates, and graph color groups.
 
 ## One-Click Access
 
-- Live site: [rayford295.github.io/GeoGraph](https://rayford295.github.io/GeoGraph/)
-- Fork guide: [rayford295.github.io/GeoGraph/fork.html](https://rayford295.github.io/GeoGraph/fork.html)
-- GitHub repository: [github.com/rayford295/GeoGraph](https://github.com/rayford295/GeoGraph)
+- Live site: [rayford295.github.io/rayford-knowledge-atlas](https://rayford295.github.io/rayford-knowledge-atlas/)
+- Fork guide: [rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
+- GitHub repository: [github.com/rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas)
 - Google Scholar: [scholar.google.com/citations?user=B-fiSHwAAAAJ](https://scholar.google.com/citations?user=B-fiSHwAAAAJ)
 - Main academic homepage: [rayford295.github.io](https://rayford295.github.io/)
 
@@ -41,6 +42,9 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - `wiki/papers/`: curated research output profiles.
 - `wiki/readings/`: public-safe WeRead reading input pages.
 - `wiki/questions/`: bridge questions that connect reading to research.
+- `wiki/maps/`: Obsidian-style maps of content for navigating the vault.
+- `wiki/templates/`: starter templates for new reading and question notes.
+- `.obsidian/`: minimal vault settings for opening this repository in Obsidian.
 - `wiki/concepts/`: reusable concept pages.
 - `wiki/comparisons/`: cross-paper and cross-source narratives.
 - `raw/papers/`: source records for paper and repository metadata.
@@ -51,6 +55,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - `scripts/fetch-weread.js`: refreshes public-safe WeRead reading nodes from `WEREAD_API_KEY`.
 - `docs/ATLAS_ARCHITECTURE.md`: explains the input-question-output graph model.
 - `docs/OPERATIONS.md`: gives the update, QA, and publishing runbook.
+- `docs/OBSIDIAN_VAULT.md`: explains how to use the repository as an Obsidian vault.
 
 ## Current Output Layer
 
@@ -80,7 +85,8 @@ This repository is public. The reading layer therefore commits only metadata, co
 - [Atlas Architecture](./docs/ATLAS_ARCHITECTURE.md)
 - [Operations Runbook](./docs/OPERATIONS.md)
 - [WeRead Integration](./docs/WEREAD_INTEGRATION.md)
+- [Obsidian Vault Guide](./docs/OBSIDIAN_VAULT.md)
 
 ## Make Your Own
 
-This repository can still be forked as a template. Start with the [Make Your Own page](https://rayford295.github.io/GeoGraph/fork.html), then follow [docs/FORK_GUIDE.md](./docs/FORK_GUIDE.md).
+This repository can still be forked as a template. Start with the [Make Your Own page](https://rayford295.github.io/rayford-knowledge-atlas/fork.html), then follow [docs/FORK_GUIDE.md](./docs/FORK_GUIDE.md).

@@ -4,7 +4,7 @@ This repository can be forked into a personal input-output atlas for another sch
 
 ## 1. Fork and Rename
 
-1. Open [Rayford Knowledge Atlas](https://github.com/rayford295/GeoGraph).
+1. Open [Rayford Knowledge Atlas](https://github.com/rayford295/rayford-knowledge-atlas).
 2. Click `Fork`.
 3. Rename the fork to your preferred project name, for example `YourName-Knowledge-Atlas`.
 4. In GitHub repository settings, enable GitHub Pages from the `main` branch root.

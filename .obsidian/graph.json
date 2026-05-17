@@ -1,0 +1,32 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:wiki/readings",
+      "color": {
+        "a": 1,
+        "rgb": 16736589
+      }
+    },
+    {
+      "query": "path:wiki/questions",
+      "color": {
+        "a": 1,
+        "rgb": 11046143
+      }
+    },
+    {
+      "query": "path:wiki/papers",
+      "color": {
+        "a": 1,
+        "rgb": 6604799
+      }
+    }
+  ]
+}
