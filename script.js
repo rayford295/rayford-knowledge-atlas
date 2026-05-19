@@ -82,14 +82,30 @@
 
   loadStateFromUrl();
 
-  paperCount.textContent = String(data.nodes.length);
-  themeCountElement.textContent = String(themeCount);
-  outputCountElement.textContent = String(data.counts?.output || data.nodes.filter((node) => node.kind === "output").length);
-  inputCountElement.textContent = String(data.counts?.input || data.nodes.filter((node) => node.kind === "input").length);
-  questionCountElement.textContent = String(data.counts?.question || data.nodes.filter((node) => node.kind === "question").length);
-  if (paperLibraryCount) {
-    paperLibraryCount.textContent = String(data.counts?.output || data.nodes.filter((node) => node.kind === "output").length);
+  function animateCount(el, target) {
+    if (!el) return;
+    if (graphRuntime.reducedMotion || target === 0) { el.textContent = String(target); return; }
+    const duration = 820;
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = String(Math.round(eased * target));
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
   }
+
+  const outputTotal = data.counts?.output || data.nodes.filter((node) => node.kind === "output").length;
+  const inputTotal = data.counts?.input || data.nodes.filter((node) => node.kind === "input").length;
+  const questionTotal = data.counts?.question || data.nodes.filter((node) => node.kind === "question").length;
+
+  animateCount(paperCount, data.nodes.length);
+  animateCount(themeCountElement, themeCount);
+  animateCount(outputCountElement, outputTotal);
+  animateCount(inputCountElement, inputTotal);
+  animateCount(questionCountElement, questionTotal);
+  if (paperLibraryCount) animateCount(paperLibraryCount, outputTotal);
 
   function renderScholar(snapshot) {
     if (!snapshot || !snapshot.metrics) {
