@@ -4,6 +4,7 @@ This folder keeps public PDF copies of Yifan Yang's published papers and chapter
 
 | Year | Publication | Atlas page | PDF |
 | --- | --- | --- | --- |
+| 2026 | Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire | [LA Wildfire Tri-Environmental Cost](../wiki/papers/tri-environmental-la-wildfire.md) | [PDF](./2026-integrating-earth-observation-tri-environmental-la-wildfire.pdf) |
 | 2026 | Towards Agentic Urban Digital Twins (AUDiTs): Advancing New Urban Science Through Human-AI Co-Learning Agents | [Agentic Urban Digital Twins](../wiki/papers/agentic-urban-digital-twins.md) | [PDF](./2026-towards-agentic-urban-digital-twins-audits.pdf) |
 | 2025 | Hyperlocal Disaster Damage Assessment Using Bi-temporal Street-View Imagery and Pre-trained Vision Models | [Hyperlocal Disaster](../wiki/papers/hyperlocal-disaster.md) | [PDF](./2025-hyperlocal-disaster-damage-assessment.pdf) |
 | 2025 | Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles | [Freight Crash Inequities](../wiki/papers/freight-crash-spatial-inequities.md) | [PDF](./2025-navigating-spatial-inequities-freight-truck-crash-severity.pdf) |

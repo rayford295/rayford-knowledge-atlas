@@ -5,6 +5,15 @@
   "migratedAt": "2026-05-17",
   "records": [
     {
+      "id": "tri-environmental-la-wildfire",
+      "category": "Journal Article",
+      "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",
+      "year": 2026,
+      "venue": "International Journal of Applied Earth Observation and Geoinformation, 150, 105342",
+      "doi": "https://doi.org/10.1016/j.jag.2026.105342",
+      "atlasPage": "wiki/papers/tri-environmental-la-wildfire.md"
+    },
+    {
       "id": "agentic-urban-digital-twins",
       "category": "Journal Article",
       "title": "Towards Agentic Urban Digital Twins (AUDiTs): Advancing New Urban Science Through Human-AI Co-Learning Agents",

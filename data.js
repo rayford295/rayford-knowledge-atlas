@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-05-18T12:47:17.441Z",
+  "generatedAt": "2026-05-23T00:02:42.340Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -10,6 +10,7 @@ window.researchMapData = {
     "Climate Risk",
     "Computer Vision Segmentation",
     "Disaster Assessment",
+    "Earth Observation",
     "Evidence and Power",
     "Federated Learning",
     "Founder Judgment",
@@ -32,7 +33,8 @@ window.researchMapData = {
     "Transportation Equity",
     "Urban Digital Twins",
     "Urban Greening",
-    "Urban Risk"
+    "Urban Risk",
+    "Wildfire Risk"
   ],
   "sources": [
     "Google Scholar",
@@ -912,6 +914,70 @@ window.researchMapData = {
       },
       "color": "#b97a16",
       "radius": 40,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "tri-environmental-la-wildfire",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "LA Wildfire Tri-Environmental Cost",
+      "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",
+      "year": 2026,
+      "venue": "International Journal of Applied Earth Observation and Geoinformation, 150, 105342",
+      "type": "Journal Article",
+      "status": "Published",
+      "authors": "Zongrong Li, Haiyang Li, Yifan Yang, Siqin Wang, Yingxin Zhu",
+      "summary": "This article evaluates the economic exposure of the 2025 Los Angeles wildfire through a tri-environmental framework. It brings natural, built, and social environmental data into one daily wildfire impact assessment.",
+      "impact": "The work adds a public-facing wildfire and remote-sensing node to the research graph. It strengthens the atlas narrative around disaster resilience, spatial intelligence, and equitable emergency planning.",
+      "themes": [
+        "Disaster Assessment",
+        "Earth Observation",
+        "Spatial Intelligence",
+        "Wildfire Risk"
+      ],
+      "methods": [
+        "VIIRS Fire Detections",
+        "OpenStreetMap",
+        "Dasymetric Mapping",
+        "Tri-Environmental Assessment"
+      ],
+      "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2026-integrating-earth-observation-tri-environmental-la-wildfire.pdf"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1016/j.jag.2026.105342"
+        }
+      ],
+      "connections": [
+        {
+          "target": "hyperlocal-disaster",
+          "label": "extends disaster assessment from street-level damage to regional wildfire exposure"
+        },
+        {
+          "target": "satellite-to-street",
+          "label": "shares the remote-sensing-to-ground-evidence disaster thread"
+        },
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "frames wildfire risk as a public spatial intelligence problem"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 4
+      },
+      "role": "collaborative output",
+      "metricLabel": "4 citations",
+      "wikiPath": "wiki/papers/tri-environmental-la-wildfire.md",
+      "position": {
+        "x": 622,
+        "y": 154
+      },
+      "color": "#d96832",
+      "radius": 34,
       "displayKind": "Research Output"
     },
     {
@@ -1881,54 +1947,6 @@ window.researchMapData = {
       "displayKind": "Research Output"
     },
     {
-      "id": "scholar-integrating-earth-observation-data-into-the-tri-environmental-ev",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Integrating earth observation data into th",
-      "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2505.01721 , 2025",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "Z Li, H Li, Y Yang, S Wang, Y Zhu",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Disaster Assessment",
-        "Spatial Intelligence"
-      ],
-      "methods": [
-        "Disaster Assessment",
-        "Spatial Intelligence"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "damagearbiter",
-          "label": "feeds the disaster intelligence output layer"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 4
-      },
-      "role": "collaborative output",
-      "metricLabel": "4 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 772,
-        "y": 96
-      },
-      "color": "#64c7ff",
-      "radius": 28.8,
-      "displayKind": "Research Output"
-    },
-    {
       "id": "scholar-earth-embeddings-reveal-diverse-urban-signals-from-space",
       "kind": "output",
       "source": "Google Scholar",
@@ -1967,7 +1985,7 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 824,
+        "x": 772,
         "y": 96
       },
       "color": "#64c7ff",
@@ -2019,8 +2037,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 720,
-        "y": 190
+        "x": 824,
+        "y": 96
       },
       "color": "#64c7ff",
       "radius": 24,

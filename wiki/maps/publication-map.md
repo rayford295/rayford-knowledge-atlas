@@ -4,6 +4,7 @@ This map is the landing page for the old `rayford295/Publications` repository af
 
 ## Journal Articles
 
+- [[../papers/tri-environmental-la-wildfire]]
 - [[../papers/agentic-urban-digital-twins]]
 - [[../papers/hyperlocal-disaster]]
 - [[../papers/freight-crash-spatial-inequities]]
