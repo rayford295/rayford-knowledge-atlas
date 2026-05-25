@@ -5,6 +5,15 @@
   "migratedAt": "2026-05-17",
   "records": [
     {
+      "id": "boiling-frog-effect",
+      "category": "Journal Article",
+      "title": "The Boiling Frog Effect: Global Warming Delays Emotional Impacts of Air Pollution in Warmer Climates",
+      "year": 2026,
+      "venue": "Journal of Hazardous Materials, 142440",
+      "doi": "https://doi.org/10.1016/j.jhazmat.2026.142440",
+      "atlasPage": "wiki/papers/boiling-frog-effect.md"
+    },
+    {
       "id": "tri-environmental-la-wildfire",
       "category": "Journal Article",
       "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",

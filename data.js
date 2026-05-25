@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-05-25T12:44:08.822Z",
+  "generatedAt": "2026-05-25T21:31:10.619Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -43,7 +43,7 @@ window.researchMapData = {
     "WeRead"
   ],
   "counts": {
-    "output": 17,
+    "output": 18,
     "input": 12,
     "question": 5
   },
@@ -188,6 +188,68 @@ window.researchMapData = {
       },
       "color": "#2f8f6f",
       "radius": 35,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "boiling-frog-effect",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "Boiling Frog Effect",
+      "title": "The Boiling Frog Effect: Global Warming Delays Emotional Impacts of Air Pollution in Warmer Climates",
+      "year": 2026,
+      "venue": "Journal of Hazardous Materials, 142440",
+      "type": "Journal Article",
+      "status": "Journal Pre-proof",
+      "authors": "Siqin Wang, Haiyan Liu, Connor Y.H. Wu, Xiao Huang, Ruomei Wang, Yifan Yang, Jonathan Corcoran, Shengjie Lai, Xinming Xia, Yan Liu",
+      "summary": "This article studies how global warming changes the emotional impacts of air pollution. It uses large-scale geotagged Twitter sentiment across the continental United States to show that combined heatwaves and air pollution can produce delayed declines in expressed sentiment, especially in warmer climates.",
+      "impact": "The paper adds a climate-emotion node to the research graph. It shows that warmer regions may adapt to heat in ways that delay emotional responses to worsening air quality, which matters for public health warning systems, environmental governance, and place-based climate adaptation.",
+      "themes": [
+        "Climate Risk",
+        "Public Health AI",
+        "Public Signals",
+        "Spatial Intelligence"
+      ],
+      "methods": [
+        "Twitter Sentiment Analysis",
+        "Spatiotemporal Bayesian Hierarchical Modeling",
+        "Distributed Lag Non-linear Model",
+        "Environmental Exposure Modeling"
+      ],
+      "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2026-boiling-frog-effect-global-warming-air-pollution.pdf"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1016/j.jhazmat.2026.142440"
+        }
+      ],
+      "connections": [
+        {
+          "target": "covid-public-opinion-emotion",
+          "label": "extends public sentiment monitoring from pandemic discourse to climate and pollution stress"
+        },
+        {
+          "target": "heat-stress-digital-twins",
+          "label": "shares the climate exposure and heat-risk modeling thread"
+        },
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "frames environmental health signals as public spatial intelligence infrastructure"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": "collaborative output",
+      "metricLabel": "Research Wiki",
+      "wikiPath": "wiki/papers/boiling-frog-effect.md",
+      "position": {
+        "x": 646,
+        "y": 574
+      },
+      "color": "#2b8cbe",
+      "radius": 32,
       "displayKind": "Research Output"
     },
     {
