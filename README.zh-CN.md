@@ -93,6 +93,8 @@ npm run build
 
 修改 `wiki/papers/`、`wiki/public-writing/`、`wiki/readings/` 或 `wiki/questions/` 后运行 `npm run build`。当源仓库 `awesome-autonomous-geoai` 里的 research philosophy 文件变化时，运行 `npm run public-writing:sync` 刷新 atlas 备份。只有在本地已经配置 `WEREAD_API_KEY` 时才运行 `npm run weread:update`。
 
+公共写作镜像也会通过 `.github/workflows/update-public-writing.yml` 每周自动刷新一次。
+
 ## 隐私和版权边界
 
 这个仓库是公开的。因此阅读层只提交元数据、数量、主题和我自己的综合框架，不提交微信读书原始划线、私密想法或长篇版权摘录。

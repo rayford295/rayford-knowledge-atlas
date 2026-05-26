@@ -99,6 +99,7 @@ The browser reads only `data.js`, plus small live snapshots from:
 ## Automation
 
 - `.github/workflows/update-scholar.yml` refreshes Scholar, rebuilds `data.js`, verifies the graph, and commits changed files.
+- `.github/workflows/update-public-writing.yml` refreshes mirrored public-writing backups from `awesome-autonomous-geoai`, rebuilds `data.js`, verifies the graph, and commits changed files.
 - `.github/workflows/update-weread.yml` is manual. It refreshes the reading layer only when `WEREAD_API_KEY` is configured as a repository secret.
 
 ## Public Boundary

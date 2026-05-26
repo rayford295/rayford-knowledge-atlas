@@ -75,6 +75,8 @@ npm run build
 npm run verify
 ```
 
+This same sync also runs weekly through `.github/workflows/update-public-writing.yml`.
+
 ## Verify Graph Integrity
 
 ```bash

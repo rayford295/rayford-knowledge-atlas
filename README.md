@@ -93,6 +93,8 @@ npm run build
 
 Use `npm run build` after editing `wiki/papers/`, `wiki/public-writing/`, `wiki/readings/`, or `wiki/questions/`. Use `npm run public-writing:sync` when the source `awesome-autonomous-geoai` philosophy files change. Use `npm run weread:update` only in a local environment where `WEREAD_API_KEY` is configured.
 
+The public-writing mirror also refreshes weekly through `.github/workflows/update-public-writing.yml`.
+
 ## Privacy and Copyright Boundary
 
 This repository is public. The reading layer therefore commits only metadata, counts, themes, and Yifan's own synthesis scaffolds. It does not publish raw WeRead highlights, private thoughts, or long copyrighted excerpts.

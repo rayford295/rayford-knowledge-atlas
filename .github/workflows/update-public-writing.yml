@@ -1,0 +1,36 @@
+name: Update Public Writing Archive
+
+on:
+  schedule:
+    - cron: "43 10 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-public-writing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Sync public writing mirrors
+        run: npm run public-writing:sync
+
+      - name: Rebuild public graph data
+        run: npm run build
+
+      - name: Verify graph data
+        run: npm run verify
+
+      - name: Commit updated public writing archive and graph
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update public writing archive and graph data"
+          file_pattern: raw/public-writing/RESEARCH_PHILOSOPHY.md raw/public-writing/RESEARCH_PHILOSOPHY_SUMMARY_ZH.md data.js
