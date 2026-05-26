@@ -87,10 +87,11 @@ The WeRead layer imports the highest-signal public-safe reading nodes by note co
 ```bash
 npm run scholar:update
 npm run weread:update
+npm run public-writing:sync
 npm run build
 ```
 
-Use `npm run build` after editing `wiki/papers/`, `wiki/public-writing/`, `wiki/readings/`, or `wiki/questions/`. Use `npm run weread:update` only in a local environment where `WEREAD_API_KEY` is configured.
+Use `npm run build` after editing `wiki/papers/`, `wiki/public-writing/`, `wiki/readings/`, or `wiki/questions/`. Use `npm run public-writing:sync` when the source `awesome-autonomous-geoai` philosophy files change. Use `npm run weread:update` only in a local environment where `WEREAD_API_KEY` is configured.
 
 ## Privacy and Copyright Boundary
 

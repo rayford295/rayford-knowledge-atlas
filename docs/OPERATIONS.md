@@ -67,6 +67,14 @@ wiki/maps/public-writing-map.md
 
 Use `raw/public-writing/` for full backup copies and `wiki/public-writing/` for curated atlas nodes with frontmatter. Run `npm run build` after adding or editing public-writing nodes.
 
+When the source `awesome-autonomous-geoai` philosophy files change, refresh the mirrored backups with:
+
+```bash
+npm run public-writing:sync
+npm run build
+npm run verify
+```
+
 ## Verify Graph Integrity
 
 ```bash

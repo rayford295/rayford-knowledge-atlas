@@ -11,6 +11,7 @@
   "scripts": {
     "build": "node scripts/build-map.js",
     "verify": "node scripts/verify-atlas.js",
+    "public-writing:sync": "node scripts/sync-public-writing.js",
     "scholar:update": "node scripts/fetch-scholar.js",
     "weread:update": "node scripts/fetch-weread.js",
     "atlas:update": "npm run scholar:update && npm run weread:update && npm run build && npm run verify"
