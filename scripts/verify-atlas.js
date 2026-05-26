@@ -136,6 +136,7 @@ function main() {
   const data = readAtlasData();
   const markdownFiles = [
     ...listMarkdownFiles(path.join(wikiRoot, "papers")),
+    ...listMarkdownFiles(path.join(wikiRoot, "public-writing")),
     ...listMarkdownFiles(path.join(wikiRoot, "readings")),
     ...listMarkdownFiles(path.join(wikiRoot, "questions"))
   ];

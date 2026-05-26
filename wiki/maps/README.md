@@ -8,3 +8,4 @@ This folder contains Obsidian-style maps of content (MOCs). They are entry point
 - [[question-map]]
 - [[research-output-map]]
 - [[publication-map]]
+- [[public-writing-map]]

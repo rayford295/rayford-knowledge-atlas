@@ -8,6 +8,7 @@
 - [[maps/question-map]]
 - [[maps/research-output-map]]
 - [[maps/publication-map]]
+- [[maps/public-writing-map]]
 
 ## Papers
 
@@ -21,6 +22,12 @@
 - [Perceiving Multidimensional Disaster Damages](./papers/disastervlp.md)
 - [DamageArbiter](./papers/damagearbiter.md)
 - [Satellite-to-Street](./papers/satellite-to-street.md)
+
+## Public Writing
+
+- [Research Philosophy](./public-writing/research-philosophy.md)
+- [Research Philosophy Summary (中文整理)](./public-writing/research-philosophy-summary-zh.md)
+- [Letter of Support for Professor Lei Zou's Teaching Award Nomination](./public-writing/lei-zou-teaching-award-letter.md)
 
 ## Reading Inputs
 

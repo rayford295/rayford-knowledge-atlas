@@ -29,9 +29,12 @@ Question nodes explain how reading becomes research framing:
 Output nodes explain what leaves the system:
 
 - [[research-output-map]]
+- [[public-writing-map]]
 - [[../papers/damagearbiter]]
 - [[../papers/geolocator]]
 - [[../papers/satellite-to-street]]
+- [[../public-writing/research-philosophy]]
+- [[../public-writing/lei-zou-teaching-award-letter]]
 
 ## Operating Principle
 

@@ -2,7 +2,7 @@
 
 [Open Live Website](https://rayford295.github.io/rayford-knowledge-atlas/) | [Make Your Own](https://rayford295.github.io/rayford-knowledge-atlas/fork.html) | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) | [Main Homepage](https://rayford295.github.io/) | [中文说明](./README.zh-CN.md)
 
-Rayford Knowledge Atlas is my public input-output knowledge graph. It places my reading inputs beside my research outputs, so papers, book chapters, collaborative Google Scholar records, repositories, methods, and long-term questions can be inspected in one living system.
+Rayford Knowledge Atlas is my public input-output knowledge graph. It places my reading inputs beside my research outputs and public writing, so papers, book chapters, collaborative Google Scholar records, repositories, methods, long-term questions, research philosophy, and mentorship writing can be inspected in one living system.
 
 The premise is simple: my papers will never outnumber the books, biographies, essays, and technical material that shape my judgment. Research outputs show what I write into the world. Reading inputs show what I let the world write into me.
 
@@ -19,6 +19,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - A structured markdown wiki that agents and humans can maintain together.
 - A weekly-updated Google Scholar snapshot that includes collaborative and non-first-author outputs.
 - A consolidated publication layer migrated from the former `rayford295/Publications` repository.
+- A public writing layer for research philosophy, reflective essays, and mentorship writing that should remain visible beside formal papers.
 - A public-safe reading layer that stores metadata, themes, and synthesis scaffolds without publishing raw copyrighted highlights or private notes.
 - An Obsidian-ready vault with maps of content, wiki links, templates, and graph color groups.
 
@@ -28,6 +29,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - Reading input page: [rayford295.github.io/rayford-knowledge-atlas/readings.html](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)
 - Reading advisor page: [rayford295.github.io/rayford-knowledge-atlas/advisor.html](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)
 - Research output page: [rayford295.github.io/rayford-knowledge-atlas/papers.html](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)
+- Public writing archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing)
 - Published PDF archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/publications](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)
 - Fork guide: [rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
 - GitHub repository: [github.com/rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas)
@@ -47,6 +49,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 ## Knowledge Architecture
 
 - `wiki/papers/`: curated research output profiles.
+- `wiki/public-writing/`: public research philosophy, reflection, and mentorship writing nodes.
 - `wiki/readings/`: public-safe WeRead reading input pages.
 - `wiki/questions/`: bridge questions that connect reading to research.
 - `wiki/maps/`: Obsidian-style maps of content for navigating the vault.
@@ -56,11 +59,12 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - `wiki/comparisons/`: cross-paper and cross-source narratives.
 - `publications/`: public PDF copies of published papers and chapters, with filenames starting by year.
 - `raw/papers/`: source records for paper and repository metadata.
+- `raw/public-writing/`: full public-writing backups mirrored from source repositories or generated local drafts.
 - `raw/publications/`: migrated publication records from the former Publications repository.
 - `raw/scholar/google-scholar.json`: the latest public Google Scholar snapshot.
 - `raw/weread/public-reading-index.json`: public-safe WeRead metadata, note counts, and reading graph seeds.
 - `raw/weread/reading-intelligence.json`: public-safe advisor signals from the shelf, notebooks, reading depth, and recent activity.
-- `scripts/build-map.js`: compiles papers, readings, questions, and Scholar records into `data.js`.
+- `scripts/build-map.js`: compiles papers, public writing, readings, questions, and Scholar records into `data.js`.
 - `scripts/fetch-scholar.js`: refreshes public Google Scholar metadata.
 - `scripts/fetch-weread.js`: refreshes public-safe WeRead reading nodes from `WEREAD_API_KEY`.
 - `docs/ATLAS_ARCHITECTURE.md`: explains the input-question-output graph model.
@@ -71,6 +75,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 ## Current Output Layer
 
 - Curated paper/project nodes: Agentic Urban Digital Twins, ArcGIS Text SAM, GeoLocator, Hyperlocal Disaster Damage Assessment, DisasterVLP, DamageArbiter, Satellite-to-Street, and the migrated Publications records.
+- Public writing nodes: Research Philosophy, Research Philosophy Summary (中文整理), and the letter supporting Professor Lei Zou's teaching award nomination.
 - Google Scholar nodes: collaborative and non-first-author outputs from the public Scholar profile.
 
 ## Current Input Layer
@@ -85,7 +90,7 @@ npm run weread:update
 npm run build
 ```
 
-Use `npm run build` after editing `wiki/papers/`, `wiki/readings/`, or `wiki/questions/`. Use `npm run weread:update` only in a local environment where `WEREAD_API_KEY` is configured.
+Use `npm run build` after editing `wiki/papers/`, `wiki/public-writing/`, `wiki/readings/`, or `wiki/questions/`. Use `npm run weread:update` only in a local environment where `WEREAD_API_KEY` is configured.
 
 ## Privacy and Copyright Boundary
 

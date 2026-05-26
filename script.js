@@ -32,6 +32,7 @@
     "Spatial Intelligence",
     "Multimodal Learning",
     "Reading Input",
+    "Public Writing",
     "Geo-Privacy",
     "Human-AI Judgment"
   ]);
@@ -53,6 +54,12 @@
       title: "Disaster Evidence -> Arbitration",
       summary: "How street-view evidence moves from perception to auditable damage assessment.",
       nodes: ["disastervlp", "human-evidence-disaster-ai", "damagearbiter"]
+    },
+    {
+      id: "public-writing",
+      title: "Research Philosophy -> Mentorship",
+      summary: "How public writing preserves research taste, advisor training, and student voice.",
+      nodes: ["research-philosophy", "research-philosophy-summary-zh", "lei-zou-teaching-award-letter"]
     }
   ];
 

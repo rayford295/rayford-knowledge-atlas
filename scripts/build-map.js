@@ -3,6 +3,7 @@ const path = require("path");
 
 const repoRoot = path.resolve(__dirname, "..");
 const papersDir = path.join(repoRoot, "wiki", "papers");
+const publicWritingDir = path.join(repoRoot, "wiki", "public-writing");
 const readingsDir = path.join(repoRoot, "wiki", "readings");
 const questionsDir = path.join(repoRoot, "wiki", "questions");
 const scholarPath = path.join(repoRoot, "raw", "scholar", "google-scholar.json");
@@ -10,6 +11,7 @@ const outputPath = path.join(repoRoot, "data.js");
 
 const graphSources = [
   { dir: papersDir, kind: "output", source: "Research Wiki" },
+  { dir: publicWritingDir, kind: "output", source: "Public Writing" },
   { dir: readingsDir, kind: "input", source: "WeRead" },
   { dir: questionsDir, kind: "question", source: "Knowledge Questions" }
 ];

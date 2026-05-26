@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-05-25T21:31:10.619Z",
+  "generatedAt": "2026-05-26T05:36:33.150Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -21,6 +21,7 @@ window.researchMapData = {
     "Machine Learning Foundations",
     "Mathematical Modeling",
     "Medical Imaging",
+    "Mentorship",
     "Multimodal Learning",
     "Narrative and Public Voice",
     "Public Health AI",
@@ -39,11 +40,12 @@ window.researchMapData = {
   "sources": [
     "Google Scholar",
     "Knowledge Questions",
+    "Public Writing",
     "Research Wiki",
     "WeRead"
   ],
   "counts": {
-    "output": 18,
+    "output": 21,
     "input": 12,
     "question": 5
   },
@@ -1040,6 +1042,197 @@ window.researchMapData = {
       },
       "color": "#d96832",
       "radius": 34,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "lei-zou-teaching-award-letter",
+      "kind": "output",
+      "source": "Public Writing",
+      "shortTitle": "Letter for Dr. Zou",
+      "title": "Letter of Support for Professor Lei Zou's Teaching Award Nomination",
+      "year": 2026,
+      "venue": "Texas A&M University",
+      "type": "Nomination Letter",
+      "status": "Archived",
+      "authors": "Yifan Yang",
+      "summary": "A one-page letter supporting Dr. Lei Zou's college-level teaching award nomination. It preserves Yifan Yang's student voice, including the idea that great teaching is not perfect performance, but disciplined training, self-demand, and care for students.",
+      "impact": "This letter records a precious mentor-student relationship. It belongs in the atlas because Dr. Zou's teaching, advising, and professional discipline are part of the human infrastructure behind Yifan's research development.",
+      "themes": [
+        "Public Writing",
+        "Mentorship",
+        "Research Taste",
+        "Narrative and Public Voice"
+      ],
+      "methods": [
+        "Student Testimony",
+        "Teaching Reflection",
+        "Mentorship Archive"
+      ],
+      "links": [
+        {
+          "label": "One-Page PDF",
+          "url": "./assets/public-writing/2026-lei-zou-teaching-award-letter-yifan-yang.pdf"
+        },
+        {
+          "label": "Markdown Backup",
+          "url": "./raw/public-writing/2026-lei-zou-teaching-award-letter.md"
+        }
+      ],
+      "connections": [
+        {
+          "target": "research-philosophy",
+          "label": "makes the advisor-student relationship behind the research philosophy visible"
+        },
+        {
+          "target": "research-philosophy-summary-zh",
+          "label": "shares the same belief that training, clarity, and self-demand shape scholarship"
+        },
+        {
+          "target": "biography-research-judgment",
+          "label": "treats mentorship as a lived biography of professional discipline"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": null,
+      "metricLabel": "Public Writing",
+      "wikiPath": "wiki/public-writing/lei-zou-teaching-award-letter.md",
+      "position": {
+        "x": 785,
+        "y": 615
+      },
+      "color": "#f0a85a",
+      "radius": 36,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "research-philosophy-summary-zh",
+      "kind": "output",
+      "source": "Public Writing",
+      "shortTitle": "Research Philosophy 中文整理",
+      "title": "Research Philosophy Summary (中文整理)",
+      "year": 2026,
+      "venue": "Awesome Autonomous GeoAI / Rayford Knowledge Atlas",
+      "type": "Public Writing",
+      "status": "Mirrored",
+      "authors": "Yifan Yang",
+      "summary": "A Chinese synthesis of the full research philosophy, preserving the core beliefs about ambition, courage, reading, problem consciousness, advisor training, and long-term research identity.",
+      "impact": "This summary makes the philosophy easier to revisit, share, and extend in Chinese. It keeps the author's public voice close to the atlas instead of treating reflection as separate from research output.",
+      "themes": [
+        "Public Writing",
+        "Research Taste",
+        "Narrative and Public Voice",
+        "Reading Input"
+      ],
+      "methods": [
+        "Chinese Synthesis",
+        "Research Philosophy Summary",
+        "Public Reflection"
+      ],
+      "links": [
+        {
+          "label": "Atlas Backup",
+          "url": "./raw/public-writing/RESEARCH_PHILOSOPHY_SUMMARY_ZH.md"
+        },
+        {
+          "label": "Source Repository",
+          "url": "https://github.com/rayford295/awesome-autonomous-geoai/blob/main/RESEARCH_PHILOSOPHY_SUMMARY_ZH.md"
+        },
+        {
+          "label": "Full Research Philosophy",
+          "url": "./raw/public-writing/RESEARCH_PHILOSOPHY.md"
+        }
+      ],
+      "connections": [
+        {
+          "target": "research-philosophy",
+          "label": "summarizes the full philosophy into a faster Chinese entry point"
+        },
+        {
+          "target": "biography-research-judgment",
+          "label": "preserves the reading-to-judgment thread in the author's first language"
+        },
+        {
+          "target": "founder-window-research-output",
+          "label": "translates public voice into research and founder-facing positioning"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": null,
+      "metricLabel": "Public Writing",
+      "wikiPath": "wiki/public-writing/research-philosophy-summary-zh.md",
+      "position": {
+        "x": 905,
+        "y": 520
+      },
+      "color": "#d48a5c",
+      "radius": 34,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "research-philosophy",
+      "kind": "output",
+      "source": "Public Writing",
+      "shortTitle": "Research Philosophy",
+      "title": "Research Philosophy",
+      "year": 2026,
+      "venue": "Awesome Autonomous GeoAI / Rayford Knowledge Atlas",
+      "type": "Public Writing",
+      "status": "Mirrored",
+      "authors": "Yifan Yang",
+      "summary": "A long-form research self-portrait that connects ambition, courage, reading, GeoAI, disaster resilience, AI4Science, advisor feedback, dissertation positioning, and the habits that make research judgment durable.",
+      "impact": "This page gives the atlas a public intellectual backbone. It explains why the visible outputs are not isolated projects, but products of reading, advisor training, self-positioning, and a sustained effort to decide what kind of researcher Yifan Yang is becoming.",
+      "themes": [
+        "Public Writing",
+        "Research Taste",
+        "Narrative and Public Voice",
+        "Spatial Intelligence"
+      ],
+      "methods": [
+        "Research Self-Definition",
+        "Reading-to-Research Synthesis",
+        "Dissertation Framing"
+      ],
+      "links": [
+        {
+          "label": "Atlas Backup",
+          "url": "./raw/public-writing/RESEARCH_PHILOSOPHY.md"
+        },
+        {
+          "label": "Source Repository",
+          "url": "https://github.com/rayford295/awesome-autonomous-geoai/blob/main/RESEARCH_PHILOSOPHY.md"
+        },
+        {
+          "label": "Chinese Summary",
+          "url": "./raw/public-writing/RESEARCH_PHILOSOPHY_SUMMARY_ZH.md"
+        }
+      ],
+      "connections": [
+        {
+          "target": "biography-research-judgment",
+          "label": "turns reading and life stories into research taste and judgment"
+        },
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "keeps the human researcher's judgment visible in an AI-intensive field"
+        },
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "frames GeoAI as a public-facing spatial intelligence project"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": null,
+      "metricLabel": "Public Writing",
+      "wikiPath": "wiki/public-writing/research-philosophy.md",
+      "position": {
+        "x": 845,
+        "y": 425
+      },
+      "color": "#b87333",
+      "radius": 38,
       "displayKind": "Research Output"
     },
     {

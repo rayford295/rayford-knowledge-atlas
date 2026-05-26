@@ -32,12 +32,13 @@ Typical questions:
 
 ### Research Output
 
-`wiki/papers/` records curated paper and project pages. `raw/publications/` preserves the migrated publication list from the former Publications repository. `raw/scholar/google-scholar.json` adds Scholar-indexed outputs that do not yet have hand-written pages, including collaborative and non-first-author work.
+`wiki/papers/` records curated paper and project pages. `wiki/public-writing/` records public research philosophy, reflection, and mentorship writing. `raw/publications/` preserves the migrated publication list from the former Publications repository. `raw/public-writing/` preserves full public-writing backups. `raw/scholar/google-scholar.json` adds Scholar-indexed outputs that do not yet have hand-written pages, including collaborative and non-first-author work.
 
 Typical fields for a curated wiki page:
 
 - `kind: output`
 - `source: Research Wiki`
+- `source: Public Writing` for public-writing nodes
 - `repository`
 - `metrics.citations`
 - `themes`
@@ -76,6 +77,7 @@ connections:
 `scripts/build-map.js` reads:
 
 - `wiki/papers/*.md`
+- `wiki/public-writing/*.md`
 - `wiki/readings/*.md`
 - `wiki/questions/*.md`
 - `raw/scholar/google-scholar.json`
@@ -89,8 +91,10 @@ The browser reads only `data.js`, plus small live snapshots from:
 - `raw/scholar/google-scholar.json`
 - `raw/weread/public-reading-index.json`
 - `raw/publications/publications.json`
+- `raw/public-writing/*.md`
 
 `raw/publications/publications.json` is a source record for maintenance and review. The graph sees migrated publications through their curated pages in `wiki/papers/`.
+`raw/public-writing/` is a source archive for public writing. The graph sees those writings through curated pages in `wiki/public-writing/`.
 
 ## Automation
 

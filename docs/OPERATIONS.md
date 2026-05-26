@@ -54,6 +54,19 @@ wiki/maps/publication-map.md
 
 Use `docs/PUBLICATIONS_MIGRATION.md` as the boundary rule. The atlas is public, so do not commit legacy PDFs unless their public-sharing rights are clear.
 
+## Add Public Writing
+
+Public writing records belong in:
+
+```text
+wiki/public-writing/
+raw/public-writing/
+assets/public-writing/
+wiki/maps/public-writing-map.md
+```
+
+Use `raw/public-writing/` for full backup copies and `wiki/public-writing/` for curated atlas nodes with frontmatter. Run `npm run build` after adding or editing public-writing nodes.
+
 ## Verify Graph Integrity
 
 ```bash
@@ -95,6 +108,7 @@ Check:
 - `Network`, `Timeline`, and `Flow` all render;
 - search finds a reading node such as `李小龙`;
 - search finds a migrated publication node such as `Agentic Urban Digital Twins`;
+- search finds a public-writing node such as `Research Philosophy` or `Letter for Dr. Zou`;
 - `readings.html` shows reading metrics and top WeRead signals;
 - `advisor.html` shows shelf books, notebook books, true reads, hidden deep reads, bridge themes, and workflow queue;
 - `papers.html` shows output metrics, filters, and publication cards;
