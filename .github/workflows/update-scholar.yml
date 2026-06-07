@@ -44,4 +44,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update Scholar snapshot and graph data"
-          file_pattern: raw/scholar/google-scholar.json data.js
+          file_pattern: raw/scholar/google-scholar.json data.js *.html

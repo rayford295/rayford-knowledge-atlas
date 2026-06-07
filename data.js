@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-06-01T16:29:47.430Z",
+  "generatedAt": "2026-06-07T21:57:57.008Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -45,7 +45,7 @@ window.researchMapData = {
     "WeRead"
   ],
   "counts": {
-    "output": 21,
+    "output": 22,
     "input": 12,
     "question": 5
   },
@@ -524,6 +524,65 @@ window.researchMapData = {
       },
       "color": "#64c7ff",
       "radius": 44,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "firebridge",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "FireBridge Cross-View Wildfire",
+      "title": "FireBridge: Cross-View Wildfire Assessment (working title)",
+      "year": 2026,
+      "venue": "Working paper (in progress)",
+      "type": "Working Paper",
+      "status": "In Progress",
+      "authors": "Yifan Yang",
+      "summary": "<!-- TODO: Replace with the real project summary. FireBridge is the active cross-view wildfire assessment project: bridging satellite/aerial views and street-level views to evaluate wildfire impact. Keep this to public-safe, high-level framing until the paper is ready. --> FireBridge is an in-progress cross-view wildfire assessment project. It is a placeholder node in the atlas so connections to related wildfire and disaster work can be tracked while the paper develops.",
+      "impact": "<!-- TODO: Expected impact / why it matters. -->",
+      "themes": [
+        "Disaster Assessment",
+        "Wildfire Risk",
+        "Spatial Intelligence",
+        "Multimodal Learning"
+      ],
+      "methods": [
+        "Cross-View Matching",
+        "Remote Sensing",
+        "Street-Level Imagery"
+      ],
+      "links": [
+        {
+          "label": "Project Repository",
+          "url": "https://github.com/rayford295"
+        }
+      ],
+      "connections": [
+        {
+          "target": "tri-environmental-la-wildfire",
+          "label": "extends regional wildfire exposure toward cross-view ground evidence"
+        },
+        {
+          "target": "hyperlocal-disaster",
+          "label": "shares the street-level disaster damage assessment thread"
+        },
+        {
+          "target": "satellite-to-street",
+          "label": "shares method lineage with satellite-to-street geographic evidence"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "status": "in-progress"
+      },
+      "role": "first-author or lead-position output",
+      "metricLabel": "Research Wiki",
+      "wikiPath": "wiki/papers/firebridge.md",
+      "position": {
+        "x": 480,
+        "y": 95
+      },
+      "color": "#d96832",
+      "radius": 32,
       "displayKind": "Research Output"
     },
     {
@@ -1163,7 +1222,7 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy-summary-zh.md",
       "position": {
-        "x": 905,
+        "x": 892,
         "y": 520
       },
       "color": "#d48a5c",

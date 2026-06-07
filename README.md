@@ -111,3 +111,12 @@ This repository is public. The reading layer therefore commits only metadata, co
 ## Make Your Own
 
 This repository can still be forked as a template. Start with the [Make Your Own page](https://rayford295.github.io/rayford-knowledge-atlas/fork.html), then follow [docs/FORK_GUIDE.md](./docs/FORK_GUIDE.md).
+
+## License
+
+This project is dual-licensed:
+
+- **Software** (build scripts, site code, configuration) — [MIT License](./LICENSE).
+- **Content** (`wiki/`, `publications/`, `raw/`, `assets/`, and the prose in this README and `docs/`) — [Creative Commons Attribution 4.0 International (CC BY 4.0)](./LICENSE-CONTENT.md).
+
+You are free to fork the code and adapt the content, provided you keep the MIT notice for the code and give attribution for the content. Published PDFs may remain under their original publishers' terms.
