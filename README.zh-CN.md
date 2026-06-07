@@ -111,3 +111,12 @@ npm run build
 ## 做一个自己的版本
 
 这个仓库仍然可以作为模板 fork。先打开 [Make Your Own 页面](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)，再看 [docs/FORK_GUIDE.md](./docs/FORK_GUIDE.md)。
+
+## 许可证
+
+本项目采用双许可证：
+
+- **代码**（构建脚本、站点代码、配置）——[MIT 许可证](./LICENSE)。
+- **内容**（`wiki/`、`publications/`、`raw/`、`assets/`，以及本 README 和 `docs/` 中的文字）——[知识共享署名 4.0 国际许可证（CC BY 4.0）](./LICENSE-CONTENT.md)。
+
+你可以自由 fork 代码、改编内容，前提是保留代码的 MIT 声明、并对内容进行署名。已发表的 PDF 可能仍受其原出版方条款约束。

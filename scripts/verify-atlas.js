@@ -82,6 +82,18 @@ function verifyData(data) {
       warnings.push(`node has no themes: ${label}`);
     }
 
+    const position = node.position || {};
+    if (!Number.isFinite(position.x) || !Number.isFinite(position.y)) {
+      errors.push(`missing or non-numeric position on ${label}`);
+    } else {
+      if (position.x < 0 || position.x > 900) {
+        warnings.push(`position.x out of canvas (0-900) on ${label}: ${position.x}`);
+      }
+      if (position.y < 0 || position.y > 700) {
+        warnings.push(`position.y out of canvas (0-700) on ${label}: ${position.y}`);
+      }
+    }
+
     if (!Array.isArray(node.connections)) {
       errors.push(`connections must be an array on ${label}`);
       return;

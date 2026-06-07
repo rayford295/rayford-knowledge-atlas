@@ -34,7 +34,7 @@ connections:
   - target: founder-window-research-output
     label: translates public voice into research and founder-facing positioning
 position:
-  x: 905
+  x: 892
   y: 520
 color: "#d48a5c"
 radius: 34

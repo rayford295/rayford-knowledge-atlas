@@ -1,0 +1,13 @@
+# Generated graph payload — produced by scripts/build-map.js
+data.js
+
+# Dependencies and lockfiles
+node_modules/
+package-lock.json
+
+# Editor/vault config
+.obsidian/
+
+# Published PDFs
+publications/
+assets/

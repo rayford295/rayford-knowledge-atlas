@@ -1,5 +1,19 @@
 (function () {
   const data = window.researchMapData || { nodes: [], themes: [] };
+
+  // Escape text before it is interpolated into innerHTML. Several fields
+  // (titles, authors, venues) originate from external sources like the
+  // Google Scholar and WeRead snapshots, so we treat all node-derived text
+  // as untrusted when building markup.
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
   const svg = document.getElementById("graph-svg");
   const layerFilterBar = document.getElementById("layer-filter-bar");
   const filterBar = document.getElementById("filter-bar");
@@ -382,10 +396,10 @@
       card.className = "story-card";
       card.dataset.trail = trail.id;
       card.innerHTML = `
-        <span class="story-card-route">${cards.map((node) => node.shortTitle).join(" -> ")}</span>
-        <strong>${trail.title}</strong>
-        <p>${trail.summary}</p>
-        <span class="story-card-foot">Enter this path through <b>${cards[0]?.shortTitle || "the atlas"}</b>.</span>
+        <span class="story-card-route">${cards.map((node) => escapeHtml(node.shortTitle)).join(" -> ")}</span>
+        <strong>${escapeHtml(trail.title)}</strong>
+        <p>${escapeHtml(trail.summary)}</p>
+        <span class="story-card-foot">Enter this path through <b>${escapeHtml(cards[0]?.shortTitle || "the atlas")}</b>.</span>
       `;
       card.addEventListener("click", () => {
         activeTrailId = trail.id;
@@ -436,10 +450,10 @@
       );
 
       button.innerHTML = `
-        <small>${node.displayKind || node.type} | ${node.year}</small>
-        <strong>${node.shortTitle}</strong>
-        <span>${sourceName}</span>
-        <span>${stats}</span>
+        <small>${escapeHtml(node.displayKind || node.type)} | ${escapeHtml(node.year)}</small>
+        <strong>${escapeHtml(node.shortTitle)}</strong>
+        <span>${escapeHtml(sourceName)}</span>
+        <span>${escapeHtml(stats)}</span>
       `;
 
       button.addEventListener("click", () => {
@@ -1010,8 +1024,8 @@
       const article = document.createElement("div");
       article.className = "node-art node-art-" + (node.kind || "output");
       article.innerHTML = `
-        <span>${node.source || node.displayKind}</span>
-        <strong>${node.metricLabel || node.displayKind || node.type}</strong>
+        <span>${escapeHtml(node.source || node.displayKind)}</span>
+        <strong>${escapeHtml(node.metricLabel || node.displayKind || node.type)}</strong>
         <em>${node.kind === "input" ? "Input layer" : node.kind === "question" ? "Bridge layer" : "Output layer"}</em>
       `;
       container.appendChild(article);
@@ -1021,7 +1035,7 @@
         metrics.className = "repo-metrics";
         const entries = Object.entries(node.metrics).slice(0, 3);
         metrics.innerHTML = entries.map(([key, value]) => `
-          <div><strong>${value}</strong><span>${key.replace(/_/g, " ")}</span></div>
+          <div><strong>${escapeHtml(value)}</strong><span>${escapeHtml(key.replace(/_/g, " "))}</span></div>
         `).join("");
         container.appendChild(metrics);
       }
@@ -1034,9 +1048,9 @@
     anchor.target = "_blank";
     anchor.rel = "noopener";
     anchor.innerHTML = `
-      <span>${node.repository.language}</span>
-      <strong>${node.repository.name}</strong>
-      <em>${node.shortTitle}</em>
+      <span>${escapeHtml(node.repository.language)}</span>
+      <strong>${escapeHtml(node.repository.name)}</strong>
+      <em>${escapeHtml(node.shortTitle)}</em>
     `;
     container.appendChild(anchor);
 

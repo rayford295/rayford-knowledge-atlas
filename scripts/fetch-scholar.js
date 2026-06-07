@@ -39,6 +39,30 @@ function fetchText(url) {
   });
 }
 
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Google Scholar rate-limits aggressively. Retry a few times with exponential
+// backoff (2s, 4s, 8s) before letting the caller fall back to the previous
+// snapshot, so a single transient 429/503 does not skip the weekly update.
+async function fetchTextWithRetry(url, attempts = 3) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      return await fetchText(url);
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) {
+        const backoff = 2000 * Math.pow(2, attempt - 1);
+        console.warn(`Scholar fetch attempt ${attempt} failed (${error.message}); retrying in ${backoff / 1000}s`);
+        await delay(backoff);
+      }
+    }
+  }
+  throw lastError;
+}
+
 function decodeHtml(value) {
   return value
     .replace(/&amp;/g, "&")
@@ -165,7 +189,7 @@ function comparableSnapshot(snapshot) {
 
 async function main() {
   try {
-    const html = await fetchText(profileUrl);
+    const html = await fetchTextWithRetry(profileUrl);
     const metrics = parseMetrics(html);
     const articles = parseArticles(html);
 
