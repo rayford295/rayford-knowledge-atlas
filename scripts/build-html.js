@@ -13,13 +13,13 @@ const CORE_LINKS = [
   { key: "advisor", href: "./advisor.html", label: "Advisor" },
   { key: "papers", href: "./papers.html", label: "Papers" },
   { key: "rooms", href: "./rooms.html", label: "Rooms" },
-  { key: "map", href: "./map.html", label: "Map" }
+  { key: "map", href: "./map/", label: "Map" }
 ];
 
 // Pages that carry <!-- NAV:START --> / <!-- NAV:END --> markers. Page-specific
 // tail links (e.g. "Reading Vault", "Return to Graph") live outside the markers
 // and are intentionally left untouched.
-const NAV_FILES = ["index.html", "readings.html", "advisor.html", "papers.html", "rooms.html", "map.html"];
+const NAV_FILES = ["index.html", "readings.html", "advisor.html", "papers.html", "rooms.html"];
 
 // Every HTML file gets a single unified cache-bust stamp so a stylesheet or
 // script change can never be served stale on one page while fresh on another.
