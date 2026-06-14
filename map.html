@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Map | Rayford Knowledge Atlas</title>
+  <meta name="description" content="An interactive globe of the places Yifan Yang has visited, with visited U.S. states and cities lit up.">
+  <link rel="canonical" href="https://rayford295.github.io/rayford-knowledge-atlas/map.html">
+  <meta property="og:title" content="Travel Map | Rayford Knowledge Atlas">
+  <meta property="og:description" content="An interactive globe of visited places, with cities lit up.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css?v=31da978210">
+  <style>
+    .travel-globe-wrap {
+      position: relative;
+      margin: 18px 0 8px;
+      border-radius: 22px;
+      overflow: hidden;
+      background:
+        radial-gradient(120% 90% at 50% 18%, rgba(108, 184, 242, 0.10), transparent 60%),
+        rgba(7, 6, 18, 0.55);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    #globe { width: 100%; height: 68vh; min-height: 420px; }
+    .travel-globe-hint {
+      position: absolute; left: 18px; bottom: 14px; z-index: 3;
+      font-size: 0.78rem; color: var(--muted); letter-spacing: 0.02em;
+      background: rgba(5, 4, 13, 0.45); padding: 6px 12px; border-radius: 999px;
+      border: 1px solid var(--line);
+    }
+    .travel-states { margin-top: 26px; }
+    .travel-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px; margin-top: 14px;
+    }
+    .travel-card {
+      background: var(--panel); border: 1px solid var(--line);
+      border-radius: 16px; padding: 14px 16px;
+    }
+    .travel-card h3 {
+      margin: 0 0 6px; font-family: "Manrope", sans-serif; font-size: 0.98rem;
+      color: var(--ink); display: flex; align-items: center; gap: 8px;
+    }
+    .travel-card h3::before {
+      content: ""; width: 9px; height: 9px; border-radius: 50%;
+      background: var(--amber); box-shadow: 0 0 10px var(--amber);
+    }
+    .travel-card p { margin: 0; color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; }
+    .travel-card.abroad h3::before { background: var(--sky); box-shadow: 0 0 10px var(--sky); }
+  </style>
+</head>
+<body>
+  <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+  <div class="app-shell guide-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Rayford Knowledge Atlas">
+        <span class="brand-mark">RK</span>
+        <span>
+          <strong>Rayford Knowledge Atlas</strong>
+          <small>Places I have explored beyond the research graph</small>
+        </span>
+      </a>
+
+      <nav class="top-links guide-links" aria-label="Primary links">
+        <!-- NAV:START -->
+        <a href="./index.html">Atlas</a>
+        <a href="./readings.html">Readings</a>
+        <a href="./advisor.html">Advisor</a>
+        <a href="./papers.html">Papers</a>
+        <a href="./rooms.html">Rooms</a>
+        <a href="./map.html" aria-current="page">Map</a>
+        <!-- NAV:END -->
+        <a href="./index.html#graph">Return to Graph</a>
+        <a href="https://github.com/rayford295/rayford-knowledge-atlas" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="guide-page rooms-page">
+      <section class="guide-hero rooms-hero">
+        <p class="kicker">Places I Have Been</p>
+        <h1>A globe of where I have traveled.</h1>
+        <p>
+          Beyond the research graph, this is a map of the places I have visited. Drag to spin the globe,
+          scroll to zoom, and hover a glowing point to see the city. The pulsing rings mark each visited place.
+        </p>
+        <div class="reading-metrics rooms-metrics" aria-label="Travel overview">
+          <div><strong>17 / 50</strong><span>U.S. states</span></div>
+          <div><strong>26</strong><span>cities visited</span></div>
+          <div><strong>2</strong><span>countries</span></div>
+          <div><strong>1</strong><span>abroad (Canada)</span></div>
+        </div>
+      </section>
+
+      <section class="guide-panel">
+        <div class="travel-globe-wrap">
+          <div id="globe" role="img" aria-label="Interactive 3D globe of visited cities"></div>
+          <div class="travel-globe-hint">Drag to rotate · scroll to zoom · hover a point for the city</div>
+        </div>
+
+        <div class="travel-states">
+          <p class="kicker">Visited States and Cities</p>
+          <div class="travel-grid" id="travel-grid"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // ---- Visited places (lat, lng) ----
+    const PLACES = [
+      { state: "California", city: "Los Angeles", lat: 34.0522, lng: -118.2437 },
+      { state: "California", city: "San Diego", lat: 32.7157, lng: -117.1611 },
+      { state: "California", city: "San Francisco", lat: 37.7749, lng: -122.4194 },
+      { state: "Nevada", city: "Las Vegas", lat: 36.1699, lng: -115.1398 },
+      { state: "Arizona", city: "Tucson", lat: 32.2226, lng: -110.9747 },
+      { state: "Arizona", city: "Phoenix", lat: 33.4484, lng: -112.0740 },
+      { state: "New York", city: "New York", lat: 40.7128, lng: -74.0060 },
+      { state: "New Jersey", city: "Newark", lat: 40.7357, lng: -74.1724 },
+      { state: "Pennsylvania", city: "Philadelphia", lat: 39.9526, lng: -75.1652 },
+      { state: "Florida", city: "Orlando", lat: 28.5383, lng: -81.3792 },
+      { state: "Florida", city: "Miami", lat: 25.7617, lng: -80.1918 },
+      { state: "South Carolina", city: "Columbia", lat: 34.0007, lng: -81.0348 },
+      { state: "North Carolina", city: "Charlotte", lat: 35.2271, lng: -80.8431 },
+      { state: "Texas", city: "Houston", lat: 29.7604, lng: -95.3698 },
+      { state: "Texas", city: "San Antonio", lat: 29.4241, lng: -98.4936 },
+      { state: "Texas", city: "Dallas", lat: 32.7767, lng: -96.7970 },
+      { state: "Texas", city: "Austin", lat: 30.2672, lng: -97.7431 },
+      { state: "Hawaii", city: "Honolulu", lat: 21.3069, lng: -157.8583 },
+      { state: "Michigan", city: "Detroit", lat: 42.3314, lng: -83.0458 },
+      { state: "New Mexico", city: "White Sands", lat: 32.7872, lng: -106.3257 },
+      { state: "Oregon", city: "Portland", lat: 45.5152, lng: -122.6784 },
+      { state: "Washington", city: "Seattle", lat: 47.6062, lng: -122.3321 },
+      { state: "Alaska", city: "Anchorage", lat: 61.2181, lng: -149.9003 },
+      { state: "Alaska", city: "Fairbanks", lat: 64.8378, lng: -147.7164 },
+      { state: "Minnesota", city: "Minneapolis", lat: 44.9778, lng: -93.2650 },
+      { country: "Canada", state: "British Columbia (Canada)", city: "Vancouver", lat: 49.2827, lng: -123.1207 }
+    ];
+
+    // ---- Visited states list (grouped) ----
+    const STATE_GROUPS = [
+      ["California", "Los Angeles, San Diego, San Francisco"],
+      ["Nevada", "Las Vegas"],
+      ["Arizona", "Tucson, Phoenix"],
+      ["New York", "New York City"],
+      ["New Jersey", "Newark"],
+      ["Pennsylvania", "Philadelphia"],
+      ["Florida", "Orlando, Miami"],
+      ["South Carolina", "Columbia"],
+      ["North Carolina", "Charlotte"],
+      ["Texas", "Houston, San Antonio, Dallas, Austin"],
+      ["Hawaii", "Honolulu"],
+      ["Michigan", "Detroit"],
+      ["New Mexico", "White Sands National Park"],
+      ["Oregon", "Portland"],
+      ["Washington", "Seattle"],
+      ["Alaska", "Anchorage, Fairbanks"],
+      ["Minnesota", "Minneapolis"]
+    ];
+    const ABROAD = [["Canada", "Vancouver"]];
+
+    (function renderList() {
+      const grid = document.getElementById("travel-grid");
+      const make = (name, cities, abroad) => {
+        const card = document.createElement("div");
+        card.className = "travel-card" + (abroad ? " abroad" : "");
+        card.innerHTML = "<h3>" + name + "</h3><p>" + cities + "</p>";
+        return card;
+      };
+      STATE_GROUPS.forEach(([n, c]) => grid.appendChild(make(n, c, false)));
+      ABROAD.forEach(([n, c]) => grid.appendChild(make(n, c, true)));
+    })();
+  </script>
+
+  <!-- Globe.GL (three.js based) for the interactive globe. Pinned + SRI-checked. -->
+  <script src="https://unpkg.com/globe.gl@2.46.1/dist/globe.gl.min.js" integrity="sha384-fS13P48RBFel+cPUp5960AhzvtEr64LerQ00neZuM+Hi/VDxxemdQnN7IcWPYvPb" crossorigin="anonymous"></script>
+  <script>
+    (function initGlobe() {
+      const el = document.getElementById("globe");
+      if (!el || typeof Globe === "undefined") { return; }
+      const AMBER = "#f2aa40";
+      const world = Globe()(el)
+        .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-night.jpg")
+        .bumpImageUrl("https://unpkg.com/three-globe/example/img/earth-topology.png")
+        .backgroundColor("rgba(0,0,0,0)")
+        .showAtmosphere(true)
+        .atmosphereColor("#6cb8f2")
+        .atmosphereAltitude(0.16)
+        .pointsData(PLACES)
+        .pointLat("lat").pointLng("lng")
+        .pointColor(() => AMBER)
+        .pointAltitude(0.012)
+        .pointRadius(0.34)
+        .pointLabel((d) => "<div style='font-family:Manrope,sans-serif;font-weight:700'>" + d.city + "</div><div style='color:#c4bde0;font-size:0.8em'>" + d.state + "</div>")
+        .ringsData(PLACES)
+        .ringLat("lat").ringLng("lng")
+        .ringColor(() => (t) => "rgba(242,170,64," + (1 - t) + ")")
+        .ringMaxRadius(2.6)
+        .ringPropagationSpeed(1.5)
+        .ringRepeatPeriod(1500);
+
+      function sizeGlobe() { world.width(el.clientWidth); world.height(el.clientHeight); }
+      sizeGlobe();
+      window.addEventListener("resize", sizeGlobe);
+
+      const controls = world.controls();
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 0.55;
+      controls.enableZoom = true;
+      world.pointOfView({ lat: 38, lng: -100, altitude: 1.9 }, 0);
+    })();
+  </script>
+
+  <script>
+    (function () {
+      const starfield = document.getElementById("starfield");
+      function initStarfield() {
+        if (!starfield) { return; }
+        const context = starfield.getContext("2d");
+        let width = 0, height = 0, stars = [];
+        function resize() {
+          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          width = window.innerWidth; height = window.innerHeight;
+          starfield.width = Math.floor(width * ratio);
+          starfield.height = Math.floor(height * ratio);
+          starfield.style.width = width + "px";
+          starfield.style.height = height + "px";
+          context.setTransform(ratio, 0, 0, ratio, 0, 0);
+          stars = Array.from({ length: Math.min(180, Math.floor((width * height) / 6200)) }, (_, index) => ({
+            x: Math.random() * width, y: Math.random() * height,
+            radius: index % 9 === 0 ? 1.6 : Math.random() * 1.1 + 0.3,
+            alpha: Math.random() * 0.5 + 0.16,
+            tint: index % 7 === 0 ? "255, 212, 106" : "186, 255, 232"
+          }));
+        }
+        function draw() {
+          context.clearRect(0, 0, width, height);
+          stars.forEach((star) => {
+            context.beginPath();
+            context.fillStyle = "rgba(" + star.tint + ", " + star.alpha + ")";
+            context.shadowColor = "rgba(" + star.tint + ", " + star.alpha + ")";
+            context.shadowBlur = star.radius * 7;
+            context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+            context.fill();
+          });
+        }
+        resize(); draw();
+        window.addEventListener("resize", () => { resize(); draw(); });
+      }
+      initStarfield();
+    })();
+  </script>
+</body>
+</html>
