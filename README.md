@@ -29,6 +29,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - Reading input page: [rayford295.github.io/rayford-knowledge-atlas/readings.html](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)
 - Reading advisor page: [rayford295.github.io/rayford-knowledge-atlas/advisor.html](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)
 - Research output page: [rayford295.github.io/rayford-knowledge-atlas/papers.html](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)
+- Travel map: [rayford295.github.io/rayford-knowledge-atlas/map/](https://rayford295.github.io/rayford-knowledge-atlas/map/)
 - Public writing archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing)
 - Published PDF archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/publications](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)
 - Fork guide: [rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
@@ -45,6 +46,20 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - `Flow` separates reading inputs, bridge questions, and research outputs.
 - Each node opens an inspector with source metadata, themes, methods or reading lenses, links, metrics, and graph relationships.
 - Scholar-derived nodes keep collaborative outputs visible even when they do not yet have hand-written wiki pages.
+
+## Travel Map
+
+An interactive 3D globe lights up every place I have visited — **17 of 50 U.S. states, 26 cities, and 2 countries** (United States and Canada). Drag to rotate, scroll to zoom, and hover a glowing point to read the city.
+
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
+    <img src="./assets/travel-map-preview.png" alt="Interactive 3D travel globe showing the places Yifan Yang has visited, with U.S. cities lit up" width="920">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/"><b>Open the interactive globe →</b></a>
+</p>
 
 ## Knowledge Architecture
 
