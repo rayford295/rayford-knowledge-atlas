@@ -53,7 +53,7 @@ An interactive 3D globe lights up every place I have visited — **17 of 50 U.S.
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
-    <img src="./assets/travel-map-preview.png" alt="Interactive 3D travel globe showing the places Yifan Yang has visited, with U.S. cities lit up" width="920">
+    <img src="./assets/travel-map-preview.gif" alt="Animated 3D travel globe rotating through the places Yifan Yang has visited, with U.S. cities lit up" width="920">
   </a>
 </p>
 

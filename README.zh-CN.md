@@ -53,7 +53,7 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
-    <img src="./assets/travel-map-preview.png" alt="展示 Yifan Yang 到访过的地点的交互式 3D 旅行地球仪，美国各城市被点亮" width="920">
+    <img src="./assets/travel-map-preview.gif" alt="旋转展示 Yifan Yang 到访过的地点的 3D 旅行地球仪，美国各城市被点亮" width="920">
   </a>
 </p>
 
