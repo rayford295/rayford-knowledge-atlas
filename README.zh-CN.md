@@ -29,6 +29,7 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 - 阅读输入页：[rayford295.github.io/rayford-knowledge-atlas/readings.html](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)
 - 阅读顾问页：[rayford295.github.io/rayford-knowledge-atlas/advisor.html](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)
 - 论文输出页：[rayford295.github.io/rayford-knowledge-atlas/papers.html](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)
+- 旅行地图：[rayford295.github.io/rayford-knowledge-atlas/map/](https://rayford295.github.io/rayford-knowledge-atlas/map/)
 - 公共写作归档：[github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing)
 - 已发表论文 PDF 归档：[github.com/rayford295/rayford-knowledge-atlas/tree/main/publications](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)
 - Fork 指南：[rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
@@ -45,6 +46,20 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 - `Flow` 视图把阅读输入、桥接问题和研究输出分开摆放。
 - 点击节点后，右侧 inspector 会展示来源、主题、方法或阅读视角、链接、指标和图谱关系。
 - Scholar 自动节点让合作论文和非一作论文也能进入输出层，而不是只展示手工写过的项目页。
+
+## 旅行地图
+
+一个交互式 3D 地球仪点亮了我去过的每一个地方——**美国 50 个州中的 17 个、26 座城市、2 个国家**（美国和加拿大）。拖动旋转、滚轮缩放，悬停发光的点即可查看城市名。
+
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
+    <img src="./assets/travel-map-preview.png" alt="展示 Yifan Yang 到访过的地点的交互式 3D 旅行地球仪，美国各城市被点亮" width="920">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/"><b>打开交互式地球仪 →</b></a>
+</p>
 
 ## 知识库结构
 
