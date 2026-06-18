@@ -32,6 +32,7 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 - 旅行地图：[rayford295.github.io/rayford-knowledge-atlas/map/](https://rayford295.github.io/rayford-knowledge-atlas/map/)
 - 公共写作归档：[github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing)
 - 已发表论文 PDF 归档：[github.com/rayford295/rayford-knowledge-atlas/tree/main/publications](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)
+- 博士旅程与里程碑：[github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey)
 - Fork 指南：[rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
 - GitHub 仓库：[github.com/rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas)
 - Google Scholar：[scholar.google.com/citations?user=B-fiSHwAAAAJ](https://scholar.google.com/citations?user=B-fiSHwAAAAJ)
@@ -73,6 +74,7 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 - `wiki/concepts/`：可复用概念页面。
 - `wiki/comparisons/`：跨论文、跨来源的综合叙事。
 - `publications/`：已发表论文和书章的公开 PDF 归档，文件名以年份开头。
+- `phd-journey/`：博士阶段的里程碑、考核文件与反思记录。
 - `raw/papers/`：论文和仓库的原始记录。
 - `raw/public-writing/`：从源仓库镜像或从本地生成的公共写作完整备份。
 - `raw/publications/`：从旧 Publications 仓库迁移出的 publication 记录。

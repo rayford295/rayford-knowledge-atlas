@@ -32,6 +32,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 - Travel map: [rayford295.github.io/rayford-knowledge-atlas/map/](https://rayford295.github.io/rayford-knowledge-atlas/map/)
 - Public writing archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing)
 - Published PDF archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/publications](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)
+- Ph.D. journey and milestones: [github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey)
 - Fork guide: [rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
 - GitHub repository: [github.com/rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas)
 - Google Scholar: [scholar.google.com/citations?user=B-fiSHwAAAAJ](https://scholar.google.com/citations?user=B-fiSHwAAAAJ)
@@ -73,6 +74,7 @@ An interactive 3D globe lights up every place I have visited — **17 of 50 U.S.
 - `wiki/concepts/`: reusable concept pages.
 - `wiki/comparisons/`: cross-paper and cross-source narratives.
 - `publications/`: public PDF copies of published papers and chapters, with filenames starting by year.
+- `phd-journey/`: doctoral milestones, examination documents, and reflections.
 - `raw/papers/`: source records for paper and repository metadata.
 - `raw/public-writing/`: full public-writing backups mirrored from source repositories or generated local drafts.
 - `raw/publications/`: migrated publication records from the former Publications repository.
