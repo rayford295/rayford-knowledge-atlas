@@ -13,9 +13,11 @@ A living record of my doctoral journey in the Department of Geography at Texas A
 
 ## Milestones
 
-| Date | Milestone | Document |
+| Date | Milestone | Record |
 | --- | --- | --- |
-| 2026-06 | Preliminary Examination (written) | [2026-06-18_Prelim-Exam_Written_Dr-Zou.pdf](./2026-06-18_Prelim-Exam_Written_Dr-Zou.pdf) |
+| 2026-06 | Preliminary Examination (written) | [Research reflections](./preliminary-examination/) |
+
+> The examination questions themselves are kept private. The linked folder captures the substance of my own research philosophy articulated during the process, written as standalone notes rather than as exam answers.
 
 ## Notes
 
