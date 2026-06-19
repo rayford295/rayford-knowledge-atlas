@@ -18,11 +18,15 @@ In a high-stakes disaster context this ordering also tracks governability: autom
 
 ## Interpretability, fairness, trustworthiness
 
-These are three large words, and I am wary of the cost of using large words loosely in research. I hold them to concrete meanings:
+These are three large words, and I am wary of the known pitfall of claiming to deliver them outright. The accurate statement is that my work, applying GeoAI to disaster damage assessment, can *exhibit aspects* of interpretability, fairness, and trustworthiness, rather than fully solving or defining them. I hold each to a concrete meaning and to concrete strategies in the system design.
 
-- **Interpretability** — a user can see not only the prediction but the evidence and uncertainty behind it.
-- **Fairness** — errors do not systematically fall on already-vulnerable groups. This is the dimension my work has developed least, and I say so plainly.
-- **Trustworthiness** — confidence is calibrated, so a stated probability means what it says; an overconfident error is itself a failure of trust.
+**Interpretability** — the system presents, in a form humans can inspect and challenge, what evidence it used and why it reached its conclusion, as a stance against the black-box single label. Strategies: Grad-CAM showing whether the model focuses on genuine disaster-induced change (Case 1); transparent arbitration logic that makes explicit when the two models disagree, whether it trusts ViT or CLIP, and on what confidence basis (Case 2); traceable intermediate states across RAPID's perception, restoration, recognition, and reasoning agents (Case 3); and transparent error types, reporting overconfident and ambiguous errors, not only overall accuracy.
+
+**Fairness** — the system should not show systematic performance disparities across regions, severity levels, or socioeconomic groups, lest it divert relief from the most vulnerable. Strategies: MCC and per-class metrics to attend to the small but critical "severe" class rather than an accuracy the majority class inflates (Case 2); conflict-aware evaluation with cross-city and cross-hazard testing to check over-reliance on the training region, while controlling spatial leakage so fairness is not overestimated (Case 5). Candidly, fairness is the least developed of the three: I have addressed it at the class and generalization levels, while auditing spatial fairness at the demographic and socioeconomic levels remains future work, not a completed claim.
+
+**Trustworthiness** — outputs can be relied on because their reliability is known and bounded: the system knows when it is uncertain, does not make confident mistakes, and returns control to humans when appropriate. This is the strongest element of my work. Strategies: overconfidence diagnosis via Shannon entropy and the decision margin (Case 2); post-hoc temperature-scaling calibration that cuts overconfident errors from over 70% to about 51% without sacrificing accuracy (Case 2); disagreement-driven arbitration and conflict-aware evaluation to decide when to trust a prediction and when to abstain (Cases 2 and 5); and human-in-the-loop and abstention mechanisms that route low-confidence results to review rather than forcing an output.
+
+**Transparency and accountability** are supported jointly: interpretability provides what is understandable, trustworthiness what is dependable, and fairness what is impartial, while audit trails and human-in-the-loop review turn them into what is accountable.
 
 ## Mutual visibility
 
