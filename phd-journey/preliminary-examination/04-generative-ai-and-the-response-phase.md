@@ -2,17 +2,24 @@
 
 The disaster-resilience lifecycle is commonly described in four phases: mitigation, preparedness, response, and recovery. It helps to be precise about where my work contributes, rather than claiming the whole lifecycle.
 
-## Where my work sits
+## Response: rapid, reliable damage assessment
 
-My primary contribution is to the **response** phase, and specifically to **rapid damage assessment** in the hours and days after an event. This is where the demands on speed, reliability, and trust are highest, because decisions about rescue, shelter, and aid are made under time pressure and with incomplete information.
+My primary contribution is to the **response** phase, specifically rapid damage identification: assessing the severity and type of damage from street-view and satellite imagery within a short window after an event, and producing human-scale loss maps quickly.
 
-Within the response phase, generative and multimodal AI play several concrete roles in my studies:
+- **Case 1** (bi-temporal street view) introduces a pre-disaster baseline and lifts validation accuracy from 66% to 77%.
+- **Case 2** (DamageArbiter) is a multimodal arbitration framework reaching 0.7585 accuracy and 0.619 MCC.
+- **Case 3** (RAPID) is a multi-agent system performing cross-hazard zero-shot recognition with 0.92 disaster-type classification.
 
-- **Perception under scarcity.** Street-view and satellite imagery are turned into damage assessments even where ground reports are sparse, extending what responders can see.
-- **Cross-view reasoning.** Combining ground-level and overhead perspectives, and arbitrating their disagreements, produces assessments more robust than any single view.
-- **Description and explanation.** Image-text models and multi-agent reasoning generate human-readable accounts of what was damaged and why the system believes so, which is what makes the output usable by a human decision-maker.
-- **Generation as a stress test.** Satellite-to-street generation probes the boundary between realism and fidelity, a reminder that a convincing image is not the same as a correct damage judgment.
+Their value is to turn distributed visual observations into a rapid picture of the loss situation, supporting resource-allocation decisions in the immediate aftermath.
+
+## Situational awareness and triage
+
+My work does more than output labels; it reports their reliability. It quantifies overconfidence, exposes disagreement between models, and performs conflict-aware evaluation, so results can be used for triage: high-confidence predictions accepted automatically, low-confidence ones routed to human review. This avoids confident errors that would otherwise mislead triage and resource allocation in high-stakes settings, and focuses limited human review on uncertain areas.
+
+## Recovery (planned)
+
+My contribution also extends, in planned work, to the **recovery** phase: interpretable damage maps and reports to support recovery prioritization and continuous monitoring, plus an immersive 3D delivery layer for public communication and decision-maker feedback. This completes the "last mile," extending from assessment to communication and feedback so that recovery decisions are evidence-based and can be understood and improved by the public.
 
 ## Honest scope
 
-I do not claim that generative AI resolves the response phase. It contributes a faster, more inspectable perception-and-assessment capability. Mitigation, preparedness, and long-term recovery sit largely outside my current studies, and the delivery-and-feedback layer is where my work would begin to touch recovery, by communicating damage and progress to the public and to decision-makers over time.
+I do not claim that generative AI resolves the response phase. It contributes a faster, more inspectable perception-and-assessment capability. Mitigation and preparedness sit largely outside my current studies.

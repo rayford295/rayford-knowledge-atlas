@@ -4,13 +4,17 @@ These are the working definitions I rely on. They are deliberately modest: I pre
 
 ## Automation, autonomy, and self-evolution
 
-I separate three words that are often blurred together.
+I separate three words that are often blurred together along one axis: **what is fixed and what changes.**
 
-- **Automation** is executing a fixed pipeline without human intervention. The steps are predetermined; the system simply runs them.
-- **Autonomy** is the capacity to make context-dependent decisions within a task, for example the arbitrator choosing, case by case, whether to trust the image model or the image-text model when they disagree. Autonomy is bounded: it acts inside a scope a designer has defined.
-- **Self-evolution** is the harder, more confusing idea: a system that improves its own behavior over time from feedback, rather than staying fixed after deployment. My current work shows autonomy in a bounded sense and only gestures toward self-evolution. I name it because the delivery-and-feedback layer is where a genuine feedback loop, and therefore the possibility of self-evolution, would have to live.
+- **Automation** executes a fixed, predefined sequence of steps. The designer decides every step in advance, and behavior does not change with context or over time. It executes; it does not decide.
+- **Autonomy** adds decision-making at run time. Given a high-level goal (for example, "assess the disaster damage shown in this image"), the system decides on its own how to reach it: which observations to gather, which models or agents to invoke, in what order, and when its own output is unreliable enough to stop or hand the case to a human. Its capabilities are fixed, but its decisions are adaptive. Autonomy is therefore not about running end-to-end on its own, but about deciding how to act and recognizing when it should not trust itself.
+- **Self-evolution** goes further: the system changes itself over time, updating its models, knowledge, or capabilities from experience and feedback. It is closer to open-ended, organic growth, and it is the most powerful and least controllable of the three.
 
-The honest framing is that I am a *system designer* making bounded autonomy decisions, not a builder of fully self-evolving agents.
+**Why autonomy is worth discussing now.** Autonomy becomes a meaningful question only because data and models have grown powerful enough to "self-start," to bootstrap a reasoning process from a goal and an input. When data and models are weak, we speak of fixed pipelines, not autonomy. A capable foundation model is the precondition.
+
+**What a system must show to count as autonomous, not merely automated:** a foundation model as the reasoning engine; goal decomposition into ordered sub-tasks rather than a fixed script; the ability to act under uncertainty while reporting that uncertainty rather than hiding it; traceable, interpretable evidence behind its decisions; and human-in-the-loop review, so autonomy stays accountable.
+
+In a high-stakes disaster context this ordering also tracks governability: automation is predictable but brittle; autonomy needs uncertainty-awareness and human oversight to remain accountable; self-evolution, because the system rewrites itself, makes audit trails and human governance indispensable. The honest framing is that I am a *system designer* pursuing bounded, responsible autonomy (the reliability-aware arbitration of Case 2, the auditable multi-agent workflow of Case 3), and I treat self-evolution as a speculative frontier rather than a claim.
 
 ## Interpretability, fairness, trustworthiness
 
