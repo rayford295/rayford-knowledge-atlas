@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-06-15T16:12:11.170Z",
+  "generatedAt": "2026-06-20T15:31:18.324Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -14,8 +14,10 @@ window.researchMapData = {
     "Evidence and Power",
     "Federated Learning",
     "Founder Judgment",
+    "GIScience",
     "Generative Vision",
     "Geo-Privacy",
+    "GeoAI Governance",
     "Human-AI Judgment",
     "Institutions Under Stress",
     "Machine Learning Foundations",
@@ -30,6 +32,7 @@ window.researchMapData = {
     "Reading Input",
     "Research Taste",
     "Research Translation",
+    "Responsible GeoAI",
     "Spatial Intelligence",
     "Transportation Equity",
     "Urban Digital Twins",
@@ -45,7 +48,7 @@ window.researchMapData = {
     "WeRead"
   ],
   "counts": {
-    "output": 22,
+    "output": 23,
     "input": 12,
     "question": 5
   },
@@ -973,6 +976,72 @@ window.researchMapData = {
       },
       "color": "#36f1c7",
       "radius": 28,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "responsible-geoai",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "Responsible GeoAI",
+      "title": "Responsible GeoAI: Thoughtful Integration of GIScience and AI in the Real World",
+      "year": 2026,
+      "venue": "GeoAI 2026: 1st International Conference on Geospatial Artificial Intelligence",
+      "type": "Conference Paper",
+      "status": "Presented",
+      "authors": "Lei Zou, Bing Zhou, Yifan Yang",
+      "summary": "This conference paper defines Responsible GeoAI as a place-aware framework for designing, evaluating, and governing GeoAI systems in real-world settings. It argues that responsible practice must address spatial context, human vulnerability, and social consequences rather than treating model accuracy as the whole problem.",
+      "impact": "The paper adds a conceptual anchor for the atlas's Responsible GeoAI thread. It turns responsibility from a general ethical label into a set of operational questions that can guide GeoAI model design, evaluation, deployment, and future duty-based governance.",
+      "themes": [
+        "Responsible GeoAI",
+        "Spatial Intelligence",
+        "GeoAI Governance",
+        "GIScience"
+      ],
+      "methods": [
+        "Conceptual Framework",
+        "STEP Framework",
+        "Responsible AI Evaluation",
+        "Place-Aware Governance"
+      ],
+      "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2026-responsible-geoai-giscience-ai-real-world.pdf"
+        },
+        {
+          "label": "Conference",
+          "url": "https://geoaiconference.org/"
+        },
+        {
+          "label": "Program",
+          "url": "https://geoaiconference.org/?page_id=91"
+        }
+      ],
+      "connections": [
+        {
+          "target": "geolocator",
+          "label": "extends geo-privacy concerns into a broader responsible GeoAI framework"
+        },
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "asks when GeoAI outputs should be trusted for real decisions"
+        },
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "frames spatial intelligence as a governed public-good capability"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": "collaborative output",
+      "metricLabel": "Research Wiki",
+      "wikiPath": "wiki/papers/responsible-geoai.md",
+      "position": {
+        "x": 420,
+        "y": 252
+      },
+      "color": "#7a5cff",
+      "radius": 34,
       "displayKind": "Research Output"
     },
     {

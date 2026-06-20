@@ -90,6 +90,14 @@
       "atlasPage": "wiki/papers/arcgis-sam-tree-segmentation.md"
     },
     {
+      "id": "responsible-geoai",
+      "category": "Conference Proceeding",
+      "title": "Responsible GeoAI: Thoughtful Integration of GIScience and AI in the Real World",
+      "year": 2026,
+      "venue": "GeoAI 2026: 1st International Conference on Geospatial Artificial Intelligence",
+      "atlasPage": "wiki/papers/responsible-geoai.md"
+    },
+    {
       "id": "resilience-4d-urban-flood",
       "category": "Conference Proceeding",
       "title": "Resilience in 4D: AI-Driven Geospatial Digital Twins for Urban Flood Simulation and Management",
