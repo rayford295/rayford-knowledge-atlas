@@ -6,6 +6,10 @@ This folder records the substance of my written preliminary examination: the res
 **Program:** Ph.D., Geography, Texas A&M University
 **Advisor:** Dr. Lei Zou
 
+## Oral Presentation Slides
+
+- [Yifan Yang Ph.D. Preliminary Examination Slides](./2026-06-24-yifan-yang-phd-prelim-slides.pdf)
+
 ## Dissertation
 
 **Cross-View Geospatial Artificial Intelligence for Disaster Damage Assessment: From Ground-Level Perception to Immersive Decision Support.**
