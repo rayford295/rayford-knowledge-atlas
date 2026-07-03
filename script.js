@@ -81,8 +81,8 @@
   let activeLayer = "All";
   let selectedNodeId = data.nodes.find((node) => node.id === "damagearbiter")?.id || data.nodes[0]?.id || null;
   let hoveredNodeId = null;
-  let activeMode = "flow";
-  let activeTrailId = "disaster-evidence";
+  let activeMode = "network";
+  let activeTrailId = null;
   let searchTerm = "";
   let railCollapsed = window.innerWidth >= 1024;
   let detailOpen = false;

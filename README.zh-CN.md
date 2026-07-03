@@ -16,7 +16,7 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/">
-    <img src="./assets/rayford-knowledge-atlas-preview.png" alt="Rayford Knowledge Atlas 网站预览" width="920">
+    <img src="./assets/atlas-graph-preview.gif" alt="Rayford Knowledge Atlas 动态预览:镜头从完整知识星座推近到一条引导路径,再拉远回全景" width="920">
   </a>
 </p>
 

@@ -16,7 +16,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/">
-    <img src="./assets/rayford-knowledge-atlas-preview.png" alt="Preview of the Rayford Knowledge Atlas website" width="920">
+    <img src="./assets/atlas-graph-preview.gif" alt="Animated preview of the Rayford Knowledge Atlas: the camera zooms from the full knowledge constellation into a guided trail and back out" width="920">
   </a>
 </p>
 
