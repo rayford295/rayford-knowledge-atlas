@@ -1,5 +1,13 @@
 # Rayford Knowledge Atlas
 
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/"><img alt="Live Site" src="https://img.shields.io/badge/live-knowledge%20atlas-f2aa40?style=flat-square&logo=github"></a>
+  <a href="https://github.com/rayford295/rayford-knowledge-atlas/commits/main"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/rayford295/rayford-knowledge-atlas?style=flat-square&color=6cb8f2"></a>
+  <a href="./LICENSE"><img alt="Code: MIT" src="https://img.shields.io/badge/code-MIT-5ac89a?style=flat-square"></a>
+  <a href="./LICENSE-CONTENT.md"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-b0aea5?style=flat-square"></a>
+  <a href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ"><img alt="Google Scholar" src="https://img.shields.io/badge/scholar-profile-4285F4?style=flat-square&logo=googlescholar&logoColor=white"></a>
+</p>
+
 [Open Live Website](https://rayford295.github.io/rayford-knowledge-atlas/) | [Make Your Own](https://rayford295.github.io/rayford-knowledge-atlas/fork.html) | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) | [Main Homepage](https://rayford295.github.io/) | [中文说明](./README.zh-CN.md)
 
 Rayford Knowledge Atlas is my public input-output knowledge graph. It places my reading inputs beside my research outputs and public writing, so papers, book chapters, collaborative Google Scholar records, repositories, methods, long-term questions, research philosophy, and mentorship writing can be inspected in one living system.
@@ -25,18 +33,22 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 ## One-Click Access
 
-- Live site: [rayford295.github.io/rayford-knowledge-atlas](https://rayford295.github.io/rayford-knowledge-atlas/)
-- Reading input page: [rayford295.github.io/rayford-knowledge-atlas/readings.html](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)
-- Reading advisor page: [rayford295.github.io/rayford-knowledge-atlas/advisor.html](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)
-- Research output page: [rayford295.github.io/rayford-knowledge-atlas/papers.html](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)
-- Travel map: [rayford295.github.io/rayford-knowledge-atlas/map/](https://rayford295.github.io/rayford-knowledge-atlas/map/)
-- Public writing archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing)
-- Published PDF archive: [github.com/rayford295/rayford-knowledge-atlas/tree/main/publications](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)
-- Ph.D. journey and milestones: [github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey)
-- Fork guide: [rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
-- GitHub repository: [github.com/rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas)
-- Google Scholar: [scholar.google.com/citations?user=B-fiSHwAAAAJ](https://scholar.google.com/citations?user=B-fiSHwAAAAJ)
-- Main academic homepage: [rayford295.github.io](https://rayford295.github.io/)
+| Page | What it is | Link |
+|---|---|---|
+| 🌌 Atlas | Interactive knowledge constellation (home) | [Open](https://rayford295.github.io/rayford-knowledge-atlas/) |
+| 📚 Readings | WeRead reading inputs, made public-safe | [Open](https://rayford295.github.io/rayford-knowledge-atlas/readings.html) |
+| 🧭 Advisor | Shelf-vs-notes reading intelligence | [Open](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html) |
+| 📄 Papers | Research output library | [Open](https://rayford295.github.io/rayford-knowledge-atlas/papers.html) |
+| 🗺️ Rooms | Maps, concepts, and comparison rooms | [Open](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html) |
+| 🌍 Travel Map | 3D globe of visited places | [Open](https://rayford295.github.io/rayford-knowledge-atlas/map/) |
+| 🍴 Fork Guide | Make your own atlas | [Open](https://rayford295.github.io/rayford-knowledge-atlas/fork.html) |
+
+| Archive | Contents | Link |
+|---|---|---|
+| Public writing | Research philosophy, reflection, mentorship | [Browse](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing) |
+| Publications | Published PDFs, filenames start with year | [Browse](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications) |
+| Ph.D. journey | Doctoral milestones and reflections | [Browse](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey) |
+| Profiles | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) · [Main homepage](https://rayford295.github.io/) | — |
 
 ## Frontend Experience
 
@@ -64,30 +76,34 @@ An interactive 3D globe lights up every place I have visited — **17 of 50 U.S.
 
 ## Knowledge Architecture
 
-- `wiki/papers/`: curated research output profiles.
-- `wiki/public-writing/`: public research philosophy, reflection, and mentorship writing nodes.
-- `wiki/readings/`: public-safe WeRead reading input pages.
-- `wiki/questions/`: bridge questions that connect reading to research.
-- `wiki/maps/`: Obsidian-style maps of content for navigating the vault.
-- `wiki/templates/`: starter templates for new reading and question notes.
-- `.obsidian/`: minimal vault settings for opening this repository in Obsidian.
-- `wiki/concepts/`: reusable concept pages.
-- `wiki/comparisons/`: cross-paper and cross-source narratives.
-- `publications/`: public PDF copies of published papers and chapters, with filenames starting by year.
-- `phd-journey/`: doctoral milestones, examination documents, and reflections.
-- `raw/papers/`: source records for paper and repository metadata.
-- `raw/public-writing/`: full public-writing backups mirrored from source repositories or generated local drafts.
-- `raw/publications/`: migrated publication records from the former Publications repository.
-- `raw/scholar/google-scholar.json`: the latest public Google Scholar snapshot.
-- `raw/weread/public-reading-index.json`: public-safe WeRead metadata, note counts, and reading graph seeds.
-- `raw/weread/reading-intelligence.json`: public-safe advisor signals from the shelf, notebooks, reading depth, and recent activity.
-- `scripts/build-map.js`: compiles papers, public writing, readings, questions, and Scholar records into `data.js`.
-- `scripts/fetch-scholar.js`: refreshes public Google Scholar metadata.
-- `scripts/fetch-weread.js`: refreshes public-safe WeRead reading nodes from `WEREAD_API_KEY`.
-- `docs/ATLAS_ARCHITECTURE.md`: explains the input-question-output graph model.
-- `docs/OPERATIONS.md`: gives the update, QA, and publishing runbook.
-- `docs/OBSIDIAN_VAULT.md`: explains how to use the repository as an Obsidian vault.
-- `docs/PUBLICATIONS_MIGRATION.md`: records the Publications repository consolidation.
+```text
+rayford-knowledge-atlas/
+├── wiki/                     # agent-maintained markdown knowledge base
+│   ├── papers/               #   curated research output profiles
+│   ├── readings/             #   public-safe WeRead reading input pages
+│   ├── questions/            #   bridge questions connecting inputs → outputs
+│   ├── public-writing/       #   research philosophy, reflection, mentorship
+│   ├── concepts/             #   reusable concept pages
+│   ├── comparisons/          #   cross-paper and cross-source narratives
+│   ├── maps/                 #   Obsidian-style maps of content
+│   └── templates/            #   starter templates for new notes
+├── publications/             # published PDFs, filenames start with year
+├── phd-journey/              # doctoral milestones and reflections
+├── raw/                      # immutable source records
+│   ├── papers/               #   paper and repository metadata
+│   ├── public-writing/       #   mirrored public-writing backups
+│   ├── publications/         #   migrated Publications repo records
+│   ├── scholar/              #   google-scholar.json (weekly snapshot)
+│   └── weread/               #   public-safe reading metadata + advisor signals
+├── scripts/                  # build-map.js · fetch-scholar.js · fetch-weread.js
+├── docs/                     # architecture · operations · vault + fork guides
+├── .obsidian/                # minimal vault settings for Obsidian
+└── index.html + *.html       # the live atlas site (GitHub Pages)
+```
+
+- `scripts/build-map.js` compiles `wiki/papers/`, `wiki/readings/`, `wiki/questions/`, public writing, and the Scholar snapshot into `data.js`.
+- `scripts/fetch-scholar.js` refreshes public Google Scholar metadata; `scripts/fetch-weread.js` refreshes public-safe WeRead nodes from `WEREAD_API_KEY`.
+- `docs/ATLAS_ARCHITECTURE.md` explains the input-question-output graph model; `docs/OPERATIONS.md` is the update, QA, and publishing runbook.
 
 ## Current Output Layer
 

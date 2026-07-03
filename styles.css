@@ -33,6 +33,13 @@ html {
   scroll-behavior: smooth;
 }
 
+html {
+  /* clip (unlike hidden) kills sideways scroll without creating a scroll
+     container, so position: sticky keeps working; hidden is the fallback. */
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -43,6 +50,7 @@ body {
     radial-gradient(ellipse 60% 40% at 90% 70%, rgba(242, 170, 64, 0.07), transparent),
     linear-gradient(175deg, #05040d 0%, #0b0919 50%, #0e0c22 100%);
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -1200,6 +1208,13 @@ summary:focus-visible {
   margin-top: 16px;
 }
 
+/* Grid items default to min-width:auto and refuse to shrink below the widest
+   unbreakable content (e.g. the git-clone line in fork.html's <pre>), which
+   blows the page out on narrow screens. Let panels shrink; the pre scrolls. */
+.guide-page > * {
+  min-width: 0;
+}
+
 .guide-hero,
 .guide-panel,
 .guide-command {
@@ -1240,7 +1255,10 @@ summary:focus-visible {
   padding: 18px 20px;
 }
 
-.guide-panel span {
+/* Number badge: only direct-child spans of a guide panel (e.g. <span>1</span>).
+   Keep this scoped with ">" so card labels nested deeper (.room-card span,
+   .advisor-desk-card span, .next-stop-card span) never inherit the circle. */
+.guide-panel > span {
   display: inline-grid;
   place-items: center;
   width: 34px;
@@ -1250,6 +1268,19 @@ summary:focus-visible {
   background: var(--amber);
   font-weight: 900;
   font-size: 0.88rem;
+}
+
+/* Eyebrow labels inside cards: small uppercase kicker, not a badge. */
+.room-card > span,
+.advisor-desk-card > span,
+.next-stop-card > span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  font-size: 0.68rem;
+  font-weight: 900;
+  color: var(--amber);
+  line-height: 1.4;
 }
 
 .guide-panel h2 {
@@ -1722,12 +1753,25 @@ summary:focus-visible {
     height: 560px;
   }
 
+  /* Mobile nav: one horizontally swipeable row instead of three wrapped rows,
+     so the first screen shows content instead of chrome. */
   .top-links {
-    justify-content: stretch;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+    mask-image: linear-gradient(90deg, black 88%, transparent);
+  }
+
+  .top-links::-webkit-scrollbar {
+    display: none;
   }
 
   .top-links a {
-    flex: 1;
+    flex: 0 0 auto;
+    white-space: nowrap;
     text-align: center;
   }
 
@@ -1820,14 +1864,14 @@ summary:focus-visible {
   justify-content: space-between;
   gap: 22px;
   align-items: flex-start;
-  padding: 26px 22px 0;
+  padding: 20px 22px 0;
 }
 
 .stage-toolbar h1 {
   max-width: 780px;
   margin: 4px 0 0;
   font-family: "Fraunces", serif;
-  font-size: clamp(2.4rem, 4vw, 4.15rem);
+  font-size: clamp(2.2rem, 3.4vw, 3.4rem);
   line-height: 1.02;
   text-shadow: 0 0 50px rgba(242, 170, 64, 0.11);
   letter-spacing: -0.025em;
@@ -1835,7 +1879,7 @@ summary:focus-visible {
 
 .stage-onboarding {
   max-width: 720px;
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   color: var(--ink-soft);
   line-height: 1.72;
   font-size: 0.94rem;
@@ -1843,7 +1887,7 @@ summary:focus-visible {
 
 .stage-manifesto {
   max-width: 720px;
-  margin: 16px 0 0;
+  margin: 12px 0 0;
   padding-left: 16px;
   border-left: 2px solid rgba(242, 170, 64, 0.72);
   color: var(--ink-soft);
@@ -1856,7 +1900,7 @@ summary:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .hero-action {

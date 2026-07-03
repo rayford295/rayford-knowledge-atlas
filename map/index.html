@@ -20,6 +20,11 @@
       margin: 18px 0 8px;
       border-radius: 22px;
       overflow: hidden;
+      /* Size this box from its container only, never from the canvas inside.
+         globe.gl first paints at window width; without this the oversized canvas
+         inflates the whole page and sizeGlobe() then reads back the inflated width. */
+      contain: inline-size;
+      min-width: 0;
       background:
         radial-gradient(120% 90% at 50% 18%, rgba(108, 184, 242, 0.10), transparent 60%),
         rgba(7, 6, 18, 0.55);
@@ -27,6 +32,7 @@
       box-shadow: var(--shadow);
     }
     #globe { width: 100%; height: 68vh; min-height: 420px; }
+    #globe canvas { display: block; max-width: 100%; }
     .travel-globe-hint {
       position: absolute; left: 18px; bottom: 14px; z-index: 3;
       font-size: 0.78rem; color: var(--muted); letter-spacing: 0.02em;
@@ -203,6 +209,9 @@
 
       function sizeGlobe() { world.width(el.clientWidth); world.height(el.clientHeight); }
       sizeGlobe();
+      // Re-measure once layout has settled: the first paint can happen before
+      // the container reaches its final width, which would lock in a wrong size.
+      requestAnimationFrame(sizeGlobe);
       window.addEventListener("resize", sizeGlobe);
 
       const controls = world.controls();

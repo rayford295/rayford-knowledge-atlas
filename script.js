@@ -551,6 +551,51 @@
     return state;
   }
 
+  function fitViewBox(visibleNodes) {
+    // Fit the camera to the visible constellation so sparse views (an active
+    // trail, Flow mode with few nodes, tall Timeline stacks) fill the stage
+    // instead of huddling in one corner of the fixed 980x660 canvas.
+    const DEFAULT_VIEW = { x: 0, y: 0, w: 980, h: 660 };
+    let box = DEFAULT_VIEW;
+
+    if (visibleNodes.length) {
+      let minX = Infinity;
+      let maxX = -Infinity;
+      let minY = Infinity;
+      let maxY = -Infinity;
+
+      visibleNodes.forEach((node) => {
+        const state = graphRuntime.nodeStates.get(node.id);
+        if (!state) {
+          return;
+        }
+        const labelHalf = 86; // labels under nodes extend past the circle
+        minX = Math.min(minX, state.targetX - Math.max(state.radius, labelHalf));
+        maxX = Math.max(maxX, state.targetX + Math.max(state.radius, labelHalf));
+        minY = Math.min(minY, state.targetY - state.radius - 30);
+        maxY = Math.max(maxY, state.targetY + state.radius + 46);
+      });
+
+      if (minX < maxX) {
+        const pad = 26;
+        const minWidth = 640; // never zoom past a readable scale
+        const minHeight = 430;
+        const width = Math.max(maxX - minX + pad * 2, minWidth);
+        const height = Math.max(maxY - minY + pad * 2, minHeight);
+        const centerX = (minX + maxX) / 2;
+        const centerY = (minY + maxY) / 2;
+        box = { x: centerX - width / 2, y: centerY - height / 2, w: width, h: height };
+      }
+    }
+
+    graphRuntime.viewBoxTarget = box;
+
+    if (!graphRuntime.viewBoxCurrent || graphRuntime.reducedMotion) {
+      graphRuntime.viewBoxCurrent = { x: box.x, y: box.y, w: box.w, h: box.h };
+      svg.setAttribute("viewBox", `${box.x.toFixed(1)} ${box.y.toFixed(1)} ${box.w.toFixed(1)} ${box.h.toFixed(1)}`);
+    }
+  }
+
   function renderGraph() {
     svg.innerHTML = "";
     graphRuntime.nodeElements.clear();
@@ -585,6 +630,8 @@
     visibleNodes.forEach((node) => {
       ensureNodeState(node, nodePosition(node, visibleNodes));
     });
+
+    fitViewBox(visibleNodes);
 
     visibleNodes.forEach((node) => {
       node.connections.forEach((connection) => {
@@ -795,6 +842,29 @@
         particle.element.style.opacity = link.hot ? String(0.62 + Math.sin(t * Math.PI) * 0.35) : "0.22";
       });
     });
+
+    // Ease the camera toward the fitted view for a smooth zoom between modes.
+    const boxTarget = graphRuntime.viewBoxTarget;
+    const boxCurrent = graphRuntime.viewBoxCurrent;
+    if (boxTarget && boxCurrent) {
+      const ease = graphRuntime.reducedMotion ? 1 : 0.08;
+      const deltas = [
+        boxTarget.x - boxCurrent.x,
+        boxTarget.y - boxCurrent.y,
+        boxTarget.w - boxCurrent.w,
+        boxTarget.h - boxCurrent.h
+      ];
+      if (deltas.some((delta) => Math.abs(delta) > 0.4)) {
+        boxCurrent.x += deltas[0] * ease;
+        boxCurrent.y += deltas[1] * ease;
+        boxCurrent.w += deltas[2] * ease;
+        boxCurrent.h += deltas[3] * ease;
+        svg.setAttribute(
+          "viewBox",
+          `${boxCurrent.x.toFixed(1)} ${boxCurrent.y.toFixed(1)} ${boxCurrent.w.toFixed(1)} ${boxCurrent.h.toFixed(1)}`
+        );
+      }
+    }
 
     if (scheduleNext && !graphRuntime.reducedMotion) {
       window.requestAnimationFrame(updateGraph);

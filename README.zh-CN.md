@@ -1,5 +1,13 @@
 # Rayford Knowledge Atlas
 
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/"><img alt="Live Site" src="https://img.shields.io/badge/live-knowledge%20atlas-f2aa40?style=flat-square&logo=github"></a>
+  <a href="https://github.com/rayford295/rayford-knowledge-atlas/commits/main"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/rayford295/rayford-knowledge-atlas?style=flat-square&color=6cb8f2"></a>
+  <a href="./LICENSE"><img alt="Code: MIT" src="https://img.shields.io/badge/code-MIT-5ac89a?style=flat-square"></a>
+  <a href="./LICENSE-CONTENT.md"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-b0aea5?style=flat-square"></a>
+  <a href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ"><img alt="Google Scholar" src="https://img.shields.io/badge/scholar-profile-4285F4?style=flat-square&logo=googlescholar&logoColor=white"></a>
+</p>
+
 [一键打开网站](https://rayford295.github.io/rayford-knowledge-atlas/) | [做一个自己的版本](https://rayford295.github.io/rayford-knowledge-atlas/fork.html) | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) | [打开学术主页](https://rayford295.github.io/) | [English README](./README.md)
 
 Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把我的阅读输入、研究输出和公共写作放在同一个系统里，让论文、书章、合作论文、Google Scholar 记录、GitHub 仓库、方法、概念、长期问题、研究哲学和师生情谊写作可以互相连接。
@@ -25,18 +33,22 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 ## 一键入口
 
-- 网站地址：[rayford295.github.io/rayford-knowledge-atlas](https://rayford295.github.io/rayford-knowledge-atlas/)
-- 阅读输入页：[rayford295.github.io/rayford-knowledge-atlas/readings.html](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)
-- 阅读顾问页：[rayford295.github.io/rayford-knowledge-atlas/advisor.html](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)
-- 论文输出页：[rayford295.github.io/rayford-knowledge-atlas/papers.html](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)
-- 旅行地图：[rayford295.github.io/rayford-knowledge-atlas/map/](https://rayford295.github.io/rayford-knowledge-atlas/map/)
-- 公共写作归档：[github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing)
-- 已发表论文 PDF 归档：[github.com/rayford295/rayford-knowledge-atlas/tree/main/publications](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)
-- 博士旅程与里程碑：[github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey)
-- Fork 指南：[rayford295.github.io/rayford-knowledge-atlas/fork.html](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)
-- GitHub 仓库：[github.com/rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas)
-- Google Scholar：[scholar.google.com/citations?user=B-fiSHwAAAAJ](https://scholar.google.com/citations?user=B-fiSHwAAAAJ)
-- 主站地址：[rayford295.github.io](https://rayford295.github.io/)
+| 页面 | 内容 | 链接 |
+|---|---|---|
+| 🌌 Atlas | 交互式知识星图（首页） | [打开](https://rayford295.github.io/rayford-knowledge-atlas/) |
+| 📚 Readings | 公开安全的微信读书阅读输入 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/readings.html) |
+| 🧭 Advisor | 书架 vs 笔记的阅读智能分析 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html) |
+| 📄 Papers | 研究输出库 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/papers.html) |
+| 🗺️ Rooms | 地图、概念与对比房间 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html) |
+| 🌍 旅行地图 | 到访地点的 3D 地球仪 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/map/) |
+| 🍴 Fork 指南 | 做一个自己的 atlas | [打开](https://rayford295.github.io/rayford-knowledge-atlas/fork.html) |
+
+| 归档 | 内容 | 链接 |
+|---|---|---|
+| 公共写作 | 研究哲学、反思、师生情谊写作 | [浏览](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing) |
+| 已发表论文 | 公开 PDF，文件名以年份开头 | [浏览](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications) |
+| 博士旅程 | 里程碑、考核文件与反思 | [浏览](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey) |
+| 个人主页 | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) · [学术主页](https://rayford295.github.io/) | — |
 
 ## 前端体验
 
@@ -64,30 +76,34 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 ## 知识库结构
 
-- `wiki/papers/`：精修过的研究输出页面。
-- `wiki/public-writing/`：研究哲学、公共反思和师生情谊写作节点。
-- `wiki/readings/`：公开安全的微信读书阅读输入页面。
-- `wiki/questions/`：把阅读和论文连接起来的长期问题。
-- `wiki/maps/`：Obsidian 风格的 Maps of Content，用来浏览 vault。
-- `wiki/templates/`：新阅读笔记和新问题笔记的模板。
-- `.obsidian/`：让这个仓库可以直接作为 Obsidian vault 打开的最小配置。
-- `wiki/concepts/`：可复用概念页面。
-- `wiki/comparisons/`：跨论文、跨来源的综合叙事。
-- `publications/`：已发表论文和书章的公开 PDF 归档，文件名以年份开头。
-- `phd-journey/`：博士阶段的里程碑、考核文件与反思记录。
-- `raw/papers/`：论文和仓库的原始记录。
-- `raw/public-writing/`：从源仓库镜像或从本地生成的公共写作完整备份。
-- `raw/publications/`：从旧 Publications 仓库迁移出的 publication 记录。
-- `raw/scholar/google-scholar.json`：最新 Google Scholar 公开 profile 快照。
-- `raw/weread/public-reading-index.json`：公开安全的微信读书元数据、笔记数量和阅读图谱种子。
-- `raw/weread/reading-intelligence.json`：公开安全的阅读顾问信号，来自书架、notebooks、阅读深度和最近活跃。
-- `scripts/build-map.js`：把论文、公共写作、阅读、问题和 Scholar 记录编译成 `data.js`。
-- `scripts/fetch-scholar.js`：刷新 Google Scholar 公开指标。
-- `scripts/fetch-weread.js`：通过 `WEREAD_API_KEY` 刷新公开安全的阅读节点。
-- `docs/ATLAS_ARCHITECTURE.md`：解释输入、问题和输出之间的图谱模型。
-- `docs/OPERATIONS.md`：记录更新、检查和发布流程。
-- `docs/OBSIDIAN_VAULT.md`：说明如何把这个仓库当成 Obsidian vault 使用。
-- `docs/PUBLICATIONS_MIGRATION.md`：记录 Publications 仓库的合并边界。
+```text
+rayford-knowledge-atlas/
+├── wiki/                     # agent 与人共同维护的 markdown 知识库
+│   ├── papers/               #   精修过的研究输出页面
+│   ├── readings/             #   公开安全的微信读书阅读输入页面
+│   ├── questions/            #   连接阅读与论文的长期问题
+│   ├── public-writing/       #   研究哲学、反思、师生情谊写作
+│   ├── concepts/             #   可复用概念页面
+│   ├── comparisons/          #   跨论文、跨来源的综合叙事
+│   ├── maps/                 #   Obsidian 风格的 Maps of Content
+│   └── templates/            #   新笔记模板
+├── publications/             # 已发表论文 PDF，文件名以年份开头
+├── phd-journey/              # 博士里程碑、考核文件与反思
+├── raw/                      # 不可变的原始记录
+│   ├── papers/               #   论文与仓库元数据
+│   ├── public-writing/       #   公共写作完整备份
+│   ├── publications/         #   旧 Publications 仓库迁移记录
+│   ├── scholar/              #   google-scholar.json（每周快照）
+│   └── weread/               #   公开安全的阅读元数据与顾问信号
+├── scripts/                  # build-map.js · fetch-scholar.js · fetch-weread.js
+├── docs/                     # 架构 · 运维 · vault 与 fork 指南
+├── .obsidian/                # Obsidian vault 最小配置
+└── index.html + *.html       # 线上站点（GitHub Pages）
+```
+
+- `scripts/build-map.js` 把 `wiki/papers/`、`wiki/readings/`、`wiki/questions/`、公共写作和 Scholar 快照编译成 `data.js`。
+- `scripts/fetch-scholar.js` 刷新 Google Scholar 公开指标；`scripts/fetch-weread.js` 通过 `WEREAD_API_KEY` 刷新公开安全的阅读节点。
+- `docs/ATLAS_ARCHITECTURE.md` 解释输入-问题-输出的图谱模型；`docs/OPERATIONS.md` 是更新、检查和发布的操作手册。
 
 ## 当前输出层
 
