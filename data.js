@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-06-29T14:37:15.655Z",
+  "generatedAt": "2026-07-06T12:57:38.188Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -48,7 +48,7 @@ window.researchMapData = {
     "WeRead"
   ],
   "counts": {
-    "output": 23,
+    "output": 26,
     "input": 12,
     "question": 5
   },
@@ -2316,17 +2316,151 @@ window.researchMapData = {
       "connections": [],
       "repository": null,
       "metrics": {
-        "citations": 18
+        "citations": 19
       },
       "role": "collaborative output",
-      "metricLabel": "18 citations",
+      "metricLabel": "19 citations",
       "wikiPath": null,
       "position": {
         "x": 720,
         "y": 96
       },
       "color": "#64c7ff",
-      "radius": 34.182337649086286,
+      "radius": 34.46135746449762,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-rapid-a-reproducible-multi-agent-pipeline-for-interpretable-disa",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "RAPID",
+      "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2606.21819 , 2026",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "Y Yang, W Gong, K Zhang, L Zou, Z Tu, H Li, Z Li, X Ye",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Disaster Assessment",
+        "Spatial Intelligence"
+      ],
+      "methods": [
+        "Disaster Assessment",
+        "Spatial Intelligence"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "damagearbiter",
+          "label": "feeds the disaster intelligence output layer"
+        },
+        {
+          "target": "satellite-to-street",
+          "label": "shares the satellite-to-street geographic evidence thread"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "first-author or lead-position output",
+      "metricLabel": "0 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 772,
+        "y": 96
+      },
+      "color": "#64c7ff",
+      "radius": 24,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-gischolarbench-benchmarking-llm-overconfidence-in-gis-research",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "GIScholarBench",
+      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Multimodal Learning"
+      ],
+      "methods": [
+        "Multimodal Learning"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 824,
+        "y": 96
+      },
+      "color": "#64c7ff",
+      "radius": 24,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-seeing-green-from-indoors-in-3d-how-built-environment-and-vegeta",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Seeing Green from Indoors in 3D",
+      "title": "Seeing Green from Indoors in 3D: How Built Environment and Vegetation Shape Window-Level Nature Exposure",
+      "year": 2026,
+      "venue": "Available at SSRN 6766522 , 2026",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "Z Li, L Zou, JH Seo, M Yang, Y Yang",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Multimodal Learning"
+      ],
+      "methods": [
+        "Multimodal Learning"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "collaborative output",
+      "metricLabel": "0 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 720,
+        "y": 190
+      },
+      "color": "#64c7ff",
+      "radius": 24,
       "displayKind": "Research Output"
     },
     {
@@ -2369,7 +2503,7 @@ window.researchMapData = {
       "wikiPath": null,
       "position": {
         "x": 772,
-        "y": 96
+        "y": 190
       },
       "color": "#64c7ff",
       "radius": 24,
@@ -2421,7 +2555,7 @@ window.researchMapData = {
       "wikiPath": null,
       "position": {
         "x": 824,
-        "y": 96
+        "y": 190
       },
       "color": "#64c7ff",
       "radius": 24,

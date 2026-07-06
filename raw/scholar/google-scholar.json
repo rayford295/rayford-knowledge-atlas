@@ -7,24 +7,24 @@
   "verifiedEmail": "tamu.edu",
   "homepage": "https://rayford295.github.io/",
   "interests": [
-    "GeoAI",
-    "GIScience",
     "AI4Science",
     "Spatial Data Science",
-    "Disaster Resilience"
+    "GeoAI",
+    "Disaster Resilience",
+    "Generative AI"
   ],
   "metrics": {
     "citations": {
-      "all": 366,
-      "since2019": 353
+      "all": 382,
+      "since2019": 369
     },
     "hIndex": {
       "all": 6,
       "since2019": 6
     },
     "i10Index": {
-      "all": 4,
-      "since2019": 4
+      "all": 5,
+      "since2019": 5
     }
   },
   "articles": [
@@ -32,7 +32,7 @@
       "title": "Experiments of federated learning for COVID-19 chest X-ray images",
       "authors": "B Yan, J Wang, J Cheng, Y Zhou, Y Zhang, Y Yang, L Liu, H Zhao, ...",
       "venue": "Advances in Artificial Intelligence and Security: 7th International… , 2021",
-      "citations": 274,
+      "citations": 276,
       "year": 2021
     },
     {
@@ -46,48 +46,62 @@
       "title": "GeoLocator: A location-integrated large multimodal model (LMM) for inferring geo-privacy",
       "authors": "Y Yang, S Wang, D Li, S Sun, Q Wu",
       "venue": "Applied Sciences 14 (16), 7091 , 2024",
-      "citations": 22,
+      "citations": 24,
       "year": 2024
     },
     {
       "title": "Surveying attitudinal alignment between large language models vs. humans towards 17 sustainable development goals",
       "authors": "Q Wu, Y Xu, T Xiao, Y Xiao, Y Li, T Wang, Y Zhang, S Zhong, Y Zhang, ...",
       "venue": "arXiv preprint arXiv:2404.13885 , 2024",
-      "citations": 18,
+      "citations": 19,
       "year": 2024
     },
     {
       "title": "Integrating spatiotemporal vision transformer into digital twins for high-resolution heat stress forecasting in campus environments",
       "authors": "W Gong, X Ye, K Wu, S Jamonnak, W Zhang, Y Yang, X Huang",
       "venue": "Journal of Planning Education and Research, 0739456X251391121 , 2025",
-      "citations": 8,
+      "citations": 10,
       "year": 2025
     },
     {
       "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",
       "authors": "Y Yang, L Zou, B Zhou, D Li, B Lin, J Abedin, M Yang",
       "venue": "Computers, Environment and Urban Systems 121, 102335 , 2025",
-      "citations": 8,
+      "citations": 9,
       "year": 2025
     },
     {
       "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",
       "authors": "Z Li, H Li, Y Yang, S Wang, Y Zhu",
-      "venue": "arXiv preprint arXiv:2505.01721 , 2025",
-      "citations": 4,
-      "year": 2025
+      "venue": "International Journal of Applied Earth Observation and Geoinformation , 2026",
+      "citations": 5,
+      "year": 2026
     },
     {
       "title": "Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents",
       "authors": "X Ye, W Gong, Y Yang, L Zou, Z Tu, X Huang, Z Li, H Ning, L Wu",
       "venue": "Urban Informatics 5 (1), 9 , 2026",
-      "citations": 2,
+      "citations": 5,
       "year": 2026
     },
     {
       "title": "DamageArbiter: A CLIP-Enhanced Multimodal Arbitration Framework for Hurricane Damage Assessment from Street-View Imagery",
       "authors": "Y Yang, L Zou, W Gong, K Fu, Z Li, S Wang, B Zhou, H Cai, H Tian",
       "venue": "arXiv preprint arXiv:2603.14837 , 2026",
+      "citations": 2,
+      "year": 2026
+    },
+    {
+      "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
+      "authors": "Y Wang, H Yin, Y Yang, C Zhao, S Wang",
+      "venue": "Journal of Transport Geography 128, 104387 , 2025",
+      "citations": 2,
+      "year": 2025
+    },
+    {
+      "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
+      "authors": "Y Yang, L Zou, W Jepson",
+      "venue": "arXiv preprint arXiv:2603.20697 , 2026",
       "citations": 1,
       "year": 2026
     },
@@ -99,16 +113,37 @@
       "year": 2025
     },
     {
-      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
-      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
-      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
+      "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
+      "authors": "Y Yang, W Gong, K Zhang, L Zou, Z Tu, H Li, Z Li, X Ye",
+      "venue": "arXiv preprint arXiv:2606.21819 , 2026",
       "citations": 0,
       "year": 2026
     },
     {
-      "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
-      "authors": "Y Yang, L Zou, W Jepson",
-      "venue": "arXiv preprint arXiv:2603.20697 , 2026",
+      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
+      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
+      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "The Boiling Frog Effect: Global Warming Delays Emotional Impacts of Air Pollution in Warmer Climates",
+      "authors": "S Wang, H Liu, CYH Wu, X Huang, R Wang, Y Yang, J Corcoran, S Lai, ...",
+      "venue": "Journal of Hazardous Materials, 142440 , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "Seeing Green from Indoors in 3D: How Built Environment and Vegetation Shape Window-Level Nature Exposure",
+      "authors": "Z Li, L Zou, JH Seo, M Yang, Y Yang",
+      "venue": "Available at SSRN 6766522 , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
+      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
+      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
       "citations": 0,
       "year": 2026
     },
@@ -132,22 +167,8 @@
       "venue": "Security First: Geospatial Workflows for a Safe and Equitable World, 114-122 , 2025",
       "citations": 0,
       "year": 2025
-    },
-    {
-      "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
-      "authors": "Y Wang, H Yin, Y Yang, C Zhao, S Wang",
-      "venue": "Journal of Transport Geography 128, 104387 , 2025",
-      "citations": 0,
-      "year": 2025
-    },
-    {
-      "title": "Different Loss Functions Used in the Low-rank Approximation",
-      "authors": "C Shi, G Mou, H Wang, T Liu, Y Yang, Z Li",
-      "venue": "International Core Journal of Engineering 6 (11), 360-368 , 2020",
-      "citations": 0,
-      "year": 2020
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-05-17T04:28:43.997Z"
+  "fetchedAt": "2026-07-06T12:57:38.030Z"
 }
