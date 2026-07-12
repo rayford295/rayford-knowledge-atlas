@@ -19,3 +19,4 @@
 
 - Added Urbana-Champaign (UIUC), Illinois to the travel map: new globe point, Illinois state card, and updated counters (18/50 states, 27 cities).
 - Added life-journey milestones to the travel map: Xi'an (hometown), Haikou (B.S.), Los Angeles (M.S.), College Station (Ph.D.) shown as sky-blue points with animated arcs tracing the journey; counters now 30 cities / 3 countries.
+- Added Gainesville and Tampa (Florida) and Irvine (California) to the travel map; city counter now 33 across page and READMEs.

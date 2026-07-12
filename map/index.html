@@ -96,7 +96,7 @@
         </p>
         <div class="reading-metrics rooms-metrics" aria-label="Travel overview">
           <div><strong>18 / 50</strong><span>U.S. states</span></div>
-          <div><strong>30</strong><span>cities visited</span></div>
+          <div><strong>33</strong><span>cities visited</span></div>
           <div><strong>3</strong><span>countries</span></div>
           <div><strong>4</strong><span>life milestones</span></div>
         </div>
@@ -122,6 +122,7 @@
       { state: "California", city: "Los Angeles", lat: 34.0522, lng: -118.2437, milestone: "M.S." },
       { state: "California", city: "San Diego", lat: 32.7157, lng: -117.1611 },
       { state: "California", city: "San Francisco", lat: 37.7749, lng: -122.4194 },
+      { state: "California", city: "Irvine", lat: 33.6846, lng: -117.8265 },
       { state: "Nevada", city: "Las Vegas", lat: 36.1699, lng: -115.1398 },
       { state: "Arizona", city: "Tucson", lat: 32.2226, lng: -110.9747 },
       { state: "Arizona", city: "Phoenix", lat: 33.4484, lng: -112.0740 },
@@ -130,6 +131,8 @@
       { state: "Pennsylvania", city: "Philadelphia", lat: 39.9526, lng: -75.1652 },
       { state: "Florida", city: "Orlando", lat: 28.5383, lng: -81.3792 },
       { state: "Florida", city: "Miami", lat: 25.7617, lng: -80.1918 },
+      { state: "Florida", city: "Gainesville", lat: 29.6516, lng: -82.3248 },
+      { state: "Florida", city: "Tampa", lat: 27.9506, lng: -82.4572 },
       { state: "South Carolina", city: "Columbia", lat: 34.0007, lng: -81.0348 },
       { state: "North Carolina", city: "Charlotte", lat: 35.2271, lng: -80.8431 },
       { state: "Texas", city: "Houston", lat: 29.7604, lng: -95.3698 },
@@ -160,13 +163,13 @@
 
     // ---- Visited states list (grouped) ----
     const STATE_GROUPS = [
-      ["California", "Los Angeles (M.S.), San Diego, San Francisco"],
+      ["California", "Los Angeles (M.S.), San Diego, San Francisco, Irvine"],
       ["Nevada", "Las Vegas"],
       ["Arizona", "Tucson, Phoenix"],
       ["New York", "New York City"],
       ["New Jersey", "Newark"],
       ["Pennsylvania", "Philadelphia"],
-      ["Florida", "Orlando, Miami"],
+      ["Florida", "Orlando, Miami, Gainesville, Tampa"],
       ["South Carolina", "Columbia"],
       ["North Carolina", "Charlotte"],
       ["Texas", "Houston, San Antonio, Dallas, Austin, College Station (Ph.D.)"],

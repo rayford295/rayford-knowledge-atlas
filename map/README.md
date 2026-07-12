@@ -13,7 +13,7 @@ The page also lists every visited state and city for readers without WebGL.
 ## Coverage
 
 - **18 of 50 U.S. states**
-- **30 cities**
+- **33 cities**
 - **3 countries** (United States, Canada, and China)
 - **4 life milestones** (hometown, B.S., M.S., Ph.D.)
 
@@ -21,13 +21,13 @@ The page also lists every visited state and city for readers without WebGL.
 
 | Place | Cities |
 | --- | --- |
-| California | Los Angeles (M.S.), San Diego, San Francisco |
+| California | Los Angeles (M.S.), San Diego, San Francisco, Irvine |
 | Nevada | Las Vegas |
 | Arizona | Tucson, Phoenix |
 | New York | New York City |
 | New Jersey | Newark |
 | Pennsylvania | Philadelphia |
-| Florida | Orlando, Miami |
+| Florida | Orlando, Miami, Gainesville, Tampa |
 | South Carolina | Columbia |
 | North Carolina | Charlotte |
 | Texas | Houston, San Antonio, Dallas, Austin, College Station (Ph.D.) |

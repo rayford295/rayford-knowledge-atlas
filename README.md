@@ -62,7 +62,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 ## Travel Map
 
-An interactive 3D globe lights up every place I have visited — **18 of 50 U.S. states, 30 cities, and 3 countries** (United States, Canada, and China). Sky-blue milestone points and animated arcs trace my journey from my hometown Xi'an to Haikou (B.S.), Los Angeles (M.S.), and College Station (Ph.D.). Drag to rotate, scroll to zoom, and hover a glowing point to read the city.
+An interactive 3D globe lights up every place I have visited — **18 of 50 U.S. states, 33 cities, and 3 countries** (United States, Canada, and China). Sky-blue milestone points and animated arcs trace my journey from my hometown Xi'an to Haikou (B.S.), Los Angeles (M.S.), and College Station (Ph.D.). Drag to rotate, scroll to zoom, and hover a glowing point to read the city.
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
