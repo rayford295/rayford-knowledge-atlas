@@ -90,13 +90,15 @@
         <h1>A globe of where I have traveled.</h1>
         <p>
           Beyond the research graph, this is a map of the places I have visited. Drag to spin the globe,
-          scroll to zoom, and hover a glowing point to see the city. The pulsing rings mark each visited place.
+          scroll to zoom, and hover a glowing point to see the city. The pulsing rings mark each visited place,
+          and the animated blue arcs trace my journey: from my hometown Xi'an to Haikou for my B.S.,
+          across the Pacific to Los Angeles for my M.S., and on to College Station, Texas for my Ph.D.
         </p>
         <div class="reading-metrics rooms-metrics" aria-label="Travel overview">
           <div><strong>18 / 50</strong><span>U.S. states</span></div>
-          <div><strong>27</strong><span>cities visited</span></div>
-          <div><strong>2</strong><span>countries</span></div>
-          <div><strong>1</strong><span>abroad (Canada)</span></div>
+          <div><strong>30</strong><span>cities visited</span></div>
+          <div><strong>3</strong><span>countries</span></div>
+          <div><strong>4</strong><span>life milestones</span></div>
         </div>
       </section>
 
@@ -117,7 +119,7 @@
   <script>
     // ---- Visited places (lat, lng) ----
     const PLACES = [
-      { state: "California", city: "Los Angeles", lat: 34.0522, lng: -118.2437 },
+      { state: "California", city: "Los Angeles", lat: 34.0522, lng: -118.2437, milestone: "M.S." },
       { state: "California", city: "San Diego", lat: 32.7157, lng: -117.1611 },
       { state: "California", city: "San Francisco", lat: 37.7749, lng: -122.4194 },
       { state: "Nevada", city: "Las Vegas", lat: 36.1699, lng: -115.1398 },
@@ -134,6 +136,7 @@
       { state: "Texas", city: "San Antonio", lat: 29.4241, lng: -98.4936 },
       { state: "Texas", city: "Dallas", lat: 32.7767, lng: -96.7970 },
       { state: "Texas", city: "Austin", lat: 30.2672, lng: -97.7431 },
+      { state: "Texas", city: "College Station", lat: 30.6280, lng: -96.3344, milestone: "Ph.D." },
       { state: "Hawaii", city: "Honolulu", lat: 21.3069, lng: -157.8583 },
       { state: "Michigan", city: "Detroit", lat: 42.3314, lng: -83.0458 },
       { state: "New Mexico", city: "White Sands", lat: 32.7872, lng: -106.3257 },
@@ -143,12 +146,21 @@
       { state: "Alaska", city: "Fairbanks", lat: 64.8378, lng: -147.7164 },
       { state: "Minnesota", city: "Minneapolis", lat: 44.9778, lng: -93.2650 },
       { state: "Illinois", city: "Urbana-Champaign (UIUC)", lat: 40.1020, lng: -88.2272 },
-      { country: "Canada", state: "British Columbia (Canada)", city: "Vancouver", lat: 49.2827, lng: -123.1207 }
+      { country: "Canada", state: "British Columbia (Canada)", city: "Vancouver", lat: 49.2827, lng: -123.1207 },
+      { country: "China", state: "Shaanxi (China)", city: "Xi'an", lat: 34.3416, lng: 108.9398, milestone: "Hometown" },
+      { country: "China", state: "Hainan (China)", city: "Haikou", lat: 20.0444, lng: 110.1999, milestone: "B.S." }
+    ];
+
+    // ---- Life journey: hometown -> B.S. -> M.S. -> Ph.D. ----
+    const JOURNEY = [
+      { startLat: 34.3416, startLng: 108.9398, endLat: 20.0444, endLng: 110.1999, label: "Xi'an → Haikou · B.S." },
+      { startLat: 20.0444, startLng: 110.1999, endLat: 34.0522, endLng: -118.2437, label: "Haikou → Los Angeles · M.S." },
+      { startLat: 34.0522, startLng: -118.2437, endLat: 30.6280, endLng: -96.3344, label: "Los Angeles → College Station · Ph.D." }
     ];
 
     // ---- Visited states list (grouped) ----
     const STATE_GROUPS = [
-      ["California", "Los Angeles, San Diego, San Francisco"],
+      ["California", "Los Angeles (M.S.), San Diego, San Francisco"],
       ["Nevada", "Las Vegas"],
       ["Arizona", "Tucson, Phoenix"],
       ["New York", "New York City"],
@@ -157,7 +169,7 @@
       ["Florida", "Orlando, Miami"],
       ["South Carolina", "Columbia"],
       ["North Carolina", "Charlotte"],
-      ["Texas", "Houston, San Antonio, Dallas, Austin"],
+      ["Texas", "Houston, San Antonio, Dallas, Austin, College Station (Ph.D.)"],
       ["Hawaii", "Honolulu"],
       ["Michigan", "Detroit"],
       ["New Mexico", "White Sands National Park"],
@@ -167,7 +179,10 @@
       ["Minnesota", "Minneapolis"],
       ["Illinois", "Urbana-Champaign (UIUC)"]
     ];
-    const ABROAD = [["Canada", "Vancouver"]];
+    const ABROAD = [
+      ["China", "Xi'an (hometown), Haikou (B.S.)"],
+      ["Canada", "Vancouver"]
+    ];
 
     (function renderList() {
       const grid = document.getElementById("travel-grid");
@@ -189,6 +204,7 @@
       const el = document.getElementById("globe");
       if (!el || typeof Globe === "undefined") { return; }
       const AMBER = "#f2aa40";
+      const SKY = "#6cb8f2";
       const world = Globe()(el)
         .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-night.jpg")
         .bumpImageUrl("https://unpkg.com/three-globe/example/img/earth-topology.png")
@@ -198,16 +214,26 @@
         .atmosphereAltitude(0.16)
         .pointsData(PLACES)
         .pointLat("lat").pointLng("lng")
-        .pointColor(() => AMBER)
+        .pointColor((d) => d.milestone ? SKY : AMBER)
         .pointAltitude(0.012)
-        .pointRadius(0.34)
-        .pointLabel((d) => "<div style='font-family:Manrope,sans-serif;font-weight:700'>" + d.city + "</div><div style='color:#c4bde0;font-size:0.8em'>" + d.state + "</div>")
+        .pointRadius((d) => d.milestone ? 0.5 : 0.34)
+        .pointLabel((d) => "<div style='font-family:Manrope,sans-serif;font-weight:700'>" + d.city + "</div><div style='color:#c4bde0;font-size:0.8em'>" + d.state + (d.milestone ? " · " + d.milestone : "") + "</div>")
         .ringsData(PLACES)
         .ringLat("lat").ringLng("lng")
-        .ringColor(() => (t) => "rgba(242,170,64," + (1 - t) + ")")
+        .ringColor((d) => (t) => d.milestone
+          ? "rgba(108,184,242," + (1 - t) + ")"
+          : "rgba(242,170,64," + (1 - t) + ")")
         .ringMaxRadius(2.6)
         .ringPropagationSpeed(1.5)
-        .ringRepeatPeriod(1500);
+        .ringRepeatPeriod(1500)
+        .arcsData(JOURNEY)
+        .arcColor(() => [SKY, AMBER])
+        .arcStroke(0.55)
+        .arcAltitudeAutoScale(0.45)
+        .arcDashLength(0.45)
+        .arcDashGap(0.25)
+        .arcDashAnimateTime(3200)
+        .arcLabel((d) => "<div style='font-family:Manrope,sans-serif;font-weight:700'>" + d.label + "</div>");
 
       function sizeGlobe() { world.width(el.clientWidth); world.height(el.clientHeight); }
       sizeGlobe();
