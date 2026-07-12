@@ -14,3 +14,7 @@
 - Added fit-to-content camera to the atlas graph: the viewBox now follows the visible constellation with a smooth zoom, so trails, Flow, and tall Timeline stacks fill the stage instead of clipping or huddling in a corner.
 - Moved Featured Trails below the graph and tightened hero spacing so the constellation is visible on the first screen; mobile nav collapsed to one swipeable row.
 - Rebuilt README quick-access lists as tables, added badges and a directory tree; moved `SUGGESTIONS.md` into `docs/`.
+
+## 2026-07-12
+
+- Added Urbana-Champaign (UIUC), Illinois to the travel map: new globe point, Illinois state card, and updated counters (18/50 states, 27 cities).
