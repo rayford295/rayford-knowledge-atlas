@@ -148,7 +148,7 @@
       { state: "Alaska", city: "Anchorage", lat: 61.2181, lng: -149.9003 },
       { state: "Alaska", city: "Fairbanks", lat: 64.8378, lng: -147.7164 },
       { state: "Minnesota", city: "Minneapolis", lat: 44.9778, lng: -93.2650 },
-      { state: "Illinois", city: "Urbana-Champaign (UIUC)", lat: 40.1020, lng: -88.2272 },
+      { state: "Illinois", city: "Urbana-Champaign (UIUC)", lat: 40.1020, lng: -88.2272, note: "I-GUIDE Summer School 2026 · Jul. 2026" },
       { state: "Illinois", city: "Chicago", lat: 41.8781, lng: -87.6298 },
       { country: "Canada", state: "British Columbia (Canada)", city: "Vancouver", lat: 49.2827, lng: -123.1207 },
       { country: "China", state: "Shaanxi (China)", city: "Xi'an", lat: 34.3416, lng: 108.9398, milestone: "Hometown" },
@@ -181,7 +181,7 @@
       ["Washington", "Seattle"],
       ["Alaska", "Anchorage, Fairbanks"],
       ["Minnesota", "Minneapolis"],
-      ["Illinois", "Urbana-Champaign (UIUC), Chicago"]
+      ["Illinois", "Urbana-Champaign (UIUC) · I-GUIDE Summer School, Chicago"]
     ];
     const ABROAD = [
       ["China", "Xi'an (hometown), Haikou (B.S.)"],
@@ -221,7 +221,7 @@
         .pointColor((d) => d.milestone ? SKY : AMBER)
         .pointAltitude(0.012)
         .pointRadius((d) => d.milestone ? 0.5 : 0.34)
-        .pointLabel((d) => "<div style='font-family:Manrope,sans-serif;font-weight:700'>" + d.city + "</div><div style='color:#c4bde0;font-size:0.8em'>" + d.state + (d.milestone ? " · " + d.milestone : "") + "</div>")
+        .pointLabel((d) => "<div style='font-family:Manrope,sans-serif;font-weight:700'>" + d.city + "</div><div style='color:#c4bde0;font-size:0.8em'>" + d.state + (d.milestone ? " · " + d.milestone : "") + "</div>" + (d.note ? "<div style='color:#f3c46b;font-size:0.72em;margin-top:0.2em'>" + d.note + "</div>" : ""))
         .ringsData(PLACES)
         .ringLat("lat").ringLng("lng")
         .ringColor((d) => (t) => d.milestone

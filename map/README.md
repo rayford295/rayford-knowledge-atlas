@@ -38,7 +38,7 @@ The page also lists every visited state and city for readers without WebGL.
 | Washington | Seattle |
 | Alaska | Anchorage, Fairbanks |
 | Minnesota | Minneapolis |
-| Illinois | Urbana-Champaign (UIUC), Chicago |
+| Illinois | Urbana-Champaign (UIUC) · I-GUIDE Summer School 2026, Chicago |
 | Shaanxi (China) | Xi'an (hometown) |
 | Hainan (China) | Haikou (B.S.) |
 | British Columbia (Canada) | Vancouver |
