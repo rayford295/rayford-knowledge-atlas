@@ -13,7 +13,7 @@ The page also lists every visited state and city for readers without WebGL.
 ## Coverage
 
 - **18 of 50 U.S. states**
-- **33 cities**
+- **34 cities**
 - **3 countries** (United States, Canada, and China)
 - **4 life milestones** (hometown, B.S., M.S., Ph.D.)
 
@@ -38,7 +38,7 @@ The page also lists every visited state and city for readers without WebGL.
 | Washington | Seattle |
 | Alaska | Anchorage, Fairbanks |
 | Minnesota | Minneapolis |
-| Illinois | Urbana-Champaign (UIUC) |
+| Illinois | Urbana-Champaign (UIUC), Chicago |
 | Shaanxi (China) | Xi'an (hometown) |
 | Hainan (China) | Haikou (B.S.) |
 | British Columbia (Canada) | Vancouver |
