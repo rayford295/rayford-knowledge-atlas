@@ -33,22 +33,22 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 ## 一键入口
 
-| 页面 | 内容 | 链接 |
-|---|---|---|
-| 🌌 Atlas | 交互式知识星图（首页） | [打开](https://rayford295.github.io/rayford-knowledge-atlas/) |
-| 📚 Readings | 公开安全的微信读书阅读输入 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/readings.html) |
-| 🧭 Advisor | 书架 vs 笔记的阅读智能分析 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html) |
-| 📄 Papers | 研究输出库 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/papers.html) |
-| 🗺️ Rooms | 地图、概念与对比房间 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html) |
-| 🌍 旅行地图 | 到访地点的 3D 地球仪 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/map/) |
-| 🍴 Fork 指南 | 做一个自己的 atlas | [打开](https://rayford295.github.io/rayford-knowledge-atlas/fork.html) |
+| 页面         | 内容                           | 链接                                                                       |
+| ------------ | ------------------------------ | -------------------------------------------------------------------------- |
+| 🌌 Atlas     | 交互式知识星图（首页）         | [打开](https://rayford295.github.io/rayford-knowledge-atlas/)              |
+| 📚 Readings  | 公开安全的微信读书阅读输入     | [打开](https://rayford295.github.io/rayford-knowledge-atlas/readings.html) |
+| 🧭 Advisor   | 书架 vs 笔记的阅读智能分析     | [打开](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)  |
+| 📄 Papers    | 研究输出库                     | [打开](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)   |
+| 🗺️ Rooms     | 地图、概念与对比房间           | [打开](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html)    |
+| 🌍 旅行地图  | 到访州的县级足迹图与 3D 地球仪 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/map/)          |
+| 🍴 Fork 指南 | 做一个自己的 atlas             | [打开](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)     |
 
-| 归档 | 内容 | 链接 |
-|---|---|---|
-| 公共写作 | 研究哲学、反思、师生情谊写作 | [浏览](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing) |
-| 已发表论文 | 公开 PDF，文件名以年份开头 | [浏览](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications) |
-| 博士旅程 | 里程碑、考核文件与反思 | [浏览](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey) |
-| 个人主页 | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) · [学术主页](https://rayford295.github.io/) | — |
+| 归档       | 内容                                                                                                                 | 链接                                                                                        |
+| ---------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| 公共写作   | 研究哲学、反思、师生情谊写作                                                                                         | [浏览](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing) |
+| 已发表论文 | 公开 PDF，文件名以年份开头                                                                                           | [浏览](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)        |
+| 博士旅程   | 里程碑、考核文件与反思                                                                                               | [浏览](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey)         |
+| 个人主页   | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) · [学术主页](https://rayford295.github.io/) | —                                                                                           |
 
 ## 前端体验
 
@@ -62,16 +62,16 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 ## 旅行地图
 
-一个交互式 3D 地球仪点亮了我去过的每一个地方——**美国 50 个州中的 18 个、33 座城市、3 个国家**（美国、加拿大和中国）。天蓝色的里程碑光点与动画弧线描绘了我的求学之旅：从家乡西安出发，到海口读本科，再跨越太平洋到洛杉矶读硕士，最后来到德州 College Station 攻读博士。拖动旋转、滚轮缩放，悬停发光的点即可查看城市名。
+默认的县级平面图点亮了所有到访州中的县——**美国 50 个州中的 18 个、34 座城市、3 个国家**（美国、加拿大和中国）。蓝色点位标出记录过的城市停留点；切换到 3D 地球仪后，则可以看到从西安、海口、洛杉矶到 College Station 的里程碑与动画旅程弧线。
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
-    <img src="./assets/travel-map-preview.gif" alt="旋转展示 Yifan Yang 到访过的地点的 3D 旅行地球仪，美国各城市被点亮" width="920">
+    <img src="./assets/travel-map-county-preview.png" alt="县级美国旅行地图：Yifan Yang 到访过的 18 个州以琥珀色点亮，城市停留点以蓝色标出" width="920">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/"><b>打开交互式地球仪 →</b></a>
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/"><b>打开交互式旅行地图 →</b></a>
 </p>
 
 ## 知识库结构

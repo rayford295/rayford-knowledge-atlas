@@ -1,12 +1,15 @@
 # Travel Map
 
-This folder holds the interactive travel map for Rayford Knowledge Atlas: a county-level U.S. map
-that lights up every county within a state Yifan Yang has visited. The live page is [`index.html`](./index.html),
+This folder holds the interactive travel map for Rayford Knowledge Atlas. It offers a county-level U.S.
+map that lights up every county within a state Yifan Yang has visited, alongside a 3D globe of the
+full journey. The live page is [`index.html`](./index.html),
 served at `https://rayford295.github.io/rayford-knowledge-atlas/map/` and linked from the site
 navigation as **Map**.
 
-Amber counties mark the 18 visited states, and blue points locate recorded U.S. city stops. Hover a
-county to see its county and state name. The page also lists every visited state and city.
+Use the view switcher to choose **County View** or **3D Globe**. Amber counties mark the 18 visited
+states, and blue points locate recorded U.S. city stops. The globe includes pulsing city rings and
+animated arcs linking Xi'an, Haikou, Los Angeles, and College Station. The page also lists every
+visited state and city.
 
 ## Coverage
 
@@ -45,6 +48,8 @@ county to see its county and state name. The page also lists every visited state
 
 - Rendered with [D3](https://d3js.org/) and [TopoJSON](https://github.com/topojson/topojson-client),
   using the Census-derived [`us-atlas`](https://github.com/topojson/us-atlas) county topology.
+- The globe view uses [Globe.GL](https://github.com/vasturiano/globe.gl), pinned to version 2.46.1
+  and loaded only when the visitor selects it.
 - City coordinates and the visited-state list are defined inline in `index.html` (the `PLACES` and
   `STATE_GROUPS` arrays). To add a place, append an entry to both, update the hero counters, and add
   its two-digit state FIPS code to `visitedStateIds` in the county-map script.

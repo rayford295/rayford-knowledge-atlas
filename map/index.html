@@ -46,6 +46,46 @@
         width: 100%;
         min-height: 470px;
       }
+      .travel-view {
+        display: none;
+      }
+      .travel-view.is-active {
+        display: block;
+      }
+      #globe {
+        width: 100%;
+        height: 68vh;
+        min-height: 470px;
+      }
+      #globe canvas {
+        display: block;
+        max-width: 100%;
+      }
+      .map-view-switcher {
+        display: inline-flex;
+        gap: 4px;
+        margin: 2px 0 12px;
+        padding: 4px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(7, 6, 18, 0.56);
+      }
+      .map-view-button {
+        border: 0;
+        border-radius: 999px;
+        padding: 8px 13px;
+        color: var(--muted);
+        background: transparent;
+        font:
+          700 0.78rem/1 "Manrope",
+          sans-serif;
+        cursor: pointer;
+      }
+      .map-view-button[aria-pressed="true"] {
+        color: #1c160b;
+        background: var(--amber);
+        box-shadow: 0 0 16px rgba(242, 170, 64, 0.32);
+      }
       .county {
         fill: rgba(116, 105, 148, 0.16);
         stroke: rgba(196, 189, 224, 0.13);
@@ -180,12 +220,11 @@
       <main class="guide-page rooms-page">
         <section class="guide-hero rooms-hero">
           <p class="kicker">Places I Have Been</p>
-          <h1>A county-level view of where I have traveled.</h1>
+          <h1>Two ways to see where I have traveled.</h1>
           <p>
-            This county-level map lights up every county in the U.S. states I have visited. County
-            boundaries make the travel footprint legible at a finer geographic scale, while blue
-            points mark the cities that anchor each trip. Hover a county to see its name and visit
-            status.
+            Switch between a county-level U.S. footprint and a 3D globe of the full journey. The
+            county view lights up every county in visited states, while the globe connects my life
+            milestones from Xi'an to College Station.
           </p>
           <div class="reading-metrics rooms-metrics" aria-label="Travel overview">
             <div><strong>18 / 50</strong><span>U.S. states</span></div>
@@ -197,14 +236,41 @@
 
         <section class="guide-panel">
           <div class="travel-map-wrap">
-            <svg
-              id="county-map"
-              role="img"
-              aria-label="County-level map of the United States with visited states lit up"
-            ></svg>
-            <div class="county-tooltip" id="county-tooltip" role="status"></div>
-            <div class="travel-globe-hint">
-              Amber: a state I have visited · Blue: a recorded city stop · Hover for county details
+            <div class="map-view-switcher" aria-label="Travel map view">
+              <button
+                class="map-view-button"
+                type="button"
+                data-map-view="county"
+                aria-pressed="true"
+              >
+                County View
+              </button>
+              <button
+                class="map-view-button"
+                type="button"
+                data-map-view="globe"
+                aria-pressed="false"
+              >
+                3D Globe
+              </button>
+            </div>
+            <div class="travel-view is-active" id="county-view">
+              <svg
+                id="county-map"
+                role="img"
+                aria-label="County-level map of the United States with visited states lit up"
+              ></svg>
+              <div class="county-tooltip" id="county-tooltip" role="status"></div>
+              <div class="travel-globe-hint">
+                Amber: a state I have visited · Blue: a recorded city stop · Hover for county
+                details
+              </div>
+            </div>
+            <div class="travel-view" id="globe-view">
+              <div id="globe" role="img" aria-label="Interactive 3D globe of visited cities"></div>
+              <div class="travel-globe-hint">
+                Drag to rotate · scroll to zoom · hover a point for the city
+              </div>
             </div>
           </div>
 
@@ -287,6 +353,30 @@
         }
       ];
 
+      const JOURNEY = [
+        {
+          startLat: 34.3416,
+          startLng: 108.9398,
+          endLat: 20.0444,
+          endLng: 110.1999,
+          label: "Xi'an → Haikou · B.S."
+        },
+        {
+          startLat: 20.0444,
+          startLng: 110.1999,
+          endLat: 34.0522,
+          endLng: -118.2437,
+          label: "Haikou → Los Angeles · M.S."
+        },
+        {
+          startLat: 34.0522,
+          startLng: -118.2437,
+          endLat: 30.628,
+          endLng: -96.3344,
+          label: "Los Angeles → College Station · Ph.D."
+        }
+      ];
+
       // ---- Visited states list (grouped) ----
       const STATE_GROUPS = [
         ["California", "Los Angeles (M.S.), San Diego, San Francisco, Irvine"],
@@ -329,6 +419,11 @@
     <!-- D3 and TopoJSON render the Census county geometry. Both versions are pinned. -->
     <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+    <script
+      src="https://unpkg.com/globe.gl@2.46.1/dist/globe.gl.min.js"
+      integrity="sha384-fS13P48RBFel+cPUp5960AhzvtEr64LerQ00neZuM+Hi/VDxxemdQnN7IcWPYvPb"
+      crossorigin="anonymous"
+    ></script>
     <script>
       (function initCountyMap() {
         const svg = d3.select("#county-map");
@@ -468,6 +563,99 @@
               .attr("font-size", 16)
               .text("The county map could not load. Please check your connection and reload.");
           });
+      })();
+    </script>
+
+    <script>
+      window.initTravelGlobe = function initTravelGlobe() {
+        const el = document.getElementById("globe");
+        if (!el || el.dataset.initialized === "true" || typeof Globe === "undefined") {
+          return;
+        }
+        const amber = "#f2aa40";
+        const sky = "#6cb8f2";
+        const world = Globe()(el)
+          .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-night.jpg")
+          .bumpImageUrl("https://unpkg.com/three-globe/example/img/earth-topology.png")
+          .backgroundColor("rgba(0,0,0,0)")
+          .showAtmosphere(true)
+          .atmosphereColor(sky)
+          .atmosphereAltitude(0.16)
+          .pointsData(PLACES)
+          .pointLat("lat")
+          .pointLng("lng")
+          .pointColor((place) => (place.milestone ? sky : amber))
+          .pointAltitude(0.012)
+          .pointRadius((place) => (place.milestone ? 0.5 : 0.34))
+          .pointLabel(
+            (place) =>
+              "<div style='font-family:Manrope,sans-serif;font-weight:700'>" +
+              place.city +
+              "</div><div style='color:#c4bde0;font-size:0.8em'>" +
+              place.state +
+              (place.milestone ? " · " + place.milestone : "") +
+              "</div>" +
+              (place.note
+                ? "<div style='color:#f3c46b;font-size:0.72em;margin-top:0.2em'>" +
+                  place.note +
+                  "</div>"
+                : "")
+          )
+          .ringsData(PLACES)
+          .ringLat("lat")
+          .ringLng("lng")
+          .ringColor(
+            (place) => (time) =>
+              place.milestone
+                ? "rgba(108,184,242," + (1 - time) + ")"
+                : "rgba(242,170,64," + (1 - time) + ")"
+          )
+          .ringMaxRadius(2.6)
+          .ringPropagationSpeed(1.5)
+          .ringRepeatPeriod(1500)
+          .arcsData(JOURNEY)
+          .arcColor(() => [sky, amber])
+          .arcStroke(0.55)
+          .arcAltitudeAutoScale(0.45)
+          .arcDashLength(0.45)
+          .arcDashGap(0.25)
+          .arcDashAnimateTime(3200)
+          .arcLabel(
+            (journey) =>
+              "<div style='font-family:Manrope,sans-serif;font-weight:700'>" +
+              journey.label +
+              "</div>"
+          );
+
+        const sizeGlobe = () => {
+          world.width(el.clientWidth);
+          world.height(el.clientHeight);
+        };
+        sizeGlobe();
+        requestAnimationFrame(sizeGlobe);
+        window.addEventListener("resize", sizeGlobe);
+        world.controls().autoRotate = true;
+        world.controls().autoRotateSpeed = 0.55;
+        world.controls().enableZoom = true;
+        world.pointOfView({ lat: 38, lng: -100, altitude: 1.9 }, 0);
+        el.dataset.initialized = "true";
+      };
+
+      (function initMapViewSwitcher() {
+        const buttons = document.querySelectorAll("[data-map-view]");
+        const countyView = document.getElementById("county-view");
+        const globeView = document.getElementById("globe-view");
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const showGlobe = button.dataset.mapView === "globe";
+            countyView.classList.toggle("is-active", !showGlobe);
+            globeView.classList.toggle("is-active", showGlobe);
+            buttons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+            if (showGlobe) {
+              window.initTravelGlobe();
+            }
+          });
+        });
       })();
     </script>
 
