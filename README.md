@@ -33,22 +33,22 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 ## One-Click Access
 
-| Page | What it is | Link |
-|---|---|---|
-| 🌌 Atlas | Interactive knowledge constellation (home) | [Open](https://rayford295.github.io/rayford-knowledge-atlas/) |
-| 📚 Readings | WeRead reading inputs, made public-safe | [Open](https://rayford295.github.io/rayford-knowledge-atlas/readings.html) |
-| 🧭 Advisor | Shelf-vs-notes reading intelligence | [Open](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html) |
-| 📄 Papers | Research output library | [Open](https://rayford295.github.io/rayford-knowledge-atlas/papers.html) |
-| 🗺️ Rooms | Maps, concepts, and comparison rooms | [Open](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html) |
-| 🌍 Travel Map | 3D globe of visited places | [Open](https://rayford295.github.io/rayford-knowledge-atlas/map/) |
-| 🍴 Fork Guide | Make your own atlas | [Open](https://rayford295.github.io/rayford-knowledge-atlas/fork.html) |
+| Page          | What it is                                      | Link                                                                       |
+| ------------- | ----------------------------------------------- | -------------------------------------------------------------------------- |
+| 🌌 Atlas      | Interactive knowledge constellation (home)      | [Open](https://rayford295.github.io/rayford-knowledge-atlas/)              |
+| 📚 Readings   | WeRead reading inputs, made public-safe         | [Open](https://rayford295.github.io/rayford-knowledge-atlas/readings.html) |
+| 🧭 Advisor    | Shelf-vs-notes reading intelligence             | [Open](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)  |
+| 📄 Papers     | Research output library                         | [Open](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)   |
+| 🗺️ Rooms      | Maps, concepts, and comparison rooms            | [Open](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html)    |
+| 🌍 Travel Map | County footprint and 3D globe of visited places | [Open](https://rayford295.github.io/rayford-knowledge-atlas/map/)          |
+| 🍴 Fork Guide | Make your own atlas                             | [Open](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)     |
 
-| Archive | Contents | Link |
-|---|---|---|
-| Public writing | Research philosophy, reflection, mentorship | [Browse](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing) |
-| Publications | Published PDFs, filenames start with year | [Browse](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications) |
-| Ph.D. journey | Doctoral milestones and reflections | [Browse](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey) |
-| Profiles | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) · [Main homepage](https://rayford295.github.io/) | — |
+| Archive        | Contents                                                                                                                  | Link                                                                                          |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| Public writing | Research philosophy, reflection, mentorship                                                                               | [Browse](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/wiki/public-writing) |
+| Publications   | Published PDFs, filenames start with year                                                                                 | [Browse](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/publications)        |
+| Ph.D. journey  | Doctoral milestones and reflections                                                                                       | [Browse](https://github.com/rayford295/rayford-knowledge-atlas/tree/main/phd-journey)         |
+| Profiles       | [Google Scholar](https://scholar.google.com/citations?user=B-fiSHwAAAAJ) · [Main homepage](https://rayford295.github.io/) | —                                                                                             |
 
 ## Frontend Experience
 
@@ -62,16 +62,16 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 ## Travel Map
 
-An interactive 3D globe lights up every place I have visited — **18 of 50 U.S. states, 33 cities, and 3 countries** (United States, Canada, and China). Sky-blue milestone points and animated arcs trace my journey from my hometown Xi'an to Haikou (B.S.), Los Angeles (M.S.), and College Station (Ph.D.). Drag to rotate, scroll to zoom, and hover a glowing point to read the city.
+The default county-level view lights up every county within a visited state — **18 of 50 U.S. states, 34 cities, and 3 countries** (United States, Canada, and China). Blue points mark recorded city stops. Switch to the 3D globe for the full journey, including sky-blue milestones and animated arcs from Xi'an to Haikou (B.S.), Los Angeles (M.S.), and College Station (Ph.D.).
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
-    <img src="./assets/travel-map-preview.gif" alt="Animated 3D travel globe rotating through the places Yifan Yang has visited, with U.S. cities lit up" width="920">
+    <img src="./assets/travel-map-county-preview.png" alt="County-level U.S. travel map with the 18 states Yifan Yang has visited lit up in amber and city stops in blue" width="920">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/"><b>Open the interactive globe →</b></a>
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/"><b>Open the interactive travel map →</b></a>
 </p>
 
 ## Knowledge Architecture
