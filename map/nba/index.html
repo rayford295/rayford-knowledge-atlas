@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Map | Rayford Knowledge Atlas</title>
+    <meta
+      name="description"
+      content="A personal map of NBA teams watched and home courts attended by Yifan Yang."
+    />
+    <link rel="canonical" href="https://rayford295.github.io/rayford-knowledge-atlas/map/nba/" />
+    <meta property="og:title" content="NBA Map | Rayford Knowledge Atlas" />
+    <meta property="og:description" content="Thirteen NBA teams watched across two conferences and six home-court experiences." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../../styles.css?v=31da978210" />
+    <style>
+      .nba-hero {
+        position: relative;
+        overflow: hidden;
+      }
+      .nba-hero::after {
+        content: "NBA";
+        position: absolute;
+        right: -0.04em;
+        bottom: -0.42em;
+        color: rgba(108, 184, 242, 0.07);
+        font: 800 clamp(7rem, 23vw, 18rem)/1 "Fraunces", serif;
+        letter-spacing: -0.1em;
+        pointer-events: none;
+      }
+      .nba-hero > * {
+        position: relative;
+        z-index: 1;
+      }
+      .nba-map-wrap {
+        position: relative;
+        margin-top: 18px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background:
+          radial-gradient(80% 100% at 50% 8%, rgba(108, 184, 242, 0.13), transparent 67%),
+          rgba(7, 6, 18, 0.62);
+        box-shadow: var(--shadow);
+      }
+      #nba-map {
+        display: block;
+        width: 100%;
+        min-height: 510px;
+      }
+      .nba-state {
+        fill: rgba(158, 148, 184, 0.11);
+        stroke: rgba(224, 217, 245, 0.26);
+        stroke-width: 0.7;
+      }
+      .nba-state-boundary {
+        fill: none;
+        stroke: rgba(248, 244, 255, 0.34);
+        stroke-width: 0.7;
+        pointer-events: none;
+      }
+      .nba-point {
+        cursor: pointer;
+        transition: opacity 150ms ease;
+      }
+      .nba-point.is-muted {
+        opacity: 0.16;
+        pointer-events: none;
+      }
+      .nba-point-ring {
+        fill: none;
+        stroke: #c4ffea;
+        stroke-width: 2.2;
+        filter: drop-shadow(0 0 5px rgba(196, 255, 234, 0.75));
+      }
+      .nba-point-core {
+        stroke: #f7f3ff;
+        stroke-width: 1.25;
+        filter: drop-shadow(0 0 5px rgba(8, 7, 20, 0.85));
+      }
+      .nba-point-label {
+        fill: #f6f2ff;
+        font: 800 11px/1 "Manrope", sans-serif;
+        paint-order: stroke;
+        stroke: rgba(8, 7, 20, 0.94);
+        stroke-width: 3px;
+        stroke-linejoin: round;
+        pointer-events: none;
+      }
+      .map-tooltip {
+        position: absolute;
+        z-index: 3;
+        max-width: 242px;
+        padding: 11px 12px;
+        color: #f7f3ff;
+        background: rgba(11, 9, 25, 0.96);
+        border: 1px solid rgba(255, 212, 106, 0.62);
+        border-radius: 12px;
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
+        font: 600 0.78rem/1.45 "Manrope", sans-serif;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(13px, -18px);
+        transition: opacity 100ms ease;
+      }
+      .map-tooltip strong {
+        display: block;
+        margin-bottom: 3px;
+        font-size: 0.9rem;
+      }
+      .map-tooltip .live-copy {
+        display: inline-block;
+        margin-top: 7px;
+        color: #c4ffea;
+        font-size: 0.71rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .nba-map-note {
+        position: absolute;
+        left: 16px;
+        bottom: 14px;
+        z-index: 2;
+        max-width: calc(100% - 32px);
+        padding: 6px 11px;
+        color: var(--muted);
+        background: rgba(5, 4, 13, 0.64);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.74rem;
+      }
+      .nba-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 18px 0 12px;
+      }
+      .nba-filter {
+        padding: 8px 12px;
+        color: var(--muted);
+        background: rgba(7, 6, 18, 0.55);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        font: 800 0.75rem/1 "Manrope", sans-serif;
+        cursor: pointer;
+      }
+      .nba-filter[aria-pressed="true"] {
+        color: #1c160b;
+        background: var(--amber);
+        border-color: var(--amber);
+      }
+      .nba-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin: 0 0 5px;
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+      .nba-legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .nba-legend i {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+      }
+      .nba-legend .west { background: var(--amber); }
+      .nba-legend .east { background: var(--sky); }
+      .nba-legend .live { background: transparent; border: 2px solid #c4ffea; }
+      .nba-records {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 20px;
+      }
+      .conference-panel {
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--panel);
+      }
+      .conference-panel h2 {
+        margin: 0 0 5px;
+        font: 800 1.15rem/1.2 "Fraunces", serif;
+        color: var(--ink);
+      }
+      .conference-panel > p {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .team-list {
+        display: grid;
+        gap: 8px;
+      }
+      .team-card {
+        display: grid;
+        grid-template-columns: 8px minmax(0, 1fr) auto;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 11px;
+        border: 1px solid rgba(205, 196, 232, 0.12);
+        border-radius: 11px;
+        background: rgba(7, 6, 18, 0.34);
+      }
+      .team-card .team-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+      .team-card.west .team-dot { background: var(--amber); }
+      .team-card.east .team-dot { background: var(--sky); }
+      .team-card strong {
+        display: block;
+        color: var(--ink);
+        font-size: 0.84rem;
+      }
+      .team-card small {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 0.72rem;
+      }
+      .team-card .live-badge {
+        padding: 4px 6px;
+        color: #c4ffea;
+        border: 1px solid rgba(196, 255, 234, 0.46);
+        border-radius: 999px;
+        background: rgba(196, 255, 234, 0.07);
+        font-size: 0.61rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .nba-source-note {
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.55;
+      }
+      .nba-source-note a { color: var(--sky); }
+      @media (max-width: 700px) {
+        #nba-map { min-height: 410px; }
+        .nba-records { grid-template-columns: 1fr; }
+        .nba-map-note { border-radius: 12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+    <div class="app-shell guide-shell">
+      <header class="topbar">
+        <a class="brand" href="../../index.html" aria-label="Rayford Knowledge Atlas">
+          <span class="brand-mark">RK</span>
+          <span>
+            <strong>Rayford Knowledge Atlas</strong>
+            <small>Places, teams, and courts along the way</small>
+          </span>
+        </a>
+        <nav class="top-links guide-links" aria-label="Primary links">
+          <a href="../../index.html">Atlas</a>
+          <a href="../../readings.html">Readings</a>
+          <a href="../../advisor.html">Advisor</a>
+          <a href="../../papers.html">Papers</a>
+          <a href="../../rooms.html">Rooms</a>
+          <a href="../">Travel Map</a>
+          <a href="./" aria-current="page">NBA Map</a>
+          <a href="../../index.html#graph">Return to Graph</a>
+          <a href="https://github.com/rayford295/rayford-knowledge-atlas" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </header>
+
+      <main class="guide-page rooms-page">
+        <section class="guide-hero rooms-hero nba-hero">
+          <p class="kicker">NBA Footprint</p>
+          <h1>A personal record of teams watched and home courts experienced.</h1>
+          <p>
+            Thirteen teams across both conferences, from games followed on screen to six home-team
+            experiences witnessed in the arena.
+          </p>
+          <div class="reading-metrics rooms-metrics" aria-label="NBA viewing overview">
+            <div><strong id="team-total">13</strong><span>teams watched</span></div>
+            <div><strong id="west-total">9</strong><span>Western Conference</span></div>
+            <div><strong id="east-total">4</strong><span>Eastern Conference</span></div>
+            <div><strong id="live-total">6</strong><span>home courts attended</span></div>
+          </div>
+        </section>
+
+        <section class="guide-panel">
+          <p class="kicker">Team Locations</p>
+          <div class="nba-controls" aria-label="Filter NBA teams">
+            <button class="nba-filter" type="button" data-filter="all" aria-pressed="true">All Teams</button>
+            <button class="nba-filter" type="button" data-filter="west" aria-pressed="false">Western Conference</button>
+            <button class="nba-filter" type="button" data-filter="east" aria-pressed="false">Eastern Conference</button>
+            <button class="nba-filter" type="button" data-filter="live" aria-pressed="false">Home Courts Attended</button>
+          </div>
+          <div class="nba-legend" aria-label="Map legend">
+            <span><i class="west"></i>Western Conference</span>
+            <span><i class="east"></i>Eastern Conference</span>
+            <span><i class="live"></i>Home court attended</span>
+          </div>
+          <div class="nba-map-wrap">
+            <svg id="nba-map" role="img" aria-label="Map of NBA teams watched and home courts attended"></svg>
+            <div class="map-tooltip" id="map-tooltip" role="status"></div>
+            <div class="nba-map-note">Select a point to see the team, its city, and the current home arena.</div>
+          </div>
+
+          <div class="nba-records" aria-label="NBA teams watched by conference">
+            <section class="conference-panel">
+              <h2>Western Conference</h2>
+              <p><span id="west-list-total">9</span> teams watched</p>
+              <div class="team-list" id="west-list"></div>
+            </section>
+            <section class="conference-panel">
+              <h2>Eastern Conference</h2>
+              <p><span id="east-list-total">4</span> teams watched</p>
+              <div class="team-list" id="east-list"></div>
+            </section>
+          </div>
+          <p class="nba-source-note">
+            A ring records an in-person home-court experience. Arena names identify each team’s
+            current home venue; they do not try to reconstruct historical naming or venue changes.
+            Current venue references follow the <a href="https://www.nba.com/news/all-30-nba-arenas-by-team" target="_blank" rel="noopener">NBA arena directory</a>.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+    <script>
+      const TEAM_DATA = [
+        { name: "Los Angeles Lakers", short: "LAL", conference: "west", city: "Los Angeles, CA", arena: "Crypto.com Arena", lat: 34.043, lng: -118.267, live: true },
+        { name: "Minnesota Timberwolves", short: "MIN", conference: "west", city: "Minneapolis, MN", arena: "Target Center", lat: 44.9795, lng: -93.276, live: false },
+        { name: "LA Clippers", short: "LAC", conference: "west", city: "Inglewood, CA", arena: "Intuit Dome", lat: 33.953, lng: -118.339, live: true },
+        { name: "Utah Jazz", short: "UTA", conference: "west", city: "Salt Lake City, UT", arena: "Delta Center", lat: 40.7683, lng: -111.9011, live: false },
+        { name: "Oklahoma City Thunder", short: "OKC", conference: "west", city: "Oklahoma City, OK", arena: "Paycom Center", lat: 35.4634, lng: -97.5151, live: false },
+        { name: "Golden State Warriors", short: "GSW", conference: "west", city: "San Francisco, CA", arena: "Chase Center", lat: 37.768, lng: -122.3877, live: true },
+        { name: "Phoenix Suns", short: "PHX", conference: "west", city: "Phoenix, AZ", arena: "Footprint Center", lat: 33.4459, lng: -112.0712, live: false },
+        { name: "Denver Nuggets", short: "DEN", conference: "west", city: "Denver, CO", arena: "Ball Arena", lat: 39.7487, lng: -105.0077, live: false },
+        { name: "Houston Rockets", short: "HOU", conference: "west", city: "Houston, TX", arena: "Toyota Center", lat: 29.7508, lng: -95.3621, live: true },
+        { name: "Philadelphia 76ers", short: "PHI", conference: "east", city: "Philadelphia, PA", arena: "Xfinity Mobile Arena", lat: 39.9012, lng: -75.1719, live: true },
+        { name: "Boston Celtics", short: "BOS", conference: "east", city: "Boston, MA", arena: "TD Garden", lat: 42.3662, lng: -71.0621, live: false },
+        { name: "Miami Heat", short: "MIA", conference: "east", city: "Miami, FL", arena: "Kaseya Center", lat: 25.7814, lng: -80.1881, live: true },
+        { name: "Toronto Raptors", short: "TOR", conference: "east", city: "Toronto, ON", arena: "Scotiabank Arena", lat: 43.6435, lng: -79.3791, live: false }
+      ];
+
+      const colors = { west: "#f2aa40", east: "#6cb8f2" };
+      const counts = (conference) => TEAM_DATA.filter((team) => team.conference === conference).length;
+      document.getElementById("team-total").textContent = TEAM_DATA.length;
+      document.getElementById("west-total").textContent = counts("west");
+      document.getElementById("east-total").textContent = counts("east");
+      document.getElementById("live-total").textContent = TEAM_DATA.filter((team) => team.live).length;
+      document.getElementById("west-list-total").textContent = counts("west");
+      document.getElementById("east-list-total").textContent = counts("east");
+
+      (function renderTeamLists() {
+        const makeCard = (team) => {
+          const card = document.createElement("article");
+          card.className = "team-card " + team.conference;
+          card.innerHTML =
+            '<span class="team-dot" aria-hidden="true"></span>' +
+            "<div><strong>" + team.name + "</strong><small>" + team.city + " · " + team.arena + "</small></div>" +
+            (team.live ? '<span class="live-badge">Attended</span>' : "");
+          return card;
+        };
+        TEAM_DATA.forEach((team) => {
+          document.getElementById(team.conference + "-list").appendChild(makeCard(team));
+        });
+      })();
+
+      (function initMap() {
+        const svg = d3.select("#nba-map");
+        const tooltip = d3.select("#map-tooltip");
+        const wrap = document.querySelector(".nba-map-wrap");
+        let currentFilter = "all";
+        let selectedTeam = null;
+        let mapGroups;
+
+        const width = () => Math.max(320, wrap.clientWidth);
+        const height = () => Math.max(410, Math.min(590, width() * 0.57));
+        const projection = () => d3.geoAlbersUsa().translate([width() / 2, height() / 2]).scale(width() * 1.17);
+        const matchesFilter = (team) => currentFilter === "all" || team.conference === currentFilter || (currentFilter === "live" && team.live);
+
+        function positionTooltip(event) {
+          const rect = wrap.getBoundingClientRect();
+          tooltip.style("left", event.clientX - rect.left + "px").style("top", event.clientY - rect.top + "px");
+        }
+        function showTooltip(event, team) {
+          selectedTeam = team;
+          tooltip
+            .html(
+              "<strong>" + team.name + "</strong>" +
+                team.city + "<br />" +
+                "Current home: " + team.arena +
+                (team.live ? '<span class="live-copy">Home court attended</span>' : "")
+            )
+            .style("opacity", 1);
+          positionTooltip(event);
+        }
+        function hideTooltip() {
+          if (!selectedTeam) tooltip.style("opacity", 0);
+        }
+        function updatePoints() {
+          mapGroups.classed("is-muted", (team) => !matchesFilter(team));
+        }
+        function draw(us) {
+          const w = width();
+          const h = height();
+          const proj = projection();
+          const path = d3.geoPath(proj);
+          const nation = topojson.feature(us, us.objects.nation);
+          const states = topojson.feature(us, us.objects.states);
+          svg.attr("viewBox", "0 0 " + w + " " + h).attr("height", h).selectAll("*").remove();
+          svg.append("path").datum(nation).attr("class", "nba-state").attr("d", path);
+          svg.append("path").datum(topojson.mesh(us, us.objects.states, (a, b) => a !== b)).attr("class", "nba-state-boundary").attr("d", path);
+          mapGroups = svg
+            .append("g")
+            .selectAll("g")
+            .data(TEAM_DATA)
+            .join("g")
+            .attr("class", "nba-point")
+            .attr("transform", (team) => {
+              const point = proj([team.lng, team.lat]);
+              return point ? "translate(" + point[0] + "," + point[1] + ")" : "translate(-100,-100)";
+            })
+            .on("pointerenter", function (event, team) { showTooltip(event, team); })
+            .on("pointermove", function (event) { positionTooltip(event); })
+            .on("pointerleave", function () { selectedTeam = null; hideTooltip(); })
+            .on("click", function (event, team) { showTooltip(event, team); });
+          mapGroups.filter((team) => team.live).append("circle").attr("class", "nba-point-ring").attr("r", 10);
+          mapGroups.append("circle").attr("class", "nba-point-core").attr("r", 6.2).attr("fill", (team) => colors[team.conference]);
+          mapGroups.append("text").attr("class", "nba-point-label").attr("x", 10).attr("y", 4).text((team) => team.short);
+          updatePoints();
+        }
+        d3
+          .json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json")
+          .then((us) => {
+            draw(us);
+            window.addEventListener("resize", () => draw(us));
+          })
+          .catch(() => {
+            svg.attr("viewBox", "0 0 800 420").append("text").attr("x", 400).attr("y", 210).attr("text-anchor", "middle").attr("fill", "#f6f2ff").text("The NBA map could not load. Please check your connection and reload.");
+          });
+        document.querySelectorAll(".nba-filter").forEach((button) => {
+          button.addEventListener("click", () => {
+            currentFilter = button.dataset.filter;
+            document.querySelectorAll(".nba-filter").forEach((item) => item.setAttribute("aria-pressed", item === button ? "true" : "false"));
+            if (mapGroups) updatePoints();
+          });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        const starfield = document.getElementById("starfield");
+        if (!starfield) return;
+        const context = starfield.getContext("2d");
+        let width = 0;
+        let height = 0;
+        let stars = [];
+        function resize() {
+          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          width = window.innerWidth;
+          height = window.innerHeight;
+          starfield.width = Math.floor(width * ratio);
+          starfield.height = Math.floor(height * ratio);
+          starfield.style.width = width + "px";
+          starfield.style.height = height + "px";
+          context.setTransform(ratio, 0, 0, ratio, 0, 0);
+          stars = Array.from({ length: Math.min(180, Math.floor((width * height) / 6200)) }, (_, index) => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: index % 9 === 0 ? 1.6 : Math.random() * 1.1 + 0.3,
+            alpha: Math.random() * 0.5 + 0.16,
+            tint: index % 7 === 0 ? "255, 212, 106" : "186, 255, 232"
+          }));
+        }
+        function draw() {
+          context.clearRect(0, 0, width, height);
+          stars.forEach((star) => {
+            context.beginPath();
+            context.fillStyle = "rgba(" + star.tint + ", " + star.alpha + ")";
+            context.shadowColor = "rgba(" + star.tint + ", " + star.alpha + ")";
+            context.shadowBlur = star.radius * 7;
+            context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+            context.fill();
+          });
+        }
+        resize();
+        draw();
+        window.addEventListener("resize", () => {
+          resize();
+          draw();
+        });
+      })();
+    </script>
+  </body>
+</html>
