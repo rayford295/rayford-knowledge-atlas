@@ -6,6 +6,10 @@ full journey. The live page is [`index.html`](./index.html),
 served at `https://rayford295.github.io/rayford-knowledge-atlas/map/` and linked from the site
 navigation as **Map**.
 
+The [`nba/`](./nba/) subdirectory contains a second map: a personal NBA viewing record of teams
+watched and home courts attended. It is served at
+`https://rayford295.github.io/rayford-knowledge-atlas/map/nba/` and is linked from the travel map.
+
 Use the view switcher to choose **County View** or **3D Globe**. Amber counties mark the 18 visited
 states, and blue points locate recorded U.S. city stops. The globe includes pulsing city rings and
 animated arcs linking Xi'an, Haikou, Los Angeles, and College Station. The page also lists every
