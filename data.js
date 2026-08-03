@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-07-27T13:27:17.465Z",
+  "generatedAt": "2026-08-03T12:34:45.137Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -2316,17 +2316,17 @@ window.researchMapData = {
       "connections": [],
       "repository": null,
       "metrics": {
-        "citations": 19
+        "citations": 21
       },
       "role": "collaborative output",
-      "metricLabel": "19 citations",
+      "metricLabel": "21 citations",
       "wikiPath": null,
       "position": {
         "x": 720,
         "y": 96
       },
       "color": "#64c7ff",
-      "radius": 34.46135746449762,
+      "radius": 34.998181667894016,
       "displayKind": "Research Output"
     },
     {

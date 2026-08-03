@@ -15,12 +15,12 @@
   ],
   "metrics": {
     "citations": {
-      "all": 382,
-      "since2019": 369
+      "all": 393,
+      "since2019": 379
     },
     "hIndex": {
-      "all": 6,
-      "since2019": 6
+      "all": 7,
+      "since2019": 7
     },
     "i10Index": {
       "all": 5,
@@ -39,28 +39,28 @@
       "title": "COVID-19 Public Opinion and Emotion Monitoring System Based on Time Series Thermal New Word Mining",
       "authors": "Y Zhang, J Chen, Y Yang, H Li, X Zheng, X Chen, B Liu, T Ren, N Xiong",
       "venue": "Computers, Materials & Continua 64 (3), 1415-1434 , 2020",
-      "citations": 28,
+      "citations": 29,
       "year": 2020
     },
     {
       "title": "GeoLocator: A location-integrated large multimodal model (LMM) for inferring geo-privacy",
       "authors": "Y Yang, S Wang, D Li, S Sun, Q Wu",
       "venue": "Applied Sciences 14 (16), 7091 , 2024",
-      "citations": 24,
+      "citations": 27,
       "year": 2024
     },
     {
       "title": "Surveying attitudinal alignment between large language models vs. humans towards 17 sustainable development goals",
       "authors": "Q Wu, Y Xu, T Xiao, Y Xiao, Y Li, T Wang, Y Zhang, S Zhong, Y Zhang, ...",
       "venue": "arXiv preprint arXiv:2404.13885 , 2024",
-      "citations": 19,
+      "citations": 21,
       "year": 2024
     },
     {
       "title": "Integrating spatiotemporal vision transformer into digital twins for high-resolution heat stress forecasting in campus environments",
       "authors": "W Gong, X Ye, K Wu, S Jamonnak, W Zhang, Y Yang, X Huang",
       "venue": "Journal of Planning Education and Research, 0739456X251391121 , 2025",
-      "citations": 10,
+      "citations": 12,
       "year": 2025
     },
     {
@@ -74,14 +74,14 @@
       "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",
       "authors": "Z Li, H Li, Y Yang, S Wang, Y Zhu",
       "venue": "International Journal of Applied Earth Observation and Geoinformation , 2026",
-      "citations": 5,
+      "citations": 7,
       "year": 2026
     },
     {
       "title": "Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents",
       "authors": "X Ye, W Gong, Y Yang, L Zou, Z Tu, X Huang, Z Li, H Ning, L Wu",
       "venue": "Urban Informatics 5 (1), 9 , 2026",
-      "citations": 5,
+      "citations": 6,
       "year": 2026
     },
     {
@@ -92,9 +92,9 @@
       "year": 2026
     },
     {
-      "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
-      "authors": "Y Wang, H Yin, Y Yang, C Zhao, S Wang",
-      "venue": "Journal of Transport Geography 128, 104387 , 2025",
+      "title": "Perceiving Multidimensional Disaster Damages from Street-View Images Using Visual-Language Models",
+      "authors": "Y Yang, L Zou",
+      "venue": "Abstracts of the ICA 10, 310 , 2025",
       "citations": 2,
       "year": 2025
     },
@@ -106,9 +106,9 @@
       "year": 2026
     },
     {
-      "title": "Perceiving Multidimensional Disaster Damages from Street-View Images Using Visual-Language Models",
-      "authors": "Y Yang, L Zou",
-      "venue": "Abstracts of the ICA 10, 310 , 2025",
+      "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
+      "authors": "Y Wang, H Yin, Y Yang, C Zhao, S Wang",
+      "venue": "Journal of Transport Geography 128, 104387 , 2025",
       "citations": 1,
       "year": 2025
     },
@@ -127,7 +127,7 @@
       "year": 2026
     },
     {
-      "title": "The Boiling Frog Effect: Global Warming Delays Emotional Impacts of Air Pollution in Warmer Climates",
+      "title": "The boiling frog effect: Global warming delays emotional impacts of air pollution in warmer climates",
       "authors": "S Wang, H Liu, CYH Wu, X Huang, R Wang, Y Yang, J Corcoran, S Lai, ...",
       "venue": "Journal of Hazardous Materials, 142440 , 2026",
       "citations": 0,
@@ -170,5 +170,5 @@
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-07-06T12:57:38.030Z"
+  "fetchedAt": "2026-08-03T12:34:44.966Z"
 }
