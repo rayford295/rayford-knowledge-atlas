@@ -62,7 +62,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 ## Travel Map
 
-The default county-level view lights up every county within a visited state — **18 of 50 U.S. states, 34 cities, and 3 countries** (United States, Canada, and China). Blue points mark recorded city stops. Switch to the 3D globe for the full journey, including sky-blue milestones and animated arcs from Xi'an to Haikou (B.S.), Los Angeles (M.S.), and College Station (Ph.D.).
+The default county-level view lights up every county within a visited state — **19 of 50 U.S. states plus Washington, D.C., 36 cities, and 3 countries** (United States, Canada, and China). Blue points mark recorded city stops. Switch to the 3D globe for the full journey, including sky-blue milestones and animated arcs from Xi'an to Haikou (B.S.), Los Angeles (M.S.), and College Station (Ph.D.).
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">

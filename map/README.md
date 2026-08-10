@@ -10,15 +10,15 @@ The [`nba/`](./nba/) subdirectory contains a second map: a personal NBA viewing 
 watched and home courts attended. It is served at
 `https://rayford295.github.io/rayford-knowledge-atlas/map/nba/` and is linked from the travel map.
 
-Use the view switcher to choose **County View** or **3D Globe**. Amber counties mark the 18 visited
+Use the view switcher to choose **County View** or **3D Globe**. Amber counties mark the 19 visited
 states plus Washington, D.C., and blue points locate recorded U.S. city stops. The globe includes pulsing city rings and
 animated arcs linking Xi'an, Haikou, Los Angeles, and College Station. The page also lists every
 visited state and city.
 
 ## Coverage
 
-- **18 of 50 U.S. states**, plus Washington, D.C.
-- **35 cities**
+- **19 of 50 U.S. states**, plus Washington, D.C.
+- **36 cities**
 - **3 countries** (United States, Canada, and China)
 - **4 life milestones** (hometown, B.S., M.S., Ph.D.)
 
@@ -45,6 +45,7 @@ visited state and city.
 | Minnesota                 | Minneapolis                                                   |
 | Illinois                  | Urbana-Champaign (UIUC) · I-GUIDE Summer School 2026, Chicago |
 | District of Columbia      | Washington, D.C. · IGARSS 2026                                |
+| Virginia                  | Arlington · Phở 75                                            |
 | Shaanxi (China)           | Xi'an (hometown)                                              |
 | Hainan (China)            | Haikou (B.S.)                                                 |
 | British Columbia (Canada) | Vancouver                                                     |
