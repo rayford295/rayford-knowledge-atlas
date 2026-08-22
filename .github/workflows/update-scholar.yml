@@ -68,12 +68,30 @@ jobs:
         if: steps.decide.outputs.attempt == 'true'
         run: npm run scholar:update
 
-      - name: Rebuild public graph data
+      # `npm run build` always rewrites data.js's generatedAt stamp and the
+      # cache-busting hash in every HTML file, so rebuilding after a failed
+      # fetch produces a commit whose only content is a new timestamp. While
+      # the snapshot is stuck that would be four junk commits a day from the
+      # catch-up schedule, which buries the real history. Rebuild only when the
+      # snapshot actually changed.
+      - name: Check whether the snapshot changed
+        id: changed
         if: steps.decide.outputs.attempt == 'true'
+        run: |
+          if git diff --quiet -- raw/scholar/google-scholar.json; then
+            echo "snapshot=false" >> "$GITHUB_OUTPUT"
+            echo "Snapshot unchanged; skipping rebuild and commit."
+          else
+            echo "snapshot=true" >> "$GITHUB_OUTPUT"
+            echo "Snapshot changed; rebuilding graph data."
+          fi
+
+      - name: Rebuild public graph data
+        if: steps.changed.outputs.snapshot == 'true'
         run: npm run build
 
       - name: Verify graph data
-        if: steps.decide.outputs.attempt == 'true'
+        if: steps.changed.outputs.snapshot == 'true'
         run: |
           node - <<'NODE'
           const fs = require("fs");
@@ -88,7 +106,7 @@ jobs:
           NODE
 
       - name: Commit updated snapshot and graph
-        if: steps.decide.outputs.attempt == 'true'
+        if: steps.changed.outputs.snapshot == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update Scholar snapshot and graph data"

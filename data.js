@@ -1,15 +1,21 @@
 window.researchMapData = {
-  "generatedAt": "2026-08-22T23:10:00.145Z",
+  "generatedAt": "2026-08-22T23:21:20.042Z",
   "themes": [
     "All",
     "AI Alignment",
     "AI Futures",
     "AI Systems",
+    "Accountable GeoAI",
+    "Agent Harness Engineering",
     "Applied GeoAI Tooling",
     "Biography and Judgment",
     "Climate Risk",
     "Computer Vision Segmentation",
+    "Cross-View Imagery",
+    "Data Quality and Bias",
     "Disaster Assessment",
+    "Disaster Damage Assessment",
+    "Disaster Resilience",
     "Earth Observation",
     "Evidence and Power",
     "Federated Learning",
@@ -23,10 +29,12 @@ window.researchMapData = {
     "Human-AI Judgment",
     "Human-Centered Urban Analytics",
     "Institutions Under Stress",
+    "LiDAR Point Clouds",
     "Machine Learning Foundations",
     "Mathematical Modeling",
     "Medical Imaging",
     "Mentorship",
+    "Multi-Agent Systems",
     "Multimodal Learning",
     "Narrative and Public Voice",
     "Public Health AI",
@@ -36,13 +44,17 @@ window.researchMapData = {
     "Research Taste",
     "Research Translation",
     "Responsible GeoAI",
+    "Spatial Equity",
     "Spatial Intelligence",
     "Transportation Equity",
     "Urban Digital Twins",
     "Urban Greening",
     "Urban Representation Learning",
     "Urban Risk",
-    "Wildfire Risk"
+    "Vision-Language Models",
+    "Volunteered Geographic Information",
+    "Wildfire Risk",
+    "Zero-Shot Learning"
   ],
   "sources": [
     "Google Scholar",
@@ -52,7 +64,7 @@ window.researchMapData = {
     "WeRead"
   ],
   "counts": {
-    "output": 27,
+    "output": 29,
     "input": 12,
     "question": 5
   },
@@ -798,6 +810,89 @@ window.researchMapData = {
       "displayKind": "Research Output"
     },
     {
+      "id": "geosteward",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "GeoSteward",
+      "title": "GeoSteward: An Accountable GeoAI Risk Analyst for Location-Based Resilience Understanding",
+      "year": 2026,
+      "venue": "OASIS @ ACM SIGSPATIAL 2026, Track A: Disaster Resilience and Vulnerability Analysis",
+      "type": "Working Paper",
+      "status": "In Progress",
+      "authors": "Yifan Yang, Lei Zou",
+      "summary": "GeoSteward is an AI-powered WebGIS and installable smartphone app that answers what hazards threaten a place, how exposed and vulnerable it is, and what the evidence actually supports. Its distinguishing feature is the Steward Harness: a runtime layer enforcing three validity conditions during operation. Competence is deliberately scoped by place -- hazard monitoring is nationwide, while exposure, vulnerability, and damage analysis exist only inside three deep-case study areas, and the app says so rather than extrapolating. An address outside those areas is told it is outside the evaluated areas; an address the app cannot resolve is told that, instead of being guessed at.",
+      "impact": "Being prepared as an entry for OASIS at ACM SIGSPATIAL 2026, Track A. The framing follows the autonomous-GIS-to-accountable-GeoAI-agents line on verifiable evaluation environments and geospatial harness engineering, and the repository keeps append-only history, including a preserved archive of the earlier Super Typhoon Bavi case study from its DisasterPilot phase.",
+      "themes": [
+        "Accountable GeoAI",
+        "Disaster Resilience",
+        "Agent Harness Engineering",
+        "Responsible GeoAI"
+      ],
+      "methods": [
+        "Geospatial Harness Engineering",
+        "Executable Spatial Validity Checks",
+        "Append-Only Provenance",
+        "Declarative Claim and Distribution Policy",
+        "Progressive Web App Delivery"
+      ],
+      "links": [
+        {
+          "label": "Live System",
+          "url": "https://rayford295.github.io/GeoSteward/"
+        },
+        {
+          "label": "App",
+          "url": "https://rayford295.github.io/GeoSteward/app/"
+        },
+        {
+          "label": "Workshop",
+          "url": "https://sigspatial2026.sigspatial.org/"
+        }
+      ],
+      "connections": [
+        {
+          "target": "responsible-geoai",
+          "label": "extends the STEP governance framework into an enforcing runtime layer"
+        },
+        {
+          "target": "rapid",
+          "label": "opens a new branch from the multi-agent pipeline toward accountability rather than capability"
+        },
+        {
+          "target": "damagearbiter",
+          "label": "informs the treatment of disagreeing evidence as something to declare, not resolve silently"
+        },
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "answers how a spatial-intelligence service states the limits of its own competence"
+        },
+        {
+          "target": "ai-systems-human-judgment",
+          "label": "answers when an agent's output is allowed to support a real decision"
+        }
+      ],
+      "repository": {
+        "name": "rayford295/GeoSteward",
+        "url": "https://rayford295.github.io/GeoSteward/",
+        "preview": "Accountable GeoAI risk analyst; PWA plus a Steward Harness enforcing outcome, process, and institutional validity.",
+        "language": "Python",
+        "stars": 0,
+        "forks": 0,
+        "commits": 0
+      },
+      "metrics": {},
+      "role": "first-author or lead-position output",
+      "metricLabel": "0 commits",
+      "wikiPath": "wiki/papers/geosteward.md",
+      "position": {
+        "x": 380,
+        "y": 110
+      },
+      "color": "#00a5b5",
+      "radius": 30,
+      "displayKind": "Research Output"
+    },
+    {
       "id": "heat-stress-digital-twins",
       "kind": "output",
       "source": "Research Wiki",
@@ -997,6 +1092,90 @@ window.researchMapData = {
       },
       "color": "#a579ff",
       "radius": 24,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "rapid",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "RAPID",
+      "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
+      "year": 2026,
+      "venue": "SIGSPATIAL '26: 34th ACM International Conference on Advances in Geographic Information Systems (oral presentation)",
+      "type": "Conference Paper",
+      "status": "Accepted",
+      "authors": "Yifan Yang, Wenjing Gong, Kai Zhang, Lei Zou, Zheng Tu, Heng Li, Zhenlong Li, Xinyue Ye",
+      "summary": "RAPID decomposes damage assessment into four collaborating agents rather than treating it as one classification problem. A Disaster Perception Agent identifies hazard type and image modality zero-shot and plans the downstream workflow. An Image Restoration Agent diagnoses blur, haze, and low-light degradation and applies enhancement only when it measurably helps. A Damage Recognition Agent produces structured severity diagnoses across cross-view, bi-temporal, and wildfire settings. A Disaster Reasoning Agent synthesizes those structured outputs into causal explanations and recovery recommendations. The pipeline reaches 0.92 overall accuracy on multi-disaster type classification and up to 0.627 on cross-view severity prediction, entirely zero-shot.",
+      "impact": "Accepted at ACM SIGSPATIAL 2026 and selected for oral presentation. The extended abstract RAPIDMap was separately accepted at CaGIS 2026 (September 8-11, St. Louis) for oral presentation. The repository publishes prompts alongside code for every agent, which makes the pipeline reproducible in a way that fine-tuned checkpoints are not.",
+      "themes": [
+        "Disaster Damage Assessment",
+        "Multi-Agent Systems",
+        "Vision-Language Models",
+        "Cross-View Imagery",
+        "Zero-Shot Learning"
+      ],
+      "methods": [
+        "Multi-Agent Task Decomposition",
+        "Zero-Shot Vision-Language Inference",
+        "Image Quality Restoration",
+        "Normalized Cross-Severity Error",
+        "LLM and Human Report Evaluation"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/rayford295/RAPID"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.21819"
+        },
+        {
+          "label": "Conference",
+          "url": "https://sigspatial2026.sigspatial.org/"
+        }
+      ],
+      "connections": [
+        {
+          "target": "hyperlocal-disaster",
+          "label": "uses the same dataset as the bi-temporal street-view benchmark"
+        },
+        {
+          "target": "disastervlp",
+          "label": "extends single-model VLM damage perception into an autonomous multi-agent pipeline"
+        },
+        {
+          "target": "damagearbiter",
+          "label": "shares method lineage with multimodal arbitration over disagreeing damage signals"
+        },
+        {
+          "target": "satellite-to-street",
+          "label": "shares the cross-view satellite-and-street framing"
+        },
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "answers what counts as citable evidence in an automated damage assessment"
+        }
+      ],
+      "repository": {
+        "name": "rayford295/RAPID",
+        "url": "https://github.com/rayford295/RAPID",
+        "preview": "Four coordinated agents for perception, restoration, recognition, and reasoning over disaster imagery.",
+        "language": "Python",
+        "stars": 0,
+        "forks": 0,
+        "commits": 0
+      },
+      "metrics": {},
+      "role": "first-author or lead-position output",
+      "metricLabel": "0 commits",
+      "wikiPath": "wiki/papers/rapid.md",
+      "position": {
+        "x": 600,
+        "y": 480
+      },
+      "color": "#8ee06a",
+      "radius": 38,
       "displayKind": "Research Output"
     },
     {
@@ -1245,6 +1424,85 @@ window.researchMapData = {
       },
       "color": "#d96832",
       "radius": 34,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "vgi-spatial-bias",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "VGI Spatial Bias",
+      "title": "Detecting and Correcting Spatial Bias in Volunteered Geographic Information Using Remote Sensing",
+      "year": 2026,
+      "venue": "I-GUIDE Summer School 2026 project; notebook and dataset published as I-GUIDE knowledge elements",
+      "type": "Working Paper",
+      "status": "In Progress",
+      "authors": "Yifan Yang",
+      "summary": "The project builds an end-to-end reproducible pipeline in three movements. It **detects** omissions by comparing OSM against a LiDAR-and-imagery reference; it **quantifies** the resulting bias across all 102 Illinois counties along an urban-to-rural gradient; and it **corrects** by machine-proposing fixes and scoring them, then validating those proposals against what the OSM community actually mapped in the intervening years. Two study regions anchor the method: a 2 by 2 km UIUC campus tile with fully classified QL1 LiDAR, and a Colorado Springs tile with sparser ground-only LiDAR used as an unretuned generalization test.",
+      "impact": "An I-GUIDE Summer School 2026 project, published as an I-GUIDE notebook knowledge element with linked datasets so the full pipeline runs unmodified on the I-GUIDE platform. The practical takeaway for anyone using OSM as a basemap is that completeness and recency should be treated as spatially varying covariates, not constants.",
+      "themes": [
+        "Volunteered Geographic Information",
+        "Data Quality and Bias",
+        "LiDAR Point Clouds",
+        "Spatial Equity"
+      ],
+      "methods": [
+        "DGCNN Point-Cloud Segmentation",
+        "LiDAR and NAIP Fusion",
+        "Completeness and Recency Metrics",
+        "Learned Fix Scoring",
+        "Cross-Region Generalization Test"
+      ],
+      "links": [
+        {
+          "label": "Repository",
+          "url": "https://github.com/rayford295/vgi-spatial-bias"
+        },
+        {
+          "label": "Project Site",
+          "url": "https://rayford295.github.io/vgi-spatial-bias/"
+        },
+        {
+          "label": "I-GUIDE Notebook",
+          "url": "https://platform.i-guide.io/notebooks/43edf307-c6af-4d1f-948b-260a0092a2c0"
+        }
+      ],
+      "connections": [
+        {
+          "target": "arcgis-sam-tree-segmentation",
+          "label": "shares method lineage with remote-sensing object extraction as a mapping reference"
+        },
+        {
+          "target": "freight-crash-spatial-inequities",
+          "label": "shares the spatial-inequity framing, applied to data quality rather than crash outcomes"
+        },
+        {
+          "target": "geolocator",
+          "label": "contrasts with geo-privacy risk by asking where public geodata is instead too thin"
+        },
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "answers whether a volunteered map can be trusted as public infrastructure everywhere"
+        }
+      ],
+      "repository": {
+        "name": "rayford295/vgi-spatial-bias",
+        "url": "https://github.com/rayford295/vgi-spatial-bias",
+        "preview": "End-to-end reproducible pipeline that detects, quantifies, and corrects OSM spatial bias against LiDAR and NAIP.",
+        "language": "Jupyter Notebook",
+        "stars": 0,
+        "forks": 0,
+        "commits": 0
+      },
+      "metrics": {},
+      "role": "first-author or lead-position output",
+      "metricLabel": "0 commits",
+      "wikiPath": "wiki/papers/vgi-spatial-bias.md",
+      "position": {
+        "x": 250,
+        "y": 620
+      },
+      "color": "#9a7b4f",
+      "radius": 30,
       "displayKind": "Research Output"
     },
     {
@@ -2492,58 +2750,6 @@ window.researchMapData = {
       "displayKind": "Research Output"
     },
     {
-      "id": "scholar-rapid-a-reproducible-multi-agent-pipeline-for-interpretable-disa",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "RAPID",
-      "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
-      "year": 2026,
-      "venue": "arXiv preprint arXiv:2606.21819 , 2026",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "Y Yang, W Gong, K Zhang, L Zou, Z Tu, H Li, Z Li, X Ye",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Disaster Assessment",
-        "Spatial Intelligence"
-      ],
-      "methods": [
-        "Disaster Assessment",
-        "Spatial Intelligence"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "damagearbiter",
-          "label": "feeds the disaster intelligence output layer"
-        },
-        {
-          "target": "satellite-to-street",
-          "label": "shares the satellite-to-street geographic evidence thread"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 0
-      },
-      "role": "first-author or lead-position output",
-      "metricLabel": "0 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 720,
-        "y": 190
-      },
-      "color": "#64c7ff",
-      "radius": 24,
-      "displayKind": "Research Output"
-    },
-    {
       "id": "scholar-seeing-green-from-indoors-in-3d-how-built-environment-and-vegeta",
       "kind": "output",
       "source": "Google Scholar",
@@ -2577,7 +2783,7 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 772,
+        "x": 720,
         "y": 190
       },
       "color": "#64c7ff",
@@ -2629,7 +2835,7 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 824,
+        "x": 772,
         "y": 190
       },
       "color": "#64c7ff",
