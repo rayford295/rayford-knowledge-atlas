@@ -25,3 +25,6 @@
 
 - Added the BEACON paper node (`wiki/papers/beacon.md`), accepted at SIGSPATIAL '26: tri-modal contrastive alignment of AlphaEarth embeddings with POI text and hourly visitation, keeping the deployed representation image-only.
 - Archived the published PDF as `publications/2026-beacon-tri-modal-contrastive-alphaearth.pdf` and registered the record in `raw/publications/publications.json`, the publication map, the research output map, and the wiki index.
+- Promoted RAPID from an auto-generated Scholar stub to a curated node (`wiki/papers/rapid.md`): four-agent zero-shot disaster damage pipeline, accepted at ACM SIGSPATIAL 2026 for oral presentation, with RAPIDMap accepted at CaGIS 2026. The curated page absorbs the Scholar duplicate, so Scholar-only records drop from 6 to 5.
+- Added `wiki/papers/geosteward.md` (accountable GeoAI risk analyst and Steward Harness, OASIS @ SIGSPATIAL 2026 Track A) and `wiki/papers/vgi-spatial-bias.md` (OSM spatial bias detected and corrected against LiDAR and NAIP, I-GUIDE Summer School 2026).
+- Fixed the Scholar refresh: Google 403s GitHub's datacenter IPs most weeks, and the silent fallback made every failed run look successful. Retries now happen across jobs instead of inside one, and papers.html stamps the snapshot date under the citation count.

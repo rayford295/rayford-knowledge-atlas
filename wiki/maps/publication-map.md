@@ -20,11 +20,17 @@ This map is the landing page for the old `rayford295/Publications` repository af
 
 ## Conference Proceedings
 
+- [[../papers/rapid]]
 - [[../papers/beacon]]
 - [[../papers/responsible-geoai]]
 - [[../papers/resilience-4d-urban-flood]]
 - [[../papers/disastervlp]]
 - [[../papers/federated-covid-chest-xray]]
+
+## Working Papers and Systems
+
+- [[../papers/geosteward]]
+- [[../papers/vgi-spatial-bias]]
 
 ## Published PDF Archive
 

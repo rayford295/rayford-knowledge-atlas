@@ -13,6 +13,9 @@
 ## Papers
 
 - [BEACON](./papers/beacon.md)
+- [RAPID](./papers/rapid.md)
+- [GeoSteward](./papers/geosteward.md)
+- [VGI Spatial Bias](./papers/vgi-spatial-bias.md)
 - [ArcGIS Text SAM Tree Segmentation](./papers/arcgis-sam-tree-segmentation.md)
 - [Agentic Urban Digital Twins](./papers/agentic-urban-digital-twins.md)
 - [GeoLocator](./papers/geolocator.md)

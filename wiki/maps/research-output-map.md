@@ -4,7 +4,10 @@ Research outputs are the public layer of the atlas.
 
 ## Curated Paper Nodes
 
+- [[../papers/rapid]]
 - [[../papers/beacon]]
+- [[../papers/geosteward]]
+- [[../papers/vgi-spatial-bias]]
 - [[../papers/arcgis-sam-tree-segmentation]]
 - [[../papers/agentic-urban-digital-twins]]
 - [[../papers/geolocator]]
