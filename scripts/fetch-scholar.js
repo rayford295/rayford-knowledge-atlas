@@ -24,7 +24,9 @@ function fetchText(url) {
         });
         response.on("end", () => {
           if (response.statusCode < 200 || response.statusCode >= 300) {
-            reject(new Error(`Google Scholar returned HTTP ${response.statusCode}`));
+            const error = new Error(`Google Scholar returned HTTP ${response.statusCode}`);
+            error.statusCode = response.statusCode;
+            reject(error);
             return;
           }
           resolve(body);
@@ -43,9 +45,22 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// Google Scholar rate-limits aggressively. Retry a few times with exponential
-// backoff (2s, 4s, 8s) before letting the caller fall back to the previous
-// snapshot, so a single transient 429/503 does not skip the weekly update.
+// Google Scholar throttles in two different ways, and they need opposite
+// responses:
+//
+//   429/503 - a transient, per-request throttle. Backing off for a few seconds
+//             on the same connection usually clears it, so retry here.
+//   403     - Scholar has blocked the caller's IP outright. Every retry from
+//             this process reuses the same egress IP, so it is guaranteed to
+//             fail again; retrying only burns CI minutes and hammers Scholar.
+//             Fail fast instead and let the caller keep the previous snapshot.
+//             The workflow's catch-up schedule reruns the job later, and each
+//             GitHub Actions job gets a fresh runner IP, which is what actually
+//             clears a 403.
+function isIpBlock(error) {
+  return error && error.statusCode === 403;
+}
+
 async function fetchTextWithRetry(url, attempts = 3) {
   let lastError;
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
@@ -53,6 +68,10 @@ async function fetchTextWithRetry(url, attempts = 3) {
       return await fetchText(url);
     } catch (error) {
       lastError = error;
+      if (isIpBlock(error)) {
+        console.warn(`Scholar fetch blocked this runner's IP (HTTP 403); not retrying from the same address`);
+        break;
+      }
       if (attempt < attempts) {
         const backoff = 2000 * Math.pow(2, attempt - 1);
         console.warn(`Scholar fetch attempt ${attempt} failed (${error.message}); retrying in ${backoff / 1000}s`);

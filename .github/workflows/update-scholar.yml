@@ -1,8 +1,20 @@
 name: Update Google Scholar Snapshot
 
+# Scholar blocks GitHub's datacenter IPs with a 403 most of the time: only 2 of
+# the 8 runs between 2026-06-29 and 2026-08-17 got through, which froze the
+# snapshot at 393 citations while every run still reported success.
+#
+# The block is per-IP and every job gets a fresh runner address, so the fix is
+# to retry in a *new job* rather than inside the existing one. The weekly Monday
+# run is still the intended cadence; the catch-up schedule normally exits within
+# seconds and only starts attempting when Monday's run failed to land.
 on:
   schedule:
+    # Weekly refresh, the primary attempt.
     - cron: "17 9 * * 1"
+    # Catch-up sweep every 6 hours. Gated on snapshot age, so this is a no-op
+    # unless the weekly run failed.
+    - cron: "17 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -20,13 +32,48 @@ jobs:
         with:
           node-version: "22"
 
+      # Manual runs and the Monday run always attempt. Catch-up runs only
+      # attempt when the snapshot is more than 7 days old, so a healthy week
+      # still makes exactly one request to Scholar.
+      - name: Check snapshot freshness
+        id: freshness
+        run: node scripts/scholar-freshness.js --stale-after 7
+
+      # These expressions are all GitHub- or script-controlled rather than
+      # user-supplied, but they go through env: anyway so no workflow input is
+      # ever interpolated straight into a shell command.
+      - name: Decide whether to fetch
+        id: decide
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          SNAPSHOT_STALE: ${{ steps.freshness.outputs.stale }}
+          PRIMARY_CRON: "17 9 * * 1"
+        run: |
+          if [ "$EVENT_NAME" != "schedule" ] || [ "$EVENT_SCHEDULE" = "$PRIMARY_CRON" ]; then
+            echo "primary=true" >> "$GITHUB_OUTPUT"
+            echo "attempt=true" >> "$GITHUB_OUTPUT"
+            echo "Primary run: attempting refresh."
+          elif [ "$SNAPSHOT_STALE" = "true" ]; then
+            echo "primary=false" >> "$GITHUB_OUTPUT"
+            echo "attempt=true" >> "$GITHUB_OUTPUT"
+            echo "Catch-up run: snapshot is stale, attempting refresh."
+          else
+            echo "primary=false" >> "$GITHUB_OUTPUT"
+            echo "attempt=false" >> "$GITHUB_OUTPUT"
+            echo "Catch-up run: snapshot is fresh, nothing to do."
+          fi
+
       - name: Refresh Google Scholar snapshot
+        if: steps.decide.outputs.attempt == 'true'
         run: npm run scholar:update
 
       - name: Rebuild public graph data
+        if: steps.decide.outputs.attempt == 'true'
         run: npm run build
 
       - name: Verify graph data
+        if: steps.decide.outputs.attempt == 'true'
         run: |
           node - <<'NODE'
           const fs = require("fs");
@@ -41,7 +88,19 @@ jobs:
           NODE
 
       - name: Commit updated snapshot and graph
+        if: steps.decide.outputs.attempt == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update Scholar snapshot and graph data"
           file_pattern: raw/scholar/google-scholar.json data.js *.html
+
+      # A single 403 is expected and fine - the next catch-up run picks it up.
+      # Two full weeks of failures means the catch-up loop is not working, and
+      # that should be a red run in the Actions tab, not a silent stale number.
+      #
+      # Only the primary run raises the alarm. If a catch-up run failed here
+      # too, a stuck snapshot would turn into four red runs a day, which is the
+      # fastest way to train yourself to ignore the notification.
+      - name: Fail if the snapshot is stuck
+        if: steps.decide.outputs.primary == 'true'
+        run: node scripts/scholar-freshness.js --fail-after 14

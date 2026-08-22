@@ -1355,6 +1355,13 @@ summary:focus-visible {
   letter-spacing: 0.05em;
 }
 
+.metric-footnote {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
 .reading-list-panel {
   display: grid;
   gap: 14px;

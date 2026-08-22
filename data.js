@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-08-22T22:57:55.766Z",
+  "generatedAt": "2026-08-22T23:07:50.873Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -2391,17 +2391,104 @@ window.researchMapData = {
       "connections": [],
       "repository": null,
       "metrics": {
-        "citations": 21
+        "citations": 22
       },
       "role": "collaborative output",
-      "metricLabel": "21 citations",
+      "metricLabel": "22 citations",
       "wikiPath": null,
       "position": {
         "x": 720,
         "y": 96
       },
       "color": "#64c7ff",
-      "radius": 34.998181667894016,
+      "radius": 35.25699782357623,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-earth-embeddings-reveal-diverse-urban-signals-from-space",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Earth Embeddings Reveal Diverse Urban Sign",
+      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Spatial Intelligence"
+      ],
+      "methods": [
+        "Spatial Intelligence"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "extends the urban and spatial intelligence question"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 2
+      },
+      "role": "collaborative output",
+      "metricLabel": "2 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 772,
+        "y": 96
+      },
+      "color": "#64c7ff",
+      "radius": 27.39411254969543,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-gischolarbench-benchmarking-llm-overconfidence-in-gis-research",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "GIScholarBench",
+      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Multimodal Learning"
+      ],
+      "methods": [
+        "Multimodal Learning"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [],
+      "repository": null,
+      "metrics": {
+        "citations": 1
+      },
+      "role": "collaborative output",
+      "metricLabel": "1 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 824,
+        "y": 96
+      },
+      "color": "#64c7ff",
+      "radius": 26.4,
       "displayKind": "Research Output"
     },
     {
@@ -2449,49 +2536,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 772,
-        "y": 96
-      },
-      "color": "#64c7ff",
-      "radius": 24,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-gischolarbench-benchmarking-llm-overconfidence-in-gis-research",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "GIScholarBench",
-      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
-      "year": 2026,
-      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Multimodal Learning"
-      ],
-      "methods": [
-        "Multimodal Learning"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [],
-      "repository": null,
-      "metrics": {
-        "citations": 0
-      },
-      "role": "collaborative output",
-      "metricLabel": "0 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 824,
-        "y": 96
+        "x": 720,
+        "y": 190
       },
       "color": "#64c7ff",
       "radius": 24,
@@ -2523,52 +2569,6 @@ window.researchMapData = {
         }
       ],
       "connections": [],
-      "repository": null,
-      "metrics": {
-        "citations": 0
-      },
-      "role": "collaborative output",
-      "metricLabel": "0 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 720,
-        "y": 190
-      },
-      "color": "#64c7ff",
-      "radius": 24,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-earth-embeddings-reveal-diverse-urban-signals-from-space",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Earth Embeddings Reveal Diverse Urban Sign",
-      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
-      "year": 2026,
-      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Spatial Intelligence"
-      ],
-      "methods": [
-        "Spatial Intelligence"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "spatial-intelligence-public-infrastructure",
-          "label": "extends the urban and spatial intelligence question"
-        }
-      ],
       "repository": null,
       "metrics": {
         "citations": 0

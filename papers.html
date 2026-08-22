@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./styles.css?v=3afb0109ad">
+  <link rel="stylesheet" href="./styles.css?v=369d92596a">
 </head>
 <body>
   <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
@@ -65,6 +65,7 @@
           <div><strong>--</strong><span>Scholar-only records</span></div>
           <div><strong>--</strong><span>citations</span></div>
         </div>
+        <p class="metric-footnote" id="scholar-freshness" hidden></p>
       </section>
 
       <section class="guide-panel paper-control-panel" aria-label="Paper filters">
@@ -148,7 +149,7 @@
     </main>
   </div>
 
-  <script src="./data.js?v=3afb0109ad"></script>
+  <script src="./data.js?v=369d92596a"></script>
   <script>
     (function () {
       const data = window.researchMapData || { nodes: [] };
@@ -246,6 +247,26 @@
         setMetric(3, outputs.reduce((total, node) => total + (node.metrics?.citations || 0), 0));
       }
 
+      // Scholar blocks datacenter IPs often enough that the snapshot can sit
+      // unchanged for weeks. Stamping the fetch date next to the citation count
+      // keeps a stale number honest instead of letting it read as live.
+      function renderScholarFreshness(fetchedAt) {
+        const note = document.getElementById("scholar-freshness");
+        if (!note) {
+          return;
+        }
+        const fetched = fetchedAt ? new Date(fetchedAt) : null;
+        if (!fetched || Number.isNaN(fetched.getTime())) {
+          return;
+        }
+        const ageDays = Math.floor((Date.now() - fetched.getTime()) / 86400000);
+        const stamp = fetched.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+        note.textContent = ageDays > 10
+          ? `Citation count from the Google Scholar snapshot of ${stamp} (${ageDays} days ago; the automated refresh has not landed since).`
+          : `Citation count from the Google Scholar snapshot of ${stamp}.`;
+        note.hidden = false;
+      }
+
       function loadScholarMetric() {
         fetch("./raw/scholar/google-scholar.json", { cache: "no-store" })
           .then((response) => response.ok ? response.json() : null)
@@ -254,6 +275,7 @@
             if (citations !== undefined) {
               setMetric(3, citations);
             }
+            renderScholarFreshness(snapshot?.fetchedAt);
           })
           .catch(() => {});
       }
