@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-08-17T10:59:46.636Z",
+  "generatedAt": "2026-08-22T22:57:55.766Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -18,7 +18,10 @@ window.researchMapData = {
     "Generative Vision",
     "Geo-Privacy",
     "GeoAI Governance",
+    "Geospatial Foundation Models",
+    "Human Mobility",
     "Human-AI Judgment",
+    "Human-Centered Urban Analytics",
     "Institutions Under Stress",
     "Machine Learning Foundations",
     "Mathematical Modeling",
@@ -37,6 +40,7 @@ window.researchMapData = {
     "Transportation Equity",
     "Urban Digital Twins",
     "Urban Greening",
+    "Urban Representation Learning",
     "Urban Risk",
     "Wildfire Risk"
   ],
@@ -48,7 +52,7 @@ window.researchMapData = {
     "WeRead"
   ],
   "counts": {
-    "output": 26,
+    "output": 27,
     "input": 12,
     "question": 5
   },
@@ -193,6 +197,77 @@ window.researchMapData = {
       },
       "color": "#2f8f6f",
       "radius": 35,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "beacon",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "BEACON",
+      "title": "BEACON: Behavioral and Semantic Enrichment of AlphaEarth Embeddings through Tri-Modal Contrastive Learning",
+      "year": 2026,
+      "venue": "SIGSPATIAL '26: 34th ACM International Conference on Advances in Geographic Information Systems, Riverside, CA, USA",
+      "type": "Conference Paper",
+      "status": "Accepted",
+      "authors": "Hao Tian, Heng Cai, Yifan Yang",
+      "summary": "BEACON is a tri-modal contrastive learning framework that treats POIs as anchors and aligns three complementary views of urban space: physical context from AlphaEarth embeddings, semantic context from POI description text, and behavioral context from hourly POI visitation profiles. The alignment happens only during pretraining. At inference the model consumes AlphaEarth inputs alone, so no POI or mobility data is required at deployment time. Evaluated on nine downstream tasks in the Houston metropolitan area against six baselines, BEACON improves human-centered prediction markedly while leaving physical and environmental performance essentially intact.",
+      "impact": "The paper supplies an argument the atlas needed in explicit form: physical appearance and urban function are distinct representational dimensions of geographic space. That reframes foundation-model adoption in GIScience from \"which backbone is strongest\" to \"what kind of supervision does a human-centered task require,\" and it shows the enrichment can be paid for once at training time rather than at every inference.",
+      "themes": [
+        "Geospatial Foundation Models",
+        "Urban Representation Learning",
+        "Human Mobility",
+        "Human-Centered Urban Analytics"
+      ],
+      "methods": [
+        "Tri-Modal Contrastive Learning",
+        "InfoNCE Alignment",
+        "AlphaEarth Embeddings",
+        "POI Text Embeddings",
+        "Frozen Linear and MLP Probes"
+      ],
+      "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2026-beacon-tri-modal-contrastive-alphaearth.pdf"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1145/3841645.3843383"
+        },
+        {
+          "label": "Conference",
+          "url": "https://sigspatial2026.sigspatial.org/"
+        }
+      ],
+      "connections": [
+        {
+          "target": "heat-stress-digital-twins",
+          "label": "shares method lineage with campus-scale urban representation learning"
+        },
+        {
+          "target": "agentic-urban-digital-twins",
+          "label": "supplies human-contextualized embeddings for urban digital twin reasoning"
+        },
+        {
+          "target": "damagearbiter",
+          "label": "contrasts with post-event damage inference by modeling steady-state urban function"
+        },
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "asks whether foundation-model embeddings can carry human context as public infrastructure"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": "collaborative output",
+      "metricLabel": "Research Wiki",
+      "wikiPath": "wiki/papers/beacon.md",
+      "position": {
+        "x": 620,
+        "y": 300
+      },
+      "color": "#d45d9c",
+      "radius": 32,
       "displayKind": "Research Output"
     },
     {

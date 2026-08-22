@@ -20,6 +20,7 @@ This map is the landing page for the old `rayford295/Publications` repository af
 
 ## Conference Proceedings
 
+- [[../papers/beacon]]
 - [[../papers/responsible-geoai]]
 - [[../papers/resilience-4d-urban-flood]]
 - [[../papers/disastervlp]]

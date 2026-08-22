@@ -4,6 +4,7 @@ This folder keeps public PDF copies of Yifan Yang's published papers and chapter
 
 | Year | Publication | Atlas page | PDF |
 | --- | --- | --- | --- |
+| 2026 | BEACON: Behavioral and Semantic Enrichment of AlphaEarth Embeddings through Tri-Modal Contrastive Learning | [BEACON](../wiki/papers/beacon.md) | [PDF](./2026-beacon-tri-modal-contrastive-alphaearth.pdf) |
 | 2026 | Responsible GeoAI: Thoughtful Integration of GIScience and AI in the Real World | [Responsible GeoAI](../wiki/papers/responsible-geoai.md) | [PDF](./2026-responsible-geoai-giscience-ai-real-world.pdf) |
 | 2026 | The Boiling Frog Effect: Global Warming Delays Emotional Impacts of Air Pollution in Warmer Climates | [Boiling Frog Effect](../wiki/papers/boiling-frog-effect.md) | [PDF](./2026-boiling-frog-effect-global-warming-air-pollution.pdf) |
 | 2026 | Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire | [LA Wildfire Tri-Environmental Cost](../wiki/papers/tri-environmental-la-wildfire.md) | [PDF](./2026-integrating-earth-observation-tri-environmental-la-wildfire.pdf) |

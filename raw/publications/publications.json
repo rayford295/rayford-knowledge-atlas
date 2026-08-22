@@ -90,6 +90,15 @@
       "atlasPage": "wiki/papers/arcgis-sam-tree-segmentation.md"
     },
     {
+      "id": "beacon",
+      "category": "Conference Proceeding",
+      "title": "BEACON: Behavioral and Semantic Enrichment of AlphaEarth Embeddings through Tri-Modal Contrastive Learning",
+      "year": 2026,
+      "venue": "SIGSPATIAL '26: 34th ACM International Conference on Advances in Geographic Information Systems, Riverside, CA, USA",
+      "doi": "https://doi.org/10.1145/3841645.3843383",
+      "atlasPage": "wiki/papers/beacon.md"
+    },
+    {
       "id": "responsible-geoai",
       "category": "Conference Proceeding",
       "title": "Responsible GeoAI: Thoughtful Integration of GIScience and AI in the Real World",

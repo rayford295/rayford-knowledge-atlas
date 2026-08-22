@@ -12,6 +12,7 @@
 
 ## Papers
 
+- [BEACON](./papers/beacon.md)
 - [ArcGIS Text SAM Tree Segmentation](./papers/arcgis-sam-tree-segmentation.md)
 - [Agentic Urban Digital Twins](./papers/agentic-urban-digital-twins.md)
 - [GeoLocator](./papers/geolocator.md)
