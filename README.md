@@ -107,7 +107,7 @@ rayford-knowledge-atlas/
 
 ## Current Output Layer
 
-- Curated paper/project nodes: Agentic Urban Digital Twins, ArcGIS Text SAM, GeoLocator, Hyperlocal Disaster Damage Assessment, DisasterVLP, DamageArbiter, Satellite-to-Street, and the migrated Publications records.
+- Curated paper/project nodes: RAPID, BEACON, GeoSteward, VGI Spatial Bias, Agentic Urban Digital Twins, Responsible GeoAI, ArcGIS Text SAM, GeoLocator, Hyperlocal Disaster Damage Assessment, DisasterVLP, DamageArbiter, Satellite-to-Street, FireBridge, and the migrated Publications records.
 - Public writing nodes: Research Philosophy, Research Philosophy Summary (中文整理), and the letter supporting Professor Lei Zou's teaching award nomination.
 - Google Scholar nodes: collaborative and non-first-author outputs from the public Scholar profile.
 
@@ -140,6 +140,7 @@ This repository is public. The reading layer therefore commits only metadata, co
 - [Obsidian Vault Guide](./docs/OBSIDIAN_VAULT.md)
 - [Hermes Review](./docs/HERMES_REVIEW.md)
 - [Publications Migration](./docs/PUBLICATIONS_MIGRATION.md)
+- [Atlas Backlog](./docs/ATLAS_BACKLOG.md) — what the atlas does not yet cover, and why
 
 ## Make Your Own
 

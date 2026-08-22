@@ -82,7 +82,7 @@ A Tier-1 nationwide watch layer refreshed hourly from USGS, NWS, NHC, and NIFC, 
 
 - A working demonstration that accountability for a GeoAI agent can be a technical layer with enforcement points, not a set of aspirations in a paper.
 - Conditional competence as a design principle: the system publishes the geographic boundary of what it can evaluate and refuses outside it.
-- A two-plane policy design separating what may be *claimed* from what may be *published*, after the first plane alone proved insufficient in practice.
+- A two-plane policy design separating what may be _claimed_ from what may be _published_, after the first plane alone proved insufficient in practice.
 - Refusal as the default for uncitable statements, with a closed exemption set, so an unanticipated phrasing costs a refusal rather than an uncited claim.
 
 ## How This Connects to My Other Work

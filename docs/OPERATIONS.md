@@ -17,6 +17,36 @@ node --check scripts/build-map.js
 git diff --check
 ```
 
+### When the automated refresh looks fine but the number does not move
+
+Google Scholar returns 403 to most GitHub Actions runners, and
+`fetch-scholar.js` keeps the previous snapshot and exits 0 when that happens.
+The run therefore goes green whether or not any data arrived, so a green
+workflow is not evidence of a fresh snapshot. `gh run view --log-failed` finds
+nothing, because nothing failed.
+
+Check the snapshot age directly:
+
+```bash
+node scripts/scholar-freshness.js --stale-after 7
+```
+
+To see which recent runs actually landed data:
+
+```bash
+gh run list --workflow=update-scholar.yml --limit 8 --json databaseId -q '.[].databaseId' |
+  while read -r id; do
+    gh run view "$id" --log |
+      grep -oiE "Updated Google Scholar snapshot: [0-9]+ citations|kept previous snapshot: .*$" | head -1
+  done
+```
+
+The 6-hourly catch-up schedule usually clears a block within a day, because each
+job gets a different runner IP. If it does not, refresh from a residential
+network -- `npm run scholar:update` locally, then commit the snapshot and the
+rebuilt `data.js`. The primary Monday run turns red once the snapshot passes 14
+days, so a genuinely stuck refresh does surface on its own.
+
 ## Refresh WeRead
 
 Local refresh requires:

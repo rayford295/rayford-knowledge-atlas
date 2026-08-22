@@ -107,7 +107,7 @@ rayford-knowledge-atlas/
 
 ## 当前输出层
 
-- 手工精修的论文/项目节点：Agentic Urban Digital Twins、ArcGIS Text SAM、GeoLocator、Hyperlocal Disaster Damage Assessment、DisasterVLP、DamageArbiter、Satellite-to-Street，以及从 Publications 迁移出的论文记录。
+- 手工精修的论文/项目节点：RAPID、BEACON、GeoSteward、VGI Spatial Bias、Agentic Urban Digital Twins、Responsible GeoAI、ArcGIS Text SAM、GeoLocator、Hyperlocal Disaster Damage Assessment、DisasterVLP、DamageArbiter、Satellite-to-Street、FireBridge，以及从 Publications 迁移出的论文记录。
 - 公共写作节点：Research Philosophy、Research Philosophy Summary (中文整理)，以及支持 Professor Lei Zou 教学奖提名的推荐信。
 - Google Scholar 节点：来自公开 Scholar profile 的合作论文和非一作论文。
 
@@ -140,6 +140,7 @@ npm run build
 - [Obsidian Vault Guide](./docs/OBSIDIAN_VAULT.md)
 - [Hermes 评审与优化建议](./docs/HERMES_REVIEW.zh-CN.md)
 - [Publications Migration](./docs/PUBLICATIONS_MIGRATION.md)
+- [Atlas Backlog](./docs/ATLAS_BACKLOG.md) — atlas 尚未覆盖的内容，以及为什么
 
 ## 做一个自己的版本
 

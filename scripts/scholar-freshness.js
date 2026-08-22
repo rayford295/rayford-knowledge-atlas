@@ -47,7 +47,11 @@ function readSnapshotAge() {
   const fetchedAt = snapshot.fetchedAt;
   const parsed = fetchedAt ? Date.parse(fetchedAt) : NaN;
   if (!Number.isFinite(parsed)) {
-    return { fetchedAt: fetchedAt || null, ageDays: Infinity, reason: "snapshot has no usable fetchedAt" };
+    return {
+      fetchedAt: fetchedAt || null,
+      ageDays: Infinity,
+      reason: "snapshot has no usable fetchedAt"
+    };
   }
 
   return {
@@ -96,5 +100,9 @@ if (failAfter !== null && ageDays > failAfter) {
 }
 
 if (staleAfter !== null) {
-  console.log(stale ? `Snapshot is stale (> ${staleAfter} days); a refresh attempt is due.` : `Snapshot is fresh (<= ${staleAfter} days); skipping this catch-up run.`);
+  console.log(
+    stale
+      ? `Snapshot is stale (> ${staleAfter} days); a refresh attempt is due.`
+      : `Snapshot is fresh (<= ${staleAfter} days); skipping this catch-up run.`
+  );
 }

@@ -27,6 +27,27 @@ This repository is a bilingual research knowledge graph for Yifan Yang's first-a
 - If Google Scholar rate-limits or returns incomplete data, keep the previous snapshot.
 - `.github/workflows/update-scholar.yml` runs the refresh weekly and commits only real data changes.
 
+Scholar blocks GitHub's datacenter IPs with a 403 most weeks: only 2 of the 8 runs
+between 2026-06-29 and 2026-08-17 got through, which froze the snapshot for 19 days
+while every run still reported success. Three rules follow from that, and they are
+easy to undo by accident:
+
+- **Do not retry a 403 inside one job.** The block is per-IP, so every retry from
+  the same process hits the same wall. Only 429/503 are worth backing off on.
+  Retrying across jobs is what works, because each Actions job gets a fresh runner
+  IP. That is what the 6-hourly catch-up schedule is for; it is gated on snapshot
+  age, so a healthy week still makes exactly one request.
+- **Do not rebuild or commit when the snapshot did not change.** `npm run build`
+  rewrites `generatedAt` and every HTML cache-bust hash on each invocation, so an
+  unconditional rebuild after a failed fetch commits a timestamp and nothing else.
+- **Keep the failure visible.** `scripts/scholar-freshness.js` reports snapshot age;
+  the primary weekly run fails once the snapshot passes 14 days, and `papers.html`
+  stamps the snapshot date under the citation count. A silent fallback plus a green
+  check is how the original 19-day freeze went unnoticed.
+
+When the catch-up loop cannot get through, run `npm run scholar:update` locally.
+A residential IP is normally not blocked.
+
 ## Page Rules
 
 Every research output page in `wiki/papers/` must include YAML frontmatter with:
@@ -108,17 +129,17 @@ Bridge questions are the connective tissue of the graph. A question page with co
 
 Use these labels consistently when writing `connections` entries. Labels should describe the intellectual relationship, not just cite adjacency.
 
-| Label | When to use |
-|---|---|
-| `extends` | This node builds directly on the other's method or framing |
-| `uses the same dataset as` | Shared empirical data |
-| `shares method lineage with` | Related methodology without sharing data |
-| `contrasts with` | Deliberate methodological or conceptual contrast |
-| `opens a new branch from` | The other node was the branching point for a new research direction |
-| `motivates` | Reading or question that directly motivated the output |
-| `answers` | Question node that a paper or reading attempts to answer |
-| `precedes` | Chronological predecessor in a research arc |
-| `informs` | Loose intellectual influence, not direct method transfer |
+| Label                        | When to use                                                         |
+| ---------------------------- | ------------------------------------------------------------------- |
+| `extends`                    | This node builds directly on the other's method or framing          |
+| `uses the same dataset as`   | Shared empirical data                                               |
+| `shares method lineage with` | Related methodology without sharing data                            |
+| `contrasts with`             | Deliberate methodological or conceptual contrast                    |
+| `opens a new branch from`    | The other node was the branching point for a new research direction |
+| `motivates`                  | Reading or question that directly motivated the output              |
+| `answers`                    | Question node that a paper or reading attempts to answer            |
+| `precedes`                   | Chronological predecessor in a research arc                         |
+| `informs`                    | Loose intellectual influence, not direct method transfer            |
 
 ## Position and Radius Rules
 
@@ -130,11 +151,11 @@ Use these labels consistently when writing `connections` entries. Labels should 
 
 `radius` controls node visual size (default: `28`). Use these as a guide:
 
-| Radius | Meaning |
-|---|---|
-| 34–40 | High-impact curated output (first-author journal or conference paper) |
-| 28–33 | Standard output or question |
-| 20–27 | Reading input or Scholar-only node |
+| Radius | Meaning                                                               |
+| ------ | --------------------------------------------------------------------- |
+| 34–40  | High-impact curated output (first-author journal or conference paper) |
+| 28–33  | Standard output or question                                           |
+| 20–27  | Reading input or Scholar-only node                                    |
 
 ## Workflow
 
