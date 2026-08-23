@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { overlaps, overlap, halfWidth } = require("./label-box");
 
 const repoRoot = path.resolve(__dirname, "..");
 const dataPath = path.join(repoRoot, "data.js");
@@ -82,16 +83,13 @@ function verifyData(data) {
       warnings.push(`node has no themes: ${label}`);
     }
 
+    // Coordinates in data.js are relaxation output, not the authored seeds, so
+    // there is no fixed canvas to bound them against -- the canvas is whatever
+    // size 46 collision-free label boxes need. The size is reported in the
+    // summary instead, where a sudden jump is visible.
     const position = node.position || {};
     if (!Number.isFinite(position.x) || !Number.isFinite(position.y)) {
       errors.push(`missing or non-numeric position on ${label}`);
-    } else {
-      if (position.x < 0 || position.x > 900) {
-        warnings.push(`position.x out of canvas (0-900) on ${label}: ${position.x}`);
-      }
-      if (position.y < 0 || position.y > 700) {
-        warnings.push(`position.y out of canvas (0-700) on ${label}: ${position.y}`);
-      }
     }
 
     if (!Array.isArray(node.connections)) {
@@ -128,6 +126,48 @@ function verifyData(data) {
     }
   });
 
+  // A node's drawn footprint is its label box, not its circle -- see
+  // label-box.js. Two nodes whose boxes intersect print text through each
+  // other, which is the failure mode that made the graph unreadable, so this
+  // is an error rather than a warning: it must not be able to come back.
+  const collisions = [];
+  for (let i = 0; i < nodes.length; i += 1) {
+    for (let j = i + 1; j < nodes.length; j += 1) {
+      const a = nodes[i];
+      const b = nodes[j];
+      if (!a.position || !b.position || !Number.isFinite(a.radius) || !Number.isFinite(b.radius)) {
+        continue;
+      }
+      if (overlaps(a, b)) {
+        const gap = overlap(a, b);
+        collisions.push({
+          pair: `${a.shortTitle || a.id} <-> ${b.shortTitle || b.id}`,
+          bite: Math.round(Math.min(gap.x, gap.y))
+        });
+      }
+    }
+  }
+
+  if (collisions.length) {
+    collisions.sort((left, right) => right.bite - left.bite);
+    errors.push(`${collisions.length} node label boxes overlap`);
+    collisions.slice(0, 8).forEach((collision) => {
+      errors.push(`  overlapping by ${collision.bite}: ${collision.pair}`);
+    });
+  }
+
+  // Labels wider than the renderer's own reservation get clipped out of the
+  // fitted viewBox (script.js uses labelHalf = 86).
+  nodes.forEach((node) => {
+    if (!Number.isFinite(node.radius)) {
+      return;
+    }
+    const over = Math.round(halfWidth(node) - Math.max(node.radius, 86));
+    if (over > 0) {
+      warnings.push(`label wider than the 86-unit reservation by ${over}: ${node.shortTitle}`);
+    }
+  });
+
   const counted = nodes.reduce((accumulator, node) => {
     accumulator[node.kind] = (accumulator[node.kind] || 0) + 1;
     return accumulator;
@@ -141,7 +181,15 @@ function verifyData(data) {
     }
   });
 
-  return { errors, warnings, nodeCount: nodes.length, counted };
+  const placed = nodes.filter((node) => Number.isFinite(node.position?.x));
+  const canvas = placed.length
+    ? {
+        width: Math.round(Math.max(...placed.map((n) => n.position.x)) - Math.min(...placed.map((n) => n.position.x))),
+        height: Math.round(Math.max(...placed.map((n) => n.position.y)) - Math.min(...placed.map((n) => n.position.y)))
+      }
+    : null;
+
+  return { errors, warnings, nodeCount: nodes.length, counted, canvas, labelCollisions: collisions.length };
 }
 
 function main() {
@@ -154,14 +202,14 @@ function main() {
   ];
 
   const missingFrontmatter = verifyFrontmatterPresence(markdownFiles);
-  const { errors, warnings, nodeCount, counted } = verifyData(data);
+  const { errors, warnings, nodeCount, counted, canvas, labelCollisions } = verifyData(data);
 
   if (missingFrontmatter.length) {
     errors.push(`missing frontmatter in: ${missingFrontmatter.join(", ")}`);
   }
 
   console.log("Atlas verification summary");
-  console.log(JSON.stringify({ nodeCount, counted, markdownFiles: markdownFiles.length }, null, 2));
+  console.log(JSON.stringify({ nodeCount, counted, markdownFiles: markdownFiles.length, canvas, labelCollisions }, null, 2));
 
   if (warnings.length) {
     console.warn("Warnings:");

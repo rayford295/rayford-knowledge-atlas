@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { truncateLabel, overlap, halfWidth, halfHeight } = require("./label-box");
 
 const repoRoot = path.resolve(__dirname, "..");
 const papersDir = path.join(repoRoot, "wiki", "papers");
@@ -336,8 +337,13 @@ function buildScholarNodes(existingNodes) {
     .map((article, index) => {
       const themes = inferScholarThemes(article);
       const id = `scholar-${slugify(article.title) || index + 1}`;
-      const x = 720 + (index % 3) * 52;
-      const y = 96 + Math.floor(index / 3) * 94;
+      // A seed, not a final position. This used to be a hardcoded 52-unit
+      // column pitch while radius grows with citations (up to 44), so any
+      // well-cited neighbour was guaranteed to overlap -- a bug that got worse
+      // every time a paper picked up citations. Seed them in a single column
+      // off to the side and let relaxPositions place them for real.
+      const x = 860;
+      const y = 120 + index * 150;
       const citations = Number(article.citations || 0);
 
       return {
@@ -384,6 +390,10 @@ function enrichNode(node) {
   return {
     ...node,
     metricLabel,
+    // The full title stays on the node for the detail panel; only the drawn
+    // label is trimmed, so nothing is lost, it just stops printing through
+    // its neighbour. See label-box.js for the 172-unit budget.
+    shortTitle: truncateLabel(node.shortTitle),
     displayKind:
       node.kind === "input" ? "Reading Input" :
       node.kind === "question" ? "Bridge Question" :
@@ -391,12 +401,102 @@ function enrichNode(node) {
   };
 }
 
+// Authored positions in wiki/ are seeds: they say which quadrant a node
+// belongs to and what it clusters with, which is real information worth
+// keeping. What they cannot do is stay collision-free as the graph grows --
+// at 46 nodes the authored map had 143 overlapping label boxes, and no human
+// is going to solve a 46-body packing problem by hand in YAML.
+//
+// So: push overlapping pairs apart, keep pulling everything back toward its
+// seed, and let the two forces settle. Deterministic (fixed order, no
+// randomness) so the same wiki always builds the same map.
+function relaxPositions(nodes) {
+  const placeable = nodes.filter((node) => node.position && Number.isFinite(node.radius));
+  const seeds = new Map(placeable.map((node) => [node.id, { ...node.position }]));
+  const ordered = [...placeable].sort((left, right) => (left.id < right.id ? -1 : 1));
+  const PAD = 18;          // air beyond "just touching", so labels are not kissing
+  const SEED_PULL = 0.012; // gentle enough that separation wins locally
+  const SETTLE = 900;
+
+  const separate = (pullToSeed) => {
+    let moved = 0;
+
+    for (let i = 0; i < ordered.length; i += 1) {
+      for (let j = i + 1; j < ordered.length; j += 1) {
+        const a = ordered[i];
+        const b = ordered[j];
+        const gap = overlap(a, b);
+
+        // overlap() reports intrusion: positive means the boxes bite into each
+        // other, negative means clear air. A pair is done once it has at least
+        // PAD of air on one axis, so the test is <= -PAD, not <= PAD. Using
+        // +PAD here would declare a 12-unit overlap acceptable while the
+        // verifier demands zero, and the two would never agree.
+        if (gap.x <= -PAD || gap.y <= -PAD) {
+          continue;
+        }
+
+        // Resolve along whichever axis needs the least travel.
+        const pushX = gap.x + PAD;
+        const pushY = gap.y + PAD;
+        const axis = pushX <= pushY ? "x" : "y";
+        const distance = (axis === "x" ? pushX : pushY) / 2;
+        const direction = a.position[axis] <= b.position[axis] ? -1 : 1;
+
+        a.position[axis] += direction * distance;
+        b.position[axis] -= direction * distance;
+        moved += distance * 2;
+      }
+    }
+
+    if (pullToSeed) {
+      ordered.forEach((node) => {
+        const seed = seeds.get(node.id);
+        node.position.x += (seed.x - node.position.x) * SEED_PULL;
+        node.position.y += (seed.y - node.position.y) * SEED_PULL;
+      });
+    }
+
+    return moved;
+  };
+
+  // Phase one: settle with the seed spring, so clusters stay put.
+  for (let step = 0; step < SETTLE; step += 1) {
+    if (separate(true) === 0) {
+      break;
+    }
+  }
+
+  // Phase two: drop the spring and finish the job. The spring can hold a pair
+  // just inside the overlap threshold forever, and a build that still ships
+  // overlaps is the bug we are fixing.
+  for (let step = 0; step < SETTLE; step += 1) {
+    if (separate(false) === 0) {
+      break;
+    }
+  }
+
+  // Snap to whole units and shift back to a positive origin, so committed
+  // coordinates stay readable in diffs and comparable to authored seeds.
+  const minX = Math.min(...placeable.map((node) => node.position.x - halfWidth(node)));
+  const minY = Math.min(...placeable.map((node) => node.position.y - halfHeight(node)));
+
+  placeable.forEach((node) => {
+    node.position.x = Math.round(node.position.x - minX + 40);
+    node.position.y = Math.round(node.position.y - minY + 40);
+  });
+
+  return nodes;
+}
+
 function buildData() {
   const markdownNodes = graphSources.flatMap((source) => {
     return listMarkdownFiles(source.dir).map((filePath) => parseMarkdownNode(filePath, source));
   });
   const scholarNodes = buildScholarNodes(markdownNodes);
-  const nodes = markdownNodes.concat(scholarNodes).map(enrichNode);
+  // Truncate labels before relaxing: the label width sets the footprint the
+  // layout has to pack, so trimming first is what keeps the map compact.
+  const nodes = relaxPositions(markdownNodes.concat(scholarNodes).map(enrichNode));
   const themes = Array.from(
     new Set(
       nodes.flatMap((node) => node.themes)

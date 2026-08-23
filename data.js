@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-08-23T05:12:09.392Z",
+  "generatedAt": "2026-08-23T05:33:19.731Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -73,7 +73,7 @@ window.researchMapData = {
       "id": "agentic-urban-digital-twins",
       "kind": "output",
       "source": "Research Wiki",
-      "shortTitle": "Agentic Urban Digital Twins",
+      "shortTitle": "Agentic Urban Digital T...",
       "title": "Towards Agentic Urban Digital Twins (AUDiTs): Advancing New Urban Science Through Human-AI Co-Learning Agents",
       "year": 2026,
       "venue": "Urban Informatics, 5(1), 9",
@@ -124,8 +124,8 @@ window.researchMapData = {
       "metricLabel": "2 citations",
       "wikiPath": "wiki/papers/agentic-urban-digital-twins.md",
       "position": {
-        "x": 755,
-        "y": 124
+        "x": 1151,
+        "y": 197
       },
       "color": "#1d9a8a",
       "radius": 30,
@@ -204,8 +204,8 @@ window.researchMapData = {
       "metricLabel": "4 commits",
       "wikiPath": "wiki/papers/arcgis-sam-tree-segmentation.md",
       "position": {
-        "x": 430,
-        "y": 535
+        "x": 755,
+        "y": 1034
       },
       "color": "#2f8f6f",
       "radius": 35,
@@ -275,8 +275,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/beacon.md",
       "position": {
-        "x": 620,
-        "y": 300
+        "x": 958,
+        "y": 480
       },
       "color": "#d45d9c",
       "radius": 32,
@@ -337,8 +337,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/boiling-frog-effect.md",
       "position": {
-        "x": 646,
-        "y": 574
+        "x": 1025,
+        "y": 1003
       },
       "color": "#2b8cbe",
       "radius": 32,
@@ -399,8 +399,8 @@ window.researchMapData = {
       "metricLabel": "28 citations",
       "wikiPath": "wiki/papers/covid-public-opinion-emotion.md",
       "position": {
-        "x": 838,
-        "y": 588
+        "x": 1421,
+        "y": 775
       },
       "color": "#7488ff",
       "radius": 38,
@@ -475,8 +475,8 @@ window.researchMapData = {
       "metricLabel": "61 commits",
       "wikiPath": "wiki/papers/damagearbiter.md",
       "position": {
-        "x": 705,
-        "y": 255
+        "x": 1293,
+        "y": 577
       },
       "color": "#0f1f34",
       "radius": 42,
@@ -551,8 +551,8 @@ window.researchMapData = {
       "metricLabel": "26 commits",
       "wikiPath": "wiki/papers/disastervlp.md",
       "position": {
-        "x": 560,
-        "y": 390
+        "x": 1179,
+        "y": 576
       },
       "color": "#4b9dd5",
       "radius": 36,
@@ -609,8 +609,8 @@ window.researchMapData = {
       "metricLabel": "274 citations",
       "wikiPath": "wiki/papers/federated-covid-chest-xray.md",
       "position": {
-        "x": 848,
-        "y": 222
+        "x": 1214,
+        "y": 381
       },
       "color": "#64c7ff",
       "radius": 44,
@@ -620,7 +620,7 @@ window.researchMapData = {
       "id": "firebridge",
       "kind": "output",
       "source": "Research Wiki",
-      "shortTitle": "FireBridge Cross-View Wildfire",
+      "shortTitle": "FireBridge Cross-Vie...",
       "title": "FireBridge: Cross-View Wildfire Assessment (working title)",
       "year": 2026,
       "venue": "Working paper (in progress)",
@@ -668,8 +668,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/firebridge.md",
       "position": {
-        "x": 480,
-        "y": 95
+        "x": 870,
+        "y": 118
       },
       "color": "#d96832",
       "radius": 32,
@@ -726,8 +726,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/freight-crash-spatial-inequities.md",
       "position": {
-        "x": 818,
-        "y": 494
+        "x": 1593,
+        "y": 935
       },
       "color": "#e4a72a",
       "radius": 26,
@@ -802,8 +802,8 @@ window.researchMapData = {
       "metricLabel": "22 commits",
       "wikiPath": "wiki/papers/geolocator.md",
       "position": {
-        "x": 180,
-        "y": 470
+        "x": 319,
+        "y": 768
       },
       "color": "#d7a13b",
       "radius": 34,
@@ -885,8 +885,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/geosteward.md",
       "position": {
-        "x": 380,
-        "y": 110
+        "x": 729,
+        "y": 139
       },
       "color": "#00a5b5",
       "radius": 30,
@@ -947,8 +947,8 @@ window.researchMapData = {
       "metricLabel": "8 citations",
       "wikiPath": "wiki/papers/heat-stress-digital-twins.md",
       "position": {
-        "x": 742,
-        "y": 404
+        "x": 755,
+        "y": 859
       },
       "color": "#ff6b5e",
       "radius": 30,
@@ -1030,8 +1030,8 @@ window.researchMapData = {
       "metricLabel": "44 commits",
       "wikiPath": "wiki/papers/hyperlocal-disaster.md",
       "position": {
-        "x": 370,
-        "y": 300
+        "x": 808,
+        "y": 663
       },
       "color": "#157bc0",
       "radius": 38,
@@ -1041,7 +1041,7 @@ window.researchMapData = {
       "id": "low-rank-loss-functions",
       "kind": "output",
       "source": "Research Wiki",
-      "shortTitle": "Low-Rank Loss Functions",
+      "shortTitle": "Low-Rank Loss Functi...",
       "title": "Different Loss Functions Used in the Low-Rank Approximation",
       "year": 2020,
       "venue": "International Core Journal of Engineering, 6(11), 360-368",
@@ -1087,8 +1087,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/low-rank-loss-functions.md",
       "position": {
-        "x": 884,
-        "y": 682
+        "x": 1254,
+        "y": 1125
       },
       "color": "#a579ff",
       "radius": 24,
@@ -1179,8 +1179,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/rapid.md",
       "position": {
-        "x": 600,
-        "y": 480
+        "x": 896,
+        "y": 849
       },
       "color": "#8ee06a",
       "radius": 38,
@@ -1233,8 +1233,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/resilience-4d-urban-flood.md",
       "position": {
-        "x": 798,
-        "y": 318
+        "x": 1062,
+        "y": 486
       },
       "color": "#36f1c7",
       "radius": 28,
@@ -1299,8 +1299,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/responsible-geoai.md",
       "position": {
-        "x": 420,
-        "y": 252
+        "x": 657,
+        "y": 499
       },
       "color": "#7a5cff",
       "radius": 34,
@@ -1363,8 +1363,8 @@ window.researchMapData = {
       "metricLabel": "106 commits",
       "wikiPath": "wiki/papers/satellite-to-street.md",
       "position": {
-        "x": 790,
-        "y": 500
+        "x": 1142,
+        "y": 762
       },
       "color": "#b97a16",
       "radius": 40,
@@ -1374,7 +1374,7 @@ window.researchMapData = {
       "id": "tri-environmental-la-wildfire",
       "kind": "output",
       "source": "Research Wiki",
-      "shortTitle": "LA Wildfire Tri-Environmental Cost",
+      "shortTitle": "LA Wildfire Tri-Enviro...",
       "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",
       "year": 2026,
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 150, 105342",
@@ -1427,8 +1427,8 @@ window.researchMapData = {
       "metricLabel": "4 citations",
       "wikiPath": "wiki/papers/tri-environmental-la-wildfire.md",
       "position": {
-        "x": 622,
-        "y": 154
+        "x": 966,
+        "y": 294
       },
       "color": "#d96832",
       "radius": 34,
@@ -1506,8 +1506,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/vgi-spatial-bias.md",
       "position": {
-        "x": 250,
-        "y": 620
+        "x": 620,
+        "y": 1039
       },
       "color": "#9a7b4f",
       "radius": 30,
@@ -1567,8 +1567,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/lei-zou-teaching-award-letter.md",
       "position": {
-        "x": 785,
-        "y": 615
+        "x": 1167,
+        "y": 951
       },
       "color": "#f0a85a",
       "radius": 36,
@@ -1578,7 +1578,7 @@ window.researchMapData = {
       "id": "research-philosophy-summary-zh",
       "kind": "output",
       "source": "Public Writing",
-      "shortTitle": "Research Philosophy 中文整理",
+      "shortTitle": "Research Philosophy...",
       "title": "Research Philosophy Summary (中文整理)",
       "year": 2026,
       "venue": "Awesome Autonomous GeoAI / Rayford Knowledge Atlas",
@@ -1632,8 +1632,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy-summary-zh.md",
       "position": {
-        "x": 892,
-        "y": 520
+        "x": 1325,
+        "y": 957
       },
       "color": "#d48a5c",
       "radius": 34,
@@ -1697,8 +1697,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy.md",
       "position": {
-        "x": 845,
-        "y": 425
+        "x": 1604,
+        "y": 603
       },
       "color": "#b87333",
       "radius": 38,
@@ -1708,7 +1708,7 @@ window.researchMapData = {
       "id": "reading-23303928",
       "kind": "input",
       "source": "WeRead",
-      "shortTitle": "我的团长我的团（段奕宏、张译主演同名...",
+      "shortTitle": "我的团长我的团（段奕宏...",
       "title": "我的团长我的团（段奕宏、张译主演同名电视剧原著）",
       "year": 2026,
       "venue": "WeRead",
@@ -1755,8 +1755,8 @@ window.researchMapData = {
       "metricLabel": "1346 notes",
       "wikiPath": "wiki/readings/1-23303928.md",
       "position": {
-        "x": 120,
-        "y": 115
+        "x": 124,
+        "y": 386
       },
       "color": "#ff6e4d",
       "radius": 48,
@@ -1813,8 +1813,8 @@ window.researchMapData = {
       "metricLabel": "301 notes",
       "wikiPath": "wiki/readings/10-25926862.md",
       "position": {
-        "x": 374,
-        "y": 210
+        "x": 830,
+        "y": 476
       },
       "color": "#ff6e4d",
       "radius": 38,
@@ -1824,7 +1824,7 @@ window.researchMapData = {
       "id": "reading-3300200299",
       "kind": "input",
       "source": "WeRead",
-      "shortTitle": "2030倒计时：马斯克预言AI取代人...",
+      "shortTitle": "2030倒计时：马斯克预...",
       "title": "2030倒计时：马斯克预言AI取代人类",
       "year": 2026,
       "venue": "WeRead",
@@ -1876,8 +1876,8 @@ window.researchMapData = {
       "metricLabel": "290 notes",
       "wikiPath": "wiki/readings/11-3300200299.md",
       "position": {
-        "x": 274,
-        "y": 330
+        "x": 459,
+        "y": 684
       },
       "color": "#a88cff",
       "radius": 37,
@@ -1887,7 +1887,7 @@ window.researchMapData = {
       "id": "reading-3300146170",
       "kind": "input",
       "source": "WeRead",
-      "shortTitle": "段永平投资问答录（全两册）",
+      "shortTitle": "段永平投资问答录（全两...",
       "title": "段永平投资问答录（全两册）",
       "year": 2026,
       "venue": "WeRead",
@@ -1929,8 +1929,8 @@ window.researchMapData = {
       "metricLabel": "262 notes",
       "wikiPath": "wiki/readings/12-3300146170.md",
       "position": {
-        "x": 399,
-        "y": 455
+        "x": 979,
+        "y": 661
       },
       "color": "#ffd46a",
       "radius": 37,
@@ -1982,8 +1982,8 @@ window.researchMapData = {
       "metricLabel": "715 notes",
       "wikiPath": "wiki/readings/2-3300064301.md",
       "position": {
-        "x": 230,
-        "y": 210
+        "x": 289,
+        "y": 304
       },
       "color": "#9ad66d",
       "radius": 43,
@@ -1993,7 +1993,7 @@ window.researchMapData = {
       "id": "reading-43993718",
       "kind": "input",
       "source": "WeRead",
-      "shortTitle": "白色巨塔（日本“国民级小说”，日剧巅...",
+      "shortTitle": "白色巨塔（日本“国民级...",
       "title": "白色巨塔（日本“国民级小说”，日剧巅峰之作）",
       "year": 2026,
       "venue": "WeRead",
@@ -2041,8 +2041,8 @@ window.researchMapData = {
       "metricLabel": "470 notes",
       "wikiPath": "wiki/readings/3-43993718.md",
       "position": {
-        "x": 130,
-        "y": 330
+        "x": 227,
+        "y": 584
       },
       "color": "#ff6e4d",
       "radius": 40,
@@ -2094,8 +2094,8 @@ window.researchMapData = {
       "metricLabel": "427 notes",
       "wikiPath": "wiki/readings/4-31230615.md",
       "position": {
-        "x": 255,
-        "y": 455
+        "x": 452,
+        "y": 870
       },
       "color": "#36f1c7",
       "radius": 39,
@@ -2147,8 +2147,8 @@ window.researchMapData = {
       "metricLabel": "348 notes",
       "wikiPath": "wiki/readings/5-3300118393.md",
       "position": {
-        "x": 192,
-        "y": 133
+        "x": 665,
+        "y": 317
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2200,8 +2200,8 @@ window.researchMapData = {
       "metricLabel": "340 notes",
       "wikiPath": "wiki/readings/6-24019296.md",
       "position": {
-        "x": 302,
-        "y": 228
+        "x": 427,
+        "y": 307
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2258,8 +2258,8 @@ window.researchMapData = {
       "metricLabel": "330 notes",
       "wikiPath": "wiki/readings/7-3300021861.md",
       "position": {
-        "x": 202,
-        "y": 348
+        "x": 538,
+        "y": 493
       },
       "color": "#ffd46a",
       "radius": 38,
@@ -2269,7 +2269,7 @@ window.researchMapData = {
       "id": "reading-3300151174",
       "kind": "input",
       "source": "WeRead",
-      "shortTitle": "2049：未来10000天的可能",
+      "shortTitle": "2049：未来10000天的...",
       "title": "2049：未来10000天的可能",
       "year": 2026,
       "venue": "WeRead",
@@ -2316,8 +2316,8 @@ window.researchMapData = {
       "metricLabel": "321 notes",
       "wikiPath": "wiki/readings/8-3300151174.md",
       "position": {
-        "x": 327,
-        "y": 473
+        "x": 639,
+        "y": 681
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2369,8 +2369,8 @@ window.researchMapData = {
       "metricLabel": "320 notes",
       "wikiPath": "wiki/readings/9-3300045715.md",
       "position": {
-        "x": 264,
-        "y": 115
+        "x": 539,
+        "y": 307
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2420,8 +2420,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/ai-systems-human-judgment.md",
       "position": {
-        "x": 515,
-        "y": 350
+        "x": 1277,
+        "y": 767
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2467,8 +2467,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/biography-research-judgment.md",
       "position": {
-        "x": 390,
-        "y": 430
+        "x": 580,
+        "y": 865
       },
       "color": "#9ad66d",
       "radius": 34,
@@ -2518,8 +2518,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/founder-window-research-output.md",
       "position": {
-        "x": 520,
-        "y": 500
+        "x": 887,
+        "y": 1035
       },
       "color": "#ffd46a",
       "radius": 36,
@@ -2569,8 +2569,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/human-evidence-disaster-ai.md",
       "position": {
-        "x": 485,
-        "y": 210
+        "x": 403,
+        "y": 497
       },
       "color": "#f08bd6",
       "radius": 40,
@@ -2620,8 +2620,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/spatial-intelligence-public-infrastructure.md",
       "position": {
-        "x": 635,
-        "y": 405
+        "x": 1438,
+        "y": 591
       },
       "color": "#64c7ff",
       "radius": 36,
@@ -2631,7 +2631,7 @@ window.researchMapData = {
       "id": "scholar-surveying-attitudinal-alignment-between-large-language-models-vs",
       "kind": "output",
       "source": "Google Scholar",
-      "shortTitle": "Surveying attitudinal alignment between la",
+      "shortTitle": "Surveying attitudinal a...",
       "title": "Surveying attitudinal alignment between large language models vs. humans towards 17 sustainable development goals",
       "year": 2024,
       "venue": "arXiv preprint arXiv:2404.13885 , 2024",
@@ -2663,8 +2663,8 @@ window.researchMapData = {
       "metricLabel": "22 citations",
       "wikiPath": null,
       "position": {
-        "x": 720,
-        "y": 96
+        "x": 1395,
+        "y": 245
       },
       "color": "#64c7ff",
       "radius": 35.25699782357623,
@@ -2674,7 +2674,7 @@ window.researchMapData = {
       "id": "scholar-earth-embeddings-reveal-diverse-urban-signals-from-space",
       "kind": "output",
       "source": "Google Scholar",
-      "shortTitle": "Earth Embeddings Reveal Diverse Urban Sign",
+      "shortTitle": "Earth Embeddings Rev...",
       "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
       "year": 2026,
       "venue": "arXiv preprint arXiv:2604.03456 , 2026",
@@ -2709,8 +2709,8 @@ window.researchMapData = {
       "metricLabel": "2 citations",
       "wikiPath": null,
       "position": {
-        "x": 772,
-        "y": 96
+        "x": 1446,
+        "y": 417
       },
       "color": "#64c7ff",
       "radius": 27.39411254969543,
@@ -2750,8 +2750,8 @@ window.researchMapData = {
       "metricLabel": "1 citations",
       "wikiPath": null,
       "position": {
-        "x": 824,
-        "y": 96
+        "x": 1008,
+        "y": 834
       },
       "color": "#64c7ff",
       "radius": 26.4,
@@ -2761,7 +2761,7 @@ window.researchMapData = {
       "id": "scholar-seeing-green-from-indoors-in-3d-how-built-environment-and-vegeta",
       "kind": "output",
       "source": "Google Scholar",
-      "shortTitle": "Seeing Green from Indoors in 3D",
+      "shortTitle": "Seeing Green from Ind...",
       "title": "Seeing Green from Indoors in 3D: How Built Environment and Vegetation Shape Window-Level Nature Exposure",
       "year": 2026,
       "venue": "Available at SSRN 6766522 , 2026",
@@ -2791,8 +2791,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 720,
-        "y": 190
+        "x": 1592,
+        "y": 775
       },
       "color": "#64c7ff",
       "radius": 24,
@@ -2802,7 +2802,7 @@ window.researchMapData = {
       "id": "scholar-predicting-healthcare-system-visitation-flow-by-integrating-hosp",
       "kind": "output",
       "source": "Google Scholar",
-      "shortTitle": "Predicting Healthcare System Visitation Fl",
+      "shortTitle": "Predicting Healthcare...",
       "title": "Predicting Healthcare System Visitation Flow by Integrating Hospital Attributes and Population Socioeconomics with Human Mobility Data",
       "year": 2026,
       "venue": "arXiv preprint arXiv:2601.15977 , 2026",
@@ -2843,8 +2843,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 772,
-        "y": 190
+        "x": 1230,
+        "y": 1283
       },
       "color": "#64c7ff",
       "radius": 24,

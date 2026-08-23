@@ -143,11 +143,16 @@ Use these labels consistently when writing `connections` entries. Labels should 
 
 ## Position and Radius Rules
 
-`position.x` and `position.y` place the node in the graph canvas (typical range: 0–900 for x, 0–700 for y). When adding a new node:
+`position.x` and `position.y` are **seeds, not final coordinates** (usable range: 0–900 for x, 0–700 for y). `scripts/build-map.js` runs `relaxPositions()` after loading the wiki: it pushes overlapping nodes apart and keeps pulling each one back toward its seed, so a seed decides which neighbourhood a node lands in, not its exact pixel. The coordinates in `data.js` are that relaxed output, which is why they run past 900/700.
 
-- Check existing positions in other pages to avoid overlapping nodes.
-- Place thematically related nodes near each other (same quadrant).
-- Leave at least 80 units of separation between any two node centers.
+When adding a new node:
+
+- Place thematically related nodes near each other (same quadrant). That intent survives relaxation and is the only thing a seed needs to get right.
+- Do **not** try to hand-solve overlaps. That is what the relaxation is for. At 46 nodes the hand-authored map had 143 overlapping label boxes, because nobody can pack 46 boxes by hand in YAML.
+
+What actually collides is the **label box**, not the circle: the renderer draws the title at `radius + 25` and the meta line at `radius + 42`, both centred, so a node's footprint is wider than its circle and hangs below it. Two nodes 70 units apart can have clear air between the circles and still print text through each other. `scripts/label-box.js` owns that geometry and is shared by the layout pass and the verifier so the two cannot disagree about what "overlapping" means. Its character widths were least-squares fitted against real `getBBox()` measurements and carry an 8% safety factor — if you touch the label font size or weight in `styles.css`, re-fit them, and keep the model pessimistic. Under-reserving puts text back on top of text; over-reserving only costs whitespace.
+
+`npm run verify` fails on any label-box overlap, so a regression here cannot ship quietly.
 
 `radius` controls node visual size (default: `28`). Use these as a guide:
 
