@@ -94,8 +94,8 @@
       "category": "Conference Proceeding",
       "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
       "year": 2026,
-      "venue": "SIGSPATIAL '26: 34th ACM International Conference on Advances in Geographic Information Systems (oral presentation)",
-      "doi": "https://arxiv.org/abs/2606.21819",
+      "venue": "SIGSPATIAL '26: 34th ACM International Conference on Advances in Geographic Information Systems, Riverside, CA, USA (oral presentation)",
+      "doi": "https://doi.org/10.1145/3841645.3843346",
       "atlasPage": "wiki/papers/rapid.md"
     },
     {

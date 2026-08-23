@@ -3,17 +3,17 @@ id: rapid
 short_title: RAPID
 title: "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery"
 year: 2026
-venue: "SIGSPATIAL '26: 34th ACM International Conference on Advances in Geographic Information Systems (oral presentation)"
+venue: "SIGSPATIAL '26: 34th ACM International Conference on Advances in Geographic Information Systems, Riverside, CA, USA (oral presentation)"
 type: Conference Paper
 status: Accepted
 authors:
   - Yifan Yang
   - Wenjing Gong
-  - Kai Zhang
+  - Kaili Zhang
   - Lei Zou
-  - Zheng Tu
-  - Heng Li
-  - Zhenlong Li
+  - Zhengzhong Tu
+  - Hao Li
+  - Zongrong Li
   - Xinyue Ye
 themes:
   - Disaster Damage Assessment
@@ -28,6 +28,10 @@ methods:
   - Normalized Cross-Severity Error
   - LLM and Human Report Evaluation
 links:
+  - label: PDF
+    url: ./publications/2026-rapid-multi-agent-disaster-damage-assessment.pdf
+  - label: DOI
+    url: https://doi.org/10.1145/3841645.3843346
   - label: Repository
     url: https://github.com/rayford295/RAPID
   - label: arXiv
@@ -111,13 +115,15 @@ Disaster assessment, vision-language models, cross-view imagery, zero-shot learn
 
 ## Public Links
 
+- PDF: ../../publications/2026-rapid-multi-agent-disaster-damage-assessment.pdf
+- DOI: https://doi.org/10.1145/3841645.3843346 (assigned in the camera-ready; resolves once the SIGSPATIAL '26 proceedings appear in the ACM Digital Library in November 2026)
 - Repository: https://github.com/rayford295/RAPID
 - arXiv: https://arxiv.org/abs/2606.21819
 - Conference: https://sigspatial2026.sigspatial.org/
 
 ## Citation
 
-Yang, Y., Gong, W., Zhang, K., Zou, L., Tu, Z., Li, H., Li, Z., & Ye, X. (2026). RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery. arXiv. https://arxiv.org/abs/2606.21819
+Yang, Y., Gong, W., Zhang, K., Zou, L., Tu, Z., Li, H., Li, Z., & Ye, X. (2026). RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery. In The 34th ACM International Conference on Advances in Geographic Information Systems (SIGSPATIAL '26), November 03-06, 2026, Riverside, CA, USA. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3841645.3843346
 
 ## Chinese Summary
 

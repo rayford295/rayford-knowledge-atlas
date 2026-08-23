@@ -30,3 +30,9 @@
 - Fixed the Scholar refresh: Google 403s GitHub's datacenter IPs most weeks, and the silent fallback made every failed run look successful. Retries now happen across jobs instead of inside one, and papers.html stamps the snapshot date under the citation count.
 - Recorded the state of the work in the repository rather than leaving it in a chat log: `docs/ATLAS_BACKLOG.md` now lists uncovered projects, Scholar-only stubs awaiting curated pages, half-connected bridge questions, and two open editorial decisions (BEACON's connection labels, and GeoSteward's public/private disclosure boundary).
 - Corrected stale documentation: `CLAUDE.md` Scholar rules now describe the 403 IP block and the three constraints it implies, `docs/OPERATIONS.md` explains why a green Scholar run is not evidence of fresh data, `docs/SUGGESTIONS.md` marks the 2026-06 exponential-backoff fix as superseded, and both READMEs list the curated nodes that actually exist.
+
+## 2026-08-23
+
+- Archived the RAPID camera-ready as `publications/2026-rapid-multi-agent-disaster-damage-assessment.pdf` (12 pages, CC BY 4.0, so the copy is redistributable) and registered it in the publication archive table. RAPID already had a curated node; the PDF was the missing piece.
+- Corrected four author names on `wiki/papers/rapid.md` against the camera-ready ACM Reference Format: Kai Zhang to Kaili Zhang, Zheng Tu to Zhengzhong Tu, Heng Li to Hao Li, Zhenlong Li to Zongrong Li. The old names came from the Scholar stub the curated page replaced, and would have contradicted the PDF the page now links.
+- Replaced RAPID's arXiv-only citation with the published ACM form and recorded the camera-ready DOI `10.1145/3841645.3843346` in both the page and `raw/publications/publications.json`. As with BEACON, the DOI does not resolve until the SIGSPATIAL '26 proceedings reach the ACM Digital Library in November 2026.

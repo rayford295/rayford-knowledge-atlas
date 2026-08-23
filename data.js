@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-08-22T23:33:39.191Z",
+  "generatedAt": "2026-08-23T05:12:09.392Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -1101,10 +1101,10 @@ window.researchMapData = {
       "shortTitle": "RAPID",
       "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
       "year": 2026,
-      "venue": "SIGSPATIAL '26: 34th ACM International Conference on Advances in Geographic Information Systems (oral presentation)",
+      "venue": "SIGSPATIAL '26: 34th ACM International Conference on Advances in Geographic Information Systems, Riverside, CA, USA (oral presentation)",
       "type": "Conference Paper",
       "status": "Accepted",
-      "authors": "Yifan Yang, Wenjing Gong, Kai Zhang, Lei Zou, Zheng Tu, Heng Li, Zhenlong Li, Xinyue Ye",
+      "authors": "Yifan Yang, Wenjing Gong, Kaili Zhang, Lei Zou, Zhengzhong Tu, Hao Li, Zongrong Li, Xinyue Ye",
       "summary": "RAPID decomposes damage assessment into four collaborating agents rather than treating it as one classification problem. A Disaster Perception Agent identifies hazard type and image modality zero-shot and plans the downstream workflow. An Image Restoration Agent diagnoses blur, haze, and low-light degradation and applies enhancement only when it measurably helps. A Damage Recognition Agent produces structured severity diagnoses across cross-view, bi-temporal, and wildfire settings. A Disaster Reasoning Agent synthesizes those structured outputs into causal explanations and recovery recommendations. The pipeline reaches 0.92 overall accuracy on multi-disaster type classification and up to 0.627 on cross-view severity prediction, entirely zero-shot.",
       "impact": "Accepted at ACM SIGSPATIAL 2026 and selected for oral presentation. The extended abstract RAPIDMap was separately accepted at CaGIS 2026 (September 8-11, St. Louis) for oral presentation. The repository publishes prompts alongside code for every agent, which makes the pipeline reproducible in a way that fine-tuned checkpoints are not.",
       "themes": [
@@ -1122,6 +1122,14 @@ window.researchMapData = {
         "LLM and Human Report Evaluation"
       ],
       "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2026-rapid-multi-agent-disaster-damage-assessment.pdf"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1145/3841645.3843346"
+        },
         {
           "label": "Repository",
           "url": "https://github.com/rayford295/RAPID"
