@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-08-24T11:04:38.309Z",
+  "generatedAt": "2026-08-29T19:20:34.715Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -15,6 +15,7 @@ window.researchMapData = {
     "Data Quality and Bias",
     "Disaster Assessment",
     "Disaster Damage Assessment",
+    "Disaster Mapping",
     "Disaster Resilience",
     "Earth Observation",
     "Evidence and Power",
@@ -64,7 +65,7 @@ window.researchMapData = {
     "WeRead"
   ],
   "counts": {
-    "output": 29,
+    "output": 30,
     "input": 12,
     "question": 5
   },
@@ -124,8 +125,8 @@ window.researchMapData = {
       "metricLabel": "2 citations",
       "wikiPath": "wiki/papers/agentic-urban-digital-twins.md",
       "position": {
-        "x": 1151,
-        "y": 197
+        "x": 1047,
+        "y": 116
       },
       "color": "#1d9a8a",
       "radius": 30,
@@ -204,8 +205,8 @@ window.researchMapData = {
       "metricLabel": "4 commits",
       "wikiPath": "wiki/papers/arcgis-sam-tree-segmentation.md",
       "position": {
-        "x": 755,
-        "y": 1034
+        "x": 592,
+        "y": 886
       },
       "color": "#2f8f6f",
       "radius": 35,
@@ -275,8 +276,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/beacon.md",
       "position": {
-        "x": 958,
-        "y": 480
+        "x": 842,
+        "y": 517
       },
       "color": "#d45d9c",
       "radius": 32,
@@ -337,8 +338,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/boiling-frog-effect.md",
       "position": {
-        "x": 1025,
-        "y": 1003
+        "x": 920,
+        "y": 897
       },
       "color": "#2b8cbe",
       "radius": 32,
@@ -399,8 +400,8 @@ window.researchMapData = {
       "metricLabel": "28 citations",
       "wikiPath": "wiki/papers/covid-public-opinion-emotion.md",
       "position": {
-        "x": 1421,
-        "y": 775
+        "x": 1331,
+        "y": 868
       },
       "color": "#7488ff",
       "radius": 38,
@@ -475,8 +476,8 @@ window.researchMapData = {
       "metricLabel": "61 commits",
       "wikiPath": "wiki/papers/damagearbiter.md",
       "position": {
-        "x": 1293,
-        "y": 577
+        "x": 1177,
+        "y": 496
       },
       "color": "#0f1f34",
       "radius": 42,
@@ -551,8 +552,8 @@ window.researchMapData = {
       "metricLabel": "26 commits",
       "wikiPath": "wiki/papers/disastervlp.md",
       "position": {
-        "x": 1179,
-        "y": 576
+        "x": 1063,
+        "y": 529
       },
       "color": "#4b9dd5",
       "radius": 36,
@@ -609,8 +610,8 @@ window.researchMapData = {
       "metricLabel": "274 citations",
       "wikiPath": "wiki/papers/federated-covid-chest-xray.md",
       "position": {
-        "x": 1214,
-        "y": 381
+        "x": 1189,
+        "y": 300
       },
       "color": "#64c7ff",
       "radius": 44,
@@ -668,8 +669,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/firebridge.md",
       "position": {
-        "x": 870,
-        "y": 118
+        "x": 793,
+        "y": 148
       },
       "color": "#d96832",
       "radius": 32,
@@ -726,8 +727,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/freight-crash-spatial-inequities.md",
       "position": {
-        "x": 1593,
-        "y": 935
+        "x": 1695,
+        "y": 746
       },
       "color": "#e4a72a",
       "radius": 26,
@@ -802,8 +803,8 @@ window.researchMapData = {
       "metricLabel": "22 commits",
       "wikiPath": "wiki/papers/geolocator.md",
       "position": {
-        "x": 319,
-        "y": 768
+        "x": 88,
+        "y": 737
       },
       "color": "#d7a13b",
       "radius": 34,
@@ -885,8 +886,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/geosteward.md",
       "position": {
-        "x": 729,
-        "y": 139
+        "x": 652,
+        "y": 150
       },
       "color": "#00a5b5",
       "radius": 30,
@@ -947,8 +948,8 @@ window.researchMapData = {
       "metricLabel": "8 citations",
       "wikiPath": "wiki/papers/heat-stress-digital-twins.md",
       "position": {
-        "x": 755,
-        "y": 859
+        "x": 753,
+        "y": 878
       },
       "color": "#ff6b5e",
       "radius": 30,
@@ -1030,8 +1031,8 @@ window.researchMapData = {
       "metricLabel": "44 commits",
       "wikiPath": "wiki/papers/hyperlocal-disaster.md",
       "position": {
-        "x": 808,
-        "y": 663
+        "x": 723,
+        "y": 514
       },
       "color": "#157bc0",
       "radius": 38,
@@ -1087,8 +1088,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/low-rank-loss-functions.md",
       "position": {
-        "x": 1254,
-        "y": 1125
+        "x": 1222,
+        "y": 1040
       },
       "color": "#a579ff",
       "radius": 24,
@@ -1179,11 +1180,87 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/rapid.md",
       "position": {
-        "x": 896,
-        "y": 849
+        "x": 1204,
+        "y": 689
       },
       "color": "#8ee06a",
       "radius": 38,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "rapidmap",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "RAPIDMap",
+      "title": "RAPIDMap: Rapid Multi-Agent Pipeline for Interpretable Disaster Mapping from Satellite and Street-view Imagery",
+      "year": 2026,
+      "venue": "CaGIS Conference 2026: Cartography and Geographic Information Society, September 8-11, 2026, St. Louis, MO, USA (Student Paper Competition, oral presentation)",
+      "type": "Conference Paper",
+      "status": "Accepted",
+      "authors": "Yifan Yang, Lei Zou",
+      "summary": "RAPIDMap chains four zero-shot agents into a mapping pipeline. The Disaster Perception Agent recognizes data modality and hazard type from the input and emits structured task-planning signals. The Image Restoration Agent diagnoses degradation in street-view and remote-sensing imagery and applies constrained enhancement only where it preserves disaster-relevant evidence. The Damage Recognition Agent produces severity classifications, object-level indicators, and confidence scores across cross-view and cross-temporal settings without task-specific fine-tuning. The Disaster Mapping Agent then does the work the abstract is named for: geo-referencing, cross-view alignment between remote sensing and street view, and projection of the structured damage outputs into map-based visualizations and GIS-ready records. Disaster type classification reaches 0.86-0.92 overall accuracy across backbones, and the pipeline runs entirely zero-shot.",
+      "impact": "Accepted at CaGIS 2026 (September 8-11, St. Louis, MO) for the Student Paper Competition and selected for oral presentation. Supported by the National Academies of Sciences, Engineering, and Medicine Gulf Research Program (SCON-10000653, SCON-10001536) and the U.S. National Science Foundation (2318206).",
+      "themes": [
+        "Disaster Mapping",
+        "Multi-Agent Systems",
+        "Vision-Language Models",
+        "Cross-View Imagery",
+        "Zero-Shot Learning"
+      ],
+      "methods": [
+        "Multi-Agent Task Decomposition",
+        "Zero-Shot Vision-Language Inference",
+        "Image Quality Restoration",
+        "Normalized Cross-Severity Error",
+        "Geo-Referenced Damage Mapping"
+      ],
+      "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2026-rapidmap-cagis-multi-agent-disaster-mapping.pdf"
+        },
+        {
+          "label": "Repository",
+          "url": "https://github.com/rayford295/RAPID"
+        },
+        {
+          "label": "Conference",
+          "url": "https://cartogis.org/"
+        }
+      ],
+      "connections": [
+        {
+          "target": "rapid",
+          "label": "extends the four-agent pipeline by replacing the reasoning layer with a spatially explicit mapping agent"
+        },
+        {
+          "target": "hyperlocal-disaster",
+          "label": "uses the same dataset as the bi-temporal street-view benchmark"
+        },
+        {
+          "target": "disastervlp",
+          "label": "shares method lineage with single-model vision-language damage perception"
+        }
+      ],
+      "repository": {
+        "name": "rayford295/RAPID",
+        "url": "https://github.com/rayford295/RAPID",
+        "preview": "Zero-shot agents that turn satellite and street-view imagery into a geo-referenced disaster map with per-location semantics.",
+        "language": "Python",
+        "stars": 0,
+        "forks": 0,
+        "commits": 0
+      },
+      "metrics": {},
+      "role": "first-author or lead-position output",
+      "metricLabel": "0 commits",
+      "wikiPath": "wiki/papers/rapidmap.md",
+      "position": {
+        "x": 1174,
+        "y": 870
+      },
+      "color": "#5fc26a",
+      "radius": 32,
       "displayKind": "Research Output"
     },
     {
@@ -1233,8 +1310,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/resilience-4d-urban-flood.md",
       "position": {
-        "x": 1062,
-        "y": 486
+        "x": 947,
+        "y": 522
       },
       "color": "#36f1c7",
       "radius": 28,
@@ -1299,8 +1376,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/responsible-geoai.md",
       "position": {
-        "x": 657,
-        "y": 499
+        "x": 573,
+        "y": 514
       },
       "color": "#7a5cff",
       "radius": 34,
@@ -1363,8 +1440,8 @@ window.researchMapData = {
       "metricLabel": "106 commits",
       "wikiPath": "wiki/papers/satellite-to-street.md",
       "position": {
-        "x": 1142,
-        "y": 762
+        "x": 959,
+        "y": 715
       },
       "color": "#b97a16",
       "radius": 40,
@@ -1427,8 +1504,8 @@ window.researchMapData = {
       "metricLabel": "4 citations",
       "wikiPath": "wiki/papers/tri-environmental-la-wildfire.md",
       "position": {
-        "x": 966,
-        "y": 294
+        "x": 1009,
+        "y": 349
       },
       "color": "#d96832",
       "radius": 34,
@@ -1506,8 +1583,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/vgi-spatial-bias.md",
       "position": {
-        "x": 620,
-        "y": 1039
+        "x": 463,
+        "y": 984
       },
       "color": "#9a7b4f",
       "radius": 30,
@@ -1567,8 +1644,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/lei-zou-teaching-award-letter.md",
       "position": {
-        "x": 1167,
-        "y": 951
+        "x": 1061,
+        "y": 901
       },
       "color": "#f0a85a",
       "radius": 36,
@@ -1632,8 +1709,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy-summary-zh.md",
       "position": {
-        "x": 1325,
-        "y": 957
+        "x": 1500,
+        "y": 916
       },
       "color": "#d48a5c",
       "radius": 34,
@@ -1697,8 +1774,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy.md",
       "position": {
-        "x": 1604,
-        "y": 603
+        "x": 1504,
+        "y": 572
       },
       "color": "#b87333",
       "radius": 38,
@@ -1756,7 +1833,7 @@ window.researchMapData = {
       "wikiPath": "wiki/readings/1-23303928.md",
       "position": {
         "x": 124,
-        "y": 386
+        "y": 355
       },
       "color": "#ff6e4d",
       "radius": 48,
@@ -1814,7 +1891,7 @@ window.researchMapData = {
       "wikiPath": "wiki/readings/10-25926862.md",
       "position": {
         "x": 830,
-        "y": 476
+        "y": 328
       },
       "color": "#ff6e4d",
       "radius": 38,
@@ -1876,8 +1953,8 @@ window.researchMapData = {
       "metricLabel": "290 notes",
       "wikiPath": "wiki/readings/11-3300200299.md",
       "position": {
-        "x": 459,
-        "y": 684
+        "x": 303,
+        "y": 629
       },
       "color": "#a88cff",
       "radius": 37,
@@ -1929,8 +2006,8 @@ window.researchMapData = {
       "metricLabel": "262 notes",
       "wikiPath": "wiki/readings/12-3300146170.md",
       "position": {
-        "x": 979,
-        "y": 661
+        "x": 667,
+        "y": 700
       },
       "color": "#ffd46a",
       "radius": 37,
@@ -1983,7 +2060,7 @@ window.researchMapData = {
       "wikiPath": "wiki/readings/2-3300064301.md",
       "position": {
         "x": 289,
-        "y": 304
+        "y": 249
       },
       "color": "#9ad66d",
       "radius": 43,
@@ -2041,8 +2118,8 @@ window.researchMapData = {
       "metricLabel": "470 notes",
       "wikiPath": "wiki/readings/3-43993718.md",
       "position": {
-        "x": 227,
-        "y": 584
+        "x": 124,
+        "y": 553
       },
       "color": "#ff6e4d",
       "radius": 40,
@@ -2094,8 +2171,8 @@ window.researchMapData = {
       "metricLabel": "427 notes",
       "wikiPath": "wiki/readings/4-31230615.md",
       "position": {
-        "x": 452,
-        "y": 870
+        "x": 185,
+        "y": 816
       },
       "color": "#36f1c7",
       "radius": 39,
@@ -2148,7 +2225,7 @@ window.researchMapData = {
       "wikiPath": "wiki/readings/5-3300118393.md",
       "position": {
         "x": 665,
-        "y": 317
+        "y": 328
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2201,7 +2278,7 @@ window.researchMapData = {
       "wikiPath": "wiki/readings/6-24019296.md",
       "position": {
         "x": 427,
-        "y": 307
+        "y": 254
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2258,8 +2335,8 @@ window.researchMapData = {
       "metricLabel": "330 notes",
       "wikiPath": "wiki/readings/7-3300021861.md",
       "position": {
-        "x": 538,
-        "y": 493
+        "x": 453,
+        "y": 517
       },
       "color": "#ffd46a",
       "radius": 38,
@@ -2316,8 +2393,8 @@ window.researchMapData = {
       "metricLabel": "321 notes",
       "wikiPath": "wiki/readings/8-3300151174.md",
       "position": {
-        "x": 639,
-        "y": 681
+        "x": 483,
+        "y": 703
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2370,7 +2447,7 @@ window.researchMapData = {
       "wikiPath": "wiki/readings/9-3300045715.md",
       "position": {
         "x": 539,
-        "y": 307
+        "y": 331
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2420,8 +2497,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/ai-systems-human-judgment.md",
       "position": {
-        "x": 1277,
-        "y": 767
+        "x": 824,
+        "y": 700
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2467,8 +2544,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/biography-research-judgment.md",
       "position": {
-        "x": 580,
-        "y": 865
+        "x": 313,
+        "y": 810
       },
       "color": "#9ad66d",
       "radius": 34,
@@ -2518,8 +2595,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/founder-window-research-output.md",
       "position": {
-        "x": 887,
-        "y": 1035
+        "x": 780,
+        "y": 1054
       },
       "color": "#ffd46a",
       "radius": 36,
@@ -2569,8 +2646,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/human-evidence-disaster-ai.md",
       "position": {
-        "x": 403,
-        "y": 497
+        "x": 318,
+        "y": 442
       },
       "color": "#f08bd6",
       "radius": 40,
@@ -2620,8 +2697,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/spatial-intelligence-public-infrastructure.md",
       "position": {
-        "x": 1438,
-        "y": 591
+        "x": 1336,
+        "y": 684
       },
       "color": "#64c7ff",
       "radius": 36,
@@ -2663,8 +2740,8 @@ window.researchMapData = {
       "metricLabel": "22 citations",
       "wikiPath": null,
       "position": {
-        "x": 1395,
-        "y": 245
+        "x": 1370,
+        "y": 338
       },
       "color": "#64c7ff",
       "radius": 35.25699782357623,
@@ -2709,8 +2786,8 @@ window.researchMapData = {
       "metricLabel": "2 citations",
       "wikiPath": null,
       "position": {
-        "x": 1446,
-        "y": 417
+        "x": 1330,
+        "y": 511
       },
       "color": "#64c7ff",
       "radius": 27.39411254969543,
@@ -2750,8 +2827,8 @@ window.researchMapData = {
       "metricLabel": "1 citations",
       "wikiPath": null,
       "position": {
-        "x": 1008,
-        "y": 834
+        "x": 1093,
+        "y": 701
       },
       "color": "#64c7ff",
       "radius": 26.4,
@@ -2791,8 +2868,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 1592,
-        "y": 775
+        "x": 1512,
+        "y": 748
       },
       "color": "#64c7ff",
       "radius": 24,
@@ -2843,8 +2920,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 1230,
-        "y": 1283
+        "x": 1152,
+        "y": 1198
       },
       "color": "#64c7ff",
       "radius": 24,

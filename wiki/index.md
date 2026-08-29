@@ -14,6 +14,7 @@
 
 - [BEACON](./papers/beacon.md)
 - [RAPID](./papers/rapid.md)
+- [RAPIDMap](./papers/rapidmap.md)
 - [GeoSteward](./papers/geosteward.md)
 - [VGI Spatial Bias](./papers/vgi-spatial-bias.md)
 - [ArcGIS Text SAM Tree Segmentation](./papers/arcgis-sam-tree-segmentation.md)

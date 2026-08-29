@@ -5,6 +5,7 @@ This folder keeps public PDF copies of Yifan Yang's published papers and chapter
 | Year | Publication | Atlas page | PDF |
 | --- | --- | --- | --- |
 | 2026 | RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery | [RAPID](../wiki/papers/rapid.md) | [PDF](./2026-rapid-multi-agent-disaster-damage-assessment.pdf) |
+| 2026 | RAPIDMap: Rapid Multi-Agent Pipeline for Interpretable Disaster Mapping from Satellite and Street-view Imagery | [RAPIDMap](../wiki/papers/rapidmap.md) | [PDF](./2026-rapidmap-cagis-multi-agent-disaster-mapping.pdf) |
 | 2026 | BEACON: Behavioral and Semantic Enrichment of AlphaEarth Embeddings through Tri-Modal Contrastive Learning | [BEACON](../wiki/papers/beacon.md) | [PDF](./2026-beacon-tri-modal-contrastive-alphaearth.pdf) |
 | 2026 | Responsible GeoAI: Thoughtful Integration of GIScience and AI in the Real World | [Responsible GeoAI](../wiki/papers/responsible-geoai.md) | [PDF](./2026-responsible-geoai-giscience-ai-real-world.pdf) |
 | 2026 | The Boiling Frog Effect: Global Warming Delays Emotional Impacts of Air Pollution in Warmer Climates | [Boiling Frog Effect](../wiki/papers/boiling-frog-effect.md) | [PDF](./2026-boiling-frog-effect-global-warming-air-pollution.pdf) |

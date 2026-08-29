@@ -99,6 +99,14 @@
       "atlasPage": "wiki/papers/rapid.md"
     },
     {
+      "id": "rapidmap",
+      "category": "Conference Proceeding",
+      "title": "RAPIDMap: Rapid Multi-Agent Pipeline for Interpretable Disaster Mapping from Satellite and Street-view Imagery",
+      "year": 2026,
+      "venue": "CaGIS Conference 2026: Cartography and Geographic Information Society, September 8-11, 2026, St. Louis, MO, USA (Student Paper Competition, oral presentation)",
+      "atlasPage": "wiki/papers/rapidmap.md"
+    },
+    {
       "id": "beacon",
       "category": "Conference Proceeding",
       "title": "BEACON: Behavioral and Semantic Enrichment of AlphaEarth Embeddings through Tri-Modal Contrastive Learning",
