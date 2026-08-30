@@ -15,8 +15,8 @@
   ],
   "metrics": {
     "citations": {
-      "all": 406,
-      "since2019": 392
+      "all": 408,
+      "since2019": 394
     },
     "hIndex": {
       "all": 7,
@@ -32,7 +32,7 @@
       "title": "Experiments of federated learning for COVID-19 chest X-ray images",
       "authors": "B Yan, J Wang, J Cheng, Y Zhou, Y Zhang, Y Yang, L Liu, H Zhao, ...",
       "venue": "Advances in Artificial Intelligence and Security: 7th International… , 2021",
-      "citations": 279,
+      "citations": 280,
       "year": 2021
     },
     {
@@ -46,7 +46,7 @@
       "title": "GeoLocator: A location-integrated large multimodal model (LMM) for inferring geo-privacy",
       "authors": "Y Yang, S Wang, D Li, S Sun, Q Wu",
       "venue": "Applied Sciences 14 (16), 7091 , 2024",
-      "citations": 27,
+      "citations": 28,
       "year": 2024
     },
     {
@@ -170,5 +170,5 @@
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-08-22T23:07:32.775Z"
+  "fetchedAt": "2026-08-30T16:44:32.849Z"
 }
