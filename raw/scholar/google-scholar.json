@@ -15,16 +15,16 @@
   ],
   "metrics": {
     "citations": {
-      "all": 408,
-      "since2019": 394
+      "all": 412,
+      "since2019": 398
     },
     "hIndex": {
       "all": 7,
       "since2019": 7
     },
     "i10Index": {
-      "all": 5,
-      "since2019": 5
+      "all": 7,
+      "since2019": 7
     }
   },
   "articles": [
@@ -60,21 +60,21 @@
       "title": "Integrating spatiotemporal vision transformer into digital twins for high-resolution heat stress forecasting in campus environments",
       "authors": "W Gong, X Ye, K Wu, S Jamonnak, W Zhang, Y Yang, X Huang",
       "venue": "Journal of Planning Education and Research, 0739456X251391121 , 2025",
-      "citations": 16,
+      "citations": 18,
       "year": 2025
     },
     {
       "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",
       "authors": "Z Li, H Li, Y Yang, S Wang, Y Zhu",
       "venue": "International Journal of Applied Earth Observation and Geoinformation , 2026",
-      "citations": 9,
+      "citations": 10,
       "year": 2026
     },
     {
       "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",
       "authors": "Y Yang, L Zou, B Zhou, D Li, B Lin, J Abedin, M Yang",
       "venue": "Computers, Environment and Urban Systems 121, 102335 , 2025",
-      "citations": 9,
+      "citations": 10,
       "year": 2025
     },
     {
@@ -127,9 +127,23 @@
       "year": 2025
     },
     {
+      "title": "BEACON: Behavioral and Semantic Enrichment of AlphaEarth Embeddings through Tri-Modal Contrastive Learning",
+      "authors": "H Tian, H Cai, Y Yang",
+      "venue": "The 34th ACM International Conference on Advances in Geographic Information… , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "RAPIDMap: Rapid Multi-Agent Pipeline for Interpretable Disaster Mapping from Satellite and Street-view Imagery",
+      "authors": "Y Yang, L Zou",
+      "venue": "CaGIS Conference 2026, September 8–11, 2026, St. Louis, MO, USA. , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
       "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
       "authors": "Y Yang, W Gong, K Zhang, L Zou, Z Tu, H Li, Z Li, X Ye",
-      "venue": "arXiv preprint arXiv:2606.21819 , 2026",
+      "venue": "The 34th ACM International Conference on Advances in Geographic Information… , 2026",
       "citations": 0,
       "year": 2026
     },
@@ -153,22 +167,8 @@
       "venue": "arXiv preprint arXiv:2601.15977 , 2026",
       "citations": 0,
       "year": 2026
-    },
-    {
-      "title": "Resilience in 4D: AI-Driven Geospatial Digital Twins for Urban Flood Simulation and Management",
-      "authors": "L Zou, D Mandal, B Zhou, Y Yang, M Yang",
-      "venue": "AGU25 , 2025",
-      "citations": 0,
-      "year": 2025
-    },
-    {
-      "title": "Object detection and segmentation of trees using Text SAM in ArcGIS Online",
-      "authors": "Y Yang, D Borrelli",
-      "venue": "Security First: Geospatial Workflows for a Safe and Equitable World, 114-122 , 2025",
-      "citations": 0,
-      "year": 2025
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-08-30T16:44:32.849Z"
+  "fetchedAt": "2026-09-06T20:28:08.686Z"
 }
