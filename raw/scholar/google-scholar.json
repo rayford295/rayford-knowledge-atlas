@@ -9,14 +9,14 @@
   "interests": [
     "AI4Science",
     "Spatial Data Science",
-    "GeoAI",
     "Disaster Resilience",
-    "Generative AI"
+    "Generative AI",
+    "Agentic AI"
   ],
   "metrics": {
     "citations": {
-      "all": 412,
-      "since2019": 398
+      "all": 413,
+      "since2019": 399
     },
     "hIndex": {
       "all": 7,
@@ -32,7 +32,7 @@
       "title": "Experiments of federated learning for COVID-19 chest X-ray images",
       "authors": "B Yan, J Wang, J Cheng, Y Zhou, Y Zhang, Y Yang, L Liu, H Zhao, ...",
       "venue": "Advances in Artificial Intelligence and Security: 7th International… , 2021",
-      "citations": 280,
+      "citations": 281,
       "year": 2021
     },
     {
@@ -106,16 +106,16 @@
       "year": 2025
     },
     {
-      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
-      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
-      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
+      "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
+      "authors": "Y Yang, L Zou, W Jepson",
+      "venue": "2026 IEEE International Geoscience and Remote Sensing Symposium (IGARSS) , 2026",
       "citations": 1,
       "year": 2026
     },
     {
-      "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
-      "authors": "Y Yang, L Zou, W Jepson",
-      "venue": "arXiv preprint arXiv:2603.20697 , 2026",
+      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
+      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
+      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
       "citations": 1,
       "year": 2026
     },
@@ -170,5 +170,5 @@
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-09-06T20:28:08.686Z"
+  "fetchedAt": "2026-09-15T04:59:20.863Z"
 }
