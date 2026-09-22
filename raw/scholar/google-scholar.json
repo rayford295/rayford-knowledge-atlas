@@ -8,15 +8,15 @@
   "homepage": "https://rayford295.github.io/",
   "interests": [
     "AI4Science",
-    "Spatial Data Science",
+    "GIScience",
     "Disaster Resilience",
-    "Generative AI",
-    "Agentic AI"
+    "Agentic AI",
+    "Generative AI"
   ],
   "metrics": {
     "citations": {
-      "all": 413,
-      "since2019": 399
+      "all": 415,
+      "since2019": 401
     },
     "hIndex": {
       "all": 7,
@@ -32,7 +32,7 @@
       "title": "Experiments of federated learning for COVID-19 chest X-ray images",
       "authors": "B Yan, J Wang, J Cheng, Y Zhou, Y Zhang, Y Yang, L Liu, H Zhao, ...",
       "venue": "Advances in Artificial Intelligence and Security: 7th International… , 2021",
-      "citations": 281,
+      "citations": 282,
       "year": 2021
     },
     {
@@ -85,16 +85,16 @@
       "year": 2026
     },
     {
-      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
-      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
-      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
-      "citations": 2,
-      "year": 2026
-    },
-    {
       "title": "DamageArbiter: A CLIP-Enhanced Multimodal Arbitration Framework for Hurricane Damage Assessment from Street-View Imagery",
       "authors": "Y Yang, L Zou, W Gong, K Fu, Z Li, S Wang, B Zhou, H Cai, H Tian",
       "venue": "arXiv preprint arXiv:2603.14837 , 2026",
+      "citations": 3,
+      "year": 2026
+    },
+    {
+      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
+      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
+      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
       "citations": 2,
       "year": 2026
     },
@@ -141,6 +141,13 @@
       "year": 2026
     },
     {
+      "title": "Debris-Cast: A Two-Stage Machine Learning Framework for Hurricane Debris Prediction Using Multi-Source Geospatial Data",
+      "authors": "J Kim, A Shakya, J Kelly, Y Yang, S Lee, SD Brody, A Mostafavi",
+      "venue": "Available at SSRN 7115288 , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
       "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
       "authors": "Y Yang, W Gong, K Zhang, L Zou, Z Tu, H Li, Z Li, X Ye",
       "venue": "The 34th ACM International Conference on Advances in Geographic Information… , 2026",
@@ -160,15 +167,8 @@
       "venue": "Available at SSRN 6766522 , 2026",
       "citations": 0,
       "year": 2026
-    },
-    {
-      "title": "Predicting Healthcare System Visitation Flow by Integrating Hospital Attributes and Population Socioeconomics with Human Mobility Data",
-      "authors": "B Lin, L Zou, H Tian, H Cai, Y Yang, B Zhou",
-      "venue": "arXiv preprint arXiv:2601.15977 , 2026",
-      "citations": 0,
-      "year": 2026
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-09-15T04:59:20.863Z"
+  "fetchedAt": "2026-09-22T05:04:48.084Z"
 }
