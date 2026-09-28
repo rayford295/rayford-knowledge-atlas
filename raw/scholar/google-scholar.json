@@ -15,8 +15,8 @@
   ],
   "metrics": {
     "citations": {
-      "all": 415,
-      "since2019": 401
+      "all": 418,
+      "since2019": 404
     },
     "hIndex": {
       "all": 7,
@@ -32,7 +32,7 @@
       "title": "Experiments of federated learning for COVID-19 chest X-ray images",
       "authors": "B Yan, J Wang, J Cheng, Y Zhou, Y Zhang, Y Yang, L Liu, H Zhao, ...",
       "venue": "Advances in Artificial Intelligence and Security: 7th International… , 2021",
-      "citations": 282,
+      "citations": 283,
       "year": 2021
     },
     {
@@ -64,6 +64,13 @@
       "year": 2025
     },
     {
+      "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",
+      "authors": "Y Yang, L Zou, B Zhou, D Li, B Lin, J Abedin, M Yang",
+      "venue": "Computers, Environment and Urban Systems 121, 102335 , 2025",
+      "citations": 11,
+      "year": 2025
+    },
+    {
       "title": "Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire",
       "authors": "Z Li, H Li, Y Yang, S Wang, Y Zhu",
       "venue": "International Journal of Applied Earth Observation and Geoinformation , 2026",
@@ -71,17 +78,10 @@
       "year": 2026
     },
     {
-      "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",
-      "authors": "Y Yang, L Zou, B Zhou, D Li, B Lin, J Abedin, M Yang",
-      "venue": "Computers, Environment and Urban Systems 121, 102335 , 2025",
-      "citations": 10,
-      "year": 2025
-    },
-    {
       "title": "Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents",
       "authors": "X Ye, W Gong, Y Yang, L Zou, Z Tu, X Huang, Z Li, H Ning, L Wu",
       "venue": "Urban Informatics 5 (1), 9 , 2026",
-      "citations": 6,
+      "citations": 7,
       "year": 2026
     },
     {
@@ -170,5 +170,5 @@
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-09-22T05:04:48.084Z"
+  "fetchedAt": "2026-09-28T17:38:16.800Z"
 }
