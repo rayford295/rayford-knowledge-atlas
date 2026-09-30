@@ -7,7 +7,9 @@ A living record of my doctoral journey in the Department of Geography at Texas A
 
 ## Dissertation
 
-**Evolving GeoAI for Disaster Resilience: From Discriminative Damage Assessment to Generative Multi-View Understanding and Agentic Decision Support.**
+**Advancing GeoAI for Disaster Resilience: From Damage Assessment to Responsible Decision Support.**
+
+(Title at the 2026-09-30 working draft: *Evolving GeoAI for Disaster Resilience: From Discriminative Damage Assessment to Generative Multi-View Understanding and Agentic Decision Support*. Shortened on my advisor’s advice before the committee version.)
 
 (Working title at the preliminary examination: *Cross-View Geospatial Artificial Intelligence for Disaster Damage Assessment: From Ground-Level Perception to Immersive Decision Support*.)
 
@@ -18,7 +20,7 @@ A living record of my doctoral journey in the Department of Geography at Texas A
 | Date | Milestone | Record |
 | --- | --- | --- |
 | 2026-06 | Preliminary Examination (written) | [Research reflections](./preliminary-examination/) |
-| 2026-09 | Dissertation proposal drafting | [Working draft (2026-09-30)](./dissertation-proposal/) |
+| 2026-09 | Dissertation proposal drafting | [Committee version (2026-09-30)](./dissertation-proposal/) |
 | 2026-10 (planned) | Dissertation Proposal Defense | [Proposal](./dissertation-proposal/) |
 
 > The examination questions themselves are kept private. The linked folder captures the substance of my own research philosophy articulated during the process, written as standalone notes rather than as exam answers.

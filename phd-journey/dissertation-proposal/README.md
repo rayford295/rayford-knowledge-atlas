@@ -8,7 +8,9 @@ This folder records my dissertation proposal: working drafts as they are revised
 
 ## Dissertation
 
-**Evolving GeoAI for Disaster Resilience: From Discriminative Damage Assessment to Generative Multi-View Understanding and Agentic Decision Support**
+**Advancing GeoAI for Disaster Resilience: From Damage Assessment to Responsible Decision Support**
+
+The three-stage structure below is unchanged; the title was shortened on my advisor’s advice before the proposal went to the committee (the working-draft title was *Evolving GeoAI for Disaster Resilience: From Discriminative Damage Assessment to Generative Multi-View Understanding and Agentic Decision Support*).
 
 The framing has evolved since the [preliminary examination](../preliminary-examination/), from a four-layer *system* to a three-stage *evolution* of GeoAI itself, each stage building on the data, models, and lessons of the previous one:
 
@@ -22,10 +24,11 @@ The framing has evolved since the [preliminary examination](../preliminary-exami
 
 | Date | Version | Files |
 | --- | --- | --- |
-| 2026-09-30 | Working draft (not yet defended) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-draft.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-draft.docx) · [Framework figure](./2026-09-30-conceptual-framework.png) |
+| 2026-09-30 | Committee version (sent to committee after advisor review; not yet defended) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-committee-version.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-committee-version.docx) |
+| 2026-09-30 | Working draft (superseded by the committee version) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-draft.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-draft.docx) · [Framework figure](./2026-09-30-conceptual-framework.png) |
 
 ## After the defense
 
-- Final proposal document (PDF)
+- Final proposal document (PDF), if revised after the defense
 - Proposal defense slides (PDF)
 - Reflections: what changed between the preliminary examination and the proposal, and why
