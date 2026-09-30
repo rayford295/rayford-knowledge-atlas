@@ -21,7 +21,7 @@ A living record of my doctoral journey in the Department of Geography at Texas A
 | --- | --- | --- |
 | 2026-06 | Preliminary Examination (written) | [Research reflections](./preliminary-examination/) |
 | 2026-09 | Dissertation proposal drafting | [Committee version (2026-09-30)](./dissertation-proposal/) |
-| 2026-10 (planned) | Dissertation Proposal Defense | [Proposal](./dissertation-proposal/) |
+| 2026-10-22 (scheduled) | Dissertation Proposal Defense | [Proposal and flyer](./dissertation-proposal/) |
 
 > The examination questions themselves are kept private. The linked folder captures the substance of my own research philosophy articulated during the process, written as standalone notes rather than as exam answers.
 

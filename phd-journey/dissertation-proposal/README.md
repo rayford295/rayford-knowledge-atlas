@@ -2,7 +2,7 @@
 
 This folder records my dissertation proposal: working drafts as they are revised with my committee, and, after the defense, the final document, the defense slides, and reflections.
 
-**Proposal defense:** planned for October 2026
+**Proposal defense:** Thursday, October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building ([flyer](./2026-10-22-proposal-defense-flyer.pdf))
 **Program:** Ph.D., Geography, Texas A&M University
 **Advisor:** Dr. Lei Zou
 
@@ -19,6 +19,10 @@ The framing has evolved since the [preliminary examination](../preliminary-exami
 - **Stage 3, agentic decision support:** anticipating, inspecting, and communicating place-based impacts with an accountable GeoAI agent, RAY (Cases 6–7).
 
 ![Conceptual framework: three challenges, three evolution stages, three insights](./2026-09-30-conceptual-framework.png)
+
+## Defense
+
+- [Proposal defense flyer (PDF)](./2026-10-22-proposal-defense-flyer.pdf): October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building; committee Dr. Lei Zou (Chair), Dr. Heng Cai, Dr. Andrew Klein, Dr. Zhengzhong Tu.
 
 ## Drafts
 
