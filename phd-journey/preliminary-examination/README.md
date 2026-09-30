@@ -12,7 +12,7 @@ This folder records the substance of my written preliminary examination: the res
 
 ## Dissertation
 
-**Cross-View Geospatial Artificial Intelligence for Disaster Damage Assessment: From Ground-Level Perception to Immersive Decision Support.**
+**Cross-View Geospatial Artificial Intelligence for Disaster Damage Assessment: From Ground-Level Perception to Immersive Decision Support** (title at the time of the preliminary examination; see the proposal draft below for how the framing has since evolved).
 
 Two keywords anchor the whole program: **disaster resilience** and **GeoAI**. The dissertation is organized as a four-layer system, and the through-theme is *responsibility*: beyond accuracy, the work should be interpretable, fair, and trustworthy.
 
@@ -24,6 +24,23 @@ Two keywords anchor the whole program: **disaster resilience** and **GeoAI**. Th
 4. **Delivery and feedback** — damage maps, interpretable reports, and a planned immersive 3D representation with user feedback.
 
 When I say "system," I mean this end-to-end framework as a whole, including governance and delivery, not only the part that makes predictions.
+
+## From the preliminary examination to the dissertation proposal
+
+The examination is the point where the program was first articulated as a single arc. Since then the framing has evolved from a four-layer *system* into a three-stage *evolution* of GeoAI itself, and the title has changed to:
+
+**Evolving GeoAI for Disaster Resilience: From Discriminative Damage Assessment to Generative Multi-View Understanding and Agentic Decision Support**
+
+- Stage 1, discriminative damage assessment: a single hurricane seen from a single, incomplete ground-level view (Cases 1–2).
+- Stage 2, generative multi-view understanding: many views, regions, and hazard types without event-specific training (Cases 3–5).
+- Stage 3, agentic decision support: anticipating, inspecting, and communicating place-based impacts with an accountable GeoAI agent (Cases 6–7).
+
+Working draft of the proposal (not the defended version; the final document will live in [`../dissertation-proposal/`](../dissertation-proposal/) after the defense):
+
+- [Dissertation proposal draft, 2026-09-30 (PDF)](./2026-09-30-yifan-yang-dissertation-proposal-draft.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-draft.docx)
+- [Conceptual framework figure](./2026-09-30-conceptual-framework.png)
+
+![Conceptual framework: three challenges, three evolution stages, three insights](./2026-09-30-conceptual-framework.png)
 
 ## Notes in this folder
 
