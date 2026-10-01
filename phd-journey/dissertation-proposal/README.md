@@ -18,18 +18,20 @@ The framing has evolved since the [preliminary examination](../preliminary-exami
 - **Stage 2, generative multi-view understanding:** many views, regions, and hazard types without event-specific training (Cases 3–5).
 - **Stage 3, agentic decision support:** anticipating, inspecting, and communicating place-based impacts with an accountable GeoAI agent, RAY (Cases 6–7).
 
-![Conceptual framework: three challenges, three evolution stages, three insights](./2026-09-30-conceptual-framework.png)
+![Final conceptual framework: discriminative models, generative models, and agentic decision support across the disaster management cycle](./2026-09-30-conceptual-framework.png)
+
+Final framework figure: integrates satellite imagery, street-view imagery, pre-event data, environmental data, and social and demographic data across preparedness, response, recovery, and mitigation.
 
 ## Defense
 
-- [Proposal defense flyer (PDF)](./2026-10-22-proposal-defense-flyer.pdf): October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building; committee Dr. Lei Zou (Chair), Dr. Heng Cai, Dr. Andrew Klein, Dr. Zhengzhong Tu.
+- [Final proposal defense flyer (PDF)](./2026-10-22-proposal-defense-flyer.pdf): October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building; committee Dr. Lei Zou (Chair), Dr. Heng Cai, Dr. Andrew Klein, Dr. Zhengzhong Tu.
 
 ## Drafts
 
 | Date | Version | Files |
 | --- | --- | --- |
 | 2026-09-30 | Committee version (sent to committee after advisor review; not yet defended) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-committee-version.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-committee-version.docx) |
-| 2026-09-30 | Working draft (superseded by the committee version) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-draft.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-draft.docx) · [Framework figure](./2026-09-30-conceptual-framework.png) |
+| 2026-09-30 | Working draft (superseded by the committee version) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-draft.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-draft.docx) |
 
 ## After the defense
 
