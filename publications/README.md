@@ -2,7 +2,7 @@
 
 This folder keeps public PDF copies of Yifan Yang's published papers and chapters. File names start with the publication year so the archive sorts chronologically in GitHub and Obsidian.
 
-**Stage** marks the degree stage in which each work was completed: *Undergraduate* (2020–2021, 3 works), *Master's* (GeoLocator, 2024, and ArcGIS Text SAM, 2025), and *PhD* (all others, 11 works).
+**Stage** marks the degree stage in which each work was completed: *Undergraduate* (2020–2021, 3 works), *Master's* (GeoLocator, 2024; Freight Crash Inequities and ArcGIS Text SAM, 2025), and *PhD* (all others, 10 works).
 
 The archive is grouped by publication type: **Journal Articles** (9), **Conference Proceedings** (6), **Book Chapters** (1). Numbering restarts within each type (J = journal, C = conference, B = book chapter), newest first.
 
@@ -14,7 +14,7 @@ The archive is grouped by publication type: **Journal Articles** (9), **Conferen
 | J2 | 2026 | PhD | Integrating earth observation data into the tri-environmental evaluation of the economic cost of natural disasters: a case study of 2025 LA wildfire | [LA Wildfire Tri-Environmental Cost](../wiki/papers/tri-environmental-la-wildfire.md) | [PDF](./2026-integrating-earth-observation-tri-environmental-la-wildfire.pdf) |
 | J3 | 2026 | PhD | Towards Agentic Urban Digital Twins (AUDiTs): Advancing New Urban Science Through Human-AI Co-Learning Agents | [Agentic Urban Digital Twins](../wiki/papers/agentic-urban-digital-twins.md) | [PDF](./2026-towards-agentic-urban-digital-twins-audits.pdf) |
 | J4 | 2025 | PhD | Hyperlocal Disaster Damage Assessment Using Bi-temporal Street-View Imagery and Pre-trained Vision Models | [Hyperlocal Disaster](../wiki/papers/hyperlocal-disaster.md) | [PDF](./2025-hyperlocal-disaster-damage-assessment.pdf) |
-| J5 | 2025 | PhD | Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles | [Freight Crash Inequities](../wiki/papers/freight-crash-spatial-inequities.md) | [PDF](./2025-navigating-spatial-inequities-freight-truck-crash-severity.pdf) |
+| J5 | 2025 | Master's | Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles | [Freight Crash Inequities](../wiki/papers/freight-crash-spatial-inequities.md) | [PDF](./2025-navigating-spatial-inequities-freight-truck-crash-severity.pdf) |
 | J6 | 2025 | PhD | Integrating Spatiotemporal Vision Transformer into Digital Twins for High-Resolution Heat Stress Forecasting in Campus Environments | [Heat Stress Digital Twins](../wiki/papers/heat-stress-digital-twins.md) | [PDF](./2025-spatiotemporal-vision-transformer-heat-stress-digital-twins.pdf) |
 | J7 | 2024 | Master's | GeoLocator: A Location-Integrated Large Multimodal Model for Inferring Geo-Privacy | [GeoLocator](../wiki/papers/geolocator.md) | [PDF](./2024-geolocator-location-integrated-lmm-geo-privacy.pdf) |
 | J8 | 2020 | Undergraduate | COVID-19 Public Opinion and Emotion Monitoring System Based on Time Series Thermal New Word Mining | [COVID Public Opinion](../wiki/papers/covid-public-opinion-emotion.md) | [PDF](./2020-covid-19-public-opinion-emotion-monitoring.pdf) |
