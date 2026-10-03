@@ -54,3 +54,9 @@
 
 - Added St. Louis, Missouri (CaGIS 2026 oral presentation of RAPIDMap) to the travel map: new globe point, Missouri state card, FIPS 29 in the county-lighting set.
 - Fixed the hero counters, which had drifted: Rockville, Maryland was added on 2026-08-14 without bumping them, so the page still said 19 states / 36 cities while the data held 20 + D.C. / 37. Now 21 / 50 states and 38 cities, matching `PLACES`. `map/README.md` coverage table gains the missing Maryland row as well.
+
+## 2026-10-03
+
+- Archived the GeoSearch '26 camera-ready as `publications/2026-trust-the-view-cross-view-conflicts-geosearch.pdf` (4 pages, CC BY 4.0) and registered it in the publication archive table and `raw/publications/publications.json` with DOI `10.1145/3849732.3857333`. Like the SIGSPATIAL '26 DOIs, it does not resolve until the workshop proceedings reach the ACM Digital Library in November 2026.
+- Promoted the `firebridge` placeholder to a curated node instead of opening a second page, which resolves the scoping question in `docs/ATLAS_BACKLOG.md`: FireBridge was the earlier name of the CrossViewGate repository, and the accepted paper is the published form of that line. The page moved to `wiki/papers/crossviewgate.md` (id `crossviewgate`, same graph position and colour); no other page linked to the old id.
+- Recorded the paper's own numbers (oracle gap 0.37–0.41, Eaton gate +0.051 over calibrated averaging, Milton closure 0.177 to 0.365 under building-centered crops, conflict-density Spearman r = 0.615) and connected the node to hyperlocal-disaster, damagearbiter, rapid, satellite-to-street, tri-environmental-la-wildfire, and the human-evidence-disaster-ai bridge question.

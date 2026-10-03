@@ -124,6 +124,15 @@
       "atlasPage": "wiki/papers/responsible-geoai.md"
     },
     {
+      "id": "crossviewgate",
+      "category": "Conference Proceeding",
+      "title": "Trust the View That Sees the Target: Mining Cross-View Conflicts for Reliability-Gated Disaster Damage Assessment",
+      "year": 2026,
+      "venue": "GeoSearch '26: 5th ACM SIGSPATIAL International Workshop on Searching and Mining Large Collections of Geospatial Data, Riverside, CA, USA",
+      "doi": "https://doi.org/10.1145/3849732.3857333",
+      "atlasPage": "wiki/papers/crossviewgate.md"
+    },
+    {
       "id": "resilience-4d-urban-flood",
       "category": "Conference Proceeding",
       "title": "Resilience in 4D: AI-Driven Geospatial Digital Twins for Urban Flood Simulation and Management",

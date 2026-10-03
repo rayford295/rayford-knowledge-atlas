@@ -24,6 +24,7 @@ This map is the landing page for the old `rayford295/Publications` repository af
 - [[../papers/rapidmap]]
 - [[../papers/beacon]]
 - [[../papers/responsible-geoai]]
+- [[../papers/crossviewgate]]
 - [[../papers/resilience-4d-urban-flood]]
 - [[../papers/disastervlp]]
 - [[../papers/federated-covid-chest-xray]]

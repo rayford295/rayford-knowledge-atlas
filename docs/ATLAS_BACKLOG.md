@@ -28,12 +28,11 @@ an existing markdown node, so the curated page replaces the stub in place.
 Work with material on hand but no node page yet. Ordered by how much of the
 material already exists in public form.
 
-| Project                  | Source                                      | Why it is not written yet                                                                                                                                                                                                                             |
-| ------------------------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PrepStreet               | `rayford295/PrepStreet` (private)           | Preparedness-oriented street-view damage scenario generation from hurricane forecasts. Too early; no public artifact to link.                                                                                                                         |
-| CrossViewGate            | `rayford295/CrossViewGate` (private)        | Visibility-conditioned reliability gating for cross-view damage assessment. Needs a scoping call first: this may be the same research line as the existing `firebridge` node, in which case it should extend that page rather than open a second one. |
-| Geothermal awareness     | `rayford295/geothermal-awareness` (private) | DOE task on geothermal perception and acceptance. Outside the disaster and GeoAI clusters, so it also needs a theme and a graph position that do not pretend it belongs to them.                                                                      |
-| Drone compression on HPC | `rayford295/drone-compression-hpc` (public) | Systems work rather than a research output; may belong in a repository layer instead of `wiki/papers/`.                                                                                                                                               |
+| Project                  | Source                                      | Why it is not written yet                                                                                                                                                        |
+| ------------------------ | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PrepStreet               | `rayford295/PrepStreet` (private)           | Preparedness-oriented street-view damage scenario generation from hurricane forecasts. Too early; no public artifact to link.                                                    |
+| Geothermal awareness     | `rayford295/geothermal-awareness` (private) | DOE task on geothermal perception and acceptance. Outside the disaster and GeoAI clusters, so it also needs a theme and a graph position that do not pretend it belongs to them. |
+| Drone compression on HPC | `rayford295/drone-compression-hpc` (public) | Systems work rather than a research output; may belong in a repository layer instead of `wiki/papers/`.                                                                          |
 
 ## Scholar-only records without curated pages
 

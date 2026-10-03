@@ -7,6 +7,7 @@ Research outputs are the public layer of the atlas.
 - [[../papers/rapid]]
 - [[../papers/rapidmap]]
 - [[../papers/beacon]]
+- [[../papers/crossviewgate]]
 - [[../papers/geosteward]]
 - [[../papers/vgi-spatial-bias]]
 - [[../papers/arcgis-sam-tree-segmentation]]
