@@ -31,6 +31,15 @@
       "atlasPage": "wiki/papers/agentic-urban-digital-twins.md"
     },
     {
+      "id": "debris-cast",
+      "category": "Journal Article",
+      "title": "Debris-Cast: A Two-Stage Machine Learning Framework for Hurricane Debris Prediction Using Multi-Source Geospatial Data",
+      "year": 2026,
+      "venue": "International Journal of Disaster Risk Reduction",
+      "doi": "https://doi.org/10.1016/j.ijdrr.2026.106470",
+      "atlasPage": "wiki/papers/debris-cast.md"
+    },
+    {
       "id": "hyperlocal-disaster",
       "category": "Journal Article",
       "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",

@@ -16,6 +16,7 @@
 - [RAPID](./papers/rapid.md)
 - [RAPIDMap](./papers/rapidmap.md)
 - [CrossViewGate](./papers/crossviewgate.md)
+- [Debris-Cast](./papers/debris-cast.md)
 - [GeoSteward](./papers/geosteward.md)
 - [VGI Spatial Bias](./papers/vgi-spatial-bias.md)
 - [ArcGIS Text SAM Tree Segmentation](./papers/arcgis-sam-tree-segmentation.md)

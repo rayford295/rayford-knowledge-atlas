@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-10-03T14:55:57.992Z",
+  "generatedAt": "2026-10-04T22:09:43.872Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -16,6 +16,7 @@ window.researchMapData = {
     "Disaster Assessment",
     "Disaster Damage Assessment",
     "Disaster Mapping",
+    "Disaster Recovery",
     "Disaster Resilience",
     "Earth Observation",
     "Evidence and Power",
@@ -24,11 +25,13 @@ window.researchMapData = {
     "GIScience",
     "Generative Vision",
     "Geo-Privacy",
+    "GeoAI",
     "GeoAI Governance",
     "Geospatial Foundation Models",
     "Human Mobility",
     "Human-AI Judgment",
     "Human-Centered Urban Analytics",
+    "Hurricane Debris Management",
     "Institutions Under Stress",
     "LiDAR Point Clouds",
     "Machine Learning Foundations",
@@ -47,6 +50,7 @@ window.researchMapData = {
     "Research Translation",
     "Responsible GeoAI",
     "Spatial Equity",
+    "Spatial Grid Design",
     "Spatial Intelligence",
     "Transportation Equity",
     "Urban Digital Twins",
@@ -126,8 +130,8 @@ window.researchMapData = {
       "metricLabel": "2 citations",
       "wikiPath": "wiki/papers/agentic-urban-digital-twins.md",
       "position": {
-        "x": 1267,
-        "y": 116
+        "x": 1137,
+        "y": 206
       },
       "color": "#1d9a8a",
       "radius": 30,
@@ -206,8 +210,8 @@ window.researchMapData = {
       "metricLabel": "4 commits",
       "wikiPath": "wiki/papers/arcgis-sam-tree-segmentation.md",
       "position": {
-        "x": 751,
-        "y": 940
+        "x": 732,
+        "y": 1027
       },
       "color": "#2f8f6f",
       "radius": 35,
@@ -277,8 +281,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/beacon.md",
       "position": {
-        "x": 1000,
-        "y": 562
+        "x": 1259,
+        "y": 576
       },
       "color": "#d45d9c",
       "radius": 32,
@@ -339,8 +343,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/boiling-frog-effect.md",
       "position": {
-        "x": 1110,
-        "y": 862
+        "x": 871,
+        "y": 1028
       },
       "color": "#2b8cbe",
       "radius": 32,
@@ -401,8 +405,8 @@ window.researchMapData = {
       "metricLabel": "28 citations",
       "wikiPath": "wiki/papers/covid-public-opinion-emotion.md",
       "position": {
-        "x": 1449,
-        "y": 847
+        "x": 1151,
+        "y": 1234
       },
       "color": "#7488ff",
       "radius": 38,
@@ -490,8 +494,8 @@ window.researchMapData = {
       "metricLabel": "undefined commits",
       "wikiPath": "wiki/papers/crossviewgate.md",
       "position": {
-        "x": 927,
-        "y": 200
+        "x": 798,
+        "y": 122
       },
       "color": "#d96832",
       "radius": 32,
@@ -566,11 +570,82 @@ window.researchMapData = {
       "metricLabel": "61 commits",
       "wikiPath": "wiki/papers/damagearbiter.md",
       "position": {
-        "x": 1279,
-        "y": 496
+        "x": 1156,
+        "y": 588
       },
       "color": "#0f1f34",
       "radius": 42,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "debris-cast",
+      "kind": "output",
+      "source": "Research Wiki",
+      "shortTitle": "Debris-Cast",
+      "title": "Debris-Cast: A Two-Stage Machine Learning Framework for Hurricane Debris Prediction Using Multi-Source Geospatial Data",
+      "year": 2026,
+      "venue": "International Journal of Disaster Risk Reduction",
+      "type": "Journal Article",
+      "status": "Accepted",
+      "authors": "Jooho Kim, Anish Shakya, Jacob Kelly, Yifan Yang, Selina Lee, Sam Brody, Ali Mostafavi",
+      "summary": "Debris-Cast first classifies whether debris removal was recorded in a spatial unit, then estimates debris volume for the cells that have it, which handles the zero-inflated structure of debris records. Random Forest and XGBoost models are trained on operational debris-removal load tickets from Hurricanes Helene and Milton (2024) in Pinellas County, Florida, for construction and demolition (C&D), vegetative, and combined debris. The comparison covers four spatial units: H3 hexagonal grids at resolutions 8 and 9 and equivalent-area square grids.",
+      "impact": "Estimates at the grid level support contractor mobilization, temporary debris-management site planning, and budget allocation. Because the framework uses public data instead of licensed software, local agencies can run it themselves, and the grid comparison gives them a principled way to choose between coarse, reliable totals and fine, noisier maps.",
+      "themes": [
+        "Disaster Recovery",
+        "Hurricane Debris Management",
+        "GeoAI",
+        "Spatial Grid Design"
+      ],
+      "methods": [
+        "Two-Stage Classification and Regression",
+        "Random Forest",
+        "XGBoost",
+        "H3 Hexagonal Grids",
+        "Multi-Source Geospatial Features"
+      ],
+      "links": [
+        {
+          "label": "PDF",
+          "url": "./publications/2026-debris-cast-hurricane-debris-prediction.pdf"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1016/j.ijdrr.2026.106470"
+        },
+        {
+          "label": "SSRN",
+          "url": "https://ssrn.com/abstract=7115288"
+        }
+      ],
+      "connections": [
+        {
+          "target": "hyperlocal-disaster",
+          "label": "moves from per-building damage to grid-level debris volume, the quantity recovery crews actually haul"
+        },
+        {
+          "target": "rapidmap",
+          "label": "shares the Hurricane Milton event and the goal of map-ready outputs for responders"
+        },
+        {
+          "target": "resilience-4d-urban-flood",
+          "label": "shares the hurricane and flood-exposure branch of disaster resilience work"
+        },
+        {
+          "target": "human-evidence-disaster-ai",
+          "label": "grounds the model in operational debris-removal load tickets rather than image labels"
+        }
+      ],
+      "repository": null,
+      "metrics": {},
+      "role": "collaborative output",
+      "metricLabel": "Research Wiki",
+      "wikiPath": "wiki/papers/debris-cast.md",
+      "position": {
+        "x": 1018,
+        "y": 406
+      },
+      "color": "#d96832",
+      "radius": 30,
       "displayKind": "Research Output"
     },
     {
@@ -642,8 +717,8 @@ window.researchMapData = {
       "metricLabel": "26 commits",
       "wikiPath": "wiki/papers/disastervlp.md",
       "position": {
-        "x": 778,
-        "y": 573
+        "x": 882,
+        "y": 846
       },
       "color": "#4b9dd5",
       "radius": 36,
@@ -700,8 +775,8 @@ window.researchMapData = {
       "metricLabel": "274 citations",
       "wikiPath": "wiki/papers/federated-covid-chest-xray.md",
       "position": {
-        "x": 1351,
-        "y": 300
+        "x": 1156,
+        "y": 390
       },
       "color": "#64c7ff",
       "radius": 44,
@@ -758,8 +833,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/freight-crash-spatial-inequities.md",
       "position": {
-        "x": 1748,
-        "y": 755
+        "x": 1290,
+        "y": 902
       },
       "color": "#e4a72a",
       "radius": 26,
@@ -834,8 +909,8 @@ window.researchMapData = {
       "metricLabel": "22 commits",
       "wikiPath": "wiki/papers/geolocator.md",
       "position": {
-        "x": 420,
-        "y": 712
+        "x": 163,
+        "y": 787
       },
       "color": "#d7a13b",
       "radius": 34,
@@ -917,8 +992,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/geosteward.md",
       "position": {
-        "x": 815,
-        "y": 202
+        "x": 686,
+        "y": 300
       },
       "color": "#00a5b5",
       "radius": 30,
@@ -979,8 +1054,8 @@ window.researchMapData = {
       "metricLabel": "8 citations",
       "wikiPath": "wiki/papers/heat-stress-digital-twins.md",
       "position": {
-        "x": 1435,
-        "y": 491
+        "x": 873,
+        "y": 670
       },
       "color": "#ff6b5e",
       "radius": 30,
@@ -1062,8 +1137,8 @@ window.researchMapData = {
       "metricLabel": "44 commits",
       "wikiPath": "wiki/papers/hyperlocal-disaster.md",
       "position": {
-        "x": 561,
-        "y": 393
+        "x": 440,
+        "y": 472
       },
       "color": "#157bc0",
       "radius": 38,
@@ -1119,8 +1194,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/low-rank-loss-functions.md",
       "position": {
-        "x": 1451,
-        "y": 1021
+        "x": 1260,
+        "y": 1062
       },
       "color": "#a579ff",
       "radius": 24,
@@ -1211,8 +1286,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/rapid.md",
       "position": {
-        "x": 991,
-        "y": 756
+        "x": 982,
+        "y": 848
       },
       "color": "#8ee06a",
       "radius": 38,
@@ -1287,8 +1362,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/rapidmap.md",
       "position": {
-        "x": 1226,
-        "y": 871
+        "x": 1125,
+        "y": 954
       },
       "color": "#5fc26a",
       "radius": 32,
@@ -1341,8 +1416,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/resilience-4d-urban-flood.md",
       "position": {
-        "x": 1154,
-        "y": 509
+        "x": 1032,
+        "y": 594
       },
       "color": "#36f1c7",
       "radius": 28,
@@ -1407,8 +1482,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/responsible-geoai.md",
       "position": {
-        "x": 1018,
-        "y": 386
+        "x": 720,
+        "y": 474
       },
       "color": "#7a5cff",
       "radius": 34,
@@ -1471,8 +1546,8 @@ window.researchMapData = {
       "metricLabel": "106 commits",
       "wikiPath": "wiki/papers/satellite-to-street.md",
       "position": {
-        "x": 1280,
-        "y": 689
+        "x": 1471,
+        "y": 776
       },
       "color": "#b97a16",
       "radius": 40,
@@ -1535,8 +1610,8 @@ window.researchMapData = {
       "metricLabel": "4 citations",
       "wikiPath": "wiki/papers/tri-environmental-la-wildfire.md",
       "position": {
-        "x": 1081,
-        "y": 124
+        "x": 952,
+        "y": 120
       },
       "color": "#d96832",
       "radius": 34,
@@ -1614,8 +1689,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/vgi-spatial-bias.md",
       "position": {
-        "x": 622,
-        "y": 935
+        "x": 563,
+        "y": 1020
       },
       "color": "#9a7b4f",
       "radius": 30,
@@ -1675,8 +1750,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/lei-zou-teaching-award-letter.md",
       "position": {
-        "x": 1108,
-        "y": 1040
+        "x": 1013,
+        "y": 1032
       },
       "color": "#f0a85a",
       "radius": 36,
@@ -1740,8 +1815,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy-summary-zh.md",
       "position": {
-        "x": 1567,
-        "y": 665
+        "x": 1629,
+        "y": 796
       },
       "color": "#d48a5c",
       "radius": 34,
@@ -1805,8 +1880,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy.md",
       "position": {
-        "x": 1795,
-        "y": 581
+        "x": 1326,
+        "y": 396
       },
       "color": "#b87333",
       "radius": 38,
@@ -1863,8 +1938,8 @@ window.researchMapData = {
       "metricLabel": "1346 notes",
       "wikiPath": "wiki/readings/1-23303928.md",
       "position": {
-        "x": 246,
-        "y": 323
+        "x": 124,
+        "y": 391
       },
       "color": "#ff6e4d",
       "radius": 48,
@@ -1921,8 +1996,8 @@ window.researchMapData = {
       "metricLabel": "301 notes",
       "wikiPath": "wiki/readings/10-25926862.md",
       "position": {
-        "x": 1176,
-        "y": 306
+        "x": 879,
+        "y": 492
       },
       "color": "#ff6e4d",
       "radius": 38,
@@ -1984,8 +2059,8 @@ window.researchMapData = {
       "metricLabel": "290 notes",
       "wikiPath": "wiki/readings/11-3300200299.md",
       "position": {
-        "x": 393,
-        "y": 530
+        "x": 399,
+        "y": 657
       },
       "color": "#a88cff",
       "radius": 37,
@@ -2037,8 +2112,8 @@ window.researchMapData = {
       "metricLabel": "262 notes",
       "wikiPath": "wiki/readings/12-3300146170.md",
       "position": {
-        "x": 851,
-        "y": 757
+        "x": 605,
+        "y": 841
       },
       "color": "#ffd46a",
       "radius": 37,
@@ -2090,8 +2165,8 @@ window.researchMapData = {
       "metricLabel": "715 notes",
       "wikiPath": "wiki/readings/2-3300064301.md",
       "position": {
-        "x": 411,
-        "y": 340
+        "x": 289,
+        "y": 410
       },
       "color": "#9ad66d",
       "radius": 43,
@@ -2149,8 +2224,8 @@ window.researchMapData = {
       "metricLabel": "470 notes",
       "wikiPath": "wiki/readings/3-43993718.md",
       "position": {
-        "x": 120,
-        "y": 538
+        "x": 126,
+        "y": 603
       },
       "color": "#ff6e4d",
       "radius": 40,
@@ -2202,8 +2277,8 @@ window.researchMapData = {
       "metricLabel": "427 notes",
       "wikiPath": "wiki/readings/4-31230615.md",
       "position": {
-        "x": 517,
-        "y": 716
+        "x": 261,
+        "y": 792
       },
       "color": "#36f1c7",
       "radius": 39,
@@ -2255,8 +2330,8 @@ window.researchMapData = {
       "metricLabel": "348 notes",
       "wikiPath": "wiki/readings/5-3300118393.md",
       "position": {
-        "x": 591,
-        "y": 203
+        "x": 462,
+        "y": 286
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2308,8 +2383,8 @@ window.researchMapData = {
       "metricLabel": "340 notes",
       "wikiPath": "wiki/readings/6-24019296.md",
       "position": {
-        "x": 704,
-        "y": 389
+        "x": 583,
+        "y": 478
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2366,8 +2441,8 @@ window.researchMapData = {
       "metricLabel": "330 notes",
       "wikiPath": "wiki/readings/7-3300021861.md",
       "position": {
-        "x": 255,
-        "y": 556
+        "x": 262,
+        "y": 604
       },
       "color": "#ffd46a",
       "radius": 38,
@@ -2424,8 +2499,8 @@ window.researchMapData = {
       "metricLabel": "321 notes",
       "wikiPath": "wiki/readings/8-3300151174.md",
       "position": {
-        "x": 667,
-        "y": 757
+        "x": 422,
+        "y": 842
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2477,8 +2552,8 @@ window.researchMapData = {
       "metricLabel": "320 notes",
       "wikiPath": "wiki/readings/9-3300045715.md",
       "position": {
-        "x": 717,
-        "y": 203
+        "x": 588,
+        "y": 292
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2528,8 +2603,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/ai-systems-human-judgment.md",
       "position": {
-        "x": 895,
-        "y": 570
+        "x": 714,
+        "y": 656
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2575,8 +2650,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/biography-research-judgment.md",
       "position": {
-        "x": 645,
-        "y": 575
+        "x": 570,
+        "y": 660
       },
       "color": "#9ad66d",
       "radius": 34,
@@ -2626,8 +2701,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/founder-window-research-output.md",
       "position": {
-        "x": 883,
-        "y": 940
+        "x": 764,
+        "y": 846
       },
       "color": "#ffd46a",
       "radius": 36,
@@ -2677,8 +2752,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/human-evidence-disaster-ai.md",
       "position": {
-        "x": 858,
-        "y": 382
+        "x": 880,
+        "y": 304
       },
       "color": "#f08bd6",
       "radius": 40,
@@ -2728,8 +2803,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/spatial-intelligence-public-infrastructure.md",
       "position": {
-        "x": 1125,
-        "y": 684
+        "x": 1113,
+        "y": 776
       },
       "color": "#64c7ff",
       "radius": 36,
@@ -2771,8 +2846,8 @@ window.researchMapData = {
       "metricLabel": "22 citations",
       "wikiPath": null,
       "position": {
-        "x": 1532,
-        "y": 316
+        "x": 1501,
+        "y": 396
       },
       "color": "#64c7ff",
       "radius": 35.25699782357623,
@@ -2817,8 +2892,8 @@ window.researchMapData = {
       "metricLabel": "2 citations",
       "wikiPath": null,
       "position": {
-        "x": 1621,
-        "y": 489
+        "x": 1521,
+        "y": 580
       },
       "color": "#64c7ff",
       "radius": 27.39411254969543,
@@ -2858,61 +2933,11 @@ window.researchMapData = {
       "metricLabel": "1 citations",
       "wikiPath": null,
       "position": {
-        "x": 1414,
-        "y": 658
+        "x": 1364,
+        "y": 580
       },
       "color": "#64c7ff",
       "radius": 26.4,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-debris-cast-a-two-stage-machine-learning-framework-for-hurricane",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Debris-Cast",
-      "title": "Debris-Cast: A Two-Stage Machine Learning Framework for Hurricane Debris Prediction Using Multi-Source Geospatial Data",
-      "year": 2026,
-      "venue": "Available at SSRN 7115288 , 2026",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "J Kim, A Shakya, J Kelly, Y Yang, S Lee, SD Brody, A Mostafavi",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Disaster Assessment",
-        "Spatial Intelligence",
-        "Multimodal Learning"
-      ],
-      "methods": [
-        "Disaster Assessment",
-        "Spatial Intelligence",
-        "Multimodal Learning"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "damagearbiter",
-          "label": "feeds the disaster intelligence output layer"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 0
-      },
-      "role": "collaborative output",
-      "metricLabel": "0 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 1320,
-        "y": 863
-      },
-      "color": "#64c7ff",
-      "radius": 24,
       "displayKind": "Research Output"
     },
     {
@@ -2949,8 +2974,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 1269,
-        "y": 1037
+        "x": 1309,
+        "y": 742
       },
       "color": "#64c7ff",
       "radius": 24,
