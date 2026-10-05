@@ -15,12 +15,12 @@
   ],
   "metrics": {
     "citations": {
-      "all": 418,
-      "since2019": 404
+      "all": 420,
+      "since2019": 406
     },
     "hIndex": {
-      "all": 7,
-      "since2019": 7
+      "all": 8,
+      "since2019": 8
     },
     "i10Index": {
       "all": 7,
@@ -81,7 +81,14 @@
       "title": "Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents",
       "authors": "X Ye, W Gong, Y Yang, L Zou, Z Tu, X Huang, Z Li, H Ning, L Wu",
       "venue": "Urban Informatics 5 (1), 9 , 2026",
-      "citations": 7,
+      "citations": 8,
+      "year": 2026
+    },
+    {
+      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
+      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
+      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
+      "citations": 3,
       "year": 2026
     },
     {
@@ -89,13 +96,6 @@
       "authors": "Y Yang, L Zou, W Gong, K Fu, Z Li, S Wang, B Zhou, H Cai, H Tian",
       "venue": "arXiv preprint arXiv:2603.14837 , 2026",
       "citations": 3,
-      "year": 2026
-    },
-    {
-      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
-      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
-      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
-      "citations": 2,
       "year": 2026
     },
     {
@@ -127,6 +127,20 @@
       "year": 2025
     },
     {
+      "title": "Debris-Cast: A Two-Stage Machine Learning Framework for Hurricane Debris Prediction Using Multi-Source Geospatial Data",
+      "authors": "J Kim, A Shakya, J Kelly, Y Yang, S Lee, SD Brody, A Mostafavi",
+      "venue": "International Journal of Disaster Risk Reduction, 106470 , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "Monitoring Urban Traffic Dynamics at Fine Spatiotemporal Resolution Using Distributed Acoustic Sensing and Deep Learning",
+      "authors": "H Tian, H Cai, X Chen, Y Yang",
+      "venue": "arXiv preprint arXiv:2609.28793 , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
       "title": "BEACON: Behavioral and Semantic Enrichment of AlphaEarth Embeddings through Tri-Modal Contrastive Learning",
       "authors": "H Tian, H Cai, Y Yang",
       "venue": "The 34th ACM International Conference on Advances in Geographic Information… , 2026",
@@ -137,13 +151,6 @@
       "title": "RAPIDMap: Rapid Multi-Agent Pipeline for Interpretable Disaster Mapping from Satellite and Street-view Imagery",
       "authors": "Y Yang, L Zou",
       "venue": "CaGIS Conference 2026, September 8–11, 2026, St. Louis, MO, USA. , 2026",
-      "citations": 0,
-      "year": 2026
-    },
-    {
-      "title": "Debris-Cast: A Two-Stage Machine Learning Framework for Hurricane Debris Prediction Using Multi-Source Geospatial Data",
-      "authors": "J Kim, A Shakya, J Kelly, Y Yang, S Lee, SD Brody, A Mostafavi",
-      "venue": "Available at SSRN 7115288 , 2026",
       "citations": 0,
       "year": 2026
     },
@@ -160,15 +167,8 @@
       "venue": "Journal of Hazardous Materials, 142440 , 2026",
       "citations": 0,
       "year": 2026
-    },
-    {
-      "title": "Seeing Green from Indoors in 3D: How Built Environment and Vegetation Shape Window-Level Nature Exposure",
-      "authors": "Z Li, L Zou, JH Seo, M Yang, Y Yang",
-      "venue": "Available at SSRN 6766522 , 2026",
-      "citations": 0,
-      "year": 2026
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-09-28T17:38:16.800Z"
+  "fetchedAt": "2026-10-05T18:25:10.676Z"
 }

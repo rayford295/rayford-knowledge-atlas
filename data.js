@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-10-04T22:09:43.872Z",
+  "generatedAt": "2026-10-05T18:25:13.121Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -405,7 +405,7 @@ window.researchMapData = {
       "metricLabel": "28 citations",
       "wikiPath": "wiki/papers/covid-public-opinion-emotion.md",
       "position": {
-        "x": 1151,
+        "x": 1152,
         "y": 1234
       },
       "color": "#7488ff",
@@ -642,7 +642,7 @@ window.researchMapData = {
       "wikiPath": "wiki/papers/debris-cast.md",
       "position": {
         "x": 1018,
-        "y": 406
+        "y": 405
       },
       "color": "#d96832",
       "radius": 30,
@@ -1194,7 +1194,7 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/low-rank-loss-functions.md",
       "position": {
-        "x": 1260,
+        "x": 1261,
         "y": 1062
       },
       "color": "#a579ff",
@@ -1362,7 +1362,7 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/rapidmap.md",
       "position": {
-        "x": 1125,
+        "x": 1126,
         "y": 954
       },
       "color": "#5fc26a",
@@ -1416,7 +1416,7 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/resilience-4d-urban-flood.md",
       "position": {
-        "x": 1032,
+        "x": 1031,
         "y": 594
       },
       "color": "#36f1c7",
@@ -1546,7 +1546,7 @@ window.researchMapData = {
       "metricLabel": "106 commits",
       "wikiPath": "wiki/papers/satellite-to-street.md",
       "position": {
-        "x": 1471,
+        "x": 1477,
         "y": 776
       },
       "color": "#b97a16",
@@ -1689,7 +1689,7 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/vgi-spatial-bias.md",
       "position": {
-        "x": 563,
+        "x": 564,
         "y": 1020
       },
       "color": "#9a7b4f",
@@ -1815,7 +1815,7 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy-summary-zh.md",
       "position": {
-        "x": 1629,
+        "x": 1635,
         "y": 796
       },
       "color": "#d48a5c",
@@ -2552,7 +2552,7 @@ window.researchMapData = {
       "metricLabel": "320 notes",
       "wikiPath": "wiki/readings/9-3300045715.md",
       "position": {
-        "x": 588,
+        "x": 589,
         "y": 292
       },
       "color": "#9ad66d",
@@ -2886,17 +2886,17 @@ window.researchMapData = {
       ],
       "repository": null,
       "metrics": {
-        "citations": 2
+        "citations": 3
       },
       "role": "collaborative output",
-      "metricLabel": "2 citations",
+      "metricLabel": "3 citations",
       "wikiPath": null,
       "position": {
         "x": 1521,
-        "y": 580
+        "y": 581
       },
       "color": "#64c7ff",
-      "radius": 27.39411254969543,
+      "radius": 28.156921938165304,
       "displayKind": "Research Output"
     },
     {
@@ -2941,23 +2941,23 @@ window.researchMapData = {
       "displayKind": "Research Output"
     },
     {
-      "id": "scholar-seeing-green-from-indoors-in-3d-how-built-environment-and-vegeta",
+      "id": "scholar-monitoring-urban-traffic-dynamics-at-fine-spatiotemporal-resolut",
       "kind": "output",
       "source": "Google Scholar",
-      "shortTitle": "Seeing Green from Ind...",
-      "title": "Seeing Green from Indoors in 3D: How Built Environment and Vegetation Shape Window-Level Nature Exposure",
+      "shortTitle": "Monitoring Urban Traff...",
+      "title": "Monitoring Urban Traffic Dynamics at Fine Spatiotemporal Resolution Using Distributed Acoustic Sensing and Deep Learning",
       "year": 2026,
-      "venue": "Available at SSRN 6766522 , 2026",
+      "venue": "arXiv preprint arXiv:2609.28793 , 2026",
       "type": "Scholar Output",
       "status": "Indexed",
-      "authors": "Z Li, L Zou, JH Seo, M Yang, Y Yang",
+      "authors": "H Tian, H Cai, X Chen, Y Yang",
       "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
       "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
       "themes": [
-        "Multimodal Learning"
+        "Spatial Intelligence"
       ],
       "methods": [
-        "Multimodal Learning"
+        "Spatial Intelligence"
       ],
       "links": [
         {
@@ -2965,7 +2965,12 @@ window.researchMapData = {
           "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
         }
       ],
-      "connections": [],
+      "connections": [
+        {
+          "target": "spatial-intelligence-public-infrastructure",
+          "label": "extends the urban and spatial intelligence question"
+        }
+      ],
       "repository": null,
       "metrics": {
         "citations": 0
@@ -2974,7 +2979,7 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 1309,
+        "x": 1312,
         "y": 742
       },
       "color": "#64c7ff",
