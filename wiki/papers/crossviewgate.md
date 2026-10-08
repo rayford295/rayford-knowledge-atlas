@@ -69,7 +69,7 @@ On conflict cases, how much information do fusion methods leave unused, can a pe
 
 ## Summary
 
-The paper mines conflict cases from three paired street/overhead collections: CAL FIRE inspection photographs from the 2025 Eaton wildfire, and 360-degree street-view panoramas from Hurricanes Ian and Milton, each matched to very-high-resolution overhead tiles. Conflicts make up 10–33% of the data. On them, an oracle that trusts whichever existing view is correct beats every fusion method tested by 0.37–0.41 accuracy, and the gap survives longer training, calibration, and backbone changes. A linear reliability gate over building-visibility features, calibrated confidences, and the disagreement itself recovers part of that gap on the wildfire data, a field-of-view experiment shows target alignment is the causal variable, and the spatial density of conflicts turns out to be a label-free damage map.
+The paper mines conflict cases from three paired street/overhead collections: CAL FIRE inspection photographs from the 2025 Eaton wildfire, and 360-degree street-view panoramas from Hurricanes Ian and Milton, each matched to very-high-resolution overhead tiles. Conflicts make up 9.6–33.2% of the test data. On them, an oracle that picks the correct single view would add 0.367–0.475 conflict accuracy over the better single view, and still 0.19–0.32 over the best evaluated fusion method. A linear reliability gate over building-visibility features, calibrated confidences, and the disagreement itself recovers part of that headroom where ground photographs are aimed at the building, a controlled field-of-view experiment supports building-oriented framing as a driver of when fusion pays, and the spatial density of conflicts, computed without labels, correlates with tile-level wildfire damage.
 
 ## Method Snapshot
 
@@ -82,13 +82,13 @@ Eaton wildfire, Altadena, CA (property-centric DINS photographs; 6.5k/1,966/1,98
 ## Key Contributions
 
 - Conflict cases as the unit of analysis, with an oracle single-view gap and a gap-closure metric that measure how much arbitration between existing predictors could still gain.
-- A readable linear reliability gate that is the only method to significantly beat calibrated probability averaging on the wildfire data.
-- A controlled field-of-view intervention that identifies target alignment of the street view as the causal variable behind when fusion pays.
-- Conflict density as a label-free spatial damage signal, distinct from model uncertainty.
+- A readable linear reliability gate that beats both end-to-end fusion and calibrated probability averaging on property-centric wildfire photographs, with the highest oracle-gap closure of any method.
+- A controlled field-of-view intervention that supports building-oriented framing of the street view as a driver of when fusion pays.
+- Conflict density as a label-free spatial damage indicator, distinct from model uncertainty.
 
 ## Results Snapshot
 
-On Eaton conflicts the gate reaches 0.768 accuracy, +0.072 over end-to-end fusion (p < 1e-4) and +0.051 over calibrated averaging (p = 0.0001), closing 52% of the oracle gap; no other method passes one half. On the panoramic hurricane data, where street views rarely see the target (mean building pixel ratio 0.027 on Ian vs. 0.119 on Eaton), the gate matches fusion instead. Building-centered cropping doubles the fusion closure on Milton (0.177 to 0.365) while random crops of the same size lower it. Tile-level conflict density correlates with Eaton damage at Spearman r = 0.615 (p = 0.001), while predictive entropy anti-correlates (r = -0.37 to -0.52). The gate's coefficients read as one rule: trust the street view when it is confident and actually looking at the building.
+On Eaton conflicts the gate reaches 0.768 accuracy, +0.072 over end-to-end fusion (p < 1e-4) and +0.051 over calibrated averaging (95% CI [+0.026, +0.077], p = 0.0001), an oracle-gap closure of 0.59 (calibrated averaging 0.52, end-to-end fusion 0.45). A two-expert gate that can only reweight street and remote reaches 0.734, so the headline gain combines visibility-based weighting and the added fusion expert. On the panoramic hurricane data, where street views rarely show a building prominently (mean building pixel ratio 0.027 on Ian vs. 0.119 on Eaton), the gate is statistically indistinguishable from end-to-end fusion. Building-centered cropping raises the conflict gain of fusion from 0.064 to 0.109 on Ian and from 0.067 to 0.149 on Milton, while random crops of the same geometry do not (0.042 and 0.055). Tile-level conflict density correlates with Eaton damage at Spearman r = 0.615 (nominal p = 0.001, 25 tiles; damage is spatially autocorrelated, Moran's I = 0.27), while predictive entropy anti-correlates (r = -0.37 to -0.52). The two-expert gate's coefficients read as one rule: trust the street view when it is confident and the building is centered in the frame.
 
 ## How This Connects to My Other Work
 
@@ -115,4 +115,4 @@ Yang, Y. (2026). Trust the View That Sees the Target: Mining Cross-View Conflict
 
 ## Chinese Summary
 
-这篇 GeoSearch '26 短论文（闪电报告）把跨视角灾损评估中的"冲突样本"——两个独立训练的单视角模型（卫星与街景）判断不一致的建筑——作为分析单元。数据来自 2025 年 Eaton 山火的 CAL FIRE 现场勘查照片，以及飓风 Ian、Milton 的 360° 街景全景，均与高分辨率俯视影像配对，冲突样本占 10–33%。在冲突样本上，"每次都信对的那个视角"的 oracle 比所有融合方法高出 0.37–0.41 的准确率，说明融合方法没有用好"何时信哪个视角"这一信息。论文提出一个基于建筑可见性、校准置信度和分歧特征的线性可靠性门控：在山火数据上它是唯一显著超过校准概率平均的方法（冲突准确率 +0.051），在全景街景数据上则与融合持平。视场角干预实验表明：把全景裁向建筑会使融合收益翻倍，而同尺寸的随机裁剪不会，因此街景是否对准目标建筑才是因果变量。此外，冲突样本的空间密度可以在没有标签的情况下预测瓦片级灾损（Spearman r = 0.615）。一句话：信那个真正看到目标的视角。该节点原为 FireBridge 占位节点，现升级为正式发表版本。
+这篇 GeoSearch '26 短论文（闪电报告）把跨视角灾损评估中的"冲突样本"——两个独立训练的单视角模型（卫星与街景）判断不一致的建筑——作为分析单元。数据来自 2025 年 Eaton 山火的 CAL FIRE 现场勘查照片，以及飓风 Ian、Milton 的 360° 街景全景，均与高分辨率俯视影像配对，冲突样本占测试集的 9.6–33.2%。在冲突样本上，"每次都选对单一视角"的 oracle 比更好的单视角模型高出 0.367–0.475 的冲突准确率，比最好的融合方法仍高 0.19–0.32，说明融合方法没有用好"何时信哪个视角"这一信息。论文提出一个基于建筑可见性、校准置信度和分歧特征的线性可靠性门控：在以建筑为中心拍摄的山火勘查照片上，它比端到端融合高 +0.072、比校准概率平均高 +0.051（冲突准确率），在全景街景数据上则与端到端融合无显著差异。视场角干预实验显示：把全景裁向建筑会提高融合在冲突样本上的收益（Ian 0.064→0.109，Milton 0.067→0.149），而同尺寸的随机裁剪不会，支持"街景是否对准建筑"是融合是否有用的驱动因素。此外，冲突样本的空间密度无需标签即可与瓦片级灾损相关（Spearman r = 0.615，25 个瓦片）。一句话：信那个真正看到目标的视角。该节点原为 FireBridge 占位节点，现升级为正式发表版本。

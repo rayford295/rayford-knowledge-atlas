@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-10-05T19:27:59.078Z",
+  "generatedAt": "2026-10-08T06:31:06.503Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -423,7 +423,7 @@ window.researchMapData = {
       "type": "Conference Paper",
       "status": "Accepted",
       "authors": "Yifan Yang",
-      "summary": "The paper mines conflict cases from three paired street/overhead collections: CAL FIRE inspection photographs from the 2025 Eaton wildfire, and 360-degree street-view panoramas from Hurricanes Ian and Milton, each matched to very-high-resolution overhead tiles. Conflicts make up 10–33% of the data. On them, an oracle that trusts whichever existing view is correct beats every fusion method tested by 0.37–0.41 accuracy, and the gap survives longer training, calibration, and backbone changes. A linear reliability gate over building-visibility features, calibrated confidences, and the disagreement itself recovers part of that gap on the wildfire data, a field-of-view experiment shows target alignment is the causal variable, and the spatial density of conflicts turns out to be a label-free damage map.",
+      "summary": "The paper mines conflict cases from three paired street/overhead collections: CAL FIRE inspection photographs from the 2025 Eaton wildfire, and 360-degree street-view panoramas from Hurricanes Ian and Milton, each matched to very-high-resolution overhead tiles. Conflicts make up 9.6–33.2% of the test data. On them, an oracle that picks the correct single view would add 0.367–0.475 conflict accuracy over the better single view, and still 0.19–0.32 over the best evaluated fusion method. A linear reliability gate over building-visibility features, calibrated confidences, and the disagreement itself recovers part of that headroom where ground photographs are aimed at the building, a controlled field-of-view experiment supports building-oriented framing as a driver of when fusion pays, and the spatial density of conflicts, computed without labels, correlates with tile-level wildfire damage.",
       "impact": "The paper turns \"does cross-view fusion help?\" into \"which view should be trusted, where, and why?\". For practitioners it gives a cheap rule that pays where ground evidence is aimed at the building and costs nothing where it is not, and a label-free conflict map that can flag damaged areas in a new collection before any labels exist.",
       "themes": [
         "Disaster Damage Assessment",
