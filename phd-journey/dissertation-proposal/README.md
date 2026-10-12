@@ -30,11 +30,12 @@ Final framework figure: integrates satellite imagery, street-view imagery, pre-e
 
 | Date | Version | Files |
 | --- | --- | --- |
+| 2026-10-12 | Defense slides, working draft (39 slides; being revised before the October 22 defense) | [PDF](./2026-10-12-yifan-yang-proposal-defense-slides-draft.pdf) |
 | 2026-09-30 | Committee version (sent to committee after advisor review; not yet defended) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-committee-version.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-committee-version.docx) |
 | 2026-09-30 | Working draft (superseded by the committee version) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-draft.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-draft.docx) |
 
 ## After the defense
 
 - Final proposal document (PDF), if revised after the defense
-- Proposal defense slides (PDF)
+- Proposal defense slides, final version (PDF)
 - Reflections: what changed between the preliminary examination and the proposal, and why
