@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-10-12T19:58:57.080Z",
+  "generatedAt": "2026-10-13T01:12:50.909Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -11,6 +11,7 @@ window.researchMapData = {
     "Biography and Judgment",
     "Climate Risk",
     "Computer Vision Segmentation",
+    "Cross-View Complementarity",
     "Cross-View Imagery",
     "Data Quality and Bias",
     "Disaster Assessment",
@@ -45,7 +46,6 @@ window.researchMapData = {
     "Public Signals",
     "Public Writing",
     "Reading Input",
-    "Reliability Estimation",
     "Research Taste",
     "Research Translation",
     "Responsible GeoAI",
@@ -71,7 +71,7 @@ window.researchMapData = {
     "WeRead"
   ],
   "counts": {
-    "output": 31,
+    "output": 32,
     "input": 12,
     "question": 5
   },
@@ -131,8 +131,8 @@ window.researchMapData = {
       "metricLabel": "2 citations",
       "wikiPath": "wiki/papers/agentic-urban-digital-twins.md",
       "position": {
-        "x": 1137,
-        "y": 285
+        "x": 1142,
+        "y": 165
       },
       "color": "#1d9a8a",
       "radius": 30,
@@ -211,8 +211,8 @@ window.researchMapData = {
       "metricLabel": "4 commits",
       "wikiPath": "wiki/papers/arcgis-sam-tree-segmentation.md",
       "position": {
-        "x": 688,
-        "y": 1159
+        "x": 741,
+        "y": 1027
       },
       "color": "#2f8f6f",
       "radius": 35,
@@ -282,8 +282,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/beacon.md",
       "position": {
-        "x": 1013,
-        "y": 672
+        "x": 1006,
+        "y": 497
       },
       "color": "#d45d9c",
       "radius": 32,
@@ -344,7 +344,7 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/boiling-frog-effect.md",
       "position": {
-        "x": 958,
+        "x": 880,
         "y": 1028
       },
       "color": "#2b8cbe",
@@ -406,8 +406,8 @@ window.researchMapData = {
       "metricLabel": "28 citations",
       "wikiPath": "wiki/papers/covid-public-opinion-emotion.md",
       "position": {
-        "x": 1249,
-        "y": 1219
+        "x": 1411,
+        "y": 1090
       },
       "color": "#7488ff",
       "radius": 38,
@@ -418,31 +418,31 @@ window.researchMapData = {
       "kind": "output",
       "source": "Research Wiki",
       "shortTitle": "CrossViewGate",
-      "title": "Trust the View That Sees the Target: Mining Cross-View Conflicts for Reliability-Gated Disaster Damage Assessment",
+      "title": "When Satellite and Street Views Disagree: Cross-View Complementarity in Disaster Damage Assessment",
       "year": 2026,
       "venue": "GeoSearch '26: 5th ACM SIGSPATIAL International Workshop on Searching and Mining Large Collections of Geospatial Data, Riverside, CA, USA (lightning talk)",
       "type": "Conference Paper",
       "status": "Accepted",
-      "authors": "Yifan Yang",
-      "summary": "The paper mines conflict cases from three paired street/overhead collections: CAL FIRE inspection photographs from the 2025 Eaton wildfire, and 360-degree street-view panoramas from Hurricanes Ian and Milton, each matched to very-high-resolution overhead tiles. Conflicts make up 9.6–33.2% of the test data. On them, an oracle that picks the correct single view would add 0.367–0.475 conflict accuracy over the better single view, and still 0.19–0.32 over the best evaluated fusion method. A linear reliability gate over building-visibility features, calibrated confidences, and the disagreement itself recovers part of that headroom where ground photographs are aimed at the building, a controlled field-of-view experiment supports building-oriented framing as a driver of when fusion pays, and the spatial density of conflicts, computed without labels, correlates with tile-level wildfire damage.",
-      "impact": "The paper turns \"does cross-view fusion help?\" into \"which view should be trusted, where, and why?\". For practitioners it gives a cheap rule that pays where ground evidence is aimed at the building and costs nothing where it is not, and a label-free conflict map that can flag damaged areas in a new collection before any labels exist.",
+      "authors": "Yifan Yang, Lei Zou",
+      "summary": "The paper mines conflict cases from three paired street/overhead collections: CAL FIRE inspection photographs from the 2025 Eaton wildfire, and 360-degree street-view panoramas from Hurricanes Ian and Milton, each matched to very-high-resolution overhead tiles. Conflicts make up 9.6–33.2% of the test data. On them, an oracle that picks the correct single view would add 0.367–0.475 conflict accuracy over the better single view, and still 0.19–0.32 over the best evaluated fusion method. A linear fusion gate over building-visibility features, calibrated confidences, and the disagreement itself recovers part of that headroom where ground photographs are aimed at the building, a controlled field-of-view experiment supports building-oriented framing as a driver of which view carries the evidence, and the spatial density of conflicts, computed without labels, correlates with tile-level wildfire damage. Conflict cases thus show how much complementary evidence fusion uses, which view carries it under each hazard and capture setting, and where current methods fall short.",
+      "impact": "The paper turns \"does cross-view fusion help?\" into \"which view carries the evidence, where, and why?\". Which view that is depends on hazard and capture setting: on property-centric wildfire photographs visibility cues identify when the street view is decisive, while on panoramic hurricane imagery calibrated averaging or end-to-end fusion suffices and framing ground photographs on structures raises the value of fusion. Practitioners get a cheap, auditable gate and a label-free conflict map that can flag damaged areas in a new collection before any labels exist.",
       "themes": [
         "Disaster Damage Assessment",
         "Cross-View Imagery",
         "Wildfire Risk",
-        "Reliability Estimation"
+        "Cross-View Complementarity"
       ],
       "methods": [
         "Cross-View Fusion",
         "Conflict-Case Mining",
-        "Visibility-Conditioned Reliability Gating",
+        "Visibility-Conditioned Fusion Gating",
         "Temperature Calibration",
         "Field-of-View Intervention"
       ],
       "links": [
         {
           "label": "PDF",
-          "url": "./publications/2026-trust-the-view-cross-view-conflicts-geosearch.pdf"
+          "url": "./publications/2026-when-satellite-and-street-views-disagree-geosearch.pdf"
         },
         {
           "label": "DOI",
@@ -460,7 +460,7 @@ window.researchMapData = {
       "connections": [
         {
           "target": "hyperlocal-disaster",
-          "label": "extends street-view damage assessment by asking when the street view should be trusted"
+          "label": "extends street-view damage assessment by asking which view carries the evidence for a building"
         },
         {
           "target": "damagearbiter",
@@ -468,7 +468,7 @@ window.researchMapData = {
         },
         {
           "target": "rapid",
-          "label": "supplies a per-building rule for which view an agentic pipeline should believe"
+          "label": "supplies a per-building rule for how an agentic pipeline should weight the two views"
         },
         {
           "target": "satellite-to-street",
@@ -486,7 +486,7 @@ window.researchMapData = {
       "repository": {
         "name": "rayford295/CrossViewGate",
         "url": "https://github.com/rayford295/CrossViewGate",
-        "preview": "Conflict-case mining and a visibility-conditioned reliability gate for satellite and street-view damage assessment.",
+        "preview": "Cross-view complementarity in disaster damage assessment, studied through the conflict cases where satellite and street-view models disagree.",
         "language": "Python",
         "stars": 0
       },
@@ -495,8 +495,8 @@ window.researchMapData = {
       "metricLabel": "undefined commits",
       "wikiPath": "wiki/papers/crossviewgate.md",
       "position": {
-        "x": 798,
-        "y": 268
+        "x": 803,
+        "y": 122
       },
       "color": "#d96832",
       "radius": 32,
@@ -571,8 +571,8 @@ window.researchMapData = {
       "metricLabel": "61 commits",
       "wikiPath": "wiki/papers/damagearbiter.md",
       "position": {
-        "x": 1243,
-        "y": 665
+        "x": 1108,
+        "y": 545
       },
       "color": "#0f1f34",
       "radius": 42,
@@ -642,8 +642,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/debris-cast.md",
       "position": {
-        "x": 1065,
-        "y": 497
+        "x": 1097,
+        "y": 363
       },
       "color": "#d96832",
       "radius": 30,
@@ -718,8 +718,8 @@ window.researchMapData = {
       "metricLabel": "26 commits",
       "wikiPath": "wiki/papers/disastervlp.md",
       "position": {
-        "x": 696,
-        "y": 794
+        "x": 958,
+        "y": 846
       },
       "color": "#4b9dd5",
       "radius": 36,
@@ -776,8 +776,8 @@ window.researchMapData = {
       "metricLabel": "274 citations",
       "wikiPath": "wiki/papers/federated-covid-chest-xray.md",
       "position": {
-        "x": 1203,
-        "y": 469
+        "x": 1235,
+        "y": 349
       },
       "color": "#64c7ff",
       "radius": 44,
@@ -834,8 +834,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/freight-crash-spatial-inequities.md",
       "position": {
-        "x": 1232,
-        "y": 843
+        "x": 1329,
+        "y": 916
       },
       "color": "#e4a72a",
       "radius": 26,
@@ -910,8 +910,8 @@ window.researchMapData = {
       "metricLabel": "22 commits",
       "wikiPath": "wiki/papers/geolocator.md",
       "position": {
-        "x": 237,
-        "y": 854
+        "x": 168,
+        "y": 771
       },
       "color": "#d7a13b",
       "radius": 34,
@@ -993,8 +993,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/geosteward.md",
       "position": {
-        "x": 685,
-        "y": 270
+        "x": 691,
+        "y": 298
       },
       "color": "#00a5b5",
       "radius": 30,
@@ -1055,8 +1055,8 @@ window.researchMapData = {
       "metricLabel": "8 citations",
       "wikiPath": "wiki/papers/heat-stress-digital-twins.md",
       "position": {
-        "x": 748,
-        "y": 618
+        "x": 906,
+        "y": 670
       },
       "color": "#ff6b5e",
       "radius": 30,
@@ -1138,8 +1138,8 @@ window.researchMapData = {
       "metricLabel": "44 commits",
       "wikiPath": "wiki/papers/hyperlocal-disaster.md",
       "position": {
-        "x": 445,
-        "y": 525
+        "x": 440,
+        "y": 449
       },
       "color": "#157bc0",
       "radius": 38,
@@ -1195,8 +1195,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/low-rank-loss-functions.md",
       "position": {
-        "x": 1348,
-        "y": 1047
+        "x": 1240,
+        "y": 1077
       },
       "color": "#a579ff",
       "radius": 24,
@@ -1287,8 +1287,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/rapid.md",
       "position": {
-        "x": 795,
-        "y": 807
+        "x": 858,
+        "y": 848
       },
       "color": "#8ee06a",
       "radius": 38,
@@ -1363,8 +1363,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/rapidmap.md",
       "position": {
-        "x": 1213,
-        "y": 1011
+        "x": 1193,
+        "y": 911
       },
       "color": "#5fc26a",
       "radius": 32,
@@ -1417,8 +1417,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/resilience-4d-urban-flood.md",
       "position": {
-        "x": 1118,
-        "y": 665
+        "x": 1233,
+        "y": 556
       },
       "color": "#36f1c7",
       "radius": 28,
@@ -1483,8 +1483,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/responsible-geoai.md",
       "position": {
-        "x": 743,
-        "y": 444
+        "x": 720,
+        "y": 472
       },
       "color": "#7a5cff",
       "radius": 34,
@@ -1547,8 +1547,8 @@ window.researchMapData = {
       "metricLabel": "106 commits",
       "wikiPath": "wiki/papers/satellite-to-street.md",
       "position": {
-        "x": 1395,
-        "y": 873
+        "x": 1433,
+        "y": 740
       },
       "color": "#b97a16",
       "radius": 40,
@@ -1611,7 +1611,7 @@ window.researchMapData = {
       "metricLabel": "4 citations",
       "wikiPath": "wiki/papers/tri-environmental-la-wildfire.md",
       "position": {
-        "x": 951,
+        "x": 957,
         "y": 120
       },
       "color": "#d96832",
@@ -1690,8 +1690,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/vgi-spatial-bias.md",
       "position": {
-        "x": 500,
-        "y": 1073
+        "x": 432,
+        "y": 997
       },
       "color": "#9a7b4f",
       "radius": 30,
@@ -1751,8 +1751,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/lei-zou-teaching-award-letter.md",
       "position": {
-        "x": 1100,
-        "y": 1032
+        "x": 1080,
+        "y": 915
       },
       "color": "#f0a85a",
       "radius": 36,
@@ -1816,8 +1816,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy-summary-zh.md",
       "position": {
-        "x": 1597,
-        "y": 847
+        "x": 1592,
+        "y": 781
       },
       "color": "#d48a5c",
       "radius": 34,
@@ -1881,8 +1881,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy.md",
       "position": {
-        "x": 1373,
-        "y": 361
+        "x": 1405,
+        "y": 386
       },
       "color": "#b87333",
       "radius": 38,
@@ -1939,8 +1939,8 @@ window.researchMapData = {
       "metricLabel": "1346 notes",
       "wikiPath": "wiki/readings/1-23303928.md",
       "position": {
-        "x": 130,
-        "y": 442
+        "x": 124,
+        "y": 376
       },
       "color": "#ff6e4d",
       "radius": 48,
@@ -1997,7 +1997,7 @@ window.researchMapData = {
       "metricLabel": "301 notes",
       "wikiPath": "wiki/readings/10-25926862.md",
       "position": {
-        "x": 929,
+        "x": 879,
         "y": 492
       },
       "color": "#ff6e4d",
@@ -2060,8 +2060,8 @@ window.researchMapData = {
       "metricLabel": "290 notes",
       "wikiPath": "wiki/readings/11-3300200299.md",
       "position": {
-        "x": 393,
-        "y": 710
+        "x": 413,
+        "y": 634
       },
       "color": "#a88cff",
       "radius": 37,
@@ -2113,8 +2113,8 @@ window.researchMapData = {
       "metricLabel": "262 notes",
       "wikiPath": "wiki/readings/12-3300146170.md",
       "position": {
-        "x": 655,
-        "y": 977
+        "x": 587,
+        "y": 839
       },
       "color": "#ffd46a",
       "radius": 37,
@@ -2166,8 +2166,8 @@ window.researchMapData = {
       "metricLabel": "715 notes",
       "wikiPath": "wiki/readings/2-3300064301.md",
       "position": {
-        "x": 295,
-        "y": 481
+        "x": 289,
+        "y": 394
       },
       "color": "#9ad66d",
       "radius": 43,
@@ -2225,8 +2225,8 @@ window.researchMapData = {
       "metricLabel": "470 notes",
       "wikiPath": "wiki/readings/3-43993718.md",
       "position": {
-        "x": 120,
-        "y": 657
+        "x": 140,
+        "y": 587
       },
       "color": "#ff6e4d",
       "radius": 40,
@@ -2278,8 +2278,8 @@ window.researchMapData = {
       "metricLabel": "427 notes",
       "wikiPath": "wiki/readings/4-31230615.md",
       "position": {
-        "x": 334,
-        "y": 896
+        "x": 266,
+        "y": 776
       },
       "color": "#36f1c7",
       "radius": 39,
@@ -2331,8 +2331,8 @@ window.researchMapData = {
       "metricLabel": "348 notes",
       "wikiPath": "wiki/readings/5-3300118393.md",
       "position": {
-        "x": 461,
-        "y": 339
+        "x": 467,
+        "y": 263
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2384,8 +2384,8 @@ window.researchMapData = {
       "metricLabel": "340 notes",
       "wikiPath": "wiki/readings/6-24019296.md",
       "position": {
-        "x": 588,
-        "y": 530
+        "x": 583,
+        "y": 476
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2442,8 +2442,8 @@ window.researchMapData = {
       "metricLabel": "330 notes",
       "wikiPath": "wiki/readings/7-3300021861.md",
       "position": {
-        "x": 255,
-        "y": 672
+        "x": 276,
+        "y": 588
       },
       "color": "#ffd46a",
       "radius": 38,
@@ -2500,8 +2500,8 @@ window.researchMapData = {
       "metricLabel": "321 notes",
       "wikiPath": "wiki/readings/8-3300151174.md",
       "position": {
-        "x": 472,
-        "y": 895
+        "x": 404,
+        "y": 819
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2553,8 +2553,8 @@ window.researchMapData = {
       "metricLabel": "320 notes",
       "wikiPath": "wiki/readings/9-3300045715.md",
       "position": {
-        "x": 587,
-        "y": 344
+        "x": 593,
+        "y": 290
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2604,8 +2604,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/ai-systems-human-judgment.md",
       "position": {
-        "x": 907,
-        "y": 842
+        "x": 728,
+        "y": 654
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2651,8 +2651,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/biography-research-judgment.md",
       "position": {
-        "x": 563,
-        "y": 712
+        "x": 584,
+        "y": 658
       },
       "color": "#9ad66d",
       "radius": 34,
@@ -2702,8 +2702,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/founder-window-research-output.md",
       "position": {
-        "x": 820,
-        "y": 1026
+        "x": 746,
+        "y": 846
       },
       "color": "#ffd46a",
       "radius": 36,
@@ -2753,7 +2753,7 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/human-evidence-disaster-ai.md",
       "position": {
-        "x": 947,
+        "x": 883,
         "y": 304
       },
       "color": "#f08bd6",
@@ -2804,8 +2804,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/spatial-intelligence-public-infrastructure.md",
       "position": {
-        "x": 1055,
-        "y": 850
+        "x": 1095,
+        "y": 733
       },
       "color": "#64c7ff",
       "radius": 36,
@@ -2847,8 +2847,8 @@ window.researchMapData = {
       "metricLabel": "22 citations",
       "wikiPath": null,
       "position": {
-        "x": 1548,
-        "y": 363
+        "x": 1579,
+        "y": 381
       },
       "color": "#64c7ff",
       "radius": 35.25699782357623,
@@ -2893,8 +2893,8 @@ window.researchMapData = {
       "metricLabel": "3 citations",
       "wikiPath": null,
       "position": {
-        "x": 1396,
-        "y": 537
+        "x": 1518,
+        "y": 562
       },
       "color": "#64c7ff",
       "radius": 28.156921938165304,
@@ -2934,8 +2934,8 @@ window.researchMapData = {
       "metricLabel": "1 citations",
       "wikiPath": null,
       "position": {
-        "x": 908,
-        "y": 668
+        "x": 1361,
+        "y": 564
       },
       "color": "#64c7ff",
       "radius": 26.4,
@@ -2975,8 +2975,56 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 1416,
-        "y": 699
+        "x": 1271,
+        "y": 740
+      },
+      "color": "#64c7ff",
+      "radius": 24,
+      "displayKind": "Research Output"
+    },
+    {
+      "id": "scholar-trust-the-view-that-sees-the-target-mining-cross-view-conflicts-",
+      "kind": "output",
+      "source": "Google Scholar",
+      "shortTitle": "Trust the View That Se...",
+      "title": "Trust the View That Sees the Target: Mining Cross-View Conflicts for Reliability-Gated Disaster Damage Assessment",
+      "year": 2026,
+      "venue": "Proceedings of the 5th ACM SIGSPATIAL International Workshop on Searching… , 2026",
+      "type": "Scholar Output",
+      "status": "Indexed",
+      "authors": "Y Yang",
+      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
+      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
+      "themes": [
+        "Disaster Assessment",
+        "Spatial Intelligence"
+      ],
+      "methods": [
+        "Disaster Assessment",
+        "Spatial Intelligence"
+      ],
+      "links": [
+        {
+          "label": "Scholar Profile",
+          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+        }
+      ],
+      "connections": [
+        {
+          "target": "damagearbiter",
+          "label": "feeds the disaster intelligence output layer"
+        }
+      ],
+      "repository": null,
+      "metrics": {
+        "citations": 0
+      },
+      "role": "first-author or lead-position output",
+      "metricLabel": "0 citations",
+      "wikiPath": null,
+      "position": {
+        "x": 1044,
+        "y": 1085
       },
       "color": "#64c7ff",
       "radius": 24,
@@ -3021,8 +3069,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 1171,
-        "y": 1391
+        "x": 1179,
+        "y": 1243
       },
       "color": "#64c7ff",
       "radius": 24,
