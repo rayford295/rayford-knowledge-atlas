@@ -1,41 +1,40 @@
 # Dissertation Proposal
 
-This folder records my dissertation proposal: working drafts as they are revised with my committee, and, after the defense, the final document, the defense slides, and reflections.
+This folder records my dissertation proposal: the final proposal document and the defense slides as presented to my committee, plus the defense flyer.
 
 **Proposal defense:** Thursday, October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building ([flyer](./2026-10-22-proposal-defense-flyer.pdf))
 **Program:** Ph.D., Geography, Texas A&M University
-**Advisor:** Dr. Lei Zou
+**Committee:** Dr. Lei Zou (Chair), Dr. Heng Cai, Dr. Andrew Klein, Dr. Zhengzhong Tu
 
 ## Dissertation
 
 **Advancing GeoAI for Disaster Resilience: From Damage Assessment to Responsible Decision Support**
 
-The three-stage structure below is unchanged; the title was shortened on my advisor’s advice before the proposal went to the committee (the working-draft title was *Evolving GeoAI for Disaster Resilience: From Discriminative Damage Assessment to Generative Multi-View Understanding and Agentic Decision Support*).
+> "Seeing, describing, and governing disasters: beyond the boundaries of the screen, let the real world become the stage for intelligence."
 
-The framing has evolved since the [preliminary examination](../preliminary-examination/), from a four-layer *system* to a three-stage *evolution* of GeoAI itself, each stage building on the data, models, and lessons of the previous one:
+Disaster resilience is a geographical question: it is rooted in space, diverse across the globe, a spatial inquiry into where, how severely, and who, and a cycle in time from preparedness to response, recovery, and mitigation. Damage assessment is the hinge of that cycle, and imagery from overhead and ground-level views is its primary evidence. The dissertation advances GeoAI along three evolving model families, each answering one challenge:
 
-- **Stage 1, discriminative damage assessment:** a single hurricane seen from a single, incomplete ground-level view (Cases 1–2).
-- **Stage 2, generative multi-view understanding:** many views, regions, and hazard types without event-specific training (Cases 3–5).
-- **Stage 3, agentic decision support:** anticipating, inspecting, and communicating place-based impacts with an accountable GeoAI agent, RAY (Cases 6–7).
+| Challenge | Stage | Insight | Cases |
+| --- | --- | --- | --- |
+| Discriminative assessment is not yet accurate or reliable enough | **Stage 1, discriminative damage assessment:** restore the pre-disaster baseline and arbitrate among models, to *see better* | More accurate and reliable hyperlocal damage assessment | 1–2 |
+| Specialized models do not generalize across events | **Stage 2, generative zero-shot understanding:** many views, regions, and hazards without event-specific training, to *respond faster* | Rapid, interpretable, zero-shot assessment across views, regions, and hazards | 3–5 |
+| Assessment alone does not close the resilience loop | **Stage 3, agentic decision support:** anticipate, inspect, and communicate place-based impacts with accountability, to *prepare and deliver better* | Preparedness and accountable place-based decision support, delivered by RAY (Resilience Assistant for You) | 6–7 |
 
-![Final conceptual framework: discriminative models, generative models, and agentic decision support across the disaster management cycle](./2026-09-30-conceptual-framework.png)
+![Conceptual framework: three challenges mapped to the discriminative, generative, and agentic stages of evolving GeoAI for disaster resilience, and the insight each stage contributes](./2026-10-22-conceptual-framework.png)
 
-Final framework figure: integrates satellite imagery, street-view imagery, pre-event data, environmental data, and social and demographic data across preparedness, response, recovery, and mitigation.
+Cases 1–5 are complete (CEUS 2025; Natural Hazards under review; ACM SIGSPATIAL 2026; IEEE IGARSS 2026; CRC Press chapter under review). Cases 6 and 7 are in progress, with the final defense and graduation planned for Summer 2027.
 
-## Defense
+## Final versions
 
-- [Final proposal defense flyer (PDF)](./2026-10-22-proposal-defense-flyer.pdf): October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building; committee Dr. Lei Zou (Chair), Dr. Heng Cai, Dr. Andrew Klein, Dr. Zhengzhong Tu.
-
-## Drafts
-
-| Date | Version | Files |
+| Date | Document | File |
 | --- | --- | --- |
-| 2026-10-12 | Defense slides, working draft (39 slides; being revised before the October 22 defense) | [PDF](./2026-10-12-yifan-yang-proposal-defense-slides-draft.pdf) |
-| 2026-09-30 | Committee version (sent to committee after advisor review; not yet defended) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-committee-version.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-committee-version.docx) |
-| 2026-09-30 | Working draft (superseded by the committee version) | [PDF](./2026-09-30-yifan-yang-dissertation-proposal-draft.pdf) · [DOCX](./2026-09-30-yifan-yang-dissertation-proposal-draft.docx) |
+| 2026-10-22 | Dissertation proposal, final version submitted to the committee | [PDF](./2026-10-22-yifan-yang-dissertation-proposal.pdf) |
+| 2026-10-22 | Proposal defense slides (40 slides + 3 backup slides) | [PDF](./2026-10-22-yifan-yang-proposal-defense-slides.pdf) |
+| 2026-10-22 | Proposal defense flyer | [PDF](./2026-10-22-proposal-defense-flyer.pdf) |
+
+Earlier working drafts (2026-09-30 proposal drafts, 2026-10-12 slide draft) were removed from this folder once the final versions were fixed; they remain in the git history.
 
 ## After the defense
 
-- Final proposal document (PDF), if revised after the defense
-- Proposal defense slides, final version (PDF)
 - Reflections: what changed between the preliminary examination and the proposal, and why
+- Committee feedback and the resulting revisions, if any
