@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-10-19T17:08:24.331Z",
+  "generatedAt": "2026-10-21T11:57:59.684Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -71,7 +71,7 @@ window.researchMapData = {
     "WeRead"
   ],
   "counts": {
-    "output": 32,
+    "output": 31,
     "input": 12,
     "question": 5
   },
@@ -131,8 +131,8 @@ window.researchMapData = {
       "metricLabel": "2 citations",
       "wikiPath": "wiki/papers/agentic-urban-digital-twins.md",
       "position": {
-        "x": 1142,
-        "y": 165
+        "x": 1137,
+        "y": 286
       },
       "color": "#1d9a8a",
       "radius": 30,
@@ -211,8 +211,8 @@ window.researchMapData = {
       "metricLabel": "4 commits",
       "wikiPath": "wiki/papers/arcgis-sam-tree-segmentation.md",
       "position": {
-        "x": 741,
-        "y": 1027
+        "x": 688,
+        "y": 1159
       },
       "color": "#2f8f6f",
       "radius": 35,
@@ -282,8 +282,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/beacon.md",
       "position": {
-        "x": 1006,
-        "y": 497
+        "x": 1013,
+        "y": 672
       },
       "color": "#d45d9c",
       "radius": 32,
@@ -344,7 +344,7 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/boiling-frog-effect.md",
       "position": {
-        "x": 880,
+        "x": 958,
         "y": 1028
       },
       "color": "#2b8cbe",
@@ -406,8 +406,8 @@ window.researchMapData = {
       "metricLabel": "28 citations",
       "wikiPath": "wiki/papers/covid-public-opinion-emotion.md",
       "position": {
-        "x": 1411,
-        "y": 1090
+        "x": 1249,
+        "y": 1219
       },
       "color": "#7488ff",
       "radius": 38,
@@ -495,8 +495,8 @@ window.researchMapData = {
       "metricLabel": "undefined commits",
       "wikiPath": "wiki/papers/crossviewgate.md",
       "position": {
-        "x": 803,
-        "y": 122
+        "x": 798,
+        "y": 268
       },
       "color": "#d96832",
       "radius": 32,
@@ -571,8 +571,8 @@ window.researchMapData = {
       "metricLabel": "61 commits",
       "wikiPath": "wiki/papers/damagearbiter.md",
       "position": {
-        "x": 1108,
-        "y": 545
+        "x": 1243,
+        "y": 666
       },
       "color": "#0f1f34",
       "radius": 42,
@@ -642,8 +642,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/debris-cast.md",
       "position": {
-        "x": 1097,
-        "y": 363
+        "x": 1065,
+        "y": 497
       },
       "color": "#d96832",
       "radius": 30,
@@ -718,8 +718,8 @@ window.researchMapData = {
       "metricLabel": "26 commits",
       "wikiPath": "wiki/papers/disastervlp.md",
       "position": {
-        "x": 958,
-        "y": 846
+        "x": 696,
+        "y": 794
       },
       "color": "#4b9dd5",
       "radius": 36,
@@ -776,8 +776,8 @@ window.researchMapData = {
       "metricLabel": "274 citations",
       "wikiPath": "wiki/papers/federated-covid-chest-xray.md",
       "position": {
-        "x": 1235,
-        "y": 349
+        "x": 1203,
+        "y": 470
       },
       "color": "#64c7ff",
       "radius": 44,
@@ -834,8 +834,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/freight-crash-spatial-inequities.md",
       "position": {
-        "x": 1329,
-        "y": 916
+        "x": 1232,
+        "y": 844
       },
       "color": "#e4a72a",
       "radius": 26,
@@ -910,8 +910,8 @@ window.researchMapData = {
       "metricLabel": "22 commits",
       "wikiPath": "wiki/papers/geolocator.md",
       "position": {
-        "x": 168,
-        "y": 771
+        "x": 237,
+        "y": 855
       },
       "color": "#d7a13b",
       "radius": 34,
@@ -993,8 +993,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/geosteward.md",
       "position": {
-        "x": 691,
-        "y": 298
+        "x": 685,
+        "y": 270
       },
       "color": "#00a5b5",
       "radius": 30,
@@ -1055,8 +1055,8 @@ window.researchMapData = {
       "metricLabel": "8 citations",
       "wikiPath": "wiki/papers/heat-stress-digital-twins.md",
       "position": {
-        "x": 906,
-        "y": 670
+        "x": 748,
+        "y": 618
       },
       "color": "#ff6b5e",
       "radius": 30,
@@ -1138,8 +1138,8 @@ window.researchMapData = {
       "metricLabel": "44 commits",
       "wikiPath": "wiki/papers/hyperlocal-disaster.md",
       "position": {
-        "x": 440,
-        "y": 449
+        "x": 445,
+        "y": 525
       },
       "color": "#157bc0",
       "radius": 38,
@@ -1195,8 +1195,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/low-rank-loss-functions.md",
       "position": {
-        "x": 1240,
-        "y": 1077
+        "x": 1348,
+        "y": 1047
       },
       "color": "#a579ff",
       "radius": 24,
@@ -1287,8 +1287,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/rapid.md",
       "position": {
-        "x": 858,
-        "y": 848
+        "x": 795,
+        "y": 807
       },
       "color": "#8ee06a",
       "radius": 38,
@@ -1363,8 +1363,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/rapidmap.md",
       "position": {
-        "x": 1193,
-        "y": 911
+        "x": 1213,
+        "y": 1012
       },
       "color": "#5fc26a",
       "radius": 32,
@@ -1417,8 +1417,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": "wiki/papers/resilience-4d-urban-flood.md",
       "position": {
-        "x": 1233,
-        "y": 556
+        "x": 1118,
+        "y": 665
       },
       "color": "#36f1c7",
       "radius": 28,
@@ -1483,8 +1483,8 @@ window.researchMapData = {
       "metricLabel": "Research Wiki",
       "wikiPath": "wiki/papers/responsible-geoai.md",
       "position": {
-        "x": 720,
-        "y": 472
+        "x": 743,
+        "y": 444
       },
       "color": "#7a5cff",
       "radius": 34,
@@ -1547,8 +1547,8 @@ window.researchMapData = {
       "metricLabel": "106 commits",
       "wikiPath": "wiki/papers/satellite-to-street.md",
       "position": {
-        "x": 1433,
-        "y": 740
+        "x": 1395,
+        "y": 873
       },
       "color": "#b97a16",
       "radius": 40,
@@ -1611,7 +1611,7 @@ window.researchMapData = {
       "metricLabel": "4 citations",
       "wikiPath": "wiki/papers/tri-environmental-la-wildfire.md",
       "position": {
-        "x": 957,
+        "x": 951,
         "y": 120
       },
       "color": "#d96832",
@@ -1690,8 +1690,8 @@ window.researchMapData = {
       "metricLabel": "0 commits",
       "wikiPath": "wiki/papers/vgi-spatial-bias.md",
       "position": {
-        "x": 432,
-        "y": 997
+        "x": 500,
+        "y": 1073
       },
       "color": "#9a7b4f",
       "radius": 30,
@@ -1751,8 +1751,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/lei-zou-teaching-award-letter.md",
       "position": {
-        "x": 1080,
-        "y": 915
+        "x": 1100,
+        "y": 1032
       },
       "color": "#f0a85a",
       "radius": 36,
@@ -1816,8 +1816,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy-summary-zh.md",
       "position": {
-        "x": 1592,
-        "y": 781
+        "x": 1597,
+        "y": 847
       },
       "color": "#d48a5c",
       "radius": 34,
@@ -1881,8 +1881,8 @@ window.researchMapData = {
       "metricLabel": "Public Writing",
       "wikiPath": "wiki/public-writing/research-philosophy.md",
       "position": {
-        "x": 1405,
-        "y": 386
+        "x": 1373,
+        "y": 361
       },
       "color": "#b87333",
       "radius": 38,
@@ -1939,8 +1939,8 @@ window.researchMapData = {
       "metricLabel": "1346 notes",
       "wikiPath": "wiki/readings/1-23303928.md",
       "position": {
-        "x": 124,
-        "y": 376
+        "x": 130,
+        "y": 442
       },
       "color": "#ff6e4d",
       "radius": 48,
@@ -1997,7 +1997,7 @@ window.researchMapData = {
       "metricLabel": "301 notes",
       "wikiPath": "wiki/readings/10-25926862.md",
       "position": {
-        "x": 879,
+        "x": 929,
         "y": 492
       },
       "color": "#ff6e4d",
@@ -2060,8 +2060,8 @@ window.researchMapData = {
       "metricLabel": "290 notes",
       "wikiPath": "wiki/readings/11-3300200299.md",
       "position": {
-        "x": 413,
-        "y": 634
+        "x": 393,
+        "y": 710
       },
       "color": "#a88cff",
       "radius": 37,
@@ -2113,8 +2113,8 @@ window.researchMapData = {
       "metricLabel": "262 notes",
       "wikiPath": "wiki/readings/12-3300146170.md",
       "position": {
-        "x": 587,
-        "y": 839
+        "x": 655,
+        "y": 977
       },
       "color": "#ffd46a",
       "radius": 37,
@@ -2166,8 +2166,8 @@ window.researchMapData = {
       "metricLabel": "715 notes",
       "wikiPath": "wiki/readings/2-3300064301.md",
       "position": {
-        "x": 289,
-        "y": 394
+        "x": 295,
+        "y": 482
       },
       "color": "#9ad66d",
       "radius": 43,
@@ -2225,8 +2225,8 @@ window.researchMapData = {
       "metricLabel": "470 notes",
       "wikiPath": "wiki/readings/3-43993718.md",
       "position": {
-        "x": 140,
-        "y": 587
+        "x": 120,
+        "y": 657
       },
       "color": "#ff6e4d",
       "radius": 40,
@@ -2278,8 +2278,8 @@ window.researchMapData = {
       "metricLabel": "427 notes",
       "wikiPath": "wiki/readings/4-31230615.md",
       "position": {
-        "x": 266,
-        "y": 776
+        "x": 334,
+        "y": 896
       },
       "color": "#36f1c7",
       "radius": 39,
@@ -2331,8 +2331,8 @@ window.researchMapData = {
       "metricLabel": "348 notes",
       "wikiPath": "wiki/readings/5-3300118393.md",
       "position": {
-        "x": 467,
-        "y": 263
+        "x": 461,
+        "y": 339
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2384,8 +2384,8 @@ window.researchMapData = {
       "metricLabel": "340 notes",
       "wikiPath": "wiki/readings/6-24019296.md",
       "position": {
-        "x": 583,
-        "y": 476
+        "x": 588,
+        "y": 531
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2442,8 +2442,8 @@ window.researchMapData = {
       "metricLabel": "330 notes",
       "wikiPath": "wiki/readings/7-3300021861.md",
       "position": {
-        "x": 276,
-        "y": 588
+        "x": 255,
+        "y": 673
       },
       "color": "#ffd46a",
       "radius": 38,
@@ -2500,8 +2500,8 @@ window.researchMapData = {
       "metricLabel": "321 notes",
       "wikiPath": "wiki/readings/8-3300151174.md",
       "position": {
-        "x": 404,
-        "y": 819
+        "x": 472,
+        "y": 895
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2553,8 +2553,8 @@ window.researchMapData = {
       "metricLabel": "320 notes",
       "wikiPath": "wiki/readings/9-3300045715.md",
       "position": {
-        "x": 593,
-        "y": 290
+        "x": 587,
+        "y": 345
       },
       "color": "#9ad66d",
       "radius": 38,
@@ -2604,8 +2604,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/ai-systems-human-judgment.md",
       "position": {
-        "x": 728,
-        "y": 654
+        "x": 907,
+        "y": 844
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2651,8 +2651,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/biography-research-judgment.md",
       "position": {
-        "x": 584,
-        "y": 658
+        "x": 563,
+        "y": 713
       },
       "color": "#9ad66d",
       "radius": 34,
@@ -2702,8 +2702,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/founder-window-research-output.md",
       "position": {
-        "x": 746,
-        "y": 846
+        "x": 820,
+        "y": 1028
       },
       "color": "#ffd46a",
       "radius": 36,
@@ -2753,7 +2753,7 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/human-evidence-disaster-ai.md",
       "position": {
-        "x": 883,
+        "x": 947,
         "y": 304
       },
       "color": "#f08bd6",
@@ -2804,8 +2804,8 @@ window.researchMapData = {
       "metricLabel": "Knowledge Questions",
       "wikiPath": "wiki/questions/spatial-intelligence-public-infrastructure.md",
       "position": {
-        "x": 1095,
-        "y": 733
+        "x": 1055,
+        "y": 850
       },
       "color": "#64c7ff",
       "radius": 36,
@@ -2847,8 +2847,8 @@ window.researchMapData = {
       "metricLabel": "22 citations",
       "wikiPath": null,
       "position": {
-        "x": 1579,
-        "y": 381
+        "x": 1548,
+        "y": 364
       },
       "color": "#64c7ff",
       "radius": 35.25699782357623,
@@ -2893,8 +2893,8 @@ window.researchMapData = {
       "metricLabel": "3 citations",
       "wikiPath": null,
       "position": {
-        "x": 1518,
-        "y": 562
+        "x": 1396,
+        "y": 537
       },
       "color": "#64c7ff",
       "radius": 28.156921938165304,
@@ -2928,17 +2928,17 @@ window.researchMapData = {
       "connections": [],
       "repository": null,
       "metrics": {
-        "citations": 1
+        "citations": 2
       },
       "role": "collaborative output",
-      "metricLabel": "1 citations",
+      "metricLabel": "2 citations",
       "wikiPath": null,
       "position": {
-        "x": 1361,
-        "y": 564
+        "x": 908,
+        "y": 669
       },
       "color": "#64c7ff",
-      "radius": 26.4,
+      "radius": 27.39411254969543,
       "displayKind": "Research Output"
     },
     {
@@ -2975,33 +2975,31 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 1271,
-        "y": 740
+        "x": 1416,
+        "y": 699
       },
       "color": "#64c7ff",
       "radius": 24,
       "displayKind": "Research Output"
     },
     {
-      "id": "scholar-trust-the-view-that-sees-the-target-mining-cross-view-conflicts-",
+      "id": "scholar-does-fifa-world-cup-performance-influence-tourism-arrivals-evide",
       "kind": "output",
       "source": "Google Scholar",
-      "shortTitle": "Trust the View That Se...",
-      "title": "Trust the View That Sees the Target: Mining Cross-View Conflicts for Reliability-Gated Disaster Damage Assessment",
+      "shortTitle": "Does FIFA World Cup P...",
+      "title": "Does FIFA World Cup Performance Influence Tourism Arrivals?: Evidence from Cabo Verde and Other Countries",
       "year": 2026,
-      "venue": "Proceedings of the 5th ACM SIGSPATIAL International Workshop on Searching… , 2026",
+      "venue": "Evidence from Cabo Verde and Other Countries (October 11, 2026) , 2026",
       "type": "Scholar Output",
       "status": "Indexed",
-      "authors": "Y Yang",
+      "authors": "A Arora, J Deng, A Arora, H Cai, L Zou, Y Yang",
       "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
       "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
       "themes": [
-        "Disaster Assessment",
-        "Spatial Intelligence"
+        "Scholar Output"
       ],
       "methods": [
-        "Disaster Assessment",
-        "Spatial Intelligence"
+        "Scholar Output"
       ],
       "links": [
         {
@@ -3009,58 +3007,7 @@ window.researchMapData = {
           "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
         }
       ],
-      "connections": [
-        {
-          "target": "damagearbiter",
-          "label": "feeds the disaster intelligence output layer"
-        }
-      ],
-      "repository": null,
-      "metrics": {
-        "citations": 0
-      },
-      "role": "first-author or lead-position output",
-      "metricLabel": "0 citations",
-      "wikiPath": null,
-      "position": {
-        "x": 1044,
-        "y": 1085
-      },
-      "color": "#64c7ff",
-      "radius": 24,
-      "displayKind": "Research Output"
-    },
-    {
-      "id": "scholar-monitoring-urban-traffic-dynamics-at-fine-spatiotemporal-resolut",
-      "kind": "output",
-      "source": "Google Scholar",
-      "shortTitle": "Monitoring Urban Traff...",
-      "title": "Monitoring Urban Traffic Dynamics at Fine Spatiotemporal Resolution Using Distributed Acoustic Sensing and Deep Learning",
-      "year": 2026,
-      "venue": "arXiv preprint arXiv:2609.28793 , 2026",
-      "type": "Scholar Output",
-      "status": "Indexed",
-      "authors": "H Tian, H Cai, X Chen, Y Yang",
-      "summary": "A Google Scholar-indexed research output from Yifan Yang's public profile. It keeps collaborative and non-first-author work visible in the same output layer as the curated paper pages.",
-      "impact": "This node prevents the atlas from becoming only a first-author publication list. It treats collaborative scholarship as part of the public output trail.",
-      "themes": [
-        "Spatial Intelligence"
-      ],
-      "methods": [
-        "Spatial Intelligence"
-      ],
-      "links": [
-        {
-          "label": "Scholar Profile",
-          "url": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
-        }
-      ],
-      "connections": [
-        {
-          "target": "spatial-intelligence-public-infrastructure",
-          "label": "extends the urban and spatial intelligence question"
-        }
-      ],
+      "connections": [],
       "repository": null,
       "metrics": {
         "citations": 0
@@ -3069,8 +3016,8 @@ window.researchMapData = {
       "metricLabel": "0 citations",
       "wikiPath": null,
       "position": {
-        "x": 1179,
-        "y": 1243
+        "x": 1171,
+        "y": 1391
       },
       "color": "#64c7ff",
       "radius": 24,

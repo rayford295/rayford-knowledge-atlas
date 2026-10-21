@@ -8,15 +8,15 @@
   "homepage": "https://rayford295.github.io/",
   "interests": [
     "AI4Science",
-    "GIScience",
+    "GeoAI",
     "Disaster Resilience",
     "Generative AI",
     "Agentic AI"
   ],
   "metrics": {
     "citations": {
-      "all": 429,
-      "since2019": 415
+      "all": 435,
+      "since2019": 421
     },
     "hIndex": {
       "all": 8,
@@ -67,7 +67,7 @@
       "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",
       "authors": "Y Yang, L Zou, B Zhou, D Li, B Lin, J Abedin, M Yang",
       "venue": "Computers, Environment and Urban Systems 121, 102335 , 2025",
-      "citations": 14,
+      "citations": 15,
       "year": 2025
     },
     {
@@ -88,7 +88,7 @@
       "title": "DamageArbiter: A CLIP-Enhanced Multimodal Arbitration Framework for Hurricane Damage Assessment from Street-View Imagery",
       "authors": "Y Yang, L Zou, W Gong, K Fu, Z Li, S Wang, B Zhou, H Cai, H Tian",
       "venue": "arXiv preprint arXiv:2603.14837 , 2026",
-      "citations": 5,
+      "citations": 6,
       "year": 2026
     },
     {
@@ -106,6 +106,27 @@
       "year": 2026
     },
     {
+      "title": "RAPIDMap: Rapid Multi-Agent Pipeline for Interpretable Disaster Mapping from Satellite and Street-view Imagery",
+      "authors": "Y Yang, L Zou",
+      "venue": "CaGIS Conference 2026, September 8–11, 2026, St. Louis, MO, USA. , 2026",
+      "citations": 2,
+      "year": 2026
+    },
+    {
+      "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
+      "authors": "Y Yang, W Gong, K Zhang, L Zou, Z Tu, H Li, Z Li, X Ye",
+      "venue": "The 34th ACM International Conference on Advances in Geographic Information… , 2026",
+      "citations": 2,
+      "year": 2026
+    },
+    {
+      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
+      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
+      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
+      "citations": 2,
+      "year": 2026
+    },
+    {
       "title": "Perceiving Multidimensional Disaster Damages from Street-View Images Using Visual-Language Models",
       "authors": "Y Yang, L Zou",
       "venue": "Abstracts of the ICA 10, 310 , 2025",
@@ -113,31 +134,10 @@
       "year": 2025
     },
     {
-      "title": "RAPIDMap: Rapid Multi-Agent Pipeline for Interpretable Disaster Mapping from Satellite and Street-view Imagery",
-      "authors": "Y Yang, L Zou",
-      "venue": "CaGIS Conference 2026, September 8–11, 2026, St. Louis, MO, USA. , 2026",
-      "citations": 1,
-      "year": 2026
-    },
-    {
-      "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
-      "authors": "Y Yang, W Gong, K Zhang, L Zou, Z Tu, H Li, Z Li, X Ye",
-      "venue": "The 34th ACM International Conference on Advances in Geographic Information… , 2026",
-      "citations": 1,
-      "year": 2026
-    },
-    {
-      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
-      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
-      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
-      "citations": 1,
-      "year": 2026
-    },
-    {
       "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
       "authors": "Y Wang, H Yin, Y Yang, C Zhao, S Wang",
       "venue": "Journal of Transport Geography 128, 104387 , 2025",
-      "citations": 1,
+      "citations": 2,
       "year": 2025
     },
     {
@@ -148,8 +148,15 @@
       "year": 2026
     },
     {
-      "title": "Trust the View That Sees the Target: Mining Cross-View Conflicts for Reliability-Gated Disaster Damage Assessment",
-      "authors": "Y Yang",
+      "title": "Does FIFA World Cup Performance Influence Tourism Arrivals?: Evidence from Cabo Verde and Other Countries",
+      "authors": "A Arora, J Deng, A Arora, H Cai, L Zou, Y Yang",
+      "venue": "Evidence from Cabo Verde and Other Countries (October 11, 2026) , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "When Satellite and Street Views Disagree: Cross-View Complementarity in Disaster Damage Assessment",
+      "authors": "Y Yang, L Zou",
       "venue": "Proceedings of the 5th ACM SIGSPATIAL International Workshop on Searching… , 2026",
       "citations": 0,
       "year": 2026
@@ -160,15 +167,8 @@
       "venue": "International Journal of Disaster Risk Reduction, 106470 , 2026",
       "citations": 0,
       "year": 2026
-    },
-    {
-      "title": "Monitoring Urban Traffic Dynamics at Fine Spatiotemporal Resolution Using Distributed Acoustic Sensing and Deep Learning",
-      "authors": "H Tian, H Cai, X Chen, Y Yang",
-      "venue": "arXiv preprint arXiv:2609.28793 , 2026",
-      "citations": 0,
-      "year": 2026
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-10-12T19:00:50.294Z"
+  "fetchedAt": "2026-10-21T11:57:57.218Z"
 }
