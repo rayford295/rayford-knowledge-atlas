@@ -2,6 +2,8 @@
 
 This folder keeps public PDF copies of Yifan Yang's published papers and chapters. File names start with the publication year so the archive sorts chronologically in GitHub and Obsidian.
 
+First-author works (8) are also collected in [`first-author/`](./first-author/).
+
 **Stage** marks the degree stage in which each work was completed: *PhD* (12 works), *Master's* (4 works), and *Undergraduate* (3 works, 2020–2021). Rows are ordered by stage (PhD first, then Master's, then Undergraduate) and by year within each stage. **Type** gives the publication type: Journal Article (10), Conference Proceedings (8), or Book Chapter (1).
 
 | # | Year | Stage | Type | Publication | Atlas page | PDF |
