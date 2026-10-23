@@ -20,7 +20,8 @@ A living record of my doctoral journey in the Department of Geography at Texas A
 | Date | Milestone | Record |
 | --- | --- | --- |
 | 2026-06 | Preliminary Examination (written) | [Research reflections](./preliminary-examination/) |
-| 2026-10-22 | Dissertation Proposal Defense | [Final proposal, defense slides, and flyer](./dissertation-proposal/) |
+| 2026-10-22 | Dissertation Proposal Defense (first attempt, not passed) | [Final proposal, defense slides, flyer](./dissertation-proposal/), and [reflection essay](https://mp.weixin.qq.com/s/hdapQiYII-huy9pmjt59wg) |
+| 2026-11 (planned) | Dissertation Proposal Defense (second attempt) | [Dissertation proposal](./dissertation-proposal/#the-first-defense-and-the-second) |
 
 > The examination questions themselves are kept private. The linked folder captures the substance of my own research philosophy articulated during the process, written as standalone notes rather than as exam answers.
 

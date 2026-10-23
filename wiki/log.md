@@ -79,3 +79,7 @@
 ## 2026-10-21
 
 - Fixed the final versions in `phd-journey/dissertation-proposal/`: added `2026-10-22-yifan-yang-dissertation-proposal.pdf` (final proposal document, challenges reframed to "not yet accurate or reliable enough / do not generalize across events / assessment alone does not close the resilience loop", objectives "see better / respond faster / prepare and deliver better", RAY now "Resilience Assistant for You"), `2026-10-22-yifan-yang-proposal-defense-slides.pdf` (43 pages: 40 slides + 3 backup), and `2026-10-22-conceptual-framework.png` (the Challenge → Stage → Insight figure from the slides). Removed the superseded 2026-09-30 proposal drafts, the 2026-09-30 framework figure, and the 2026-10-12 slide draft; they remain in git history. Rewrote the folder README around the final framing and collapsed the `phd-journey/README.md` milestone rows into one defense row.
+
+## 2026-10-22
+
+- Recorded the outcome of the first proposal defense in `phd-journey/dissertation-proposal/README.md` and the `phd-journey/README.md` milestones table: the October 22, 2026 defense did not pass, and a second defense is planned for November 2026. Linked the WeChat reflection essay "Moving Toward Greater Failures! (向着更大的失败前进！)". The final proposal and slides in the folder are unchanged.

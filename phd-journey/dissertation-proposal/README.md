@@ -2,7 +2,7 @@
 
 This folder records my dissertation proposal: the final proposal document and the defense slides as presented to my committee, plus the defense flyer.
 
-**Proposal defense:** Thursday, October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building ([flyer](./2026-10-22-proposal-defense-flyer.pdf))
+**Proposal defense:** Thursday, October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building ([flyer](./2026-10-22-proposal-defense-flyer.pdf)); not passed, second defense planned for November 2026 ([see below](#the-first-defense-and-the-second))
 **Program:** Ph.D., Geography, Texas A&M University
 **Committee:** Dr. Lei Zou (Chair), Dr. Heng Cai, Dr. Andrew Klein, Dr. Zhengzhong Tu
 
@@ -34,7 +34,19 @@ Cases 1–5 are complete (CEUS 2025; Natural Hazards under review; ACM SIGSPATIA
 
 Earlier working drafts (2026-09-30 proposal drafts, 2026-10-12 slide draft) were removed from this folder once the final versions were fixed; they remain in the git history.
 
-## After the defense
+## The first defense, and the second
 
-- Reflections: what changed between the preliminary examination and the proposal, and why
-- Committee feedback and the resulting revisions, if any
+The first proposal defense on October 22, 2026 did not pass. I am keeping that on record here rather than leaving only the polished final versions, because the failure is part of the journey and probably the most instructive part of it. The proposal will be defended again before the same committee in **November 2026**.
+
+That evening I wrote about it on my WeChat official account: **[Moving Toward Greater Failures! (向着更大的失败前进！)](https://mp.weixin.qq.com/s/hdapQiYII-huy9pmjt59wg)**. The essay starts from Cao Cao after the Battle of Red Cliffs, who answered defeat with "victory and defeat are common in war" (胜败乃兵家常事) and went on to regroup. Reflection does not undo a failure, but it restores morale and the nerve to go back into the field, and to aim at larger challenges, and so at larger possible failures, next time.
+
+| Date | Event | Record |
+| --- | --- | --- |
+| 2026-10-22 | First proposal defense, not passed | Final versions above; [reflection essay](https://mp.weixin.qq.com/s/hdapQiYII-huy9pmjt59wg) |
+| 2026-11 (planned) | Second proposal defense | To be added |
+
+## After the second defense
+
+- Committee feedback from the first defense and the revisions it led to
+- Revised proposal and slides for the second defense, if they differ from the versions above
+- Reflections: what changed between the preliminary examination, the first defense, and the second, and why
