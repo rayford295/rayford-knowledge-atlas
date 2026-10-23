@@ -142,6 +142,15 @@
       "atlasPage": "wiki/papers/crossviewgate.md"
     },
     {
+      "id": "satellite-to-street",
+      "category": "Conference Proceeding",
+      "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
+      "year": 2026,
+      "venue": "IGARSS 2026: 2026 IEEE International Geoscience and Remote Sensing Symposium, August 9-14, 2026, Washington, DC, USA, pp. 1764-1768",
+      "doi": "https://doi.org/10.1109/IGARSS60577.2026.11730816",
+      "atlasPage": "wiki/papers/satellite-to-street.md"
+    },
+    {
       "id": "resilience-4d-urban-flood",
       "category": "Conference Proceeding",
       "title": "Resilience in 4D: AI-Driven Geospatial Digital Twins for Urban Flood Simulation and Management",

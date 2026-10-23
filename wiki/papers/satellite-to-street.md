@@ -3,9 +3,9 @@ id: satellite-to-street
 short_title: Satellite-to-Street
 title: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models
 year: 2026
-venue: IGARSS 2026
+venue: "IGARSS 2026: 2026 IEEE International Geoscience and Remote Sensing Symposium, Washington, DC, USA, pp. 1764-1768"
 type: Conference Paper
-status: Accepted
+status: Published
 authors:
   - Yifan Yang
   - Lei Zou
@@ -19,8 +19,12 @@ methods:
   - Satellite Imagery
   - Street-Level Synthesis
 links:
-  - label: Paper
-    url: https://arxiv.org/abs/2603.20697
+  - label: PDF
+    url: ./publications/2026-satellite-to-street-post-disaster-views-igarss.pdf
+  - label: DOI
+    url: https://doi.org/10.1109/IGARSS60577.2026.11730816
+  - label: IEEE Xplore
+    url: https://ieeexplore.ieee.org/document/11730816
   - label: Code
     url: https://github.com/rayford295/Sat2Street-DisasterGen
 connections:
@@ -66,6 +70,18 @@ The repository notes support from the Texas A&M University Environment and Susta
 ## Impact
 
 This paper opens a new branch in the graph by moving from analysis to generation, which makes the broader research program feel forward-looking and distinctive.
+
+## Public Links
+
+- PDF: ../../publications/2026-satellite-to-street-post-disaster-views-igarss.pdf
+- DOI: https://doi.org/10.1109/IGARSS60577.2026.11730816
+- IEEE Xplore: https://ieeexplore.ieee.org/document/11730816 (added 2026-10-21)
+- Repository: https://github.com/rayford295/Sat2Street-DisasterGen
+- Preprint: https://arxiv.org/abs/2603.20697
+
+## Citation
+
+Y. Yang, L. Zou and W. Jepson, "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models," *IGARSS 2026 - 2026 IEEE International Geoscience and Remote Sensing Symposium*, Washington, DC, USA, 2026, pp. 1764-1768, doi: 10.1109/IGARSS60577.2026.11730816.
 
 ## Chinese Summary
 

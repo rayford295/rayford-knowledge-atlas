@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-10-21T11:57:59.684Z",
+  "generatedAt": "2026-10-23T02:07:24.645Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -1497,9 +1497,9 @@ window.researchMapData = {
       "shortTitle": "Satellite-to-Street",
       "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
       "year": 2026,
-      "venue": "IGARSS 2026",
+      "venue": "IGARSS 2026: 2026 IEEE International Geoscience and Remote Sensing Symposium, Washington, DC, USA, pp. 1764-1768",
       "type": "Conference Paper",
-      "status": "Accepted",
+      "status": "Published",
       "authors": "Yifan Yang, Lei Zou, Wendy Jepson",
       "summary": "Uses generative vision models to synthesize post-disaster street-level views from satellite imagery, bridging remote sensing and ground-level interpretation.",
       "impact": "This paper opens a new branch in the graph by moving from analysis to generation, which makes the broader research program feel forward-looking and distinctive.",
@@ -1515,8 +1515,16 @@ window.researchMapData = {
       ],
       "links": [
         {
-          "label": "Paper",
-          "url": "https://arxiv.org/abs/2603.20697"
+          "label": "PDF",
+          "url": "./publications/2026-satellite-to-street-post-disaster-views-igarss.pdf"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1109/IGARSS60577.2026.11730816"
+        },
+        {
+          "label": "IEEE Xplore",
+          "url": "https://ieeexplore.ieee.org/document/11730816"
         },
         {
           "label": "Code",
