@@ -88,3 +88,7 @@
 ## 2026-10-23
 
 - Added `publications/first-author/`: copies of the 8 archived works with Yifan Yang as first author (GeoSearch '26, IGARSS 2026, RAPID, RAPIDMap, CEUS 2025, ICC 2025, Esri Press chapter, GeoLocator), each checked against the PDF's author line, plus a README table. The copies are byte-identical to the parent files, so git stores each PDF once. `publications/README.md` now points to the folder.
+
+## 2026-10-24
+
+- Archived the co-authored Transactions in GIS paper as `publications/2026-modeling-hospital-visitation-flows-tgis.pdf` (Lin, Zou, Tian, Cai, Yang, Zhou; 30(7), e70432; open access; DOI 10.1111/tgis.70432) and created `wiki/papers/hospital-visitation-flows.md` (HGNN best of five models, drive time dominant, rating crossover near 12.78 min that shifts across community contexts). Added it as row 4 of the archive table (PhD 13, Journal Article 11), to `raw/publications/publications.json`, `wiki/index.md`, `wiki/maps/publication-map.md`, and `wiki/maps/research-output-map.md`. Not first-authored, so not copied into `publications/first-author/`.

@@ -40,6 +40,15 @@
       "atlasPage": "wiki/papers/debris-cast.md"
     },
     {
+      "id": "hospital-visitation-flows",
+      "category": "Journal Article",
+      "title": "Modeling Hospital Visitation Flows Through Distance-Attractiveness Tradeoffs: Integrating Human Mobility, Hospital Attributes, and Socioeconomic Context",
+      "year": 2026,
+      "venue": "Transactions in GIS, 30(7), e70432",
+      "doi": "https://doi.org/10.1111/tgis.70432",
+      "atlasPage": "wiki/papers/hospital-visitation-flows.md"
+    },
+    {
       "id": "hyperlocal-disaster",
       "category": "Journal Article",
       "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",

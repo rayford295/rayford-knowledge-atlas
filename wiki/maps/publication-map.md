@@ -8,6 +8,7 @@ This map is the landing page for the old `rayford295/Publications` repository af
 - [[../papers/tri-environmental-la-wildfire]]
 - [[../papers/agentic-urban-digital-twins]]
 - [[../papers/debris-cast]]
+- [[../papers/hospital-visitation-flows]]
 - [[../papers/hyperlocal-disaster]]
 - [[../papers/freight-crash-spatial-inequities]]
 - [[../papers/heat-stress-digital-twins]]
