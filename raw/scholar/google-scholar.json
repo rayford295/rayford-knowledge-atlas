@@ -15,8 +15,8 @@
   ],
   "metrics": {
     "citations": {
-      "all": 435,
-      "since2019": 421
+      "all": 436,
+      "since2019": 422
     },
     "hIndex": {
       "all": 8,
@@ -36,18 +36,18 @@
       "year": 2021
     },
     {
+      "title": "GeoLocator: A location-integrated large multimodal model (LMM) for inferring geo-privacy",
+      "authors": "Y Yang, S Wang, D Li, S Sun, Q Wu",
+      "venue": "Applied Sciences 14 (16), 7091 , 2024",
+      "citations": 29,
+      "year": 2024
+    },
+    {
       "title": "COVID-19 Public Opinion and Emotion Monitoring System Based on Time Series Thermal New Word Mining",
       "authors": "Y Zhang, J Chen, Y Yang, H Li, X Zheng, X Chen, B Liu, T Ren, N Xiong",
       "venue": "Computers, Materials & Continua 64 (3), 1415-1434 , 2020",
       "citations": 29,
       "year": 2020
-    },
-    {
-      "title": "GeoLocator: A location-integrated large multimodal model (LMM) for inferring geo-privacy",
-      "authors": "Y Yang, S Wang, D Li, S Sun, Q Wu",
-      "venue": "Applied Sciences 14 (16), 7091 , 2024",
-      "citations": 28,
-      "year": 2024
     },
     {
       "title": "Surveying attitudinal alignment between large language models vs. humans towards 17 sustainable development goals",
@@ -85,7 +85,7 @@
       "year": 2026
     },
     {
-      "title": "DamageArbiter: A CLIP-Enhanced Multimodal Arbitration Framework for Hurricane Damage Assessment from Street-View Imagery",
+      "title": "Damagearbiter: A clip-enhanced multi-modal arbitration framework for hurricane damage assessment from street-view imagery",
       "authors": "Y Yang, L Zou, W Gong, K Fu, Z Li, S Wang, B Zhou, H Cai, H Tian",
       "venue": "arXiv preprint arXiv:2603.14837 , 2026",
       "citations": 6,
@@ -94,16 +94,16 @@
     {
       "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
       "authors": "Y Yang, L Zou, W Jepson",
-      "venue": "2026 IEEE International Geoscience and Remote Sensing Symposium (IGARSS) , 2026",
+      "venue": "IGARSS 2026 - 2026 IEEE International Geoscience and Remote Sensing… , 2026",
       "citations": 3,
       "year": 2026
     },
     {
-      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
-      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
-      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
+      "title": "Perceiving Multidimensional Disaster Damages from Street-View Images Using Visual-Language Models",
+      "authors": "Y Yang, L Zou",
+      "venue": "Abstracts of the ICA 10, 310 , 2025",
       "citations": 3,
-      "year": 2026
+      "year": 2025
     },
     {
       "title": "RAPIDMap: Rapid Multi-Agent Pipeline for Interpretable Disaster Mapping from Satellite and Street-view Imagery",
@@ -127,11 +127,11 @@
       "year": 2026
     },
     {
-      "title": "Perceiving Multidimensional Disaster Damages from Street-View Images Using Visual-Language Models",
-      "authors": "Y Yang, L Zou",
-      "venue": "Abstracts of the ICA 10, 310 , 2025",
+      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
+      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
+      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
       "citations": 2,
-      "year": 2025
+      "year": 2026
     },
     {
       "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
@@ -148,6 +148,13 @@
       "year": 2026
     },
     {
+      "title": "Modeling Hospital Visitation Flows Through Distance‐Attractiveness Tradeoffs: Integrating Human Mobility, Hospital Attributes, and Socioeconomic Context",
+      "authors": "B Lin, L Zou, H Tian, H Cai, Y Yang, B Zhou",
+      "venue": "Transactions in GIS 30 (7), e70432 , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
       "title": "Does FIFA World Cup Performance Influence Tourism Arrivals?: Evidence from Cabo Verde and Other Countries",
       "authors": "A Arora, J Deng, A Arora, H Cai, L Zou, Y Yang",
       "venue": "Evidence from Cabo Verde and Other Countries (October 11, 2026) , 2026",
@@ -160,15 +167,8 @@
       "venue": "Proceedings of the 5th ACM SIGSPATIAL International Workshop on Searching… , 2026",
       "citations": 0,
       "year": 2026
-    },
-    {
-      "title": "Debris-Cast: A Two-Stage Machine Learning Framework for Hurricane Debris Prediction Using Multi-Source Geospatial Data",
-      "authors": "J Kim, A Shakya, J Kelly, Y Yang, S Lee, SD Brody, A Mostafavi",
-      "venue": "International Journal of Disaster Risk Reduction, 106470 , 2026",
-      "citations": 0,
-      "year": 2026
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-10-21T11:57:57.218Z"
+  "fetchedAt": "2026-10-28T22:39:39.856Z"
 }
