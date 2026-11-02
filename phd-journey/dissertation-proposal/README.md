@@ -8,7 +8,9 @@ This folder records my dissertation proposal: the final proposal document and th
 
 ## Dissertation
 
-**Advancing GeoAI for Disaster Resilience: From Damage Assessment to Responsible Decision Support**
+**Advancing GeoAI for Disaster Resilience: From Damage Assessment to Insightful Decision Support**
+
+(The 2026-10-22 proposal document below still carries the earlier subtitle "Responsible Decision Support"; "Insightful" is the title used from the second defense onward.)
 
 > "Seeing, describing, and governing disasters: beyond the boundaries of the screen, let the real world become the stage for intelligence."
 
@@ -34,7 +36,7 @@ Cases 1–5 are complete (CEUS 2025; Natural Hazards under review; ACM SIGSPATIA
 | 2026-11-13 | Second-defense slides (45 slides + 6 backup slides), revised after the first defense | [PDF](./2026-11-13-yifan-yang-proposal-defense-slides.pdf) |
 | 2026-11-13 | Speaker script for the second-defense slides, one section per slide (also stored in the deck's notes) | [Markdown](./2026-11-13-proposal-defense-speaker-script.md) |
 
-What changed between the two decks: the background now builds the "disaster resilience is a geographical question" argument in four steps (rooted in space, diverse across the globe, a geographic inquiry, a cycle in time) before the bottleneck of volume, speed, and complexity; every results table became a bar chart; the DamageArbiter framework and the RAPID dataset pages gained explanatory bullets; dense pages reveal their content step by step; and the title slide reads "From Damage Assessment to Insightful Decision Support" (the proposal document above still says "Responsible").
+What changed between the two decks: the background now builds the "disaster resilience is a geographical question" argument in four steps (rooted in space, diverse across the globe, a geographic inquiry, a cycle in time) before the bottleneck of volume, speed, and complexity; every results table became a bar chart; the DamageArbiter framework and the RAPID dataset pages gained explanatory bullets; dense pages reveal their content step by step; and the subtitle became "From Damage Assessment to Insightful Decision Support".
 
 Earlier working drafts (2026-09-30 proposal drafts, 2026-10-12 slide draft) were removed from this folder once the final versions were fixed; they remain in the git history.
 
