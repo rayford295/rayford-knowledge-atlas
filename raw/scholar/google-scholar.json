@@ -15,8 +15,8 @@
   ],
   "metrics": {
     "citations": {
-      "all": 436,
-      "since2019": 422
+      "all": 438,
+      "since2019": 424
     },
     "hIndex": {
       "all": 8,
@@ -36,18 +36,18 @@
       "year": 2021
     },
     {
+      "title": "COVID-19 Public Opinion and Emotion Monitoring System Based on Time Series Thermal New Word Mining",
+      "authors": "Y Zhang, J Chen, Y Yang, H Li, X Zheng, X Chen, B Liu, T Ren, N Xiong",
+      "venue": "Computers, Materials & Continua 64 (3), 1415-1434 , 2020",
+      "citations": 30,
+      "year": 2020
+    },
+    {
       "title": "GeoLocator: A location-integrated large multimodal model (LMM) for inferring geo-privacy",
       "authors": "Y Yang, S Wang, D Li, S Sun, Q Wu",
       "venue": "Applied Sciences 14 (16), 7091 , 2024",
       "citations": 29,
       "year": 2024
-    },
-    {
-      "title": "COVID-19 Public Opinion and Emotion Monitoring System Based on Time Series Thermal New Word Mining",
-      "authors": "Y Zhang, J Chen, Y Yang, H Li, X Zheng, X Chen, B Liu, T Ren, N Xiong",
-      "venue": "Computers, Materials & Continua 64 (3), 1415-1434 , 2020",
-      "citations": 29,
-      "year": 2020
     },
     {
       "title": "Surveying attitudinal alignment between large language models vs. humans towards 17 sustainable development goals",
@@ -81,7 +81,7 @@
       "title": "Towards Agentic Urban Digital Twins (AUDiTs): advancing new urban science through Human-AI co-learning agents",
       "authors": "X Ye, W Gong, Y Yang, L Zou, Z Tu, X Huang, Z Li, H Ning, L Wu",
       "venue": "Urban Informatics 5 (1), 9 , 2026",
-      "citations": 8,
+      "citations": 9,
       "year": 2026
     },
     {
@@ -141,9 +141,23 @@
       "year": 2025
     },
     {
+      "title": "Engaging Communities, Energizing Futures — A Framework for Geothermal Awareness and Acceptance",
+      "authors": "Ting Chen, Yifan Yang, Lei Zou, Christian Brannstrom, Randy Harsuko, Nori ...",
+      "venue": "AGU 2026 Fall Meeting, San Francisco, CA, United States, December 7–11, 2026… , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "Debris-Cast: Data-Driven Hurricane Debris Estimation for Early Recovery Planning",
+      "authors": "AM Anish Shakya, Jooho Kim, Jacob Kelly, Yifan Yang, Samuel D. Brody",
+      "venue": "AGU 2026 Annual Meeting, San Francisco, CA, United States, December 7–11, 2026 , 2026",
+      "citations": 0,
+      "year": 2026
+    },
+    {
       "title": "Optimizing HPC Performance for CDC-Based Storage and Reconstruction of High-Resolution Imagery",
       "authors": "J Kim, Y Yang, A Shakya, J Kelly",
-      "venue": "SC26-International Conference for High Performance Computing, Networking… , 2026",
+      "venue": "SC26: The International Conference for High Performance Computing… , 2026",
       "citations": 0,
       "year": 2026
     },
@@ -153,22 +167,8 @@
       "venue": "Transactions in GIS 30 (7), e70432 , 2026",
       "citations": 0,
       "year": 2026
-    },
-    {
-      "title": "Does FIFA World Cup Performance Influence Tourism Arrivals?: Evidence from Cabo Verde and Other Countries",
-      "authors": "A Arora, J Deng, A Arora, H Cai, L Zou, Y Yang",
-      "venue": "Evidence from Cabo Verde and Other Countries (October 11, 2026) , 2026",
-      "citations": 0,
-      "year": 2026
-    },
-    {
-      "title": "When Satellite and Street Views Disagree: Cross-View Complementarity in Disaster Damage Assessment",
-      "authors": "Y Yang, L Zou",
-      "venue": "Proceedings of the 5th ACM SIGSPATIAL International Workshop on Searching… , 2026",
-      "citations": 0,
-      "year": 2026
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-10-28T22:39:39.856Z"
+  "fetchedAt": "2026-11-02T19:28:11.366Z"
 }
