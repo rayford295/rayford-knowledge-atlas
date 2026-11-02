@@ -100,176 +100,167 @@ The three objectives follow directly from the challenges.
 Objective one addresses challenge one: improve accuracy and reliability by fusing different views and arbitrating among multiple models, realized in cases one and two.
 Objective two addresses challenge two: enable zero-shot assessment that transfers across hazards and regions without new labels or retraining, realized in cases three to five.
 Objective three addresses challenge three: build accountable agentic GeoAI that turns assessment into evidence-backed action before, during, and after disasters, realized in cases six and seven.
-Before the stages, one slide on what has changed since October.
+With that structure in place, let me walk through the stages.
 
 
-## Slide 16 — Since the first defense (October 22): three clarifications
-
-Before the stages, let me say what has changed since the first defense in October, in three points.
-First, the argument is one thread: resilience is geographical, assessment is the hinge of the cycle, three model families answer three challenges, and the three objectives map one to one onto seven cases.
-Second, the evidence is easier to read: every results table is now a chart with a one-line takeaway, and I report reliability, that is, overconfident errors, alongside accuracy.
-Third, the ongoing work, cases six and seven, now comes with a concrete plan: scope, data, deliverables, evaluation, and milestones through Summer 2027. You will see one plan slide after each case.
-The subtitle has also been updated to Insightful Decision Support, which better describes what stage three delivers: insight that a planner or resident can act on, not only an assessment.
-
-
-## Slide 17 — STAGE 1  ·  OBJECTIVE 1
+## Slide 16 — STAGE 1  ·  OBJECTIVE 1
 
 Stage one: see better. The challenge is that discriminative assessment is not yet accurate or reliable enough.
 Two cases address it. Case one, published in Computers, Environment and Urban Systems in 2025, adds the pre-disaster street-view baseline so that the model can see actual change. Case two, DamageArbiter, now under review at Natural Hazards, tackles overconfidence by arbitrating among image, text, and multimodal models.
 
 
-## Slide 18 — Research questions: 
+## Slide 17 — Research questions: 
 
 Case one asks two questions. First, can pre-disaster street-view imagery help us classify disaster damage more accurately? Second, how can we integrate pre- and post-disaster street-view imagery to enable rapid, hyperlocal damage assessment?
 The panoramas show the same locations before and after Hurricane Milton. The red boxes highlight changes that become obvious only when both views are available, which is the intuition behind the whole case.
 
 
-## Slide 19 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models (study area and dataset)
+## Slide 18 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models (study area and dataset)
 
 This slide shows the study area and the dataset. We collected panoramic street-view imagery along the road network in Florida before and after Hurricane Milton, and annotated damage at three levels: mild, moderate, and severe.
 The bar chart shows the class distribution. It is imbalanced, which is a realistic condition that any operational model has to handle. The image rows at the bottom show example pre- and post-event pairs for each severity level.
 
 
-## Slide 20 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models
+## Slide 19 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models
 
 We compared three settings. Post-only classifies post-event images into three severity levels, which is how most existing models work. The second setting mixes pre- and post-event images in one pool and adds a fourth "no damage" class. The third, paired setting extracts features from the pre- and post-event images of the same location and fuses them before classification.
 The question is whether explicitly pairing the two views helps the model see real change rather than scene context.
 
 
-## Slide 21 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models
+## Slide 20 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models
 
 Methodologically, we compared single-channel baselines, which see only the post-event image, with several dual-channel architectures that take both images together: six-channel early fusion, cross-attention between Swin Transformer branches, feature-fusion ConvNeXt, and a Siamese ConvNeXt that computes feature differences.
 All models use pre-trained vision backbones, so the design question is how to inject the pre-disaster baseline, not how to train from scratch.
 
 
-## Slide 22 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models
+## Slide 21 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models
 
 Here are the results as two charts. The top chart is overall accuracy for all seven models. The single-view Swin baseline reaches 66 percent; the dual-channel feature-fusion ConvNeXt reaches 77 percent, an eleven-point gain, and every dual-channel model beats its single-view counterpart.
 The bottom chart breaks accuracy down by severity class. The gains are largest where they matter most: the baseline Swin recognizes only 39 percent of mild cases, while the dual models lift mild and severe accuracy substantially.
 The Grad-CAM maps on the left show why: the dual-channel model attends to real pre-to-post changes, such as missing roofs and debris, rather than background context. This is the evidence that the pre-disaster baseline helps us see better.
 
 
-## Slide 23 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models (Published, CEUS 2025)
+## Slide 22 — Case 1: Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models (Published, CEUS 2025)
 
 This work was published in Computers, Environment and Urban Systems in 2025. It was also featured by Mosaic, the company whose camera imagery we used, as an example of how Texas A&M is pioneering street-level damage assessment after Hurricane Milton.
 Case one improves accuracy. The next case asks about reliability.
 
 
-## Slide 24 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery (Under Review, Natural Hazards)
+## Slide 23 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery (Under Review, Natural Hazards)
 
 Case two starts from a reliability problem: accuracy alone is not enough for disaster response.
 Here is a concrete example. A fine-tuned vision transformer looks at this post-hurricane street view and predicts mild with 70 percent confidence. The actual label is severe. The model was not only wrong, it was confidently wrong; the gap between its top probability and the probability it gave the true class is 60 percent.
 Overconfident wrong predictions are dangerous because they can send crews to the wrong places and mislead prioritization. DamageArbiter is designed to reduce overconfidence, not just the error rate.
 
 
-## Slide 25 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for 
+## Slide 24 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for 
 
 Case two has two research questions. First, how reliable are image-only, text-only, and image-text models for street-view damage assessment? Second, can LLM-generated image descriptions support reliable assessment when human annotations are limited?
 The panels show the three severity classes together with LLM-generated descriptions of each scene. These descriptions give us a text modality that is cheap to produce and surprisingly informative.
 
 
-## Slide 26 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery
+## Slide 25 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery
 
 The reliability analysis works like this. We train image-only, text-only, and multimodal models, collect their misclassified samples, and group the errors by confidence.
 High-confidence errors, at or above 0.40, are the overconfident errors we most want to eliminate. Medium-confidence errors, between 0.10 and 0.40, are transitional cases. Low-confidence errors, below 0.10, are genuinely ambiguous. Separating them tells us where arbitration can help.
 
 
-## Slide 27 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for 
+## Slide 26 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for 
 
 This is the DamageArbiter framework. Panels a to c are the three single pipelines: an image-only CLIP vision encoder, a text-only CLIP text encoder on LLM-generated descriptions, and a multimodal CLIP model that matches image and text features in a joint embedding space. Each ends in the same three-class classification.
 Panel d is the arbitration. A fine-tuned ViT and the CLIP image-text model each make a prediction. When they agree, we accept the shared answer directly. When they disagree, a lightweight logistic-regression meta-classifier decides which model to trust, using both models' confidence profiles. The arbiter is deliberately small, so it adds almost no cost and stays interpretable.
 
 
-## Slide 28 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery
+## Slide 27 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery
 
 Panel a compares classification metrics for ViT, CLIP, and DamageArbiter. The arbitrated system reaches about 75.8 percent accuracy with a Matthews correlation coefficient of 0.62, above either single model.
 One caveat on panel a: the score axis starts at 0.55, so the visual gaps are magnified; the real differences are about two to three points of accuracy and five points of MCC.
 Panel b is the part I care most about: the confidence-based error profile. For the fine-tuned ViT, 71 percent of its errors are overconfident. For DamageArbiter, only 16 percent are; most of its remaining errors sit in the medium-confidence band. CLIP alone has no overconfident errors, but it is also the least accurate model. The arbitrated system keeps CLIP's caution and ViT's accuracy, and the errors it still makes are the ones a human reviewer would be asked to look at.
 
 
-## Slide 29 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery
+## Slide 28 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery
 
 Mapped along the road network, DamageArbiter's predictions on the right closely follow the ground-truth severity on the left, including the severe cluster near the coast and the moderate corridors inland.
 This matters operationally: the map a responder would receive from the arbitrated model is nearly the one they would get from a full manual survey.
 
 
-## Slide 30 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery  (Under Review, Natural Hazards)
+## Slide 29 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery  (Under Review, Natural Hazards)
 
 DamageArbiter won second place in the 2026 AAG GIS Specialty Group Student Honors Paper Competition. The manuscript is under review at Natural Hazards, and a preprint is available on arXiv.
 Together, cases one and two complete stage one: we see better by restoring the pre-disaster baseline and by arbitrating among models. But both cases still require labels for the specific event, which brings us to stage two.
 
 
-## Slide 31 — STAGE 2  ·  OBJECTIVE 2
+## Slide 30 — STAGE 2  ·  OBJECTIVE 2
 
 Stage two: respond faster. The challenge is that specialized models do not generalize across events.
 Three cases address it. Case three, RAPID, accepted at ACM SIGSPATIAL 2026, is a zero-shot multi-agent pipeline across satellite and street views. Case four, Satellite-to-Street, accepted at IEEE IGARSS 2026, synthesizes post-disaster street views from satellite imagery. Case five is a book chapter, under review at CRC Press, that positions generative AI across the resilience cycle.
 Given the time, I will focus on case three today; cases four and five, and a related cross-view study accepted at the GeoSearch workshop, are in the backup slides.
 
 
-## Slide 32 — Case 3: 
+## Slide 31 — Case 3: 
 
 RAPID stands for a Reproducible multi-Agent Pipeline for Interpretable Disaster damage assessment.
 The research question is whether one zero-shot pipeline can support four things at once: cross-view assessment from satellite and street-view imagery, different regions and hazards, here hurricanes in Florida and wildfires in California, rapid reasoning without any training, and interpretable damage reports instead of bare labels.
 
 
-## Slide 33 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
+## Slide 32 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
 
 Before the method, here are the data. Panel a maps the events: Marshall, California, Florida, and Hawaii in the United States, Haiti, Morocco, Libya, Turkey, and Noto in Japan. The main hazards are earthquakes, floods, hurricanes, and wildfires, and the web-sourced subset adds ice storms, drought, and tropical cyclones.
 Panel b gives key statistics: four datasets, roughly 1,100 images in total, with hazard coverage and severity distributions.
 Panel c describes them. Dataset A pairs post-disaster street-view and remote-sensing images from CVDisaster. Dataset B is bi-temporal street-view pairs from the BiTemporal StreetView Damage dataset. Dataset C is pre- and post-event satellite pairs from BRIGHT with pixel-level damage masks. Dataset D is post-disaster street-view images, including geo-referenced wildfire inspections and web-sourced scenes without location. This mix is what lets us test generalization across views and hazards.
 
 
-## Slide 34 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
+## Slide 33 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
 
 The pipeline has three stages. Stage one prepares remote-sensing and street-view imagery from the datasets you just saw.
 Stage two is the multi-agent framework. A Disaster Perception Agent detects the disaster type and image quality. An Image Restoration Agent enhances degraded images. A Damage Recognition Agent classifies severity. And a Disaster Reasoning Agent produces structured reasoning and recommendations.
 Stage three validates the models and generates a structured disaster report, evaluated by both models and human reviewers. Every agent is a prompted foundation model, so nothing is trained on the target event.
 
 
-## Slide 35 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
+## Slide 34 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
 
 The Image Restoration Agent matters because post-disaster imagery is often degraded by rain, haze, or low light, as the examples on the left show.
 The chart reports image quality for each disaster and image type, with the original in gray and three restoration options in color. Baseline and planner-based restoration improve quality in every row, and the planner-based option is the most consistent, for example from 0.51 to 0.62 on one hurricane set and from 0.71 to 0.80 for the earthquake set. Gemini image-only enhancement is strong for hurricanes but actually lowers quality for wildfire, ice storm, and drought, which is why the agent chooses the restoration route per image instead of applying one tool everywhere. The recognition agent therefore receives cleaner inputs.
 
 
-## Slide 36 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
+## Slide 35 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
 
 For damage recognition, we benchmarked five vision-language models zero-shot across three datasets. The left chart is accuracy, higher is better. The right chart is Normalized Cumulative Severity Error, or NCSE, lower is better; it penalizes a prediction by how far it is from the true severity, so a mild-versus-severe mistake costs more than a mild-versus-moderate one.
 No single model wins everywhere: Gemini 3 Pro leads on dataset A, ChatGPT-5.1 on dataset B, and Gemini 2.5 Pro on dataset C2. The confusion matrices below show that most errors fall between adjacent severity levels rather than between mild and severe, which is the acceptable failure mode for triage.
 
 
-## Slide 37 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
+## Slide 36 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
 
 This slide shows what interpretability looks like in practice. For a paired satellite and street-view input, three models agree on hurricane as the disaster type and severe as the damage level, with confidence of 0.85 or higher.
 The Disaster Reasoning Agent then explains the assessment, naming the debris, fallen trees, and damaged buildings that you can see in the object-detection overlay, and produces a recovery and reconstruction suggestion. This is a report a responder could actually read.
 
 
-## Slide 38 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
+## Slide 37 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
 
 We also evaluated the reasoning itself, not just the labels, with both an LLM judge and human raters on four dimensions: factuality, plausibility, completeness, and actionability.
 Scores are high in both the post-event-only setting on top and the pre-and-post setting below, with the Gemini models slightly ahead, and the human and LLM ratings broadly agree. This gives a reproducible way to assess narrative outputs.
 
 
-## Slide 39 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery (Accepted by ACM SIGSPATIAL)
+## Slide 38 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery (Accepted by ACM SIGSPATIAL)
 
 RAPID has been accepted at ACM SIGSPATIAL 2026 in Riverside, California, as a full paper with my collaborators at Texas A&M and beyond.
 That completes the main part of stage two. The pipeline answers the four questions I posed: it works across views, across regions and hazards, without training, and it produces reports rather than labels. What it does not yet do is turn those reports into decisions, which is stage three.
 
 
-## Slide 40 — STAGE 3  ·  OBJECTIVE 3
+## Slide 39 — STAGE 3  ·  OBJECTIVE 3
 
 Stage three: prepare and deliver better. The challenge is that assessment alone does not close the resilience loop.
 Two ongoing cases address it. Case six, Seeing Damage Before It Happens, moves assessment forward in time into the preparedness phase. Case seven, RAY, builds an accountable multi-agent GeoAI system that delivers place-based disaster intelligence to the public and to decision-makers.
 
 
-## Slide 41 — Case 6: Seeing Disaster Damage Before It Happens: Predicting and Visualizing Street-Level Impacts from Multimodal Pre-Event Information  (Ongoing)
+## Slide 40 — Case 6: Seeing Disaster Damage Before It Happens: Predicting and Visualizing Street-Level Impacts from Multimodal Pre-Event Information  (Ongoing)
 
 Case six asks whether we can anticipate post-disaster street-level damage from pre-disaster multimodal data, Earth-observation embeddings, and hazard forecasts.
 The framework has three parts. Predict: estimate severity probabilities for each street location, with leakage-audited cross-validation grouped by street segment. Generate: produce a visual scenario of the expected damage with an instruction-tuned diffusion model trained on Milton image pairs. Integrate: combine predictions and scenarios into risk maps for inspection planning, benchmarked against FEMA flood zones.
 The study areas are Hurricane Milton 2024 at Horseshoe Beach and Hurricane Ian 2022 in Lee County, which also lets us test transfer across events. The next slide lays out exactly what I will do and when.
 
 
-## Slide 42 — Case 6 · What I will do  (Ongoing, ~20% complete)
+## Slide 41 — Case 6 · What I will do  (Ongoing, ~20% complete)
 
 Here is concretely what I will do for case six.
 Predict: a random-forest classifier takes pre-event street-view imagery, foundation-model embeddings, hazard forecasts, and spatial context, and outputs a severity probability for each street location, with leakage-audited cross-validation grouped by street segment so that neighbouring images do not leak across folds.
@@ -279,19 +270,19 @@ Data: Hurricane Milton at Horseshoe Beach for training and testing, and Hurrican
 Milestones: prediction and transfer results this fall, risk maps and a manuscript draft in spring, and the dissertation chapter by summer 2027. The expected insight is simple: where to inspect first, before the storm arrives.
 
 
-## Slide 43 — Case 7: RAY: Resilience Assistant for You
+## Slide 42 — Case 7: RAY: Resilience Assistant for You
 
 Case seven is RAY, the Resilience Assistant for You. The research question is how a GeoAI agent can analyze disasters on its own, yet have every answer authorized, evidence-faithful, and reproducible, enforced by the system rather than promised by the model.
 The architecture has a data plane, an agent plane, and a presentation plane, wrapped by a Steward Harness with four gates: a policy check before any model call, grounded analysis, a citation check after it, and audit and replay. Every claim carries evidence lineage, and the system refuses to answer when evidence is insufficient. It is delivered through a WebGIS and mobile console for planners and residents.
 
 
-## Slide 44 — Case 7: RAY: Resilience Assistant for You
+## Slide 43 — Case 7: RAY: Resilience Assistant for You
 
 Rather than describe the interface, let me show it. This is a three-minute demo of RAY: a resident asks a question about their neighborhood, the policy check runs before any model call, the agent grounds its analysis in the spatial data, and every sentence in the answer cites an artifact that can be inspected.
 If time is short, the link and the QR code are on the slide, and I can also play it during the questions. The next slide says what remains to be built and how RAY will be evaluated.
 
 
-## Slide 45 — Case 7 · Plan and evaluation of RAY  (Ongoing, ~40% complete)
+## Slide 44 — Case 7 · Plan and evaluation of RAY  (Ongoing, ~40% complete)
 
 And here is the plan for case seven.
 Build: the agent plane runs on open, OpenAI-compatible models with spatial tools and live data from USGS, the National Weather Service, NOAA, the Hurricane Center, and the Census. The Steward Harness wraps it with four gates: a policy check before any model call, grounded analysis, a citation check after it, and audit and replay. Delivery is a WebGIS and mobile console.
@@ -300,38 +291,38 @@ Tests: a question bank across the four resilience phases with known answers, run
 Milestones: the data plane, agent plane, console prototype, and demo are done; harness gates and the question bank this fall; evaluation, user review, and a manuscript in spring; chapter and final defense in summer 2027.
 
 
-## Slide 46 — Publications and Awards
+## Slide 45 — Publications and Awards
 
 Briefly, my record so far. Eight first-authored publications during the Ph.D.: the CEUS article, the Natural Hazards manuscript under review, five peer-reviewed conference papers at ACM SIGSPATIAL, the GeoSearch workshop, IGARSS, CaGIS, and ICC, and one chapter under review. I also have fourteen co-authored publications, including eight journal articles.
 I have received fifteen honors, including second place in the AAG GISSG paper competition and the ICC 2025 Best Student Paper Award. The QR code links to the Autonomous GeoAI for Science community site.
 
 
-## Slide 47 — Research Schedule
+## Slide 46 — Research Schedule
 
 On the schedule: cases one through five are complete. Case six is about 20 percent done and case seven about 40 percent, both in progress this fall.
 I completed the preliminary exam in spring 2026, and the proposal defense is today. Dissertation writing runs through spring 2027, with the final defense and graduation planned for summer 2027.
 
 
-## Slide 48 — Q&A  Welcome any comments/questions
+## Slide 47 — Q&A  Welcome any comments/questions
 
 Thank you for your attention. To summarize in one line: discriminative models help us see better, generative models help us respond faster, and agentic systems help us prepare and deliver better.
 I welcome your comments and questions, and I would especially value your guidance on the two ongoing cases.
 
 
-## Slide 49 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
+## Slide 48 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
 
 Backup for case four. Satellite-to-Street flips the problem: when street-level imagery is missing after a disaster, can we synthesize it from satellite imagery?
 Three research questions: can generative vision models synthesize realistic post-disaster street views from satellite imagery; do explicit disaster semantics, extracted by a vision-language model, improve fidelity; and how can we evaluate cross-view synthesis beyond pixel metrics?
 The framework compares a conditional GAN, Stable Diffusion with ControlNet, a VLM-guided variant, and a mixture of experts gated by severity.
 
 
-## Slide 50 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
+## Slide 49 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
 
 Backup for case four: qualitative results.
 Pix2Pix produces blurry but structurally aligned views. Stable Diffusion with ControlNet produces visually plausible scenes, and adding Gemini-extracted semantics increases disaster realism. The mixture of experts strikes the best balance. From mild to severe, the synthesized views become progressively more damaged, which is what the generation should encode.
 
 
-## Slide 51 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
+## Slide 50 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
 
 Backup for case four: quantitative results.
 The four small charts on the left are perceptual image-quality metrics. Pix2Pix scores best on SSIM, PSNR, and LPIPS because it stays pixel-aligned, while ControlNet has the best FID, that is, the most realistic distribution.
@@ -339,17 +330,17 @@ The chart on the right is downstream severity consistency, measured by classifyi
 Three takeaways: single-model approaches cannot yet balance visual plausibility with strict structural alignment; high perceptual realism does not mean high semantic accuracy, so evaluation must be structure-aware; and trustworthiness, not fidelity alone, should be the target for disaster generation.
 
 
-## Slide 52 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
+## Slide 51 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
 
 Backup for case four. This paper was accepted at IGARSS 2026, the IEEE International Geoscience and Remote Sensing Symposium, and appears in the proceedings with Lei Zou and Wendy Jepson as co-authors.
 
 
-## Slide 53 — Case 5: Generative AI for Disaster Resilience
+## Slide 52 — Case 5: Generative AI for Disaster Resilience
 
 Backup for case five. This is a chapter under review for the CRC Press volume "Geography in the Age of Generative AI."
 It reviews how generative AI can serve each phase of the resilience cycle, mitigation, preparedness, response, and recovery, and distills a three-stage pipeline from my own work: selective image restoration, GenAI-assisted damage recognition, and reasoning and decision support. This chapter consolidates stage two into a reusable framework for the community.
 
 
-## Slide 54 — Case 8: When Satellite and Street Views Disagree: Cross-View Complementarity 
+## Slide 53 — Case 8: When Satellite and Street Views Disagree: Cross-View Complementarity 
 
 Backup. This is an additional stage-two study, accepted at the fifth ACM SIGSPATIAL GeoSearch workshop in 2026. It asks what happens when satellite and street views disagree about the same building, and shows that the two views are complementary rather than redundant: the view that actually sees the damaged element should be trusted. It is a direct extension of the cross-view theme in cases three and four.
