@@ -257,72 +257,53 @@ Two ongoing cases address it. Case six, Seeing Damage Before It Happens, moves a
 
 Case six asks whether we can anticipate post-disaster street-level damage from pre-disaster multimodal data, Earth-observation embeddings, and hazard forecasts.
 The framework has three parts. Predict: estimate severity probabilities for each street location, with leakage-audited cross-validation grouped by street segment. Generate: produce a visual scenario of the expected damage with an instruction-tuned diffusion model trained on Milton image pairs. Integrate: combine predictions and scenarios into risk maps for inspection planning, benchmarked against FEMA flood zones.
-The study areas are Hurricane Milton 2024 at Horseshoe Beach and Hurricane Ian 2022 in Lee County, which also lets us test transfer across events. The next slide lays out exactly what I will do and when.
+The study areas are Hurricane Milton 2024 at Horseshoe Beach and Hurricane Ian 2022 in Lee County, which also lets us test transfer across events.
 
 
-## Slide 41 — Case 6 · What I will do  (Ongoing, ~20% complete)
-
-Here is concretely what I will do for case six.
-Predict: a random-forest classifier takes pre-event street-view imagery, foundation-model embeddings, hazard forecasts, and spatial context, and outputs a severity probability for each street location, with leakage-audited cross-validation grouped by street segment so that neighbouring images do not leak across folds.
-Generate: an instruction-tuned diffusion model trained on Milton before-and-after pairs renders a visual scenario of the expected damage, checked for place fidelity and severity consistency.
-Integrate: predictions and scenarios combine into a block-level risk map that prioritizes inspection routes, benchmarked against FEMA flood zones, which is the pre-event standard today.
-Data: Hurricane Milton at Horseshoe Beach for training and testing, and Hurricane Ian in Lee County as a cross-event transfer test.
-Milestones: prediction and transfer results this fall, risk maps and a manuscript draft in spring, and the dissertation chapter by summer 2027. The expected insight is simple: where to inspect first, before the storm arrives.
-
-
-## Slide 42 — Case 7: RAY: Resilience Assistant for You
+## Slide 41 — Case 7: RAY: Resilience Assistant for You
 
 Case seven is RAY, the Resilience Assistant for You. The research question is how a GeoAI agent can analyze disasters on its own, yet have every answer authorized, evidence-faithful, and reproducible, enforced by the system rather than promised by the model.
 The architecture has a data plane, an agent plane, and a presentation plane, wrapped by a Steward Harness with four gates: a policy check before any model call, grounded analysis, a citation check after it, and audit and replay. Every claim carries evidence lineage, and the system refuses to answer when evidence is insufficient. It is delivered through a WebGIS and mobile console for planners and residents.
 
 
-## Slide 43 — Case 7: RAY: Resilience Assistant for You
+## Slide 42 — Case 7: RAY: Resilience Assistant for You
 
 Rather than describe the interface, let me show it. This is a three-minute demo of RAY: a resident asks a question about their neighborhood, the policy check runs before any model call, the agent grounds its analysis in the spatial data, and every sentence in the answer cites an artifact that can be inspected.
-If time is short, the link and the QR code are on the slide, and I can also play it during the questions. The next slide says what remains to be built and how RAY will be evaluated.
+If time is short, the link and the QR code are on the slide, and I can also play it during the questions.
 
 
-## Slide 44 — Case 7 · Plan and evaluation of RAY  (Ongoing, ~40% complete)
-
-And here is the plan for case seven.
-Build: the agent plane runs on open, OpenAI-compatible models with spatial tools and live data from USGS, the National Weather Service, NOAA, the Hurricane Center, and the Census. The Steward Harness wraps it with four gates: a policy check before any model call, grounded analysis, a citation check after it, and audit and replay. Delivery is a WebGIS and mobile console.
-Evaluate: four validities. Outcome validity means the spatial checks pass and uncertainty is reported. Process validity means every step is logged and replayable. Institutional validity means answers obey policy and refusals name the rule. Verifiability means every sentence cites an artifact you can open.
-Tests: a question bank across the four resilience phases with known answers, run with and without the harness to measure accuracy, citation faithfulness, and correct refusals, plus review sessions with planners and residents.
-Milestones: the data plane, agent plane, console prototype, and demo are done; harness gates and the question bank this fall; evaluation, user review, and a manuscript in spring; chapter and final defense in summer 2027.
-
-
-## Slide 45 — Publications and Awards
+## Slide 43 — Publications and Awards
 
 Briefly, my record so far. Eight first-authored publications during the Ph.D.: the CEUS article, the Natural Hazards manuscript under review, five peer-reviewed conference papers at ACM SIGSPATIAL, the GeoSearch workshop, IGARSS, CaGIS, and ICC, and one chapter under review. I also have fourteen co-authored publications, including eight journal articles.
 I have received fifteen honors, including second place in the AAG GISSG paper competition and the ICC 2025 Best Student Paper Award. The QR code links to the Autonomous GeoAI for Science community site.
 
 
-## Slide 46 — Research Schedule
+## Slide 44 — Research Schedule
 
 On the schedule: cases one through five are complete. Case six is about 20 percent done and case seven about 40 percent, both in progress this fall.
 I completed the preliminary exam in spring 2026, and the proposal defense is today. Dissertation writing runs through spring 2027, with the final defense and graduation planned for summer 2027.
 
 
-## Slide 47 — Q&A  Welcome any comments/questions
+## Slide 45 — Q&A  Welcome any comments/questions
 
 Thank you for your attention. To summarize in one line: discriminative models help us see better, generative models help us respond faster, and agentic systems help us prepare and deliver better.
 I welcome your comments and questions, and I would especially value your guidance on the two ongoing cases.
 
 
-## Slide 48 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
+## Slide 46 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
 
 Backup for case four. Satellite-to-Street flips the problem: when street-level imagery is missing after a disaster, can we synthesize it from satellite imagery?
 Three research questions: can generative vision models synthesize realistic post-disaster street views from satellite imagery; do explicit disaster semantics, extracted by a vision-language model, improve fidelity; and how can we evaluate cross-view synthesis beyond pixel metrics?
 The framework compares a conditional GAN, Stable Diffusion with ControlNet, a VLM-guided variant, and a mixture of experts gated by severity.
 
 
-## Slide 49 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
+## Slide 47 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
 
 Backup for case four: qualitative results.
 Pix2Pix produces blurry but structurally aligned views. Stable Diffusion with ControlNet produces visually plausible scenes, and adding Gemini-extracted semantics increases disaster realism. The mixture of experts strikes the best balance. From mild to severe, the synthesized views become progressively more damaged, which is what the generation should encode.
 
 
-## Slide 50 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
+## Slide 48 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
 
 Backup for case four: quantitative results.
 The four small charts on the left are perceptual image-quality metrics. Pix2Pix scores best on SSIM, PSNR, and LPIPS because it stays pixel-aligned, while ControlNet has the best FID, that is, the most realistic distribution.
@@ -330,17 +311,17 @@ The chart on the right is downstream severity consistency, measured by classifyi
 Three takeaways: single-model approaches cannot yet balance visual plausibility with strict structural alignment; high perceptual realism does not mean high semantic accuracy, so evaluation must be structure-aware; and trustworthiness, not fidelity alone, should be the target for disaster generation.
 
 
-## Slide 51 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
+## Slide 49 — Case 4: Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery 
 
 Backup for case four. This paper was accepted at IGARSS 2026, the IEEE International Geoscience and Remote Sensing Symposium, and appears in the proceedings with Lei Zou and Wendy Jepson as co-authors.
 
 
-## Slide 52 — Case 5: Generative AI for Disaster Resilience
+## Slide 50 — Case 5: Generative AI for Disaster Resilience
 
 Backup for case five. This is a chapter under review for the CRC Press volume "Geography in the Age of Generative AI."
 It reviews how generative AI can serve each phase of the resilience cycle, mitigation, preparedness, response, and recovery, and distills a three-stage pipeline from my own work: selective image restoration, GenAI-assisted damage recognition, and reasoning and decision support. This chapter consolidates stage two into a reusable framework for the community.
 
 
-## Slide 53 — Case 8: When Satellite and Street Views Disagree: Cross-View Complementarity 
+## Slide 51 — Case 8: When Satellite and Street Views Disagree: Cross-View Complementarity 
 
 Backup. This is an additional stage-two study, accepted at the fifth ACM SIGSPATIAL GeoSearch workshop in 2026. It asks what happens when satellite and street views disagree about the same building, and shows that the two views are complementary rather than redundant: the view that actually sees the damaged element should be trusted. It is a direct extension of the cross-view theme in cases three and four.
