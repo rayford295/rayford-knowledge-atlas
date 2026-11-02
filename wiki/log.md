@@ -92,3 +92,7 @@
 ## 2026-10-24
 
 - Archived the co-authored Transactions in GIS paper as `publications/2026-modeling-hospital-visitation-flows-tgis.pdf` (Lin, Zou, Tian, Cai, Yang, Zhou; 30(7), e70432; open access; DOI 10.1111/tgis.70432) and created `wiki/papers/hospital-visitation-flows.md` (HGNN best of five models, drive time dominant, rating crossover near 12.78 min that shifts across community contexts). Added it as row 4 of the archive table (PhD 13, Journal Article 11), to `raw/publications/publications.json`, `wiki/index.md`, `wiki/maps/publication-map.md`, and `wiki/maps/research-output-map.md`. Not first-authored, so not copied into `publications/first-author/`.
+
+## 2026-11-01
+
+- Added the revised slides for the second proposal defense (November 13, 2026, online) to `phd-journey/dissertation-proposal/`: `2026-11-13-yifan-yang-proposal-defense-slides.pdf` (51 pages: 45 slides + 6 backup) and `2026-11-13-proposal-defense-speaker-script.md` (one English section per slide, mirrored in the deck's notes). Compared with the 10-22 deck: four-step background argument, all results tables redrawn as bar charts, explanatory bullets on the DamageArbiter framework and RAPID dataset pages, step-by-step reveals on dense pages. Updated the folder README (defense date, final-versions table, second-defense row) and the `phd-journey/README.md` milestone row. The 10-22 proposal document and slides are unchanged.

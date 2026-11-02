@@ -2,7 +2,7 @@
 
 This folder records my dissertation proposal: the final proposal document and the defense slides as presented to my committee, plus the defense flyer.
 
-**Proposal defense:** Thursday, October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building ([flyer](./2026-10-22-proposal-defense-flyer.pdf)); not passed, second defense planned for November 2026 ([see below](#the-first-defense-and-the-second))
+**Proposal defense:** Thursday, October 22, 2026, 1:00–2:30 p.m. CDT, Room 807, Eller O&M Building ([flyer](./2026-10-22-proposal-defense-flyer.pdf)); not passed. **Second defense:** November 13, 2026, online ([see below](#the-first-defense-and-the-second))
 **Program:** Ph.D., Geography, Texas A&M University
 **Committee:** Dr. Lei Zou (Chair), Dr. Heng Cai, Dr. Andrew Klein, Dr. Zhengzhong Tu
 
@@ -31,19 +31,23 @@ Cases 1–5 are complete (CEUS 2025; Natural Hazards under review; ACM SIGSPATIA
 | 2026-10-22 | Dissertation proposal, final version submitted to the committee | [PDF](./2026-10-22-yifan-yang-dissertation-proposal.pdf) |
 | 2026-10-22 | Proposal defense slides (40 slides + 3 backup slides) | [PDF](./2026-10-22-yifan-yang-proposal-defense-slides.pdf) |
 | 2026-10-22 | Proposal defense flyer | [PDF](./2026-10-22-proposal-defense-flyer.pdf) |
+| 2026-11-13 | Second-defense slides (45 slides + 6 backup slides), revised after the first defense | [PDF](./2026-11-13-yifan-yang-proposal-defense-slides.pdf) |
+| 2026-11-13 | Speaker script for the second-defense slides, one section per slide (also stored in the deck's notes) | [Markdown](./2026-11-13-proposal-defense-speaker-script.md) |
+
+What changed between the two decks: the background now builds the "disaster resilience is a geographical question" argument in four steps (rooted in space, diverse across the globe, a geographic inquiry, a cycle in time) before the bottleneck of volume, speed, and complexity; every results table became a bar chart; the DamageArbiter framework and the RAPID dataset pages gained explanatory bullets; dense pages reveal their content step by step; and the title slide reads "From Damage Assessment to Insightful Decision Support" (the proposal document above still says "Responsible").
 
 Earlier working drafts (2026-09-30 proposal drafts, 2026-10-12 slide draft) were removed from this folder once the final versions were fixed; they remain in the git history.
 
 ## The first defense, and the second
 
-The first proposal defense on October 22, 2026 did not pass. I am keeping that on record here rather than leaving only the polished final versions, because the failure is part of the journey and probably the most instructive part of it. The proposal will be defended again before the same committee in **November 2026**.
+The first proposal defense on October 22, 2026 did not pass. I am keeping that on record here rather than leaving only the polished final versions, because the failure is part of the journey and probably the most instructive part of it. The proposal will be defended again before the same committee on **November 13, 2026**, online.
 
 That evening I wrote about it on my WeChat official account: **[Moving Toward Greater Failures! (向着更大的失败前进！)](https://mp.weixin.qq.com/s/hdapQiYII-huy9pmjt59wg)**. The essay starts from Cao Cao after the Battle of Red Cliffs, who answered defeat with "victory and defeat are common in war" (胜败乃兵家常事) and went on to regroup. Reflection does not undo a failure, but it restores morale and the nerve to go back into the field, and to aim at larger challenges, and so at larger possible failures, next time.
 
 | Date | Event | Record |
 | --- | --- | --- |
 | 2026-10-22 | First proposal defense, not passed | Final versions above; [reflection essay](https://mp.weixin.qq.com/s/hdapQiYII-huy9pmjt59wg) |
-| 2026-11 (planned) | Second proposal defense | To be added |
+| 2026-11-13 (planned) | Second proposal defense, online | [Revised slides](./2026-11-13-yifan-yang-proposal-defense-slides.pdf) and [speaker script](./2026-11-13-proposal-defense-speaker-script.md); outcome to be added |
 
 ## After the second defense
 
