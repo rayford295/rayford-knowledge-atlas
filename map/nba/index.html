@@ -236,6 +236,19 @@
         color: var(--muted);
         font-size: 0.72rem;
       }
+      .team-card .game-log {
+        display: block;
+        margin-top: 4px;
+        color: #c4ffea;
+        font-size: 0.68rem;
+        line-height: 1.45;
+      }
+      .map-tooltip .game-copy {
+        display: block;
+        margin-top: 5px;
+        color: #c4ffea;
+        font-size: 0.74rem;
+      }
       .team-card .live-badge {
         padding: 4px 6px;
         color: #c4ffea;
@@ -336,6 +349,7 @@
           <p class="nba-source-note">
             A ring records an in-person home-court experience. Arena names identify each team’s
             current home venue; they do not try to reconstruct historical naming or venue changes.
+            Where a game is logged, the card lists its date, venue, opponent and final score.
             Current venue references follow the <a href="https://www.nba.com/news/all-30-nba-arenas-by-team" target="_blank" rel="noopener">NBA arena directory</a>.
           </p>
         </section>
@@ -348,7 +362,8 @@
       const TEAM_DATA = [
         { name: "Los Angeles Lakers", short: "LAL", conference: "west", city: "Los Angeles, CA", arena: "Crypto.com Arena", lat: 34.043, lng: -118.267, live: true },
         { name: "Minnesota Timberwolves", short: "MIN", conference: "west", city: "Minneapolis, MN", arena: "Target Center", lat: 44.9795, lng: -93.276, live: false },
-        { name: "LA Clippers", short: "LAC", conference: "west", city: "Inglewood, CA", arena: "Intuit Dome", lat: 33.953, lng: -118.339, live: true },
+        { name: "LA Clippers", short: "LAC", conference: "west", city: "Inglewood, CA", arena: "Intuit Dome", lat: 33.953, lng: -118.339, live: true,
+          games: [{ date: "2026-11-04", arena: "Intuit Dome", opponent: "Miami Heat", result: "MIA 117–116 LAC (OT)" }] },
         { name: "Utah Jazz", short: "UTA", conference: "west", city: "Salt Lake City, UT", arena: "Delta Center", lat: 40.7683, lng: -111.9011, live: false },
         { name: "Oklahoma City Thunder", short: "OKC", conference: "west", city: "Oklahoma City, OK", arena: "Paycom Center", lat: 35.4634, lng: -97.5151, live: false },
         { name: "Golden State Warriors", short: "GSW", conference: "west", city: "San Francisco, CA", arena: "Chase Center", lat: 37.768, lng: -122.3877, live: true },
@@ -371,13 +386,17 @@
       document.getElementById("west-list-total").textContent = counts("west");
       document.getElementById("east-list-total").textContent = counts("east");
 
+      const gameLine = (game) => game.date + " · " + game.arena + " · vs " + game.opponent + (game.result ? " · " + game.result : "");
+
       (function renderTeamLists() {
         const makeCard = (team) => {
           const card = document.createElement("article");
           card.className = "team-card " + team.conference;
           card.innerHTML =
             '<span class="team-dot" aria-hidden="true"></span>' +
-            "<div><strong>" + team.name + "</strong><small>" + team.city + " · " + team.arena + "</small></div>" +
+            "<div><strong>" + team.name + "</strong><small>" + team.city + " · " + team.arena + "</small>" +
+            (team.games || []).map((game) => '<small class="game-log">' + gameLine(game) + "</small>").join("") +
+            "</div>" +
             (team.live ? '<span class="live-badge">Attended</span>' : "");
           return card;
         };
@@ -410,7 +429,8 @@
               "<strong>" + team.name + "</strong>" +
                 team.city + "<br />" +
                 "Current home: " + team.arena +
-                (team.live ? '<span class="live-copy">Home court attended</span>' : "")
+                (team.live ? '<span class="live-copy">Home court attended</span>' : "") +
+                (team.games || []).map((game) => '<span class="game-copy">' + gameLine(game) + "</span>").join("")
             )
             .style("opacity", 1);
           positionTooltip(event);
