@@ -10,6 +10,12 @@ The [`nba/`](./nba/) subdirectory contains a second map: a personal NBA viewing 
 watched and home courts attended. It is served at
 `https://rayford295.github.io/rayford-knowledge-atlas/map/nba/` and is linked from the travel map.
 
+The [`citations/`](./citations/) subdirectory contains a third map: a citation world map of the
+institutions whose researchers cite Yifan Yang's papers, generated from the public Google Scholar
+profile with [CitationMap](https://github.com/ChenLiu-1996/CitationMap). It is served at
+`https://rayford295.github.io/rayford-knowledge-atlas/map/citations/`. See
+[`citations/README.md`](./citations/README.md) for how to refresh it.
+
 Use the view switcher to choose **County View** or **3D Globe**. Amber counties mark the 21 visited
 states plus Washington, D.C., and blue points locate recorded U.S. city stops. The globe includes pulsing city rings and
 animated arcs linking Xi'an, Haikou, Los Angeles, and College Station. The page also lists every

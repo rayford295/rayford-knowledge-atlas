@@ -36,7 +36,8 @@
          The SVG is resized from this container, never the reverse. */
         contain: inline-size;
         min-width: 0;
-        background: radial-gradient(120% 90% at 50% 18%, rgba(108, 184, 242, 0.1), transparent 60%),
+        background:
+          radial-gradient(120% 90% at 50% 18%, rgba(108, 184, 242, 0.1), transparent 60%),
           rgba(7, 6, 18, 0.55);
         border: 1px solid var(--line);
         box-shadow: var(--shadow);
@@ -208,6 +209,7 @@
           <a href="../rooms.html">Rooms</a>
           <a href="./" aria-current="page">Map</a>
           <a href="./nba/">NBA Map</a>
+          <a href="./citations/">Citation Map</a>
           <a href="../index.html#graph">Return to Graph</a>
           <a
             href="https://github.com/rayford295/rayford-knowledge-atlas"
@@ -277,12 +279,22 @@
 
           <div class="travel-states">
             <p class="kicker">Beyond Travel</p>
-            <div class="travel-card">
-              <h3>NBA Footprint</h3>
-              <p>
-                Follow a personal record of NBA teams watched and home courts experienced across
-                North America. <a href="./nba/">Open the NBA Map →</a>
-              </p>
+            <div class="travel-grid">
+              <div class="travel-card">
+                <h3>NBA Footprint</h3>
+                <p>
+                  Follow a personal record of NBA teams watched and home courts experienced across
+                  North America. <a href="./nba/">Open the NBA Map →</a>
+                </p>
+              </div>
+              <div class="travel-card abroad">
+                <h3>Citation Map</h3>
+                <p>
+                  Where my research has traveled without me: every institution whose researchers
+                  cite my papers, on a world map and a globe.
+                  <a href="./citations/">Open the Citation Map →</a>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -426,7 +438,10 @@
 
       // ---- Visited states list (grouped) ----
       const STATE_GROUPS = [
-        ["California", "Los Angeles (M.S.), San Diego, San Francisco, Irvine, Riverside · ACM SIGSPATIAL 2026"],
+        [
+          "California",
+          "Los Angeles (M.S.), San Diego, San Francisco, Irvine, Riverside · ACM SIGSPATIAL 2026"
+        ],
         ["Nevada", "Las Vegas"],
         ["Arizona", "Tucson, Phoenix"],
         ["New York", "New York City"],

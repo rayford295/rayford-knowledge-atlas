@@ -33,15 +33,16 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 ## One-Click Access
 
-| Page          | What it is                                      | Link                                                                       |
-| ------------- | ----------------------------------------------- | -------------------------------------------------------------------------- |
-| 🌌 Atlas      | Interactive knowledge constellation (home)      | [Open](https://rayford295.github.io/rayford-knowledge-atlas/)              |
-| 📚 Readings   | WeRead reading inputs, made public-safe         | [Open](https://rayford295.github.io/rayford-knowledge-atlas/readings.html) |
-| 🧭 Advisor    | Shelf-vs-notes reading intelligence             | [Open](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)  |
-| 📄 Papers     | Research output library                         | [Open](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)   |
-| 🗺️ Rooms      | Maps, concepts, and comparison rooms            | [Open](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html)    |
-| 🌍 Travel Map | County footprint and 3D globe of visited places | [Open](https://rayford295.github.io/rayford-knowledge-atlas/map/)          |
-| 🍴 Fork Guide | Make your own atlas                             | [Open](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)     |
+| Page            | What it is                                      | Link                                                                        |
+| --------------- | ----------------------------------------------- | --------------------------------------------------------------------------- |
+| 🌌 Atlas        | Interactive knowledge constellation (home)      | [Open](https://rayford295.github.io/rayford-knowledge-atlas/)               |
+| 📚 Readings     | WeRead reading inputs, made public-safe         | [Open](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)  |
+| 🧭 Advisor      | Shelf-vs-notes reading intelligence             | [Open](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)   |
+| 📄 Papers       | Research output library                         | [Open](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)    |
+| 🗺️ Rooms        | Maps, concepts, and comparison rooms            | [Open](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html)     |
+| 🌍 Travel Map   | County footprint and 3D globe of visited places | [Open](https://rayford295.github.io/rayford-knowledge-atlas/map/)           |
+| 📍 Citation Map | Institutions whose researchers cite my papers   | [Open](https://rayford295.github.io/rayford-knowledge-atlas/map/citations/) |
+| 🍴 Fork Guide   | Make your own atlas                             | [Open](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)      |
 
 | Archive        | Contents                                                                                                                  | Link                                                                                          |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |

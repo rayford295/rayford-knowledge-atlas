@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citation Map | Rayford Knowledge Atlas</title>
+    <meta
+      name="description"
+      content="A world map of the institutions whose researchers cite Yifan Yang's work, built from the public Google Scholar profile with CitationMap."
+    />
+    <link
+      rel="canonical"
+      href="https://rayford295.github.io/rayford-knowledge-atlas/map/citations/"
+    />
+    <meta property="og:title" content="Citation Map | Rayford Knowledge Atlas" />
+    <meta
+      property="og:description"
+      content="Where my research travels: citing authors and their institutions on a world map and a 3D globe."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../../styles.css?v=31da978210" />
+    <style>
+      .cite-hero {
+        position: relative;
+        overflow: hidden;
+      }
+      .cite-hero::after {
+        content: "CITED";
+        position: absolute;
+        right: -0.04em;
+        bottom: -0.42em;
+        color: rgba(242, 170, 64, 0.045);
+        font:
+          800 clamp(6rem, 20vw, 16rem)/1 "Fraunces",
+          serif;
+        letter-spacing: -0.08em;
+        pointer-events: none;
+      }
+      .cite-hero > * {
+        position: relative;
+        z-index: 1;
+      }
+      .cite-map-wrap {
+        position: relative;
+        margin: 18px 0 8px;
+        border-radius: 22px;
+        overflow: hidden;
+        contain: inline-size;
+        min-width: 0;
+        background:
+          radial-gradient(120% 90% at 50% 18%, rgba(242, 170, 64, 0.09), transparent 60%),
+          rgba(7, 6, 18, 0.55);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+      #world-map {
+        display: block;
+        width: 100%;
+        min-height: 470px;
+        cursor: grab;
+      }
+      #world-map:active {
+        cursor: grabbing;
+      }
+      .cite-view {
+        display: none;
+      }
+      .cite-view.is-active {
+        display: block;
+      }
+      #cite-globe {
+        width: 100%;
+        height: 68vh;
+        min-height: 470px;
+      }
+      #cite-globe canvas {
+        display: block;
+        max-width: 100%;
+      }
+      .map-view-switcher {
+        display: inline-flex;
+        gap: 4px;
+        margin: 2px 0 12px;
+        padding: 4px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(7, 6, 18, 0.56);
+      }
+      .map-view-button {
+        border: 0;
+        border-radius: 999px;
+        padding: 8px 13px;
+        color: var(--muted);
+        background: transparent;
+        font:
+          700 0.78rem/1 "Manrope",
+          sans-serif;
+        cursor: pointer;
+      }
+      .map-view-button[aria-pressed="true"] {
+        color: #1c160b;
+        background: var(--amber);
+        box-shadow: 0 0 16px rgba(242, 170, 64, 0.32);
+      }
+      .country {
+        fill: rgba(116, 105, 148, 0.16);
+        stroke: rgba(196, 189, 224, 0.22);
+        stroke-width: 0.4;
+        vector-effect: non-scaling-stroke;
+        transition: fill 120ms ease;
+      }
+      .country.has-citers {
+        fill: rgba(242, 170, 64, 0.2);
+      }
+      .graticule {
+        fill: none;
+        stroke: rgba(196, 189, 224, 0.07);
+        stroke-width: 0.5;
+        vector-effect: non-scaling-stroke;
+      }
+      .sphere {
+        fill: rgba(108, 184, 242, 0.035);
+        stroke: rgba(196, 189, 224, 0.18);
+        stroke-width: 0.8;
+        vector-effect: non-scaling-stroke;
+      }
+      .pin {
+        fill: rgba(242, 170, 64, 0.72);
+        stroke: #ffe9b0;
+        stroke-width: 1;
+        vector-effect: non-scaling-stroke;
+        filter: drop-shadow(0 0 5px rgba(242, 170, 64, 0.8));
+        cursor: pointer;
+        transition:
+          fill 120ms ease,
+          opacity 160ms ease;
+      }
+      .pin.is-dim {
+        opacity: 0.16;
+        filter: none;
+      }
+      .pin:hover,
+      .pin.is-selected {
+        fill: #ffe0a0;
+      }
+      .home-pin {
+        fill: #6cb8f2;
+        stroke: #eef8ff;
+        stroke-width: 1.3;
+        vector-effect: non-scaling-stroke;
+        filter: drop-shadow(0 0 6px rgba(108, 184, 242, 0.95));
+        pointer-events: none;
+      }
+      .cite-tooltip {
+        position: absolute;
+        z-index: 4;
+        pointer-events: none;
+        opacity: 0;
+        max-width: 260px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: rgba(12, 10, 27, 0.93);
+        border: 1px solid rgba(255, 212, 106, 0.55);
+        color: #f6f2ff;
+        font:
+          600 0.78rem/1.4 "Manrope",
+          sans-serif;
+        transform: translate(12px, -18px);
+        transition: opacity 100ms ease;
+      }
+      .cite-tooltip small {
+        display: block;
+        color: var(--ink-soft);
+        font-weight: 500;
+      }
+      .cite-hint {
+        position: absolute;
+        left: 18px;
+        bottom: 14px;
+        z-index: 3;
+        font-size: 0.78rem;
+        color: var(--muted);
+        letter-spacing: 0.02em;
+        background: rgba(5, 4, 13, 0.45);
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+      }
+      .cite-detail {
+        margin-top: 14px;
+        padding: 16px 18px;
+        border: 1px solid rgba(255, 212, 106, 0.28);
+        border-radius: 16px;
+        background: var(--panel);
+      }
+      .cite-detail[hidden] {
+        display: none;
+      }
+      .cite-detail h3 {
+        margin: 0 0 4px;
+        font-family: "Manrope", sans-serif;
+        font-size: 1.02rem;
+        color: var(--ink);
+      }
+      .cite-detail .cite-where {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .cite-detail ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 8px;
+      }
+      .cite-detail li {
+        color: var(--ink-soft);
+        font-size: 0.88rem;
+        line-height: 1.45;
+      }
+      .cite-detail li strong {
+        color: var(--ink);
+      }
+      .cite-detail li em {
+        color: var(--muted);
+        font-style: normal;
+        font-size: 0.8rem;
+      }
+      .cite-detail button {
+        float: right;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 5px 10px;
+        background: transparent;
+        color: var(--muted);
+        font:
+          700 0.72rem/1 "Manrope",
+          sans-serif;
+        cursor: pointer;
+      }
+      .cite-filter {
+        margin-top: 22px;
+      }
+      .cite-filter label {
+        display: block;
+        margin: 10px 0 6px;
+        color: var(--ink-soft);
+        font-size: 0.88rem;
+      }
+      .cite-filter select {
+        width: 100%;
+        max-width: 720px;
+        padding: 9px 12px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        background: rgba(7, 6, 18, 0.7);
+        color: var(--ink);
+        font:
+          600 0.86rem/1.3 "Manrope",
+          sans-serif;
+      }
+      .cite-section {
+        margin-top: 26px;
+      }
+      .cite-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 14px;
+        margin-top: 14px;
+      }
+      .cite-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 14px 16px;
+        cursor: pointer;
+      }
+      .cite-card:hover {
+        border-color: rgba(255, 212, 106, 0.4);
+      }
+      .cite-card h3 {
+        margin: 0 0 6px;
+        font-family: "Manrope", sans-serif;
+        font-size: 0.95rem;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .cite-card h3::before {
+        content: "";
+        flex: 0 0 9px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--amber);
+        box-shadow: 0 0 10px var(--amber);
+      }
+      .cite-card p {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+      .cite-card p b {
+        color: var(--amber);
+      }
+      .cite-table {
+        width: 100%;
+        margin-top: 14px;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+      }
+      .cite-table th,
+      .cite-table td {
+        padding: 8px 10px;
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink-soft);
+        vertical-align: top;
+      }
+      .cite-table th {
+        color: var(--muted);
+        font-family: "Manrope", sans-serif;
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .cite-table td:last-child,
+      .cite-table th:last-child {
+        text-align: right;
+        white-space: nowrap;
+      }
+      .cite-bar {
+        display: inline-block;
+        height: 7px;
+        margin-right: 8px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--amber), var(--amber-deep));
+        vertical-align: middle;
+      }
+      .cite-note {
+        margin-top: 22px;
+        color: var(--muted);
+        font-size: 0.8rem;
+        line-height: 1.6;
+      }
+      .cite-note a {
+        color: var(--sky);
+      }
+      .cite-empty {
+        padding: 40px 20px;
+        text-align: center;
+        color: var(--muted);
+      }
+      @media (max-width: 640px) {
+        .cite-hero::after {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+    <div class="app-shell guide-shell">
+      <header class="topbar">
+        <a class="brand" href="../../index.html" aria-label="Rayford Knowledge Atlas">
+          <span class="brand-mark">RK</span>
+          <span>
+            <strong>Rayford Knowledge Atlas</strong>
+            <small>Where my research has traveled without me</small>
+          </span>
+        </a>
+
+        <nav class="top-links guide-links" aria-label="Primary links">
+          <a href="../../index.html">Atlas</a>
+          <a href="../../readings.html">Readings</a>
+          <a href="../../advisor.html">Advisor</a>
+          <a href="../../papers.html">Papers</a>
+          <a href="../../rooms.html">Rooms</a>
+          <a href="../">Travel Map</a>
+          <a href="../nba/">NBA Map</a>
+          <a href="./" aria-current="page">Citation Map</a>
+          <a href="../../index.html#graph">Return to Graph</a>
+          <a
+            href="https://github.com/rayford295/rayford-knowledge-atlas"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </nav>
+      </header>
+
+      <main class="guide-page rooms-page">
+        <section class="guide-hero rooms-hero cite-hero">
+          <p class="kicker">Where My Work Travels</p>
+          <h1>A world map of the people who cite my research.</h1>
+          <p>
+            Every pin is an institution where at least one researcher has cited a paper on my
+            <a
+              href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ"
+              target="_blank"
+              rel="noopener"
+              >Google Scholar profile</a
+            >. Larger pins mean more citing authors. Pick a paper below to see where that single
+            piece of work has reached.
+          </p>
+          <div class="reading-metrics rooms-metrics" aria-label="Citation overview">
+            <div><strong id="m-authors">--</strong><span>citing authors</span></div>
+            <div><strong id="m-affils">--</strong><span>institutions</span></div>
+            <div><strong id="m-countries">--</strong><span>countries</span></div>
+            <div><strong id="m-papers">--</strong><span>papers cited</span></div>
+          </div>
+        </section>
+
+        <section class="guide-panel">
+          <div class="cite-map-wrap">
+            <div class="map-view-switcher" aria-label="Citation map view">
+              <button
+                class="map-view-button"
+                type="button"
+                data-cite-view="world"
+                aria-pressed="true"
+              >
+                World Map
+              </button>
+              <button
+                class="map-view-button"
+                type="button"
+                data-cite-view="globe"
+                aria-pressed="false"
+              >
+                3D Globe
+              </button>
+            </div>
+            <div class="cite-view is-active" id="world-view">
+              <svg
+                id="world-map"
+                role="img"
+                aria-label="World map of institutions citing Yifan Yang"
+              ></svg>
+              <div class="cite-tooltip" id="cite-tooltip" role="status"></div>
+              <div class="cite-hint">
+                Amber: a citing institution (size = authors) · Blue: College Station · Scroll to
+                zoom · Click a pin for names
+              </div>
+            </div>
+            <div class="cite-view" id="globe-view">
+              <div
+                id="cite-globe"
+                role="img"
+                aria-label="Interactive 3D globe of citing institutions"
+              ></div>
+              <div class="cite-hint">
+                Drag to rotate · scroll to zoom · arcs run from Texas A&amp;M to each citing
+                institution
+              </div>
+            </div>
+          </div>
+
+          <div class="cite-detail" id="cite-detail" hidden></div>
+
+          <div class="cite-filter">
+            <p class="kicker">Follow One Paper</p>
+            <label for="paper-select">Show only the institutions citing:</label>
+            <select id="paper-select">
+              <option value="">All papers</option>
+            </select>
+          </div>
+
+          <div class="cite-section">
+            <p class="kicker">Citing Institutions</p>
+            <div class="cite-grid" id="affil-grid"></div>
+          </div>
+
+          <div class="cite-section">
+            <p class="kicker">By Country</p>
+            <table class="cite-table" id="country-table">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Institutions</th>
+                  <th>Citing authors</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div class="cite-section">
+            <p class="kicker">By Paper</p>
+            <table class="cite-table" id="paper-table">
+              <thead>
+                <tr>
+                  <th>Cited paper</th>
+                  <th>Citing authors</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <p class="cite-note" id="cite-note"></p>
+        </section>
+      </main>
+    </div>
+
+    <script src="./data.js?v=31da978210"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+    <script
+      src="https://unpkg.com/globe.gl@2.46.1/dist/globe.gl.min.js"
+      integrity="sha384-fS13P48RBFel+cPUp5960AhzvtEr64LerQ00neZuM+Hi/VDxxemdQnN7IcWPYvPb"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      (function citationMap() {
+        const DATA = window.CITATION_MAP;
+        const HOME = {
+          lat: 30.6187,
+          lng: -96.3365,
+          label: "Texas A&M University · College Station"
+        };
+        const wrap = document.querySelector(".cite-map-wrap");
+        const svg = d3.select("#world-map");
+        const tooltip = d3.select("#cite-tooltip");
+        const detail = document.getElementById("cite-detail");
+        const select = document.getElementById("paper-select");
+
+        if (!DATA || !DATA.pins || !DATA.pins.length) {
+          document.querySelector(".cite-map-wrap").innerHTML =
+            '<p class="cite-empty">The citation data has not been generated yet. Run <code>python3 scripts/build-citation-map.py --fetch</code>.</p>';
+          return;
+        }
+
+        const esc = (text) =>
+          String(text).replace(
+            /[&<>"]/g,
+            (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]
+          );
+        const plural = (n, word) => n + " " + word + (n === 1 ? "" : "s");
+        const where = (pin) => [pin.city, pin.state, pin.country].filter(Boolean).join(", ");
+
+        // ---- State: which cited paper is selected (empty = all) ----
+        let activePaper = "";
+        let selectedPin = null;
+        const pinMatches = (pin) =>
+          !activePaper || pin.authors.some((a) => a.cited.includes(activePaper));
+        const visibleAuthors = (pin) =>
+          pin.authors.filter((a) => !activePaper || a.cited.includes(activePaper));
+        const radiusFor = (count) => 3 + Math.sqrt(count) * 2.4;
+
+        // ---- Hero metrics ----
+        const t = DATA.totals;
+        document.getElementById("m-authors").textContent = t.citingAuthors;
+        document.getElementById("m-affils").textContent = t.affiliations;
+        document.getElementById("m-countries").textContent = t.countries;
+        document.getElementById("m-papers").textContent = t.citedPapers;
+
+        // ---- Paper filter ----
+        DATA.papers.forEach((paper) => {
+          const option = document.createElement("option");
+          option.value = paper.title;
+          option.textContent = paper.title + " (" + paper.authors + ")";
+          select.appendChild(option);
+        });
+        select.addEventListener("change", () => {
+          activePaper = select.value;
+          selectedPin = null;
+          detail.hidden = true;
+          refreshPins();
+          renderAffiliations();
+          if (window.citeGlobe) {
+            window.citeGlobe.refresh();
+          }
+        });
+
+        // ---- Detail panel ----
+        function showDetail(pin) {
+          selectedPin = pin;
+          const authors = visibleAuthors(pin);
+          detail.innerHTML =
+            '<button type="button" id="detail-close">Close</button>' +
+            "<h3>" +
+            esc(pin.affiliation) +
+            "</h3>" +
+            '<p class="cite-where">' +
+            esc(where(pin)) +
+            " · " +
+            plural(authors.length, "citing author") +
+            "</p>" +
+            "<ul>" +
+            authors
+              .map(
+                (a) =>
+                  "<li><strong>" +
+                  esc(a.name) +
+                  "</strong><br><em>cites: " +
+                  a.cited.map(esc).join(" · ") +
+                  "</em></li>"
+              )
+              .join("") +
+            "</ul>";
+          detail.hidden = false;
+          document.getElementById("detail-close").addEventListener("click", () => {
+            selectedPin = null;
+            detail.hidden = true;
+            refreshPins();
+          });
+          refreshPins();
+          detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+        // ---- Institution cards ----
+        function renderAffiliations() {
+          const grid = document.getElementById("affil-grid");
+          grid.innerHTML = "";
+          DATA.pins.filter(pinMatches).forEach((pin) => {
+            const authors = visibleAuthors(pin);
+            const card = document.createElement("div");
+            card.className = "cite-card";
+            card.innerHTML =
+              "<h3>" +
+              esc(pin.affiliation) +
+              "</h3><p>" +
+              esc(where(pin)) +
+              "<br><b>" +
+              plural(authors.length, "citing author") +
+              "</b></p>";
+            card.addEventListener("click", () => showDetail(pin));
+            grid.appendChild(card);
+          });
+        }
+        renderAffiliations();
+
+        // ---- Country + paper tables ----
+        (function renderTables() {
+          const cbody = document.querySelector("#country-table tbody");
+          const cmax = Math.max(...DATA.countries.map((c) => c.authors));
+          DATA.countries.forEach((c) => {
+            const row = document.createElement("tr");
+            row.innerHTML =
+              "<td>" +
+              esc(c.country) +
+              "</td><td>" +
+              c.affiliations +
+              '</td><td><span class="cite-bar" style="width:' +
+              Math.round((c.authors / cmax) * 90) +
+              'px"></span>' +
+              c.authors +
+              "</td>";
+            cbody.appendChild(row);
+          });
+          const pbody = document.querySelector("#paper-table tbody");
+          const pmax = Math.max(...DATA.papers.map((p) => p.authors));
+          DATA.papers.forEach((p) => {
+            const row = document.createElement("tr");
+            row.innerHTML =
+              "<td>" +
+              esc(p.title) +
+              '</td><td><span class="cite-bar" style="width:' +
+              Math.round((p.authors / pmax) * 90) +
+              'px"></span>' +
+              p.authors +
+              "</td>";
+            pbody.appendChild(row);
+          });
+          const unresolved = DATA.totals.unresolvedAuthors;
+          document.getElementById("cite-note").innerHTML =
+            "Built from the public Google Scholar profile with " +
+            '<a href="https://github.com/ChenLiu-1996/CitationMap" target="_blank" rel="noopener">CitationMap</a> ' +
+            "(Chen Liu, 2024). Affiliations come from citing authors' own Scholar profiles and were geocoded " +
+            "with Nominatim, so a few pins may be missing or misplaced. " +
+            plural(DATA.totals.pinnedAuthors, "author") +
+            " are pinned" +
+            (unresolved
+              ? "; " +
+                unresolved +
+                " citing authors have no resolvable affiliation and are counted only in the totals"
+              : "") +
+            ". Snapshot: " +
+            esc(DATA.generatedAt.slice(0, 10)) +
+            ".";
+        })();
+
+        // ---- World map (D3) ----
+        let pinLayer = null;
+        function refreshPins() {
+          if (!pinLayer) {
+            return;
+          }
+          pinLayer
+            .selectAll("circle.pin")
+            .classed("is-dim", (pin) => !pinMatches(pin))
+            .classed("is-selected", (pin) => pin === selectedPin)
+            .attr("r", (pin) => radiusFor(visibleAuthors(pin).length || 1));
+        }
+
+        function render(topology) {
+          const countries = topojson.feature(topology, topology.objects.countries).features;
+          const width = Math.max(320, wrap.clientWidth);
+          const height = Math.round(Math.max(470, Math.min(640, width * 0.52)));
+          const projection = d3.geoNaturalEarth1().fitSize([width, height], { type: "Sphere" });
+          const path = d3.geoPath(projection);
+          svg.attr("viewBox", "0 0 " + width + " " + height).attr("height", height);
+          svg.selectAll("*").remove();
+          const root = svg.append("g");
+
+          // Nominatim country names differ from the world-atlas labels for a few countries.
+          const COUNTRY_ALIASES = {
+            "United States": "United States of America",
+            "Czech Republic": "Czechia",
+            "Bosnia and Herzegovina": "Bosnia and Herz.",
+            "Dominican Republic": "Dominican Rep.",
+            "North Macedonia": "Macedonia",
+            "Türkiye": "Turkey",
+            "Hong Kong": "China",
+            "Macau": "China",
+            "Republic of Korea": "South Korea",
+            "Korea": "South Korea",
+            "Viet Nam": "Vietnam",
+            "Russian Federation": "Russia",
+            "Iran, Islamic Republic of": "Iran",
+            "Democratic Republic of the Congo": "Dem. Rep. Congo",
+            "Central African Republic": "Central African Rep.",
+            "South Sudan": "S. Sudan",
+            "Eswatini": "eSwatini",
+            "Ivory Coast": "Côte d'Ivoire",
+            "East Timor": "Timor-Leste",
+            "Equatorial Guinea": "Eq. Guinea"
+          };
+          const citedCountries = new Set(
+            DATA.countries.map((c) => COUNTRY_ALIASES[c.country] || c.country)
+          );
+          root.append("path").datum({ type: "Sphere" }).attr("class", "sphere").attr("d", path);
+          root.append("path").datum(d3.geoGraticule10()).attr("class", "graticule").attr("d", path);
+          root
+            .append("g")
+            .selectAll("path")
+            .data(countries)
+            .join("path")
+            .attr(
+              "class",
+              (c) => "country" + (citedCountries.has(c.properties.name) ? " has-citers" : "")
+            )
+            .attr("d", path);
+
+          const home = projection([HOME.lng, HOME.lat]);
+          root
+            .append("circle")
+            .attr("class", "home-pin")
+            .attr("cx", home[0])
+            .attr("cy", home[1])
+            .attr("r", 4.2);
+
+          pinLayer = root.append("g").attr("aria-label", "Citing institutions");
+          pinLayer
+            .selectAll("circle")
+            .data(DATA.pins.slice().sort((a, b) => b.count - a.count))
+            .join("circle")
+            .attr("class", "pin")
+            .attr("cx", (pin) => projection([pin.lng, pin.lat])[0])
+            .attr("cy", (pin) => projection([pin.lng, pin.lat])[1])
+            .on("mousemove", function (event, pin) {
+              const authors = visibleAuthors(pin);
+              tooltip
+                .style("opacity", 1)
+                .style("left", event.offsetX + "px")
+                .style("top", event.offsetY + "px")
+                .html(
+                  "<strong>" +
+                    esc(pin.affiliation) +
+                    "</strong><small>" +
+                    esc(where(pin)) +
+                    "</small><small>" +
+                    plural(authors.length, "citing author") +
+                    ": " +
+                    esc(
+                      authors
+                        .slice(0, 4)
+                        .map((a) => a.name)
+                        .join(", ")
+                    ) +
+                    (authors.length > 4 ? ", …" : "") +
+                    "</small>"
+                );
+            })
+            .on("mouseleave", () => tooltip.style("opacity", 0))
+            .on("click", (event, pin) => showDetail(pin));
+          refreshPins();
+
+          svg.call(
+            d3
+              .zoom()
+              .scaleExtent([1, 9])
+              .on("zoom", (event) => {
+                root.attr("transform", event.transform);
+              })
+          );
+        }
+
+        d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json")
+          .then((topology) => {
+            if (!topology) {
+              throw new Error("World geometry could not load.");
+            }
+            render(topology);
+            window.addEventListener("resize", () => render(topology));
+          })
+          .catch(() => {
+            svg
+              .attr("viewBox", "0 0 700 120")
+              .append("text")
+              .attr("x", 24)
+              .attr("y", 64)
+              .attr("fill", "#c4bde0")
+              .text("The world map could not load. The institution list below still works.");
+          });
+
+        // ---- 3D globe (loaded lazily) ----
+        window.initCiteGlobe = function initCiteGlobe() {
+          const el = document.getElementById("cite-globe");
+          if (!el || el.dataset.initialized === "true" || typeof Globe === "undefined") {
+            return;
+          }
+          const amber = "#f2aa40";
+          const sky = "#6cb8f2";
+          const label = (pin) =>
+            "<div style='font-family:Manrope,sans-serif;font-weight:700'>" +
+            esc(pin.affiliation) +
+            "</div><div style='color:#c4bde0;font-size:0.8em'>" +
+            esc(where(pin)) +
+            "</div><div style='color:#f3c46b;font-size:0.72em;margin-top:0.2em'>" +
+            esc(
+              visibleAuthors(pin)
+                .map((a) => a.name)
+                .join(", ")
+            ) +
+            "</div>";
+          const world = Globe()(el)
+            .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-night.jpg")
+            .bumpImageUrl("https://unpkg.com/three-globe/example/img/earth-topology.png")
+            .backgroundColor("rgba(0,0,0,0)")
+            .showAtmosphere(true)
+            .atmosphereColor(amber)
+            .atmosphereAltitude(0.16)
+            .pointLat("lat")
+            .pointLng("lng")
+            .pointColor(() => amber)
+            .pointAltitude((pin) => 0.01 + Math.sqrt(visibleAuthors(pin).length) * 0.02)
+            .pointRadius((pin) => 0.22 + Math.sqrt(visibleAuthors(pin).length) * 0.12)
+            .pointLabel(label)
+            .onPointClick((pin) => showDetail(pin))
+            .arcStartLat(() => HOME.lat)
+            .arcStartLng(() => HOME.lng)
+            .arcEndLat("lat")
+            .arcEndLng("lng")
+            .arcColor(() => [sky, amber])
+            .arcAltitudeAutoScale(0.35)
+            .arcStroke(0.28)
+            .arcDashLength(0.5)
+            .arcDashGap(0.25)
+            .arcDashAnimateTime(2400)
+            .arcLabel(label)
+            .ringsData([HOME])
+            .ringLat("lat")
+            .ringLng("lng")
+            .ringColor(() => (t) => "rgba(108,184,242," + (1 - t) + ")")
+            .ringMaxRadius(3)
+            .ringPropagationSpeed(1.2)
+            .ringRepeatPeriod(1400);
+
+          function refresh() {
+            const pins = DATA.pins.filter(pinMatches);
+            world.pointsData(pins).arcsData(pins);
+          }
+          refresh();
+          window.citeGlobe = { refresh };
+
+          function sizeGlobe() {
+            const width = Math.max(320, el.clientWidth);
+            world.width(width).height(Math.max(470, el.clientHeight));
+          }
+          sizeGlobe();
+          requestAnimationFrame(sizeGlobe);
+          window.addEventListener("resize", sizeGlobe);
+          world.controls().autoRotate = true;
+          world.controls().autoRotateSpeed = 0.5;
+          world.controls().enableZoom = true;
+          world.pointOfView({ lat: 25, lng: -40, altitude: 2.1 }, 0);
+          el.dataset.initialized = "true";
+        };
+
+        (function initViewSwitcher() {
+          const buttons = document.querySelectorAll("[data-cite-view]");
+          const worldView = document.getElementById("world-view");
+          const globeView = document.getElementById("globe-view");
+          buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+              const showGlobe = button.dataset.citeView === "globe";
+              worldView.classList.toggle("is-active", !showGlobe);
+              globeView.classList.toggle("is-active", showGlobe);
+              buttons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+              if (showGlobe) {
+                window.initCiteGlobe();
+              }
+            });
+          });
+        })();
+      })();
+    </script>
+
+    <script>
+      (function () {
+        const starfield = document.getElementById("starfield");
+        function initStarfield() {
+          if (!starfield) {
+            return;
+          }
+          const context = starfield.getContext("2d");
+          let width = 0,
+            height = 0,
+            stars = [];
+          function resize() {
+            const ratio = Math.min(window.devicePixelRatio || 1, 2);
+            width = window.innerWidth;
+            height = window.innerHeight;
+            starfield.width = Math.floor(width * ratio);
+            starfield.height = Math.floor(height * ratio);
+            starfield.style.width = width + "px";
+            starfield.style.height = height + "px";
+            context.setTransform(ratio, 0, 0, ratio, 0, 0);
+            stars = Array.from(
+              { length: Math.min(180, Math.floor((width * height) / 6200)) },
+              (_, index) => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: index % 9 === 0 ? 1.6 : Math.random() * 1.1 + 0.3,
+                alpha: Math.random() * 0.5 + 0.16,
+                tint: index % 7 === 0 ? "255, 212, 106" : "186, 255, 232"
+              })
+            );
+          }
+          function draw() {
+            context.clearRect(0, 0, width, height);
+            stars.forEach((star) => {
+              context.beginPath();
+              context.fillStyle = "rgba(" + star.tint + ", " + star.alpha + ")";
+              context.shadowColor = "rgba(" + star.tint + ", " + star.alpha + ")";
+              context.shadowBlur = star.radius * 7;
+              context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+              context.fill();
+            });
+          }
+          resize();
+          draw();
+          window.addEventListener("resize", () => {
+            resize();
+            draw();
+          });
+        }
+        initStarfield();
+      })();
+    </script>
+  </body>
+</html>

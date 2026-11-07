@@ -33,15 +33,16 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 ## 一键入口
 
-| 页面         | 内容                           | 链接                                                                       |
-| ------------ | ------------------------------ | -------------------------------------------------------------------------- |
-| 🌌 Atlas     | 交互式知识星图（首页）         | [打开](https://rayford295.github.io/rayford-knowledge-atlas/)              |
-| 📚 Readings  | 公开安全的微信读书阅读输入     | [打开](https://rayford295.github.io/rayford-knowledge-atlas/readings.html) |
-| 🧭 Advisor   | 书架 vs 笔记的阅读智能分析     | [打开](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)  |
-| 📄 Papers    | 研究输出库                     | [打开](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)   |
-| 🗺️ Rooms     | 地图、概念与对比房间           | [打开](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html)    |
-| 🌍 旅行地图  | 到访州的县级足迹图与 3D 地球仪 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/map/)          |
-| 🍴 Fork 指南 | 做一个自己的 atlas             | [打开](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)     |
+| 页面         | 内容                               | 链接                                                                        |
+| ------------ | ---------------------------------- | --------------------------------------------------------------------------- |
+| 🌌 Atlas     | 交互式知识星图（首页）             | [打开](https://rayford295.github.io/rayford-knowledge-atlas/)               |
+| 📚 Readings  | 公开安全的微信读书阅读输入         | [打开](https://rayford295.github.io/rayford-knowledge-atlas/readings.html)  |
+| 🧭 Advisor   | 书架 vs 笔记的阅读智能分析         | [打开](https://rayford295.github.io/rayford-knowledge-atlas/advisor.html)   |
+| 📄 Papers    | 研究输出库                         | [打开](https://rayford295.github.io/rayford-knowledge-atlas/papers.html)    |
+| 🗺️ Rooms     | 地图、概念与对比房间               | [打开](https://rayford295.github.io/rayford-knowledge-atlas/rooms.html)     |
+| 🌍 旅行地图  | 到访州的县级足迹图与 3D 地球仪     | [打开](https://rayford295.github.io/rayford-knowledge-atlas/map/)           |
+| 📍 引用地图  | 引用我论文的学者所在机构的世界地图 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/map/citations/) |
+| 🍴 Fork 指南 | 做一个自己的 atlas                 | [打开](https://rayford295.github.io/rayford-knowledge-atlas/fork.html)      |
 
 | 归档       | 内容                                                                                                                 | 链接                                                                                        |
 | ---------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |

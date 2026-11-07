@@ -11,3 +11,6 @@ package-lock.json
 # Published PDFs
 publications/
 assets/
+
+# Generated citation map payload — produced by scripts/build-citation-map.py
+map/citations/data.js
