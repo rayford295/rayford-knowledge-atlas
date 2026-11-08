@@ -22,7 +22,7 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23102019'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' font-weight='800' fill='%23ffd46a'%3ERK%3C/text%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="../../styles.css?v=31da978210" />
+    <link rel="stylesheet" href="../../styles.css?v=eae404c143" />
     <style>
       .nba-hero {
         position: relative;
@@ -33,8 +33,8 @@
         position: absolute;
         right: -0.04em;
         bottom: -0.42em;
-        color: rgba(108, 184, 242, 0.07);
-        font: 800 clamp(7rem, 23vw, 18rem)/1 "Fraunces", serif;
+        color: rgba(36, 81, 179, 0.03);
+        font: 700 clamp(7rem, 23vw, 18rem)/1 "Fraunces", serif;
         letter-spacing: -0.1em;
         pointer-events: none;
       }
@@ -48,9 +48,7 @@
         overflow: hidden;
         border: 1px solid var(--line);
         border-radius: 22px;
-        background:
-          radial-gradient(80% 100% at 50% 8%, rgba(108, 184, 242, 0.13), transparent 67%),
-          rgba(7, 6, 18, 0.62);
+        background: #ffffff;
         box-shadow: var(--shadow);
       }
       #nba-map {
@@ -59,13 +57,13 @@
         min-height: 510px;
       }
       .nba-state {
-        fill: rgba(158, 148, 184, 0.11);
-        stroke: rgba(224, 217, 245, 0.26);
+        fill: rgba(17, 24, 39, 0.07);
+        stroke: rgba(17, 24, 39, 0.28);
         stroke-width: 0.7;
       }
       .nba-state-boundary {
         fill: none;
-        stroke: rgba(248, 244, 255, 0.34);
+        stroke: rgba(17, 24, 39, 0.36);
         stroke-width: 0.7;
         pointer-events: none;
       }
@@ -79,20 +77,18 @@
       }
       .nba-point-ring {
         fill: none;
-        stroke: #c4ffea;
+        stroke: #0f766e;
         stroke-width: 2.2;
-        filter: drop-shadow(0 0 5px rgba(196, 255, 234, 0.75));
       }
       .nba-point-core {
-        stroke: #f7f3ff;
+        stroke: #ffffff;
         stroke-width: 1.25;
-        filter: drop-shadow(0 0 5px rgba(8, 7, 20, 0.85));
       }
       .nba-point-label {
-        fill: #f6f2ff;
-        font: 800 11px/1 "Manrope", sans-serif;
+        fill: #111827;
+        font: 700 11px/1 "Manrope", sans-serif;
         paint-order: stroke;
-        stroke: rgba(8, 7, 20, 0.94);
+        stroke: #ffffff;
         stroke-width: 3px;
         stroke-linejoin: round;
         pointer-events: none;
@@ -102,11 +98,11 @@
         z-index: 3;
         max-width: 242px;
         padding: 11px 12px;
-        color: #f7f3ff;
-        background: rgba(11, 9, 25, 0.96);
-        border: 1px solid rgba(255, 212, 106, 0.62);
+        color: #ffffff;
+        background: #ffffff;
+        border: 1px solid rgba(36, 81, 179, 0.62);
         border-radius: 12px;
-        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
+        box-shadow: 0 14px 32px rgba(17, 24, 39, 0.08);
         font: 600 0.78rem/1.45 "Manrope", sans-serif;
         opacity: 0;
         pointer-events: none;
@@ -121,7 +117,7 @@
       .map-tooltip .live-copy {
         display: inline-block;
         margin-top: 7px;
-        color: #c4ffea;
+        color: #0f766e;
         font-size: 0.71rem;
         font-weight: 800;
         letter-spacing: 0.05em;
@@ -135,7 +131,7 @@
         max-width: calc(100% - 32px);
         padding: 6px 11px;
         color: var(--muted);
-        background: rgba(5, 4, 13, 0.64);
+        background: #ffffff;
         border: 1px solid var(--line);
         border-radius: 999px;
         font-size: 0.74rem;
@@ -149,14 +145,14 @@
       .nba-filter {
         padding: 8px 12px;
         color: var(--muted);
-        background: rgba(7, 6, 18, 0.55);
+        background: #ffffff;
         border: 1px solid var(--line);
         border-radius: 999px;
-        font: 800 0.75rem/1 "Manrope", sans-serif;
+        font: 700 0.75rem/1 "Manrope", sans-serif;
         cursor: pointer;
       }
       .nba-filter[aria-pressed="true"] {
-        color: #1c160b;
+        color: #ffffff;
         background: var(--amber);
         border-color: var(--amber);
       }
@@ -179,9 +175,9 @@
         height: 9px;
         border-radius: 50%;
       }
-      .nba-legend .west { background: var(--amber); }
-      .nba-legend .east { background: var(--sky); }
-      .nba-legend .live { background: transparent; border: 2px solid #c4ffea; }
+      .nba-legend .west { background: #c2410c; }
+      .nba-legend .east { background: #2451b3; }
+      .nba-legend .live { background: transparent; border: 2px solid #0f766e; }
       .nba-records {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -196,7 +192,7 @@
       }
       .conference-panel h2 {
         margin: 0 0 5px;
-        font: 800 1.15rem/1.2 "Fraunces", serif;
+        font: 700 1.15rem/1.2 "Fraunces", serif;
         color: var(--ink);
       }
       .conference-panel > p {
@@ -214,17 +210,17 @@
         gap: 10px;
         align-items: center;
         padding: 10px 11px;
-        border: 1px solid rgba(205, 196, 232, 0.12);
+        border: 1px solid rgba(17, 24, 39, 0.14);
         border-radius: 11px;
-        background: rgba(7, 6, 18, 0.34);
+        background: #ffffff;
       }
       .team-card .team-dot {
         width: 8px;
         height: 8px;
         border-radius: 50%;
       }
-      .team-card.west .team-dot { background: var(--amber); }
-      .team-card.east .team-dot { background: var(--sky); }
+      .team-card.west .team-dot { background: #c2410c; }
+      .team-card.east .team-dot { background: #2451b3; }
       .team-card strong {
         display: block;
         color: var(--ink);
@@ -239,22 +235,22 @@
       .team-card .game-log {
         display: block;
         margin-top: 4px;
-        color: #c4ffea;
+        color: #0f766e;
         font-size: 0.68rem;
         line-height: 1.45;
       }
       .map-tooltip .game-copy {
         display: block;
         margin-top: 5px;
-        color: #c4ffea;
+        color: #0f766e;
         font-size: 0.74rem;
       }
       .team-card .live-badge {
         padding: 4px 6px;
-        color: #c4ffea;
-        border: 1px solid rgba(196, 255, 234, 0.46);
+        color: #0f766e;
+        border: 1px solid rgba(15, 118, 110, 0.46);
         border-radius: 999px;
-        background: rgba(196, 255, 234, 0.07);
+        background: rgba(15, 118, 110, 0.07);
         font-size: 0.61rem;
         font-weight: 800;
         letter-spacing: 0.04em;
@@ -378,7 +374,7 @@
         { name: "Toronto Raptors", short: "TOR", conference: "east", city: "Toronto, ON", arena: "Scotiabank Arena", lat: 43.6435, lng: -79.3791, live: false }
       ];
 
-      const colors = { west: "#f2aa40", east: "#6cb8f2" };
+      const colors = { west: "#c2410c", east: "#2451b3" };
       const counts = (conference) => TEAM_DATA.filter((team) => team.conference === conference).length;
       document.getElementById("team-total").textContent = TEAM_DATA.length;
       document.getElementById("west-total").textContent = counts("west");
@@ -478,7 +474,7 @@
             window.addEventListener("resize", () => draw(us));
           })
           .catch(() => {
-            svg.attr("viewBox", "0 0 800 420").append("text").attr("x", 400).attr("y", 210).attr("text-anchor", "middle").attr("fill", "#f6f2ff").text("The NBA map could not load. Please check your connection and reload.");
+            svg.attr("viewBox", "0 0 800 420").append("text").attr("x", 400).attr("y", 210).attr("text-anchor", "middle").attr("fill", "#111827").text("The NBA map could not load. Please check your connection and reload.");
           });
         document.querySelectorAll(".nba-filter").forEach((button) => {
           button.addEventListener("click", () => {

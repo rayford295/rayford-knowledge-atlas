@@ -16,8 +16,8 @@ profile with [CitationMap](https://github.com/ChenLiu-1996/CitationMap). It is s
 `https://rayford295.github.io/rayford-knowledge-atlas/map/citations/`. See
 [`citations/README.md`](./citations/README.md) for how to refresh it.
 
-Use the view switcher to choose **County View** or **3D Globe**. Amber counties mark the 21 visited
-states plus Washington, D.C., and blue points locate recorded U.S. city stops. The globe includes pulsing city rings and
+Use the view switcher to choose **County View** or **3D Globe**. Blue counties mark the 21 visited
+states plus Washington, D.C., and orange points locate recorded U.S. city stops. The globe includes pulsing city rings and
 animated arcs linking Xi'an, Haikou, Los Angeles, and College Station. The page also lists every
 visited state and city.
 
@@ -67,5 +67,5 @@ visited state and city.
 - City coordinates and the visited-state list are defined inline in `index.html` (the `PLACES` and
   `STATE_GROUPS` arrays). To add a place, append an entry to both, update the hero counters, and add
   its two-digit state FIPS code to `visitedStateIds` in the county-map script.
-- Life milestones carry a `milestone` field in `PLACES` and render as larger blue points.
+- Life milestones carry a `milestone` field in `PLACES` and render as larger teal points.
 - Styling reuses the site theme (`../styles.css`) and the shared starfield background.

@@ -6,7 +6,7 @@ A world map of the institutions whose researchers cite Yifan Yang's papers, buil
 `https://rayford295.github.io/rayford-knowledge-atlas/map/citations/` and linked from the travel map
 as **Citation Map**.
 
-Each amber pin is one institution; its size follows the number of citing authors there. Click a pin
+Each blue pin is one institution; its size follows the number of citing authors there. Click a pin
 (or an institution card) to list the citing authors and which papers they cite. The **Follow One
 Paper** selector dims every pin that does not cite the chosen paper. The **3D Globe** view draws an
 arc from Texas A&M University to every citing institution.
