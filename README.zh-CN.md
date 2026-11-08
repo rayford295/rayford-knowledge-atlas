@@ -75,7 +75,7 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
-    <img src="./assets/travel-map-county-preview.png" alt="县级美国旅行地图：Yifan Yang 到访过的 21 个州以蓝色点亮，城市停留点以橙色标出" width="920">
+    <img src="./assets/travel-map-light-preview.png" alt="县级美国旅行地图：Yifan Yang 到访过的 21 个州以蓝色点亮，城市停留点以橙色标出" width="920">
   </a>
 </p>
 

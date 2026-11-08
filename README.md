@@ -75,7 +75,7 @@ The default county-level view lights up every county within a visited state — 
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
-    <img src="./assets/travel-map-county-preview.png" alt="County-level U.S. travel map with the 21 states Yifan Yang has visited lit up in blue and city stops in orange" width="920">
+    <img src="./assets/travel-map-light-preview.png" alt="County-level U.S. travel map with the 21 states Yifan Yang has visited lit up in blue and city stops in orange" width="920">
   </a>
 </p>
 
