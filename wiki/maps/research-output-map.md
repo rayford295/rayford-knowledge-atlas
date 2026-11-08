@@ -10,6 +10,7 @@ Research outputs are the public layer of the atlas.
 - [[../papers/crossviewgate]]
 - [[../papers/debris-cast]]
 - [[../papers/hospital-visitation-flows]]
+- [[../papers/urban-traffic-das]]
 - [[../papers/geosteward]]
 - [[../papers/vgi-spatial-bias]]
 - [[../papers/arcgis-sam-tree-segmentation]]

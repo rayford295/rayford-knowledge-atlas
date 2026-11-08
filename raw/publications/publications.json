@@ -49,6 +49,15 @@
       "atlasPage": "wiki/papers/hospital-visitation-flows.md"
     },
     {
+      "id": "urban-traffic-das",
+      "category": "Journal Article",
+      "title": "Monitoring urban traffic dynamics at high spatiotemporal resolution using distributed acoustic sensing and deep learning",
+      "year": 2026,
+      "venue": "Journal of Transport Geography, 138, 104901",
+      "doi": "https://doi.org/10.1016/j.jtrangeo.2026.104901",
+      "atlasPage": "wiki/papers/urban-traffic-das.md"
+    },
+    {
       "id": "hyperlocal-disaster",
       "category": "Journal Article",
       "title": "Hyperlocal disaster damage assessment using bi-temporal street-view imagery and pre-trained vision models",
