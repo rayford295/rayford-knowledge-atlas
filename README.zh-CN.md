@@ -1,10 +1,18 @@
-# Rayford Knowledge Atlas
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/">
+    <img src="./assets/icon.svg" alt="Rayford Knowledge Atlas 图标：输入、问题、输出三个节点连成一线，横跨一个地球" width="96" height="96">
+  </a>
+</p>
+
+<h1 align="center">Rayford Knowledge Atlas</h1>
+
+<p align="center"><em>一张“输入-输出”知识图谱：我读了什么，我问了什么，我发表了什么，它们又去了哪里。</em></p>
 
 <p align="center">
-  <a href="https://rayford295.github.io/rayford-knowledge-atlas/"><img alt="Live Site" src="https://img.shields.io/badge/live-knowledge%20atlas-f2aa40?style=flat-square&logo=github"></a>
-  <a href="https://github.com/rayford295/rayford-knowledge-atlas/commits/main"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/rayford295/rayford-knowledge-atlas?style=flat-square&color=6cb8f2"></a>
-  <a href="./LICENSE"><img alt="Code: MIT" src="https://img.shields.io/badge/code-MIT-5ac89a?style=flat-square"></a>
-  <a href="./LICENSE-CONTENT.md"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-b0aea5?style=flat-square"></a>
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/"><img alt="Live Site" src="https://img.shields.io/badge/live-knowledge%20atlas-2451b3?style=flat-square&logo=github"></a>
+  <a href="https://github.com/rayford295/rayford-knowledge-atlas/commits/main"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/rayford295/rayford-knowledge-atlas?style=flat-square&color=0369a1"></a>
+  <a href="./LICENSE"><img alt="Code: MIT" src="https://img.shields.io/badge/code-MIT-15803d?style=flat-square"></a>
+  <a href="./LICENSE-CONTENT.md"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-6b7280?style=flat-square"></a>
   <a href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ"><img alt="Google Scholar" src="https://img.shields.io/badge/scholar-profile-4285F4?style=flat-square&logo=googlescholar&logoColor=white"></a>
 </p>
 
@@ -16,7 +24,7 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/">
-    <img src="./assets/atlas-graph-preview.gif" alt="Rayford Knowledge Atlas 动态预览:镜头从完整知识星座推近到一条引导路径,再拉远回全景" width="920">
+    <img src="./assets/atlas-preview.png" alt="Rayford Knowledge Atlas 首页：白色简洁版式，中央是由阅读输入、桥接问题和研究输出组成的知识图谱" width="920">
   </a>
 </p>
 
@@ -63,16 +71,30 @@ Rayford Knowledge Atlas 是我的公开“输入-输出”知识图谱。它把�
 
 ## 旅行地图
 
-默认的县级平面图点亮了所有到访州中的县——**美国 50 个州中的 18 个、34 座城市、3 个国家**（美国、加拿大和中国）。蓝色点位标出记录过的城市停留点；切换到 3D 地球仪后，则可以看到从西安、海口、洛杉矶到 College Station 的里程碑与动画旅程弧线。
+默认的县级平面图点亮了所有到访州中的县——**美国 50 个州中的 21 个加华盛顿特区、39 座城市、3 个国家**（美国、加拿大和中国）。橙色点位标出记录过的城市停留点；切换到 3D 地球仪后，则可以看到从西安、海口、洛杉矶到 College Station 的里程碑与动画旅程弧线。
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
-    <img src="./assets/travel-map-county-preview.png" alt="县级美国旅行地图：Yifan Yang 到访过的 18 个州以琥珀色点亮，城市停留点以蓝色标出" width="920">
+    <img src="./assets/travel-map-county-preview.png" alt="县级美国旅行地图：Yifan Yang 到访过的 21 个州以蓝色点亮，城市停留点以橙色标出" width="920">
   </a>
 </p>
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/"><b>打开交互式旅行地图 →</b></a>
+</p>
+
+## 引用地图
+
+我的研究替我去过的地方。地图上每一个点都是一个机构，那里至少有一位学者引用过我 Google Scholar 主页上的论文；数据由 [CitationMap](https://github.com/ChenLiu-1996/CitationMap) 抓取并清洗为“每位作者一个机构”——首个快照（2026 年 11 月）共 **707 位引用作者、415 个机构、59 个国家**。可以只看某一篇论文的传播范围，也可以切换到地球仪查看从 Texas A&M 连向每个引用机构的弧线。
+
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/citations/">
+    <img src="./assets/citation-map-preview.png" alt="引用我论文的学者所在机构世界地图：每个机构一个蓝色点，大小随引用作者数变化" width="920">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/citations/"><b>打开引用地图 →</b></a>
 </p>
 
 ## 知识库结构

@@ -1,10 +1,18 @@
-# Rayford Knowledge Atlas
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/">
+    <img src="./assets/icon.svg" alt="Rayford Knowledge Atlas icon: an input, a question, and an output node linked across a globe" width="96" height="96">
+  </a>
+</p>
+
+<h1 align="center">Rayford Knowledge Atlas</h1>
+
+<p align="center"><em>An input-output knowledge graph: what I read, what I ask, what I publish, and where it travels.</em></p>
 
 <p align="center">
-  <a href="https://rayford295.github.io/rayford-knowledge-atlas/"><img alt="Live Site" src="https://img.shields.io/badge/live-knowledge%20atlas-f2aa40?style=flat-square&logo=github"></a>
-  <a href="https://github.com/rayford295/rayford-knowledge-atlas/commits/main"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/rayford295/rayford-knowledge-atlas?style=flat-square&color=6cb8f2"></a>
-  <a href="./LICENSE"><img alt="Code: MIT" src="https://img.shields.io/badge/code-MIT-5ac89a?style=flat-square"></a>
-  <a href="./LICENSE-CONTENT.md"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-b0aea5?style=flat-square"></a>
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/"><img alt="Live Site" src="https://img.shields.io/badge/live-knowledge%20atlas-2451b3?style=flat-square&logo=github"></a>
+  <a href="https://github.com/rayford295/rayford-knowledge-atlas/commits/main"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/rayford295/rayford-knowledge-atlas?style=flat-square&color=0369a1"></a>
+  <a href="./LICENSE"><img alt="Code: MIT" src="https://img.shields.io/badge/code-MIT-15803d?style=flat-square"></a>
+  <a href="./LICENSE-CONTENT.md"><img alt="Content: CC BY 4.0" src="https://img.shields.io/badge/content-CC%20BY%204.0-6b7280?style=flat-square"></a>
   <a href="https://scholar.google.com/citations?user=B-fiSHwAAAAJ"><img alt="Google Scholar" src="https://img.shields.io/badge/scholar-profile-4285F4?style=flat-square&logo=googlescholar&logoColor=white"></a>
 </p>
 
@@ -16,7 +24,7 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/">
-    <img src="./assets/atlas-graph-preview.gif" alt="Animated preview of the Rayford Knowledge Atlas: the camera zooms from the full knowledge constellation into a guided trail and back out" width="920">
+    <img src="./assets/atlas-preview.png" alt="The Rayford Knowledge Atlas home page: a white, clean layout with the living knowledge graph of reading inputs, bridge questions, and research outputs" width="920">
   </a>
 </p>
 
@@ -63,16 +71,30 @@ The premise is simple: my papers will never outnumber the books, biographies, es
 
 ## Travel Map
 
-The default county-level view lights up every county within a visited state — **19 of 50 U.S. states plus Washington, D.C., 36 cities, and 3 countries** (United States, Canada, and China). Blue points mark recorded city stops. Switch to the 3D globe for the full journey, including sky-blue milestones and animated arcs from Xi'an to Haikou (B.S.), Los Angeles (M.S.), and College Station (Ph.D.).
+The default county-level view lights up every county within a visited state — **21 of 50 U.S. states plus Washington, D.C., 39 cities, and 3 countries** (United States, Canada, and China). Orange points mark recorded city stops. Switch to the 3D globe for the full journey, including teal milestones and animated arcs from Xi'an to Haikou (B.S.), Los Angeles (M.S.), and College Station (Ph.D.).
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/">
-    <img src="./assets/travel-map-county-preview.png" alt="County-level U.S. travel map with the 18 states Yifan Yang has visited lit up in amber and city stops in blue" width="920">
+    <img src="./assets/travel-map-county-preview.png" alt="County-level U.S. travel map with the 21 states Yifan Yang has visited lit up in blue and city stops in orange" width="920">
   </a>
 </p>
 
 <p align="center">
   <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/"><b>Open the interactive travel map →</b></a>
+</p>
+
+## Citation Map
+
+Where my research has traveled without me. Every pin is an institution whose researchers cite a paper on my Google Scholar profile, built with [CitationMap](https://github.com/ChenLiu-1996/CitationMap) and cleaned into one institution per author — **707 citing authors, 415 institutions, 59 countries** in the first snapshot (Nov 2026). Pick a paper to see where that single piece of work has reached, or switch to the globe for arcs from Texas A&M to every citing institution.
+
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/citations/">
+    <img src="./assets/citation-map-preview.png" alt="World map of the institutions citing Yifan Yang's papers, one blue pin per institution sized by citing authors" width="920">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://rayford295.github.io/rayford-knowledge-atlas/map/citations/"><b>Open the citation map →</b></a>
 </p>
 
 ## Knowledge Architecture

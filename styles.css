@@ -106,16 +106,10 @@ summary:focus-visible {
 
 .brand-mark {
   flex-shrink: 0;
+  display: block;
   width: 46px;
   height: 46px;
-  display: grid;
-  place-items: center;
   border-radius: 10px;
-  background: var(--ink);
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
 }
 
 .brand strong,
