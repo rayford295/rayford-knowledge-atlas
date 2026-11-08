@@ -1,0 +1,501 @@
+{
+  "Ahsanullah University of Science and Technology": {
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "lat": 23.7634,
+    "lng": 90.4072,
+    "state": "Dhaka Division"
+  },
+  "Aier Eye Hospital Group": null,
+  "Australia": {
+    "city": "",
+    "country": "Australia",
+    "lat": -24.7761,
+    "lng": 134.755,
+    "state": ""
+  },
+  "Bangladesh": {
+    "city": "",
+    "country": "Bangladesh",
+    "lat": 24.4769,
+    "lng": 90.2934,
+    "state": ""
+  },
+  "Bansal Group of Institutes": null,
+  "Beijing Information Science and Technology University": {
+    "city": "Haidian District",
+    "country": "China",
+    "lat": 40.0372,
+    "lng": 116.3403,
+    "state": ""
+  },
+  "Benedict College": {
+    "city": "Columbia",
+    "country": "United States",
+    "lat": 34.014,
+    "lng": -81.021,
+    "state": "South Carolina"
+  },
+  "Bio10, Australia": null,
+  "C. K. Tedam University of Technology and Applied Sciences": null,
+  "Ca' Foscari University of Venice": {
+    "city": "Venice",
+    "country": "Italy",
+    "lat": 45.4345,
+    "lng": 12.3266,
+    "state": "Veneto"
+  },
+  "Central Institute of Technology Kokrajhar": null,
+  "European Commission - Joint Research Center": null,
+  "Geneva University Hospitals": {
+    "city": "Geneva",
+    "country": "United States",
+    "lat": 41.7994,
+    "lng": -80.9615,
+    "state": "Ohio"
+  },
+  "Hangzhou Dianzi University": {
+    "city": "Qiantang District",
+    "country": "China",
+    "lat": 30.3033,
+    "lng": 120.3741,
+    "state": "Zhejiang"
+  },
+  "ICFAI Foundation for Higher Education": {
+    "city": "Shankarpalle mandal",
+    "country": "India",
+    "lat": 17.4203,
+    "lng": 78.2189,
+    "state": "Telangana"
+  },
+  "Idiap Research Institute": null,
+  "Indian Institute of Technology Palakkad": {
+    "city": "Palakkad",
+    "country": "India",
+    "lat": 10.7939,
+    "lng": 76.8267,
+    "state": "Kerala"
+  },
+  "Iran University of Medical Sciences": {
+    "city": "Tehran",
+    "country": "Iran",
+    "lat": 35.7483,
+    "lng": 51.3814,
+    "state": "Tehran Province"
+  },
+  "Iran university  of medical sciences (IUMS)": {
+    "city": "Tehran",
+    "country": "Iran",
+    "lat": 35.7483,
+    "lng": 51.3814,
+    "state": "Tehran Province"
+  },
+  "Istanbul Beykent University": {
+    "city": "Sarıyer",
+    "country": "Turkey",
+    "lat": 41.1174,
+    "lng": 29.0038,
+    "state": ""
+  },
+  "Joint Research Center": {
+    "city": "Camp Springs",
+    "country": "United States",
+    "lat": 38.8091,
+    "lng": -76.8962,
+    "state": "Maryland"
+  },
+  "Kazimierz Wielki University": {
+    "city": "Bydgoszcz",
+    "country": "Poland",
+    "lat": 53.1278,
+    "lng": 18.0196,
+    "state": "Kuyavian-Pomeranian Voivodeship"
+  },
+  "Keysight AI Labs": null,
+  "Kyiv National University of Construction and Architecture": {
+    "city": "Kyiv",
+    "country": "Ukraine",
+    "lat": 50.426,
+    "lng": 30.4676,
+    "state": ""
+  },
+  "LIRIS": {
+    "city": "Espeyrac",
+    "country": "France",
+    "lat": 44.6226,
+    "lng": 2.5089,
+    "state": "Occitania"
+  },
+  "Leibniz University Hannover": {
+    "city": "Hanover",
+    "country": "Germany",
+    "lat": 52.3765,
+    "lng": 9.7212,
+    "state": "Lower Saxony"
+  },
+  "Middle Technical University": {
+    "city": "Baghdad",
+    "country": "Iraq",
+    "lat": 33.2626,
+    "lng": 44.4894,
+    "state": "Baghdad Governorate"
+  },
+  "Mohamed Bin Zayed University of Artificial Intelligence": {
+    "city": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "lat": 24.4325,
+    "lng": 54.6184,
+    "state": "Abu Dhabi Emirate"
+  },
+  "Mohamed Bin Zayed University of Artificial Intelligence (MBZUAI)": {
+    "city": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "lat": 24.4325,
+    "lng": 54.6184,
+    "state": "Abu Dhabi Emirate"
+  },
+  "Nanjing University of Posts and Telecommunications": {
+    "city": "Qixia District",
+    "country": "China",
+    "lat": 32.1153,
+    "lng": 118.926,
+    "state": "Jiangsu"
+  },
+  "National University of Computer and Emerging Sciences": {
+    "city": "Islamabad",
+    "country": "Pakistan",
+    "lat": 33.6567,
+    "lng": 73.0153,
+    "state": "Islamabad Capital Territory"
+  },
+  "Norwegian University of Science and Technology": {
+    "city": "Trondheim",
+    "country": "Norway",
+    "lat": 63.448,
+    "lng": 10.4536,
+    "state": ""
+  },
+  "OWL University of Applied Sciences and Arts": {
+    "city": "Lemgo",
+    "country": "Germany",
+    "lat": 52.0161,
+    "lng": 8.9053,
+    "state": "North Rhine-Westphalia"
+  },
+  "Ocean University of China": {
+    "city": "Laoshan District",
+    "country": "China",
+    "lat": 36.1614,
+    "lng": 120.4936,
+    "state": "Shandong"
+  },
+  "Oregon Institute of Technology": {
+    "city": "Klamath Falls",
+    "country": "United States",
+    "lat": 42.2584,
+    "lng": -121.7854,
+    "state": "Oregon"
+  },
+  "Pabna University of Science and Technology": {
+    "city": "Pabna",
+    "country": "Bangladesh",
+    "lat": 24.014,
+    "lng": 89.2797,
+    "state": "Rajshahi Division"
+  },
+  "Pakistan": {
+    "city": "",
+    "country": "Pakistan",
+    "lat": 30.3308,
+    "lng": 71.2475,
+    "state": ""
+  },
+  "Panjab University": {
+    "city": "Chandigarh",
+    "country": "India",
+    "lat": 30.7602,
+    "lng": 76.7665,
+    "state": "Chandigarh"
+  },
+  "Pirojpur Science and Technology University": {
+    "city": "Pirojpur Municipality",
+    "country": "Bangladesh",
+    "lat": 22.5832,
+    "lng": 89.9794,
+    "state": "Barishal Division"
+  },
+  "Politeknik Negeri Banyuwangi": {
+    "city": "Banyuwangi",
+    "country": "Indonesia",
+    "lat": -8.296,
+    "lng": 114.3078,
+    "state": "East Java"
+  },
+  "Presiding Officer": null,
+  "REGIM Lab.": null,
+  "Research Center Trustworthy Data Science and Security": {
+    "city": "Bochum",
+    "country": "Germany",
+    "lat": 51.4443,
+    "lng": 7.2565,
+    "state": "North Rhine-Westphalia"
+  },
+  "SRM University Delhi-NCR": null,
+  "Shenyang Aerospace University": {
+    "city": "Shenyang City",
+    "country": "China",
+    "lat": 41.924,
+    "lng": 123.3987,
+    "state": "Liaoning"
+  },
+  "Siksha 'O' Anusandhan": null,
+  "Spain": {
+    "city": "",
+    "country": "Spain",
+    "lat": 39.3261,
+    "lng": -4.838,
+    "state": ""
+  },
+  "TVS MOTOR COMPANY": {
+    "city": "Palangka Raya",
+    "country": "Indonesia",
+    "lat": -2.2111,
+    "lng": 113.919,
+    "state": "Central Kalimantan"
+  },
+  "TVS MOTOR COMPANY(IQL)": {
+    "city": "Palangka Raya",
+    "country": "Indonesia",
+    "lat": -2.2111,
+    "lng": 113.919,
+    "state": "Central Kalimantan"
+  },
+  "Tabriz University of Medical Sciences": {
+    "city": "Tabriz",
+    "country": "Iran",
+    "lat": 38.0561,
+    "lng": 46.3253,
+    "state": "East Azerbaijan Province"
+  },
+  "Taylor Geospatial": null,
+  "Technical University in Košice": null,
+  "Technical University of Denmark (DTU Compute)": {
+    "city": "Kongens Lyngby",
+    "country": "Denmark",
+    "lat": 55.7854,
+    "lng": 12.5202,
+    "state": "Capital Region of Denmark"
+  },
+  "Thapar university": {
+    "city": "Patiala",
+    "country": "India",
+    "lat": 30.3545,
+    "lng": 76.3658,
+    "state": "Punjab"
+  },
+  "The American University in Cairo": {
+    "city": "New Cairo City",
+    "country": "Egypt",
+    "lat": 30.0199,
+    "lng": 31.5003,
+    "state": "Cairo"
+  },
+  "Toronto Metropolitan University (Ryerson University)": {
+    "city": "Toronto",
+    "country": "Canada",
+    "lat": 43.6585,
+    "lng": -79.3785,
+    "state": "Ontario"
+  },
+  "Toronto Metropolitan University (TMU)": {
+    "city": "Toronto",
+    "country": "Canada",
+    "lat": 43.6585,
+    "lng": -79.3785,
+    "state": "Ontario"
+  },
+  "Transform Radiology": null,
+  "Trinity College Dublin": {
+    "city": "Dublin",
+    "country": "Ireland",
+    "lat": 53.3437,
+    "lng": -6.2544,
+    "state": ""
+  },
+  "Trinity College Dublin (TCD)": {
+    "city": "Dublin",
+    "country": "Ireland",
+    "lat": 53.3437,
+    "lng": -6.2544,
+    "state": ""
+  },
+  "Truba Group of Institutes": null,
+  "UVAS Swat": null,
+  "United Arab Emirates University": {
+    "city": "'Asharij",
+    "country": "United Arab Emirates",
+    "lat": 24.1972,
+    "lng": 55.6806,
+    "state": "Abu Dhabi Emirate"
+  },
+  "United Arab Emirates University (UAEU)": {
+    "city": "Al 'Iqabiyyah",
+    "country": "United Arab Emirates",
+    "lat": 24.1972,
+    "lng": 55.6806,
+    "state": "Abu Dhabi Emirate"
+  },
+  "Universidad Carlos III de Madrid": {
+    "city": "Getafe",
+    "country": "Spain",
+    "lat": 40.3151,
+    "lng": -3.7249,
+    "state": "Community of Madrid"
+  },
+  "University Medical Center Utrecht": {
+    "city": "Utrecht",
+    "country": "Netherlands",
+    "lat": 52.0886,
+    "lng": 5.1797,
+    "state": "Utrecht"
+  },
+  "University Mediterranea of Reggio Calabria": null,
+  "University of Applied Sciences Upper Austria": {
+    "city": "Wels",
+    "country": "Austria",
+    "lat": 48.1553,
+    "lng": 14.0105,
+    "state": "Upper Austria"
+  },
+  "University of Asia Pacific": {
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "lat": 23.7549,
+    "lng": 90.3894,
+    "state": "Dhaka Division"
+  },
+  "University of Asia Pacific (UAP)": {
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "lat": 23.7549,
+    "lng": 90.3894,
+    "state": "Dhaka Division"
+  },
+  "University of Bisha": {
+    "city": "",
+    "country": "Saudi Arabia",
+    "lat": 20.029,
+    "lng": 42.6129,
+    "state": "'Asir Province"
+  },
+  "University of Jaén": {
+    "city": "Jaén",
+    "country": "Spain",
+    "lat": 37.7861,
+    "lng": -3.7742,
+    "state": "Andalusia"
+  },
+  "University of Medicine and Pharmacy": {
+    "city": "Târgu Mureș",
+    "country": "Romania",
+    "lat": 46.555,
+    "lng": 24.5811,
+    "state": ""
+  },
+  "University of Medicine and Pharmacy of Craiova": {
+    "city": "Craiova",
+    "country": "Romania",
+    "lat": 44.3055,
+    "lng": 23.7942,
+    "state": ""
+  },
+  "University of Rome \"La Sapienza\"": {
+    "city": "Rome",
+    "country": "Italy",
+    "lat": 41.9033,
+    "lng": 12.5158,
+    "state": "Lazio"
+  },
+  "University of Southern Queensland": {
+    "city": "Toowoomba",
+    "country": "Australia",
+    "lat": -27.6067,
+    "lng": 151.9294,
+    "state": "Queensland"
+  },
+  "University of the Basque Country": {
+    "city": "San Sebastián",
+    "country": "Spain",
+    "lat": 43.3092,
+    "lng": -2.0108,
+    "state": "Autonomous Community of the Basque Country"
+  },
+  "University of the Fraser Valley": {
+    "city": "Abbotsford",
+    "country": "Canada",
+    "lat": 49.0283,
+    "lng": -122.2849,
+    "state": "British Columbia"
+  },
+  "Università della Svizzera italiana": {
+    "city": "Lugano",
+    "country": "Switzerland",
+    "lat": 46.0109,
+    "lng": 8.9581,
+    "state": "Ticino"
+  },
+  "Università della Svizzera italiana (USI)": {
+    "city": "Lugano",
+    "country": "Switzerland",
+    "lat": 46.0109,
+    "lng": 8.9581,
+    "state": "Ticino"
+  },
+  "Università di Napoli Federico II": {
+    "city": "Naples",
+    "country": "Italy",
+    "lat": 40.8472,
+    "lng": 14.2569,
+    "state": "Campania"
+  },
+  "Urmia University of Medical Science": null,
+  "Verto Education": null,
+  "Wageningen Economic Research": {
+    "city": "The Hague",
+    "country": "Netherlands",
+    "lat": 52.0881,
+    "lng": 4.3018,
+    "state": "South Holland"
+  },
+  "Wageningen University and Research": {
+    "city": "Wageningen",
+    "country": "Netherlands",
+    "lat": 51.9853,
+    "lng": 5.6637,
+    "state": "Gelderland"
+  },
+  "Worker's Care & Digital Health Lab": null,
+  "Zhejiang A and F University": null,
+  "byteXL TechED Private Limited": null,
+  "the University of Fraser Valley": {
+    "city": "Kent",
+    "country": "Canada",
+    "lat": 49.244,
+    "lng": -121.7638,
+    "state": "British Columbia"
+  },
+  "الجامعة التقنية الوسطى": {
+    "city": "Baghdad",
+    "country": "Iraq",
+    "lat": 33.2626,
+    "lng": 44.4894,
+    "state": "Baghdad Governorate"
+  },
+  "الجامعه التقنية الوسطى": {
+    "city": "Baghdad",
+    "country": "Iraq",
+    "lat": 33.3195,
+    "lng": 44.3655,
+    "state": "Baghdad Governorate"
+  }
+}

@@ -316,6 +316,21 @@
       .cite-card p b {
         color: var(--amber);
       }
+      .cite-more {
+        margin-top: 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 9px 16px;
+        background: rgba(7, 6, 18, 0.56);
+        color: var(--amber);
+        font:
+          700 0.8rem/1 "Manrope",
+          sans-serif;
+        cursor: pointer;
+      }
+      .cite-more[hidden] {
+        display: none;
+      }
       .cite-table {
         width: 100%;
         margin-top: 14px;
@@ -482,6 +497,7 @@
           <div class="cite-section">
             <p class="kicker">Citing Institutions</p>
             <div class="cite-grid" id="affil-grid"></div>
+            <button class="cite-more" id="affil-more" type="button" hidden></button>
           </div>
 
           <div class="cite-section">
@@ -623,10 +639,15 @@
         }
 
         // ---- Institution cards ----
+        const CARD_LIMIT = 36;
+        let showAllCards = false;
         function renderAffiliations() {
           const grid = document.getElementById("affil-grid");
+          const more = document.getElementById("affil-more");
           grid.innerHTML = "";
-          DATA.pins.filter(pinMatches).forEach((pin) => {
+          const pins = DATA.pins.filter(pinMatches);
+          const shown = showAllCards ? pins : pins.slice(0, CARD_LIMIT);
+          shown.forEach((pin) => {
             const authors = visibleAuthors(pin);
             const card = document.createElement("div");
             card.className = "cite-card";
@@ -641,7 +662,15 @@
             card.addEventListener("click", () => showDetail(pin));
             grid.appendChild(card);
           });
+          more.hidden = pins.length <= CARD_LIMIT;
+          more.textContent = showAllCards
+            ? "Show the top " + CARD_LIMIT + " only"
+            : "Show all " + pins.length + " institutions";
         }
+        document.getElementById("affil-more").addEventListener("click", () => {
+          showAllCards = !showAllCards;
+          renderAffiliations();
+        });
         renderAffiliations();
 
         // ---- Country + paper tables ----
@@ -724,18 +753,18 @@
             "Bosnia and Herzegovina": "Bosnia and Herz.",
             "Dominican Republic": "Dominican Rep.",
             "North Macedonia": "Macedonia",
-            "Türkiye": "Turkey",
+            Türkiye: "Turkey",
             "Hong Kong": "China",
-            "Macau": "China",
+            Macau: "China",
             "Republic of Korea": "South Korea",
-            "Korea": "South Korea",
+            Korea: "South Korea",
             "Viet Nam": "Vietnam",
             "Russian Federation": "Russia",
             "Iran, Islamic Republic of": "Iran",
             "Democratic Republic of the Congo": "Dem. Rep. Congo",
             "Central African Republic": "Central African Rep.",
             "South Sudan": "S. Sudan",
-            "Eswatini": "eSwatini",
+            Eswatini: "eSwatini",
             "Ivory Coast": "Côte d'Ivoire",
             "East Timor": "Timor-Leste",
             "Equatorial Guinea": "Eq. Guinea"

@@ -1,0 +1,504 @@
+{
+  "_comment": "Hand corrections applied by scripts/build-citation-map.py after its automatic cleaning. aliases: rename a chosen affiliation. locations: replace Nominatim's geocode for a (post-alias) affiliation. drop: strings that are never an institution (the author becomes unresolved unless another variant survives).",
+  "aliases": {
+    "Texas A&M": "Texas A&M University",
+    "IIT Patna": "Indian Institute of Technology Patna",
+    "IIT Bombay": "Indian Institute of Technology Bombay",
+    "IIT Kharagpur": "Indian Institute of Technology Kharagpur",
+    "Johns Hopkins": "Johns Hopkins University",
+    "Georgia Tech": "Georgia Institute of Technology",
+    "TU München": "Technical University of Munich",
+    "Amrita Vishwa Vidyapeetam": "Amrita Vishwa Vidyapeetham",
+    "UTCB": "Technical University of Civil Engineering Bucharest",
+    "Sapienza": "Sapienza University of Rome",
+    "UCLA": "University of California, Los Angeles",
+    "USC": "University of Southern California",
+    "TUMS": "Tehran University of Medical Sciences",
+    "MUMS": "Mashhad University of Medical Sciences",
+    "VIT": "Vellore Institute of Technology",
+    "CAS": "Chinese Academy of Sciences",
+    "中国科学院计算技术研究所": "Institute of Computing Technology, Chinese Academy of Sciences",
+    "NTUA": "National Technical University of Athens",
+    "HKUST": "Hong Kong University of Science and Technology",
+    "Hong Kong University of Science and Technology (HKUST)": "Hong Kong University of Science and Technology",
+    "The Hong Kong University of Science and Technology (Guangzhou)": "Hong Kong University of Science and Technology (Guangzhou)",
+    "KTH": "KTH Royal Institute of Technology",
+    "EPFL": "EPFL",
+    "WPI": "Worcester Polytechnic Institute",
+    "BUET": "Bangladesh University of Engineering and Technology",
+    "AIUB": "American International University-Bangladesh",
+    "IIUM": "International Islamic University Malaysia",
+    "NUIST": "Nanjing University of Information Science and Technology",
+    "UC Berkeley": "University of California, Berkeley",
+    "SS-CASE-IT": "Sir Syed CASE Institute of Technology",
+    "Al-Mustaqbal": "Al-Mustaqbal University",
+    "William & Mary": "College of William & Mary",
+    "KUMC": "Korea University Medical Center",
+    "Robert Bosch Engineering and Business solution": "Robert Bosch Engineering and Business Solutions",
+    "Toronto Metropolitan University (Ryerson University)": "Toronto Metropolitan University",
+    "Toronto Metropolitan University (TMU)": "Toronto Metropolitan University",
+    "University of Rome \"La Sapienza\"": "Sapienza University of Rome",
+    "Iran university  of medical sciences (IUMS)": "Iran University of Medical Sciences",
+    "Technical University of Denmark (DTU Compute)": "Technical University of Denmark",
+    "الجامعة التقنية الوسطى": "Middle Technical University",
+    "الجامعه التقنية الوسطى": "Middle Technical University",
+    "Univeristy Of Calgary": "University of Calgary",
+    "Universisty of Calgary": "University of Calgary",
+    "Univeristy of Calgary": "University of Calgary",
+    "Hotchkiss Brain Institute": "University of Calgary",
+    "Ocean Univesity of China": "Ocean University of China",
+    "University Of Cincinnai": "University of Cincinnati",
+    "Universidad Carlod III de Madrid": "Universidad Carlos III de Madrid",
+    "HANGZHOU DIANZIUNIVERSITY": "Hangzhou Dianzi University",
+    "Geneva University Hopsital": "Geneva University Hospitals",
+    "Christ University Banglore": "Christ University",
+    "Umm Al Quora University": "Umm Al-Qura University",
+    "Insititute of Computing Technology": "Institute of Computing Technology, Chinese Academy of Sciences",
+    "Amity University Punjab": "Amity University",
+    "The American University of Cairo": "The American University in Cairo",
+    "Data61 CSIRO": "CSIRO",
+    "AWS AI Labs": "Amazon",
+    "Keele University & University of Liverpool": "Keele University",
+    "EPFL and Idiap Research Institute": "Idiap Research Institute",
+    "Simula Research Laboratory & Assoc. Prof.": "Simula Research Laboratory",
+    "Taipei Veteran General Hospital": "Taipei Veterans General Hospital",
+    "USDA Forest Service Northern Research Station": "USDA Forest Service",
+    "Wageningen Social and Economic Research ( WUR )": "Wageningen Economic Research",
+    "Affiliated with UCL": "University College London",
+    "Artificial Intelligence department in University of Bish": "University of Bisha",
+    "Peter L. Reichertz Institute for Medical Informatics of Hannover Medical School": "Hannover Medical School",
+    "L3S Research Center of Leibniz University of Hannover": "Leibniz University Hannover",
+    "State Key Laboratory of High Performance Computing": "National University of Defense Technology",
+    "UniSQ School of Business": "University of Southern Queensland",
+    "OWL University of Applied Sciences & Arts": "OWL University of Applied Sciences and Arts",
+    "the University of Jaén": "University of Jaén",
+    "the University of Fraser Valley": "University of the Fraser Valley",
+    "AP TRUBA GROUP OF INSTITUTES BHOPAL": "Truba Group of Institutes",
+    "Siksha 'O' Anusandhan (Deemed to be University)": "Siksha 'O' Anusandhan",
+    "Bansal Group of Institutes (BIRTS)": "Bansal Group of Institutes",
+    "University of the Basque Country (UPV": "University of the Basque Country",
+    "Doç.Dr. İstanbul Beykent Üniversitesi": "Istanbul Beykent University",
+    "Mohamed Bin Zayed University of Artificial Intelligence (MBZUAI)": "Mohamed Bin Zayed University of Artificial Intelligence"
+  },
+  "locations": {
+    "University of Oxford": {
+      "lat": 51.7548,
+      "lng": -1.2544,
+      "city": "Oxford",
+      "state": "England",
+      "country": "United Kingdom"
+    },
+    "University of Hong Kong": {
+      "lat": 22.283,
+      "lng": 114.1371,
+      "city": "Hong Kong",
+      "state": "",
+      "country": "China"
+    },
+    "Hong Kong University of Science and Technology": {
+      "lat": 22.3364,
+      "lng": 114.2655,
+      "city": "Hong Kong",
+      "state": "",
+      "country": "China"
+    },
+    "Hong Kong University of Science and Technology (Guangzhou)": {
+      "lat": 22.7527,
+      "lng": 113.554,
+      "city": "Guangzhou",
+      "state": "Guangdong",
+      "country": "China"
+    },
+    "Iran University of Science and Technology": {
+      "lat": 35.7437,
+      "lng": 51.5048,
+      "city": "Tehran",
+      "state": "",
+      "country": "Iran"
+    },
+    "Tencent": {
+      "lat": 22.53,
+      "lng": 113.9343,
+      "city": "Shenzhen",
+      "state": "Guangdong",
+      "country": "China"
+    },
+    "IBM Research": {
+      "lat": 41.211,
+      "lng": -73.8035,
+      "city": "Yorktown Heights",
+      "state": "New York",
+      "country": "United States"
+    },
+    "Qualcomm": {
+      "lat": 32.8954,
+      "lng": -117.1957,
+      "city": "San Diego",
+      "state": "California",
+      "country": "United States"
+    },
+    "Samsung Electronics": {
+      "lat": 37.258,
+      "lng": 127.054,
+      "city": "Suwon",
+      "state": "",
+      "country": "South Korea"
+    },
+    "College of William & Mary": {
+      "lat": 37.2707,
+      "lng": -76.7075,
+      "city": "Williamsburg",
+      "state": "Virginia",
+      "country": "United States"
+    },
+    "Sapienza University of Rome": {
+      "lat": 41.9028,
+      "lng": 12.514,
+      "city": "Rome",
+      "state": "",
+      "country": "Italy"
+    },
+    "University of California, Los Angeles": {
+      "lat": 34.0689,
+      "lng": -118.4452,
+      "city": "Los Angeles",
+      "state": "California",
+      "country": "United States"
+    },
+    "Tehran University of Medical Sciences": {
+      "lat": 35.705,
+      "lng": 51.389,
+      "city": "Tehran",
+      "state": "",
+      "country": "Iran"
+    },
+    "Vellore Institute of Technology": {
+      "lat": 12.9692,
+      "lng": 79.1559,
+      "city": "Vellore",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    "Chinese Academy of Sciences": {
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "city": "Beijing",
+      "state": "",
+      "country": "China"
+    },
+    "Institute of Computing Technology, Chinese Academy of Sciences": {
+      "lat": 39.9999,
+      "lng": 116.3306,
+      "city": "Beijing",
+      "state": "",
+      "country": "China"
+    },
+    "National Technical University of Athens": {
+      "lat": 37.9781,
+      "lng": 23.7827,
+      "city": "Athens",
+      "state": "",
+      "country": "Greece"
+    },
+    "Luma AI": {
+      "lat": 37.4419,
+      "lng": -122.143,
+      "city": "Palo Alto",
+      "state": "California",
+      "country": "United States"
+    },
+    "Sir Syed CASE Institute of Technology": {
+      "lat": 33.6844,
+      "lng": 73.0479,
+      "city": "Islamabad",
+      "state": "",
+      "country": "Pakistan"
+    },
+    "UVAS Swat": {
+      "lat": 34.77,
+      "lng": 72.36,
+      "city": "Swat",
+      "state": "Khyber Pakhtunkhwa",
+      "country": "Pakistan"
+    },
+    "CISPA": {
+      "lat": 49.2576,
+      "lng": 7.0459,
+      "city": "Saarbrücken",
+      "state": "Saarland",
+      "country": "Germany"
+    },
+    "CNIT": {
+      "lat": 43.7228,
+      "lng": 10.4017,
+      "city": "Pisa",
+      "state": "",
+      "country": "Italy"
+    },
+    "Al-Mustaqbal University": {
+      "lat": 32.4635,
+      "lng": 44.4215,
+      "city": "Hillah",
+      "state": "Babil",
+      "country": "Iraq"
+    },
+    "Korea University Medical Center": {
+      "lat": 37.5872,
+      "lng": 127.0266,
+      "city": "Seoul",
+      "state": "",
+      "country": "South Korea"
+    },
+    "Meta": {
+      "lat": 37.453,
+      "lng": -122.1817,
+      "city": "Menlo Park",
+      "state": "California",
+      "country": "United States"
+    },
+    "Bytedance": {
+      "lat": 39.9838,
+      "lng": 116.3243,
+      "city": "Beijing",
+      "state": "",
+      "country": "China"
+    },
+    "Stanford University": {
+      "lat": 37.4275,
+      "lng": -122.1697,
+      "city": "Stanford",
+      "state": "California",
+      "country": "United States"
+    },
+    "Mississippi State University": {
+      "lat": 33.4552,
+      "lng": -88.7944,
+      "city": "Starkville",
+      "state": "Mississippi",
+      "country": "United States"
+    },
+    "Johns Hopkins University": {
+      "lat": 39.3299,
+      "lng": -76.6205,
+      "city": "Baltimore",
+      "state": "Maryland",
+      "country": "United States"
+    },
+    "Robert Bosch Engineering and Business Solutions": {
+      "lat": 12.9716,
+      "lng": 77.5946,
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "country": "India"
+    },
+    "LIRIS": {
+      "lat": 45.7831,
+      "lng": 4.8733,
+      "city": "Villeurbanne",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France"
+    },
+    "University of the Fraser Valley": {
+      "lat": 49.0288,
+      "lng": -122.2857,
+      "city": "Abbotsford",
+      "state": "British Columbia",
+      "country": "Canada"
+    },
+    "Middle Technical University": {
+      "lat": 33.3152,
+      "lng": 44.3661,
+      "city": "Baghdad",
+      "state": "",
+      "country": "Iraq"
+    },
+    "Aier Eye Hospital Group": {
+      "lat": 28.1941,
+      "lng": 112.9825,
+      "city": "Changsha",
+      "state": "Hunan",
+      "country": "China"
+    },
+    "byteXL TechED Private Limited": {
+      "lat": 17.385,
+      "lng": 78.4867,
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India"
+    },
+    "C. K. Tedam University of Technology and Applied Sciences": {
+      "lat": 10.8939,
+      "lng": -1.0921,
+      "city": "Navrongo",
+      "state": "Upper East",
+      "country": "Ghana"
+    },
+    "Urmia University of Medical Science": {
+      "lat": 37.5527,
+      "lng": 45.0761,
+      "city": "Urmia",
+      "state": "West Azerbaijan",
+      "country": "Iran"
+    },
+    "Truba Group of Institutes": {
+      "lat": 23.2599,
+      "lng": 77.4126,
+      "city": "Bhopal",
+      "state": "Madhya Pradesh",
+      "country": "India"
+    },
+    "Taylor Geospatial": {
+      "lat": 38.627,
+      "lng": -90.1994,
+      "city": "St. Louis",
+      "state": "Missouri",
+      "country": "United States"
+    },
+    "Keysight AI Labs": {
+      "lat": 38.4404,
+      "lng": -122.7141,
+      "city": "Santa Rosa",
+      "state": "California",
+      "country": "United States"
+    },
+    "REGIM Lab.": {
+      "lat": 34.7406,
+      "lng": 10.7603,
+      "city": "Sfax",
+      "state": "",
+      "country": "Tunisia"
+    },
+    "Worker's Care & Digital Health Lab": {
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "city": "Tokyo",
+      "state": "",
+      "country": "Japan"
+    },
+    "Research Center Trustworthy Data Science and Security": {
+      "lat": 51.4818,
+      "lng": 7.2162,
+      "city": "Bochum",
+      "state": "North Rhine-Westphalia",
+      "country": "Germany"
+    },
+    "TVS MOTOR COMPANY": {
+      "lat": 13.0827,
+      "lng": 80.2707,
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    "Geneva University Hospitals": {
+      "lat": 46.1925,
+      "lng": 6.1497,
+      "city": "Geneva",
+      "state": "",
+      "country": "Switzerland"
+    },
+    "Bansal Group of Institutes": {
+      "lat": 23.2599,
+      "lng": 77.4126,
+      "city": "Bhopal",
+      "state": "Madhya Pradesh",
+      "country": "India"
+    },
+    "Central Institute of Technology Kokrajhar": {
+      "lat": 26.4716,
+      "lng": 90.2699,
+      "city": "Kokrajhar",
+      "state": "Assam",
+      "country": "India"
+    },
+    "European Commission - Joint Research Center": {
+      "lat": 45.8104,
+      "lng": 8.6286,
+      "city": "Ispra",
+      "state": "Lombardy",
+      "country": "Italy"
+    },
+    "Idiap Research Institute": {
+      "lat": 46.1006,
+      "lng": 7.0725,
+      "city": "Martigny",
+      "state": "Valais",
+      "country": "Switzerland"
+    },
+    "SRM University Delhi-NCR": {
+      "lat": 28.9931,
+      "lng": 77.0151,
+      "city": "Sonepat",
+      "state": "Haryana",
+      "country": "India"
+    },
+    "Siksha 'O' Anusandhan": {
+      "lat": 20.2961,
+      "lng": 85.8245,
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "country": "India"
+    },
+    "Technical University in Košice": {
+      "lat": 48.7319,
+      "lng": 21.2452,
+      "city": "Košice",
+      "state": "",
+      "country": "Slovakia"
+    },
+    "University Mediterranea of Reggio Calabria": {
+      "lat": 38.1113,
+      "lng": 15.6472,
+      "city": "Reggio Calabria",
+      "state": "Calabria",
+      "country": "Italy"
+    },
+    "Zhejiang A and F University": {
+      "lat": 30.2559,
+      "lng": 119.7287,
+      "city": "Hangzhou",
+      "state": "Zhejiang",
+      "country": "China"
+    }
+  },
+  "drop": [
+    "School of",
+    "Investigador",
+    "Iyaso",
+    "д.т.н.",
+    "mimarlık",
+    "Business solution",
+    "Gr. Noida",
+    "Ludhiana ( Punjab)",
+    "UAE",
+    "KPK",
+    "Educational Technology",
+    "Digital Forensics",
+    "Information Sciences",
+    "F University",
+    "NC AI",
+    "Bio10",
+    "EPU",
+    "GECAD",
+    "IEEE Fellow",
+    "Asst Prof",
+    "DPhil",
+    "TeCIP Institute Scoul",
+    "Researcher in SCSE",
+    "Research Staff Member",
+    "Exploring Machine Learning",
+    "Next singular point? :)",
+    "Nature 3b project",
+    "RADiCAIT",
+    "Investigador, GECAD",
+    "Human Research Ethics Committee",
+    "Intelligence Fusion Research Center （IFRC）",
+    "SunyataTek Inc",
+    "State University of Medical and Applied Science",
+    "Bio10,UAE",
+    "Joint Research Center",
+    "Bio10, Australia",
+    "Presiding Officer",
+    "Transform Radiology",
+    "Verto Education"
+  ]
+}

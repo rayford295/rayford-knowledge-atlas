@@ -52,9 +52,11 @@ A residential IP is normally not blocked.
 
 - `map/citations/` is a world map of citing institutions built with
   [CitationMap](https://github.com/ChenLiu-1996/CitationMap) over the same Scholar profile.
-- `raw/scholar/citation-map.csv` is its editable source of truth (one row per citing author ×
-  citing paper × cited paper). `scripts/build-citation-map.py` aggregates it into
-  `map/citations/data.js`; never edit `data.js` by hand.
+- `raw/scholar/citation-map.csv` is the raw scrape (one row per citing author × citing paper ×
+  cited paper). `scripts/build-citation-map.py` cleans it (one institution per author) into
+  `map/citations/data.js`; never edit `data.js` by hand. Hand corrections go in
+  `raw/scholar/citation-map-overrides.json` (aliases, locations, drop); coordinates looked up
+  after the scrape live in `raw/scholar/citation-map-geocode.json` (delete an entry to retry).
 - Refresh is local and attended (`python3 scripts/build-citation-map.py --fetch`): it needs
   Chrome for CAPTCHAs and a residential IP, for the same 403 reason as above. Do not add it to
   GitHub Actions.

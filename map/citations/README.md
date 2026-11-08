@@ -19,8 +19,19 @@ arc from Texas A&M University to every citing institution.
 2. Its CSV lands in [`raw/scholar/citation-map.csv`](../../raw/scholar/citation-map.csv), one row per
    (citing author, citing paper, cited paper). That CSV is the editable source of truth: fix a wrong
    coordinate or country there and rebuild.
-3. [`scripts/build-citation-map.py`](../../scripts/build-citation-map.py) aggregates the CSV by
-   affiliation and writes [`data.js`](./data.js), which the page reads.
+3. [`scripts/build-citation-map.py`](../../scripts/build-citation-map.py) cleans the CSV and writes
+   [`data.js`](./data.js), which the page reads. CitationMap's aggressive mode emits several
+   strings per author ("Ph.D. Student", "Texas A&M University", "Ph.D. Student, Texas A&M
+   University", plus the halves of every "and"), so the script keeps one institution per author:
+   it drops titles and department fragments, prefers the full name over an "and"-split piece, and
+   merges "Department of X, University Y" onto "University Y".
+4. Two small committed files patch what automation gets wrong:
+   - [`raw/scholar/citation-map-overrides.json`](../../raw/scholar/citation-map-overrides.json):
+     `aliases` (rename, e.g. `UCLA` → the full name), `locations` (replace a bad Nominatim
+     geocode), `drop` (strings that are never an institution).
+   - [`raw/scholar/citation-map-geocode.json`](../../raw/scholar/citation-map-geocode.json): the
+     cache filled by `--geocode` for names CitationMap could not place (Nominatim first, Wikidata
+     as fallback). Delete an entry to retry it.
 
 ## Refreshing
 
@@ -28,6 +39,7 @@ arc from Texas A&M University to every citing institution.
 pip install citation-map               # once; needs Chrome for Scholar CAPTCHAs
 python3 scripts/build-citation-map.py --fetch   # scrape + rebuild (attended, local)
 python3 scripts/build-citation-map.py           # rebuild data.js from the edited CSV only
+python3 scripts/build-citation-map.py --geocode # also look up coordinates still missing
 ```
 
 Run the fetch from a residential connection. Google Scholar blocks datacenter IPs (see the Scholar
@@ -40,8 +52,8 @@ in `raw/scholar/citation-map-cache/`, which is ignored by git.
 - Only citing authors with a Scholar profile and a self-reported affiliation get a pin. Authors
   without one are counted in the hero totals and listed in `data.js` under `unresolved`.
 - Affiliations are current profile affiliations, not the affiliation on the citing paper.
-- Geocoding is approximate. A pin in the wrong place means Nominatim matched a different campus or
-  city; correct the row in the CSV.
+- Geocoding is approximate. A pin in the wrong place means Nominatim or Wikidata matched a
+  different campus or city; add the institution to `locations` in the overrides file.
 
 ## Technical notes
 
