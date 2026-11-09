@@ -23,8 +23,11 @@
 | — | &nbsp;&nbsp;[Q6 · Contribution Framing After Advisor Feedback](#q6) | Methods, applications, resilience, governance |
 | 10 | [PhD Journey · 博士旅程延伸](#phd-journey) | Ongoing supplements (companion repo) |
 | 11 | [读书笔记（真金）](#reading-notes) | Quotes & reflections |
+| 12 | [Import into your Principles system · 导入到原则系统](#import) | Load this file into principles.numb1999.com |
 
 > **How to search / 如何检索：** Use your browser's built-in search (`Ctrl/Cmd + F`) to find any keyword across the full document. Click any Table of Contents entry to jump directly to that section.
+>
+> **Import / 导入：** The whole document can be loaded into [principles.numb1999.com](https://principles.numb1999.com/) so your AI agents can query it by situation — see [§12](#import).
 
 ---
 
@@ -934,5 +937,24 @@ All in动作，一般是玩家拿到好牌的时候，对整个局势有着极�
 感情贵在专致，始终如一--仙剑奇侠传1
 
 马克·吐温曾说：“你生命中最重要的两天，是你出生的那一天和你找到生命目的（或明白为何而活）的那一天。”
+
+↑ [Back to Top · 返回目录](#top)
+
+---
+
+<a id="import"></a>
+
+## Import into your Principles system · 导入到原则系统
+
+Load this file into [principles.numb1999.com](https://principles.numb1999.com/) and its advisor, or any AI agent you connect, will return the most relevant principles for a situation you describe. Register, open the **API** tab, copy your token, then paste this into Claude Code / Codex:
+
+```text
+Import https://raw.githubusercontent.com/rayford295/awesome-autonomous-geoai/main/RESEARCH_PHILOSOPHY.md into my Principles system.
+Skip the Table of Contents and this import section. Split by "## " headings into notes (title = heading, content = body, source = "RESEARCH_PHILOSOPHY.md#heading"), batches of at most 20:
+curl -X POST https://principles.numb1999.com/api/import -H "Authorization: Bearer <TOKEN>" -H "Content-Type: application/json" -d '{"notes":[{"title":"...","content":"...","source":"..."}]}'
+Report notes_added / principles_added after each batch.
+```
+
+No agent? Upload the raw `.md` on the site's **导入笔记 → 上传文件** card. Then ask: `POST /api/context {"situation":"reviewer says my dissertation is just an application"}`.
 
 ↑ [Back to Top · 返回目录](#top)

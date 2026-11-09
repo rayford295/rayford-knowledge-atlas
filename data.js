@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-11-08T16:10:12.200Z",
+  "generatedAt": "2026-11-09T21:01:49.830Z",
   "themes": [
     "All",
     "AI Alignment",
