@@ -161,8 +161,8 @@ Errors with C at or above 0.40 are overconfident; the earlier example, with C eq
 
 ## Slide 25 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery
 
-This is the DamageArbiter method, read from left to right. The first three columns are the single pipelines: an image-only CLIP vision encoder, a text-only CLIP text encoder on the image descriptions, and a multimodal CLIP model that matches image and text features in a joint embedding space. Each ends in the same three-class output: mild, moderate, or severe.
-The fourth column is the disagreement-driven arbitration. The ViT is a strong discriminator but prone to overconfidence; CLIP is more robust semantically but often ambiguous. Each makes a prediction. When they agree, we accept the shared answer directly. When they disagree, a lightweight logistic-regression meta-classifier decides which model to trust, using label-free signals such as confidence and uncertainty. The base models stay untouched, so the arbiter adds almost no cost and stays interpretable.
+This is the DamageArbiter method. Panels a to c are the three single pipelines: an image-only CLIP vision encoder, a text-only CLIP text encoder on the image descriptions, and a multimodal CLIP model that matches image and text features in a joint embedding space. Each ends in the same three-class output: mild, moderate, or severe.
+Panel d, on the right, is the disagreement-driven arbitration. The ViT is a strong discriminator but prone to overconfidence; CLIP is more robust semantically but often ambiguous. Each makes a prediction. When they agree, we accept the shared answer directly. When they disagree, a lightweight logistic-regression meta-classifier decides which model to trust. Its inputs are label-free confidence and uncertainty measures, so it can run on new, unlabeled images. The base models stay untouched, so the arbiter adds almost no cost and stays interpretable.
 
 
 ## Slide 26 — Case 2: DamageArbiter: A Multimodal Arbitration Framework for Disaster Damage Assessment from Street-View Imagery
