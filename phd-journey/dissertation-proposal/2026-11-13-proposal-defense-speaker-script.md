@@ -206,8 +206,11 @@ Panel c describes them. Dataset A pairs post-disaster street-view and remote-sen
 
 ## Slide 32 — Case 3: RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery
 
-After the data come stages two and three. Stage two, the top row, is the multi-agent framework, and every agent is a prompted foundation model, so nothing is trained on the target event. The Disaster Perception Agent detects the disaster type and the kind of imagery, and initializes the task. The Image Restoration Agent enhances low-quality images. The Damage Recognition Agent identifies damaged objects and classifies severity zero-shot from remote-sensing and street-view images. The Disaster Reasoning Agent turns that structured evidence into reasoning and a report.
-Stage three, the bottom row, is validation: the structured reports are checked by model-based consistency evaluation and by human reviewers.
+So how does RAPID actually work? Stages two and three are the heart of it, and this is where most of my own work went.
+First, I designed the workflow. Instead of asking one model to do everything, I split damage assessment into four steps, each with its own agent. The Disaster Perception Agent detects the disaster type and the kind of imagery, and initializes the task. The Image Restoration Agent enhances low-quality images. The Damage Recognition Agent identifies damaged objects and classifies severity from remote-sensing and street-view images. The Disaster Reasoning Agent turns that structured evidence into reasoning and a report.
+Second, prompt engineering. Every agent is a prompted foundation model, and I wrote the zero-shot prompts for each one, so nothing is trained on the target event.
+Third, I assembled the benchmark you just saw: four datasets and roughly 1,100 images across satellite and street view.
+Fourth, stage three, the bottom row, is validation: I compared three foundation models, and the structured reports are checked by model-based consistency evaluation and by human reviewers.
 The next four slides show one result per agent, in the same order.
 
 
