@@ -33,13 +33,13 @@ Cases 1–5 are complete (CEUS 2025; Natural Hazards under review; ACM SIGSPATIA
 | 2026-10-22 | Dissertation proposal, final version submitted to the committee | [PDF](./2026-10-22-yifan-yang-dissertation-proposal.pdf) |
 | 2026-10-22 | Proposal defense slides (40 slides + 3 backup slides) | [PDF](./2026-10-22-yifan-yang-proposal-defense-slides.pdf) |
 | 2026-10-22 | Proposal defense flyer | [PDF](./2026-10-22-proposal-defense-flyer.pdf) |
-| 2026-11-13 | Dissertation proposal, revised for the second defense to match the revised slides | [PDF](./2026-11-13-yifan-yang-dissertation-proposal.pdf) |
-| 2026-11-13 | Second-defense slides (44 slides, a backup divider, and 8 backup slides; latest revision 2026-11-09), revised after the first defense | [PDF](./2026-11-13-yifan-yang-proposal-defense-slides.pdf) |
+| 2026-11-13 | Dissertation proposal for the second defense | [PDF](./2026-11-13-yifan-yang-dissertation-proposal.pdf) |
+| 2026-11-13 | Second-defense slides (44 slides, a backup divider, and 8 backup slides) | [PDF](./2026-11-13-yifan-yang-proposal-defense-slides.pdf) |
 | 2026-11-13 | Speaker script for the second-defense slides, one section per slide (also stored in the deck's notes) | [Markdown](./2026-11-13-proposal-defense-speaker-script.md) |
 
 What changed between the two decks: the background now builds the "disaster resilience is a geographical question" argument in four steps (rooted in space, diverse across the globe, a geographic inquiry, a cycle in time) before the bottleneck of volume, speed, and complexity; every results table became a bar chart; the DamageArbiter framework and the RAPID dataset pages gained explanatory bullets; dense pages reveal their content step by step; and the subtitle became "From Damage Assessment to Insightful Decision Support".
 
-The second-defense deck was revised again on 2026-11-09, and the files above are that latest version. The standalone objectives slide is gone, because each stage divider now states its objective. The bottleneck slide uses real imagery for volume, speed, and complexity. Case 1 marks the paired setting and opens it up step by step on the next slide. Case 2 first shows why an image-only model is not enough (it can be confidently wrong), then introduces image-to-text descriptions and the research questions. Case 3 walks through data preparation, a method overview of the four agents, and one result slide per agent, with the perception agent's results as a bar chart. Extra results sit behind a backup divider with jump links.
+The second-defense files above are the final versions, settled on 2026-11-09. The standalone objectives slide is gone, because each stage divider now states its objective. The bottleneck slide uses real imagery for volume, speed, and complexity. Case 1 marks the paired setting and opens it up step by step on the next slide. Case 2 first shows why an image-only model is not enough (it can be confidently wrong), then introduces image-to-text descriptions and the research questions. Case 3 walks through data preparation, a method overview of the four agents, and one result slide per agent, with the perception agent's results as a bar chart. Extra results sit behind a backup divider with jump links.
 
 Earlier working drafts (2026-09-30 proposal drafts, 2026-10-12 slide draft) were removed from this folder once the final versions were fixed; they remain in the git history.
 
@@ -52,10 +52,9 @@ That evening I wrote about it on my WeChat official account: **[Moving Toward Gr
 | Date | Event | Record |
 | --- | --- | --- |
 | 2026-10-22 | First proposal defense, not passed | Final versions above; [reflection essay](https://mp.weixin.qq.com/s/hdapQiYII-huy9pmjt59wg) |
-| 2026-11-13 (planned) | Second proposal defense, online | [Revised slides](./2026-11-13-yifan-yang-proposal-defense-slides.pdf) and [speaker script](./2026-11-13-proposal-defense-speaker-script.md); outcome to be added |
+| 2026-11-13 (planned) | Second proposal defense, online | [Proposal](./2026-11-13-yifan-yang-dissertation-proposal.pdf), [slides](./2026-11-13-yifan-yang-proposal-defense-slides.pdf), and [speaker script](./2026-11-13-proposal-defense-speaker-script.md); outcome to be added |
 
 ## After the second defense
 
 - Committee feedback from the first defense and the revisions it led to
-- Revised proposal and slides for the second defense, if they differ from the versions above
 - Reflections: what changed between the preliminary examination, the first defense, and the second, and why

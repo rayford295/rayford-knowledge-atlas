@@ -5,8 +5,8 @@ Yifan Yang · Second proposal defense, 11.13.2026 (online) · one section per sl
 
 ## Slide 1 — Advancing GeoAI for Disaster Resilience: From Damage Assessment to Insightful Decision Support
 
-Good afternoon, committee members, and thank you for being here. My name is Yifan Yang, and today I will present my dissertation proposal, "Advancing GeoAI for Disaster Resilience: From Damage Assessment to Insightful Decision Support."
-The subtitle is the arc of this talk. I started from a narrow, well-defined task, assessing damage from images, and I am building toward GeoAI that supports decisions across the whole disaster resilience cycle. The quote at the bottom is my own one-line motto for the dissertation: seeing, describing, and governing disasters, with the real world rather than the screen as the stage for intelligence.
+Good afternoon, committee members! Thank you all for joining us once again via Zoom. And today I will present my dissertation proposal, "Advancing GeoAI for Disaster Resilience: From Damage Assessment to Insightful Decision Support."
+The subtitle is the arc of this talk. I started from a narrow, well-defined task, assessing damage from images, and I am building toward GeoAI that supports decisions across the whole disaster resilience cycle.
 
 
 ## Slide 2 — Outline
@@ -18,7 +18,7 @@ Those challenges motivate a three-stage conceptual framework, and each stage has
 ## Slide 3 — Background Disaster resilience is a geographical question
 
 Let me start with why disaster resilience is a geographical question. I will make four points.
-First, resilience is rooted in space. Cutter and colleagues' place-based model argues that resilience is shaped by local hazard exposure, social vulnerability, and human-environment interactions.
+First, resilience is rooted in space. resilience is shaped by local hazard exposure, social vulnerability, and human-environment interactions.
 The figure, from the same paper, shows why a place-based framing is needed: the global environmental change community and the hazards community draw the relationships among vulnerability, resilience, and adaptive capacity differently, as you see in panels A to F. The DROP model reconciles them by anchoring all three concepts at a specific place.
 
 
