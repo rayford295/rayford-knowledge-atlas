@@ -10,7 +10,7 @@ This folder records my dissertation proposal: the final proposal document and th
 
 **Advancing GeoAI for Disaster Resilience: From Damage Assessment to Insightful Decision Support**
 
-(The 2026-10-22 proposal document below still carries the earlier subtitle "Responsible Decision Support"; "Insightful" is the title used from the second defense onward.)
+(The 2026-10-22 proposal document below still carries the earlier subtitle "Responsible Decision Support"; "Insightful" is the title used from the second defense onward, including the 2026-11-13 proposal.)
 
 > "Seeing, describing, and governing disasters: beyond the boundaries of the screen, let the real world become the stage for intelligence."
 
@@ -33,6 +33,7 @@ Cases 1–5 are complete (CEUS 2025; Natural Hazards under review; ACM SIGSPATIA
 | 2026-10-22 | Dissertation proposal, final version submitted to the committee | [PDF](./2026-10-22-yifan-yang-dissertation-proposal.pdf) |
 | 2026-10-22 | Proposal defense slides (40 slides + 3 backup slides) | [PDF](./2026-10-22-yifan-yang-proposal-defense-slides.pdf) |
 | 2026-10-22 | Proposal defense flyer | [PDF](./2026-10-22-proposal-defense-flyer.pdf) |
+| 2026-11-13 | Dissertation proposal, revised for the second defense to match the revised slides | [PDF](./2026-11-13-yifan-yang-dissertation-proposal.pdf) |
 | 2026-11-13 | Second-defense slides (44 slides, a backup divider, and 8 backup slides; latest revision 2026-11-09), revised after the first defense | [PDF](./2026-11-13-yifan-yang-proposal-defense-slides.pdf) |
 | 2026-11-13 | Speaker script for the second-defense slides, one section per slide (also stored in the deck's notes) | [Markdown](./2026-11-13-proposal-defense-speaker-script.md) |
 
