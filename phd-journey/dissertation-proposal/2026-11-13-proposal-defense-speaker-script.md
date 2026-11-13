@@ -267,7 +267,7 @@ The architecture has a data plane, an agent plane, and a presentation plane, wra
 
 ## Slide 41 — Case 7: RAY: Resilience Assistant for You An Accountable GeoAI System for Place-Based Disaster Intelligence (Ongoing)
 
-Rather than describe the interface, let me show it. This is a three-minute demo of RAY: a resident asks a question about their neighborhood, the policy check runs before any model call, the agent grounds its analysis in the spatial data, and every sentence in the answer cites an artifact that can be inspected.
+Rather than describe the interface, let me show it. This is a one-minute video of RAY: a resident asks a question about their neighborhood, the policy check runs before any model call, the agent grounds its analysis in the spatial data, and every sentence in the answer cites an artifact that can be inspected.
 If time is short, the link and the QR code are on the slide, and I can also play it during the questions.
 
 
@@ -279,8 +279,8 @@ I have received fifteen honors, including second place in the AAG GISSG paper co
 
 ## Slide 43 — Research Schedule
 
-On the schedule: cases one through five are complete. Case six is about 20 percent done and case seven about 40 percent, both in progress this fall.
-I completed the preliminary exam in spring 2026, and the proposal defense is today. Dissertation writing runs through spring 2027, with the final defense and graduation planned for summer 2027.
+On the schedule: cases one through five are complete. Case six is about 90 percent done and case seven about 65 percent, both in progress this fall.
+I completed the preliminary exam in summer 2026, and the proposal defense is today. Dissertation writing runs through spring 2027, with the final defense and graduation planned for summer 2027.
 
 
 ## Slide 44 — Q&A
