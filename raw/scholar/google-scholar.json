@@ -3,7 +3,7 @@
   "profileUrl": "https://scholar.google.com/citations?user=B-fiSHwAAAAJ",
   "userId": "B-fiSHwAAAAJ",
   "name": "Yifan Yang",
-  "affiliation": "Ph.D. Student, Texas A&M University",
+  "affiliation": "Ph.D. Candidate, Texas A&M University",
   "verifiedEmail": "tamu.edu",
   "homepage": "https://rayford295.github.io/",
   "interests": [
@@ -15,8 +15,8 @@
   ],
   "metrics": {
     "citations": {
-      "all": 441,
-      "since2019": 427
+      "all": 445,
+      "since2019": 431
     },
     "hIndex": {
       "all": 8,
@@ -39,7 +39,7 @@
       "title": "GeoLocator: A location-integrated large multimodal model (LMM) for inferring geo-privacy",
       "authors": "Y Yang, S Wang, D Li, S Sun, Q Wu",
       "venue": "Applied Sciences 14 (16), 7091 , 2024",
-      "citations": 30,
+      "citations": 31,
       "year": 2024
     },
     {
@@ -53,7 +53,7 @@
       "title": "Surveying attitudinal alignment between large language models vs. humans towards 17 sustainable development goals",
       "authors": "Q Wu, Y Xu, T Xiao, Y Xiao, Y Li, T Wang, Y Zhang, S Zhong, Y Zhang, ...",
       "venue": "arXiv preprint arXiv:2404.13885 , 2024",
-      "citations": 23,
+      "citations": 24,
       "year": 2024
     },
     {
@@ -92,6 +92,13 @@
       "year": 2026
     },
     {
+      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
+      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
+      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
+      "citations": 4,
+      "year": 2026
+    },
+    {
       "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
       "authors": "Y Yang, L Zou, W Jepson",
       "venue": "IGARSS 2026 - 2026 IEEE International Geoscience and Remote Sensing… , 2026",
@@ -127,18 +134,18 @@
       "year": 2026
     },
     {
-      "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
-      "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
-      "venue": "arXiv preprint arXiv:2604.03456 , 2026",
-      "citations": 2,
-      "year": 2026
-    },
-    {
       "title": "Navigating Spatial Inequities in Freight Truck Crash Severity via Counterfactual Inference in Los Angeles",
       "authors": "Y Wang, H Yin, Y Yang, C Zhao, S Wang",
       "venue": "Journal of Transport Geography 128, 104387 , 2025",
       "citations": 2,
       "year": 2025
+    },
+    {
+      "title": "Monitoring urban traffic dynamics at high spatiotemporal resolution using distributed acoustic sensing and deep learning",
+      "authors": "H Tian, H Cai, X Chen, Y Yang",
+      "venue": "Journal of Transport Geography 138, 104901 , 2027",
+      "citations": 0,
+      "year": 2027
     },
     {
       "title": "Engaging Communities, Energizing Futures — A Framework for Geothermal Awareness and Acceptance",
@@ -160,15 +167,8 @@
       "venue": "SC26: The International Conference for High Performance Computing… , 2026",
       "citations": 0,
       "year": 2026
-    },
-    {
-      "title": "Monitoring urban traffic dynamics at high spatiotemporal resolution using distributed acoustic sensing and deep learning",
-      "authors": "H Tian, H Cai, X Chen, Y Yang",
-      "venue": "Journal of Transport Geography 138, 104901 , 2026",
-      "citations": 0,
-      "year": 2026
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-11-10T07:26:15.709Z"
+  "fetchedAt": "2026-11-17T08:01:25.006Z"
 }
