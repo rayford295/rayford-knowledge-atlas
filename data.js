@@ -1,5 +1,5 @@
 window.researchMapData = {
-  "generatedAt": "2026-11-23T22:12:33.989Z",
+  "generatedAt": "2026-11-24T10:00:15.997Z",
   "themes": [
     "All",
     "AI Alignment",
@@ -289,7 +289,7 @@ window.researchMapData = {
       "wikiPath": "wiki/papers/beacon.md",
       "position": {
         "x": 1074,
-        "y": 652
+        "y": 653
       },
       "color": "#d45d9c",
       "radius": 32,
@@ -649,7 +649,7 @@ window.researchMapData = {
       "wikiPath": "wiki/papers/debris-cast.md",
       "position": {
         "x": 1073,
-        "y": 123
+        "y": 124
       },
       "color": "#d96832",
       "radius": 30,
@@ -725,7 +725,7 @@ window.researchMapData = {
       "wikiPath": "wiki/papers/disastervlp.md",
       "position": {
         "x": 758,
-        "y": 526
+        "y": 527
       },
       "color": "#4b9dd5",
       "radius": 36,
@@ -841,7 +841,7 @@ window.researchMapData = {
       "wikiPath": "wiki/papers/freight-crash-spatial-inequities.md",
       "position": {
         "x": 1542,
-        "y": 664
+        "y": 665
       },
       "color": "#e4a72a",
       "radius": 26,
@@ -1265,7 +1265,7 @@ window.researchMapData = {
       "wikiPath": "wiki/papers/low-rank-loss-functions.md",
       "position": {
         "x": 1211,
-        "y": 1015
+        "y": 1016
       },
       "color": "#a579ff",
       "radius": 24,
@@ -1487,7 +1487,7 @@ window.researchMapData = {
       "wikiPath": "wiki/papers/resilience-4d-urban-flood.md",
       "position": {
         "x": 1077,
-        "y": 481
+        "y": 482
       },
       "color": "#36f1c7",
       "radius": 28,
@@ -1625,7 +1625,7 @@ window.researchMapData = {
       "wikiPath": "wiki/papers/satellite-to-street.md",
       "position": {
         "x": 1130,
-        "y": 841
+        "y": 842
       },
       "color": "#b97a16",
       "radius": 40,
@@ -1841,7 +1841,7 @@ window.researchMapData = {
       "wikiPath": "wiki/papers/vgi-spatial-bias.md",
       "position": {
         "x": 581,
-        "y": 894
+        "y": 895
       },
       "color": "#9a7b4f",
       "radius": 30,
@@ -1902,7 +1902,7 @@ window.researchMapData = {
       "wikiPath": "wiki/public-writing/lei-zou-teaching-award-letter.md",
       "position": {
         "x": 846,
-        "y": 892
+        "y": 893
       },
       "color": "#f0a85a",
       "radius": 36,
@@ -2090,7 +2090,7 @@ window.researchMapData = {
       "wikiPath": "wiki/readings/1-23303928.md",
       "position": {
         "x": 124,
-        "y": 285
+        "y": 286
       },
       "color": "#ff6e4d",
       "radius": 48,
@@ -2264,7 +2264,7 @@ window.researchMapData = {
       "wikiPath": "wiki/readings/12-3300146170.md",
       "position": {
         "x": 718,
-        "y": 709
+        "y": 710
       },
       "color": "#ffd46a",
       "radius": 37,
@@ -2651,7 +2651,7 @@ window.researchMapData = {
       "wikiPath": "wiki/readings/8-3300151174.md",
       "position": {
         "x": 403,
-        "y": 716
+        "y": 717
       },
       "color": "#a88cff",
       "radius": 38,
@@ -2802,7 +2802,7 @@ window.researchMapData = {
       "wikiPath": "wiki/questions/biography-research-judgment.md",
       "position": {
         "x": 626,
-        "y": 528
+        "y": 529
       },
       "color": "#9ad66d",
       "radius": 34,
@@ -2904,7 +2904,7 @@ window.researchMapData = {
       "wikiPath": "wiki/questions/human-evidence-disaster-ai.md",
       "position": {
         "x": 1111,
-        "y": 303
+        "y": 304
       },
       "color": "#f08bd6",
       "radius": 40,
@@ -2955,7 +2955,7 @@ window.researchMapData = {
       "wikiPath": "wiki/questions/spatial-intelligence-public-infrastructure.md",
       "position": {
         "x": 1200,
-        "y": 655
+        "y": 656
       },
       "color": "#64c7ff",
       "radius": 36,
@@ -2991,17 +2991,17 @@ window.researchMapData = {
       "connections": [],
       "repository": null,
       "metrics": {
-        "citations": 24
+        "citations": 25
       },
       "role": "collaborative output",
-      "metricLabel": "24 citations",
+      "metricLabel": "25 citations",
       "wikiPath": null,
       "position": {
         "x": 1468,
         "y": 142
       },
       "color": "#64c7ff",
-      "radius": 35.757550765359255,
+      "radius": 36,
       "displayKind": "Research Output"
     },
     {
@@ -3037,17 +3037,17 @@ window.researchMapData = {
       ],
       "repository": null,
       "metrics": {
-        "citations": 4
+        "citations": 5
       },
       "role": "collaborative output",
-      "metricLabel": "4 citations",
+      "metricLabel": "5 citations",
       "wikiPath": null,
       "position": {
         "x": 1499,
-        "y": 489
+        "y": 490
       },
       "color": "#64c7ff",
-      "radius": 28.8,
+      "radius": 29.366563145999496,
       "displayKind": "Research Output"
     },
     {
@@ -3078,17 +3078,17 @@ window.researchMapData = {
       "connections": [],
       "repository": null,
       "metrics": {
-        "citations": 2
+        "citations": 3
       },
       "role": "collaborative output",
-      "metricLabel": "2 citations",
+      "metricLabel": "3 citations",
       "wikiPath": null,
       "position": {
         "x": 1205,
         "y": 482
       },
       "color": "#64c7ff",
-      "radius": 27.39411254969543,
+      "radius": 28.156921938165304,
       "displayKind": "Research Output"
     },
     {

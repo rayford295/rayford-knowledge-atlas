@@ -15,8 +15,8 @@
   ],
   "metrics": {
     "citations": {
-      "all": 445,
-      "since2019": 431
+      "all": 451,
+      "since2019": 437
     },
     "hIndex": {
       "all": 8,
@@ -32,14 +32,14 @@
       "title": "Experiments of federated learning for COVID-19 chest X-ray images",
       "authors": "B Yan, J Wang, J Cheng, Y Zhou, Y Zhang, Y Yang, L Liu, H Zhao, ...",
       "venue": "Advances in Artificial Intelligence and Security: 7th International… , 2021",
-      "citations": 284,
+      "citations": 285,
       "year": 2021
     },
     {
       "title": "GeoLocator: A location-integrated large multimodal model (LMM) for inferring geo-privacy",
       "authors": "Y Yang, S Wang, D Li, S Sun, Q Wu",
       "venue": "Applied Sciences 14 (16), 7091 , 2024",
-      "citations": 31,
+      "citations": 32,
       "year": 2024
     },
     {
@@ -53,7 +53,7 @@
       "title": "Surveying attitudinal alignment between large language models vs. humans towards 17 sustainable development goals",
       "authors": "Q Wu, Y Xu, T Xiao, Y Xiao, Y Li, T Wang, Y Zhang, S Zhong, Y Zhang, ...",
       "venue": "arXiv preprint arXiv:2404.13885 , 2024",
-      "citations": 24,
+      "citations": 25,
       "year": 2024
     },
     {
@@ -95,13 +95,27 @@
       "title": "Earth Embeddings Reveal Diverse Urban Signals from Space",
       "authors": "W Gong, U Srivastava, Y Wang, Y Jia, Q Wu, W Bai, Y Yang, X Huang, ...",
       "venue": "arXiv preprint arXiv:2604.03456 , 2026",
-      "citations": 4,
+      "citations": 5,
       "year": 2026
     },
     {
       "title": "Satellite-to-Street: Synthesizing Post-Disaster Views from Satellite Imagery via Generative Vision Models",
       "authors": "Y Yang, L Zou, W Jepson",
       "venue": "IGARSS 2026 - 2026 IEEE International Geoscience and Remote Sensing… , 2026",
+      "citations": 3,
+      "year": 2026
+    },
+    {
+      "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
+      "authors": "Y Yang, W Gong, K Zhang, L Zou, Z Tu, H Li, Z Li, X Ye",
+      "venue": "The 34th ACM International Conference on Advances in Geographic Information… , 2026",
+      "citations": 3,
+      "year": 2026
+    },
+    {
+      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
+      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
+      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
       "citations": 3,
       "year": 2026
     },
@@ -116,20 +130,6 @@
       "title": "RAPIDMap: Rapid Multi-Agent Pipeline for Interpretable Disaster Mapping from Satellite and Street-view Imagery",
       "authors": "Y Yang, L Zou",
       "venue": "CaGIS Conference 2026, September 8–11, 2026, St. Louis, MO, USA. , 2026",
-      "citations": 2,
-      "year": 2026
-    },
-    {
-      "title": "RAPID: A Reproducible Multi-Agent Pipeline for Interpretable Disaster Damage Assessment from Satellite and Street-View Imagery",
-      "authors": "Y Yang, W Gong, K Zhang, L Zou, Z Tu, H Li, Z Li, X Ye",
-      "venue": "The 34th ACM International Conference on Advances in Geographic Information… , 2026",
-      "citations": 2,
-      "year": 2026
-    },
-    {
-      "title": "GIScholarBench: Benchmarking LLM Overconfidence in GIS Research",
-      "authors": "Z Li, M Yang, L Zou, H Ma, H Tian, S Zhou, W Gong, K Zhang, B Chen, ...",
-      "venue": "arXiv preprint arXiv:2606.08036 , 2026",
       "citations": 2,
       "year": 2026
     },
@@ -170,5 +170,5 @@
     }
   ],
   "status": "ok",
-  "fetchedAt": "2026-11-17T08:01:25.006Z"
+  "fetchedAt": "2026-11-24T10:00:13.253Z"
 }
