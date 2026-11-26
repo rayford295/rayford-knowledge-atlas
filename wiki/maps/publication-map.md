@@ -10,6 +10,7 @@ This map is the landing page for the old `rayford295/Publications` repository af
 - [[../papers/debris-cast]]
 - [[../papers/hospital-visitation-flows]]
 - [[../papers/urban-traffic-das]]
+- [[../papers/geoprobe]]
 - [[../papers/hyperlocal-disaster]]
 - [[../papers/freight-crash-spatial-inequities]]
 - [[../papers/heat-stress-digital-twins]]

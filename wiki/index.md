@@ -19,6 +19,7 @@
 - [Debris-Cast](./papers/debris-cast.md)
 - [Hospital Visitation Flows](./papers/hospital-visitation-flows.md)
 - [DAS Traffic Dynamics](./papers/urban-traffic-das.md)
+- [GeoProbe](./papers/geoprobe.md)
 - [GeoSteward](./papers/geosteward.md)
 - [VGI Spatial Bias](./papers/vgi-spatial-bias.md)
 - [ArcGIS Text SAM Tree Segmentation](./papers/arcgis-sam-tree-segmentation.md)

@@ -11,6 +11,7 @@ Research outputs are the public layer of the atlas.
 - [[../papers/debris-cast]]
 - [[../papers/hospital-visitation-flows]]
 - [[../papers/urban-traffic-das]]
+- [[../papers/geoprobe]]
 - [[../papers/geosteward]]
 - [[../papers/vgi-spatial-bias]]
 - [[../papers/arcgis-sam-tree-segmentation]]
